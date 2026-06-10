@@ -1,0 +1,159 @@
+/* === MapQuiz — 樣式（北歐極簡）===
+   app 主題：北歐霧藍（沉穩、低視覺干擾，極簡）。
+   SELA 品牌色保留為橘+白，僅用於 logo / 歸屬印記（不可改色）。 */
+
+:root {
+  /* SELA 品牌色（永遠不變，logo 用） */
+  --sela-orange: #F36825;
+  --sela-white: #FFFFFF;
+
+  /* app 主題：北歐霧藍 */
+  --primary: #5A7A8B;       /* 主色：作答中、主要按鈕 */
+  --secondary: #9AB0BC;     /* 副色 */
+  --slate-deep: #3F5B6B;    /* 深板岩：標題強調、最高評級 */
+  --success: #4A9B7F;       /* 柔和綠：答對 */
+  --danger: #9A8585;        /* 低彩度紅：答錯 */
+  --muted: #8A9BA8;         /* 輔助文字 */
+  --text: #4A5B6A;
+  --text-light: #5A6B7A;
+  --bg: #FAFBFC;
+  --card: #FFFFFF;
+  --bg-soft: #EEF2F5;       /* 卡片底/海洋底 */
+  --border: #E3E9ED;        /* 極淡邊線 */
+
+  /* 地圖 */
+  --sea: #EEF2F5;
+  --sea-line: #DCE4E8;
+  --land: #D7DFE3;
+  --land-line: #FFFFFF;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "PingFang TC", "Microsoft JhengHei",
+    "Noto Sans CJK TC", "Heiti TC", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { width: 100%; max-width: 480px; margin: 0 auto; padding: 18px 16px 28px; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* typography — 極簡：克制字重與字距 */
+h1 { font-size: 27px; font-weight: 700; margin: 6px 0 2px; letter-spacing: 0.5px; color: var(--slate-deep); }
+h2 { font-size: 21px; font-weight: 700; margin: 4px 0 12px; color: var(--slate-deep); }
+.eyebrow { font-size: 11px; letter-spacing: 3px; color: var(--primary); font-weight: 600; text-transform: uppercase; }
+.eyebrow.sub { color: var(--muted); letter-spacing: 2.5px; }
+.lead { color: var(--muted); font-size: 14px; margin: 2px 0 20px; line-height: 1.5; }
+.muted { color: var(--muted); }
+
+/* top bar */
+.topbar { display: flex; justify-content: space-between; align-items: center; min-height: 30px; gap: 8px; }
+.topbar .right { display: flex; gap: 6px; align-items: center; }
+.linkbtn { background: none; border: none; color: var(--muted); font-size: 14px; cursor: pointer; padding: 0; }
+
+/* cards — 極簡：無陰影、細邊線 */
+.card { width: 100%; text-align: left; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 10px; cursor: pointer; transition: border-color .15s, background .15s; }
+.card:hover { border-color: var(--secondary); }
+.card .row { display: flex; justify-content: space-between; align-items: baseline; }
+.card .title { font-size: 16px; font-weight: 700; color: var(--text); }
+.card .desc { font-size: 13px; color: var(--muted); margin-top: 5px; line-height: 1.5; }
+.card .best { font-size: 12px; color: var(--primary); font-weight: 700; }
+
+/* county picker grid */
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 9px; }
+.county-btn { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 13px 6px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 3px; transition: border-color .15s; }
+.county-btn:hover { border-color: var(--secondary); }
+.county-btn .nm { font-size: 15px; font-weight: 700; color: var(--text); }
+.county-btn .cnt { font-size: 11px; color: var(--muted); }
+
+/* buttons */
+.btn { width: 100%; padding: 14px; border-radius: 12px; border: 1px solid transparent; font-size: 15px; font-weight: 700; cursor: pointer; letter-spacing: .5px; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-outline { background: var(--card); color: var(--text); border-color: var(--border); }
+.btn-ghost { background: transparent; color: var(--muted); }
+.btn-col { display: flex; flex-direction: column; gap: 9px; }
+
+/* map */
+.map-box { width: 100%; height: 100%; border-radius: 16px; background: var(--sea); border: 1px solid var(--sea-line); overflow: hidden; }
+.map-box.zoomed { overflow: auto; -webkit-overflow-scrolling: touch; }
+.map-box svg { display: block; }
+.map-box svg path { transition: fill .3s ease; }
+.tw-ring { animation: twpulse 1.5s ease-in-out infinite; transform-origin: center; }
+@keyframes twpulse { 0%,100% { opacity:.4; r:13px; } 50% { opacity:.95; r:17px; } }
+
+/* zoom / icon buttons */
+.zoombar { display: flex; align-items: center; gap: 5px; }
+.iconbtn { width: 32px; height: 30px; border-radius: 9px; border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.iconbtn.off { color: var(--muted); text-decoration: line-through; }
+.zoombar .pct { font-size: 11px; color: var(--muted); width: 34px; text-align: center; }
+
+/* score strip — 極簡 */
+.scorestrip { position: relative; display: flex; justify-content: space-between; align-items: flex-end; margin: 10px 0 6px; }
+.scorestrip .lbl { font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
+.scorestrip .pts { font-size: 26px; font-weight: 700; line-height: 1; color: var(--slate-deep); }
+.combo { font-size: 12px; font-weight: 700; padding: 5px 11px; border-radius: 999px; color: #fff; background: var(--secondary); letter-spacing: .5px; }
+.combo.m15 { background: var(--primary); }
+.combo.m2 { background: var(--slate-deep); }
+.float { position: absolute; left: 0; top: -10px; color: var(--success); font-weight: 700; font-size: 17px; }
+.tw-pop { animation: tw-popk .28s ease-out; }
+@keyframes tw-popk { 0% { transform: scale(.7); opacity:.5; } 100% { transform: scale(1); opacity:1; } }
+.tw-float { animation: tw-floatk 1s ease-out forwards; }
+@keyframes tw-floatk { 0% { transform: translateY(0); opacity:1; } 100% { transform: translateY(-24px); opacity:0; } }
+
+/* speed bar */
+.speedtrack { height: 4px; background: var(--border); border-radius: 9px; overflow: hidden; margin-bottom: 12px; }
+.speedbar { height: 100%; background: var(--secondary); width: 100%; transform-origin: left; }
+.speedbar.run { animation: tw-deplete 8s linear forwards; }
+.speedbar.locked { background: var(--border); }
+@keyframes tw-deplete { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+
+/* prompt */
+.prompt .q { font-size: 13px; color: var(--muted); }
+.prompt .name { font-size: 25px; font-weight: 700; margin-top: 2px; color: var(--slate-deep); }
+
+/* options */
+.opts { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.opt { padding: 15px 8px; border-radius: 12px; border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 16px; font-weight: 600; cursor: pointer; transition: all .15s; }
+.opt.correct { background: var(--success); color: #fff; border-color: var(--success); }
+.opt.wrong { background: var(--danger); color: #fff; border-color: var(--danger); }
+.opt.dim { color: var(--muted); }
+.opt:disabled { cursor: default; }
+
+/* feedback */
+.fb { min-height: 46px; font-size: 15px; font-weight: 700; }
+.fb.ok { color: var(--success); }
+.fb.no { color: var(--danger); }
+.fb.hint { font-size: 13px; font-weight: 400; color: var(--muted); }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: var(--bg-soft); color: var(--danger); font-weight: 600; }
+
+/* result */
+.rankrow { display: flex; align-items: center; gap: 16px; margin: 10px 0 4px; }
+.rankbadge { width: 72px; height: 72px; border-radius: 18px; background: var(--card); border: 2px solid var(--muted); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.rankbadge .g { font-size: 32px; font-weight: 800; }
+.bigpts { font-size: 36px; font-weight: 700; line-height: 1.1; }
+.bigpts small { font-size: 15px; color: var(--muted); font-weight: 600; }
+.stats { display: flex; gap: 18px; font-size: 13px; color: var(--muted); margin: 8px 0 14px; flex-wrap: wrap; }
+.stats b { color: var(--text); font-weight: 700; }
+.legend { display: flex; gap: 14px; font-size: 12.5px; color: var(--muted); margin-bottom: 14px; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 9px; margin-right: 5px; }
+
+/* misc */
+.box { background: var(--card); border-radius: 13px; padding: 12px 14px; border: 1px solid var(--border); margin-top: 8px; }
+.note { font-size: 12px; color: var(--muted); margin-top: 18px; line-height: 1.6; }
+.section-gap { margin: 18px 0 8px; }
+
+/* SELA 歸屬印記（品牌印記，非 app 主視覺） */
+.attrib { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 24px; opacity: .7; }
+.attrib img { width: 18px; height: 18px; }
+.attrib span { font-size: 12px; color: var(--muted); letter-spacing: .5px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tw-ring, .tw-pop, .tw-float, .speedbar.run { animation: none; }
+  .tw-ring { opacity: .9; }
+}

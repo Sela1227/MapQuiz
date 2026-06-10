@@ -50,3 +50,5 @@ node_modules/
 
 # Flet
 .flet/
+/* project-specific */
+.jsdom-test/
