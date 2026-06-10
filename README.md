@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="assets/app-logo.png" width="112" alt="MapQuiz"/>
   <h1>MapQuiz（台灣縣市地圖）</h1>
   <p>互動式地理測驗：全台 22 縣市與 368 鄉鎮市區，連擊加倍、限時加分，邊玩邊記位置。</p>
   <p><em>北歐極簡風 · 純前端 · 零後端</em></p>
@@ -51,7 +52,8 @@ MapQuiz/
 ├── js/
 │   ├── data.js             地圖資料（window.MAP / window.DISTRICTS）
 │   └── app.js              主程式（測驗流程、計分、音效、存檔）
-├── favicon/                favicon 套組（app logo 生成後替換；暫用 SELA logo）
+├── favicon/                favicon／app icon 套組（MapQuiz app logo）
+├── assets/app-logo.png     app 主視覺（README／首頁）
 ├── assets/sela.svg         SELA 品牌標識（歸屬印記）
 ├── SELA-logo-prompt.md     app logo 生成 prompt（給其他 AI 生圖）
 ├── README.md
@@ -62,7 +64,7 @@ MapQuiz/
 
 ## Logo
 
-本專案的 app 專屬 logo 尚在製作：`SELA-logo-prompt.md` 內含可直接複製給其他 AI（Midjourney / DALL-E / Firefly 等）的 prompt。生成原圖後，會轉成完整 favicon 套組並替換目前暫用的 SELA logo；SELA logo 保留作品牌歸屬印記。
+app 專屬 logo（白色台灣＋定位 pin、北歐霧藍底）已整合為 favicon／app icon／README 主視覺，由其他 AI 生圖、Claude 優化轉檔（多解析度 + favicon.ico + apple-touch-icon）。`SELA-logo-prompt.md` 保留生成用的 prompt。SELA logo 作為品牌歸屬印記，置於首頁底與 README footer。
 
 ## 資料來源
 
@@ -72,12 +74,12 @@ MapQuiz/
 
 ## 版本
 
-V0.2.0
+V0.3.0
 
 ---
 
 <div align="center">
   <img src="assets/sela.svg" width="22" alt="SELA"/>
   <br/>
-  <sub>Made by <strong>SELA</strong> · V0.2.0</sub>
+  <sub>Made by <strong>SELA</strong> · V0.3.0</sub>
 </div>

@@ -11,7 +11,7 @@
 
   var COUNTY_ORDER = ["基隆市","台北市","新北市","桃園市","新竹市","新竹縣","苗栗縣","台中市","彰化縣","南投縣","雲林縣","嘉義市","嘉義縣","台南市","高雄市","屏東縣","宜蘭縣","花蓮縣","台東縣","澎湖縣","金門縣","連江縣"];
 
-  var COL = { land:"#D7DFE3", active:"#5A7A8B", correct:"#4A9B7F", wrong:"#9A8585", sea:"#EEF2F5", seaLine:"#DCE4E8", muted:"#8A9BA8", deep:"#3F5B6B", white:"#FFFFFF" };
+  var COL = { land:"#D7DFE3", active:"#537387", correct:"#4A9B7F", wrong:"#9A8585", sea:"#EEF2F5", seaLine:"#DCE4E8", muted:"#8A9BA8", deep:"#3E5666", white:"#FFFFFF" };
 
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
@@ -135,6 +135,7 @@
     var tm = topMiss();
     var missBox = tm.length ? '<div class="box"><div class="desc" style="margin-bottom:8px">你最常答錯的縣市</div><div class="chips">' + tm.map(function (n) { return '<span class="chip">' + n + '</span>'; }).join("") + '</div></div>' : "";
     return '' +
+      '<img class="applogo" src="assets/app-logo.png" alt="MapQuiz"/>' +
       '<div class="eyebrow">地理挑戰</div>' +
       '<h1>台灣縣市地圖</h1>' +
       '<p class="lead">連擊加倍、限時加分，邊玩邊記 22 縣市與 368 區。</p>' +
