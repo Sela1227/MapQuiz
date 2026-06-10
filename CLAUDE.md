@@ -6,7 +6,7 @@
 > 每升一版至少更新三處：踩過的坑、版本歷程、下版候選工作。
 
 > **⚠ Kit 對齊註記（已對齊 Kit V1.14.1 的專案）：**
-> 對話中先以 React/Vite 原型成形；V0.1.0 首次對齊 Kit 重寫為純靜態原生 JS；V0.2.0 改名 + 北歐極簡；V0.3.0 整合 app logo 並把主色對齊 logo 底色。
+> 對話中先以 React/Vite 原型成形；V0.1.0 首次對齊 Kit 重寫為純靜態原生 JS；V0.2.0 改名 + 北歐極簡；V0.3.0 整合 app logo + 主色對齊；V0.4.0 加限時挑戰 + 主視覺 hero。
 > 衝突仲裁：
 > 1. **以本專案 CLAUDE.md 為主、Kit 為輔。**
 > 2. 刻意決定（明寫理由，下次別「修正」回去）：
@@ -19,8 +19,8 @@
 
 ## 〇、當前狀態
 
-- **版本：** V0.3.0
-- **狀態：** 可運作（功能完整；北歐極簡 + app logo 雙軌到位）
+- **版本：** V0.4.0
+- **狀態：** 可運作（功能完整；加入限時挑戰模式 + 首頁主視覺 hero）
 - **一句話定位：** 全台 22 縣市 + 368 鄉鎮市區的互動地理測驗，連擊／限時計分，給想記住台灣地理位置的人玩。
 - **目標使用者：** 學生、想熟悉台灣行政區位置的一般大眾。
 - **技術棧：** 純 HTML + CSS + 原生 JS（無框架、無 build step）
@@ -111,18 +111,18 @@ python -m http.server 8000   # 開 http://localhost:8000
 | V0.1.0 | 首次對齊 Kit：React/Vite 原型 → 純靜態原生 JS。縣市+分區、三模式、連擊/速度計分、音效、評級、localStorage（前名 TaiwanMapQuiz）|
 | V0.2.0 | 改名 MapQuiz；北歐霧藍極簡；產出 `SELA-logo-prompt.md` |
 | V0.3.0 | 整合 app logo（Gemini 生圖 + Pillow 轉多解析度套組 + favicon.ico/apple-touch）；主色取樣 logo 底色對齊為 `#537387`（CSS/JS/HTML/manifest 四處）；首頁 + README 換上 app 主視覺；SELA logo 降為歸屬印記 |
+| V0.4.0 | 加**限時挑戰**模式（全程碼錶、時間越短時間獎勵越高、答錯 +5 秒；縣市與分區皆可）；首頁加**主色 hero**（白底卡放 app logo + 白字標題）讓主視覺色更明顯；計時做成主色 chip |
 
 ---
 
 ## 七、下版候選工作（按優先序）
 
-1. **限時挑戰模式** — 全程倒數 + 結束結算，與現有速度獎勵互補；是目前玩法深度最直接的擴充。
+1. **PWA 離線安裝** — 已有 webmanifest + app icon，補 service worker 就能加到主畫面離線玩；是讓 app 更像「裝起來的 app」最直接的一步。
 2. 分區「只考錯的」跨縣市彙整（目前限單一縣市內）
 3. 英文區名提示／英文作答模式（資料已含 TOWNENG）
-4. PWA 離線（已有 webmanifest + app icon，補 service worker 即可裝成 app）
+4. 限時挑戰排行：本機歷史最佳用時榜（localStorage）
 5. 無障礙：鍵盤操作、aria、焦點順序
 6. 地圖資料更新流程文件（內政部界線改版時怎麼重產 data.js）
-7. app logo 若要更銳利的小尺寸 favicon，可從 `assets/app-logo-1024.png` 另調 16/32 描邊
 
 ---
 
@@ -134,4 +134,4 @@ python -m http.server 8000   # 開 http://localhost:8000
 
 ## 九、一句話總結
 
-V0.3.0：把 SELA 用 Gemini 生的 app logo（白色台灣＋定位 pin、霧藍底）轉成完整 favicon／app icon 套組並整合進首頁與 README，取樣 logo 底色把 UI 主色對齊為 `#537387`（CSS/JS/HTML/manifest 四處同步），SELA logo 降為歸屬印記，雙軌 logo 到位。jsdom 全流程測試通過。下版第一優先是限時挑戰模式。
+V0.4.0：依 SELA 回饋做兩件事——(1) 首頁加主色 hero（app logo 白底卡 + 白字標題）讓北歐主視覺色 `#537387` 明確現身；(2) 新增限時挑戰模式：全程碼錶、時間越短時間獎勵越高、答錯 +5 秒，縣市與分區皆可玩，計時做成主色 chip。jsdom 全流程測試通過。下版第一優先是 PWA 離線安裝。

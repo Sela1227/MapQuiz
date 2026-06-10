@@ -15,6 +15,7 @@
 
 特色：
 
+- **限時挑戰**：全程碼錶，時間越短分數越高（答錯加 5 秒）
 - 連擊加成（3 連 ×1.5、6 連 ×2、10 連 ×3）＋ 速度獎勵（答得越快加越多）
 - 答對／答錯音效（WebAudio，可靜音）、分數浮動動畫
 - 結算評級 S+／S／A／B／C／D，並用對錯把整張地圖上色
@@ -74,12 +75,12 @@ app 專屬 logo（白色台灣＋定位 pin、北歐霧藍底）已整合為 fav
 
 ## 版本
 
-V0.3.0
+V0.4.0
 
 ---
 
 <div align="center">
   <img src="assets/sela.svg" width="22" alt="SELA"/>
   <br/>
-  <sub>Made by <strong>SELA</strong> · V0.3.0</sub>
+  <sub>Made by <strong>SELA</strong> · V0.4.0</sub>
 </div>

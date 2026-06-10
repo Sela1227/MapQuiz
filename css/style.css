@@ -160,3 +160,16 @@ h2 { font-size: 21px; font-weight: 700; margin: 4px 0 12px; color: var(--slate-d
 
 /* app logo（首頁主視覺，圓角依 DNA） */
 .applogo { width: 56px; height: 56px; border-radius: 14px; display: block; margin: 2px 0 12px; }
+
+/* hero（主視覺色塊，讓品牌色明確現身）*/
+.hero { background: var(--primary); border-radius: 18px; padding: 18px; display: flex; align-items: center; gap: 14px; margin: 2px 0 18px; }
+.hero-chip { background: #fff; border-radius: 13px; padding: 6px; flex-shrink: 0; line-height: 0; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.hero-chip img { width: 52px; height: 52px; display: block; border-radius: 9px; }
+.hero-txt { color: #fff; min-width: 0; }
+.hero-kicker { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; opacity: .85; }
+.hero-title { font-size: 22px; font-weight: 800; letter-spacing: .5px; margin: 2px 0 3px; }
+.hero-sub { font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,.88); }
+
+/* 限時挑戰：計時 chip + 分數列右側群組 */
+.srtright { display: flex; align-items: center; gap: 8px; }
+.timerchip { background: var(--primary); color: #fff; font-size: 13px; font-weight: 700; padding: 5px 11px; border-radius: 999px; letter-spacing: .5px; font-variant-numeric: tabular-nums; }
