@@ -43,6 +43,7 @@
     for (var i = 0; i < bag.length && out.length < k; i++) { if (!seen[bag[i]]) { seen[bag[i]] = 1; out.push(bag[i]); } }
     return out;
   }
+  function pickFrom(v) { return Array.isArray(v) ? v[Math.floor(Math.random() * v.length)] : v; }
   function pickFact(nation) {
     var FS = window.WORLD_FACTS && window.WORLD_FACTS[nation];
     return (FS && FS.length) ? FS[Math.floor(Math.random() * FS.length)] : null;
@@ -89,7 +90,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "2.3.0";
+  var VERSION = "2.4.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -445,11 +446,11 @@
     S.picked = name; S.locked = true; S.lastMs = ms;
     S.fact = null; S.factName = null;
     if (S.level === "world") {
-      if (S.mode === "landmark" && window.WORLD_LM_DESC && window.WORLD_LM_DESC[S.target]) { S.fact = window.WORLD_LM_DESC[S.target]; S.factName = S.target; }
+      if (S.mode === "landmark" && window.WORLD_LM_DESC && window.WORLD_LM_DESC[S.target]) { S.fact = pickFrom(window.WORLD_LM_DESC[S.target]); S.factName = S.target; }
       else { S.fact = pickFact(correctAns()); S.factName = correctAns(); }
     }
     else if (S.level === "county") {
-      if (S.mode === "landmark" && window.TW_LM_DESC && window.TW_LM_DESC[S.target]) { S.fact = window.TW_LM_DESC[S.target]; S.factName = S.target; }
+      if (S.mode === "landmark" && window.TW_LM_DESC && window.TW_LM_DESC[S.target]) { S.fact = pickFrom(window.TW_LM_DESC[S.target]); S.factName = S.target; }
       else if (window.TW_FACTS && window.TW_FACTS[correctAns()]) { var tf = window.TW_FACTS[correctAns()]; S.fact = tf[Math.floor(Math.random() * tf.length)]; S.factName = correctAns(); }
     }
     if (correct) {
