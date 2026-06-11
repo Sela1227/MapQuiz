@@ -1,7 +1,7 @@
 # SELA-handoff.md — MapQuiz
 
-> 首次對齊 Kit 是重大里程碑，依鐵律 #0 產出本 handoff。
-> 給 Kit Claude 升 Kit 用；分類待 SELA 對焦確認。
+> 依鐵律 #0：距上次 handoff（V0.1.0）已累積 5 個小版本，本版必走評估 → 產出。
+> 分類已先 grep Kit 避免重複；待 SELA 對焦確認。
 
 ---
 
@@ -9,10 +9,10 @@
 
 - **專案名稱：** MapQuiz（V0.2.0 由 TaiwanMapQuiz 改名；中文俗稱：台灣縣市地圖）
 - **專案類型：** 純靜態網頁（GitHub Pages，互動測驗／遊戲型）
-- **技術棧：** HTML + CSS + 原生 JS（無框架、無 build step）；WebAudio；localStorage
-- **規模：** 7 個程式/資料檔（index.html / style.css / app.js / data.js + favicon + assets）；app.js ~430 行、data.js ~358KB（建置期產生的地圖資料）
+- **技術棧：** HTML + CSS + 原生 JS（無框架、無 build step）；WebAudio；localStorage；Pillow（建置期 logo 轉檔）
+- **規模：** 8 個程式/資料檔；app.js ~400 行、data.js ~358KB（建置期產生地圖資料）、landmarks.json（下版素材）
 - **使用 Kit 版本：** V1.14.1
-- **完成版本：** V0.1.0
+- **完成版本：** V0.6.0
 - **完成日期：** 2026-06-11
 
 ---
@@ -20,101 +20,101 @@
 ## 一、用 Kit 的整體感受
 
 ### 預期外的順利
-- `reference-static-pages/架構說明.md` 直接點出「file:// ES module 失敗」「資料 vs 顯示分離」「不要塞單一巨檔」，照做就避開了三個坑。
-- 四級分類法（🔴🟡🟢✗）讓「該不該為對齊改架構」這種決定很好下。
+- `reference-static-pages` 的三條警告（file:// ES module、資料/顯示分離、勿單一巨檔）一開始照做，後面 5 版迭代都沒回頭踩。
+- logo 雙軌 + §17 prompt 自動工作流：從 CLAUDE.md 萃取 → 三決策 → 完整 prompt，SELA 拿去 Gemini 一次生成可用圖，流程順。
+- 四級分類法在「要不要為對齊改架構」「配色保不保留」這類決定上持續好用。
 
 ### 預期外的卡住
-- 靜態網頁 reference 偏「**內容展示型**」（健保藥物、簡報），本案是「**互動遊戲/測驗型**」純靜態，reference 的設計重點（資料表格、上游監控）對得上的不多，互動狀態機/計分/音效那塊得自己拿捏。
-- reference §7 同時出現「考慮 esbuild build step」與部署用 Git Pusher branch-serve（不跑 build）——這兩者其實衝突，第一次讀會猶豫要不要上 build。
+- 同 V0.1.0 handoff 所提：互動型純靜態（遊戲/測驗）與「framework 原型 → branch-serve 部署」兩個缺口仍在（未重複展開）。
+- §10.2 工作流 B 對「AI 生成的圓角方形 logo」轉檔細節沒有著墨（白角、取色），本案自行摸索（見第二節坑 1）。
 
 ### 整體評價
-- ✓ 對齊既有專案 SOP（claude-init §二）+ 四級分類 +「不做要寫理由」非常實用，省了反覆確認。
-- ✗ 缺「互動型純靜態（遊戲/工具）」的範例與「framework 原型 → branch-serve 部署」的決策提醒。
+- ✓ 規範覆蓋率高，V0.2–V0.6 五版迭代全程沒有需要「跳出 Kit」的時刻。
+- ✗ 工作流 B 的轉檔實作細節值得補一段，避免每個專案重新摸索。
 
 ---
 
 ## 一.5、新 stack 首遇報告
-- A（全新 framework/語言/工具）：**無**。技術棧 Kit 都覆蓋（純靜態 HTML/JS）。
-- B（既有 stack 新 API）：WebAudio 程式生成音效首次在 SELA 專案出現，但**沒踩到實質坑**（依方向 2 原則不另記）。
+- A（全新 framework/工具）：**無**。
+- B（既有 stack 新 API）：WebAudio 程式生成音效（V0.1.0 起）、Pillow floodfill 去白角（V0.3.0）。後者有實質坑 → 第二節條 1，標 `[既有 stack 新 API: Pillow]`。
 
 ---
 
-## 二、發現的「跨專案通用坑」
+## 二、發現的「跨專案通用坑」（建議進 Kit）
 
-> 先 grep Kit：file://、ES module、事件冒泡、build step 皆**已有覆蓋**（cross-platform-cheatsheet / static reference / pitfalls）。
-> 因此本案**不提新坑**，改把可強化處放第四節。
+### 強烈建議加坑
 
-（無新坑提案；既有坑的補強見第四節。）
+#### 1. [既有 stack 新 API: Pillow] AI 生成的圓角方形 logo 直接縮圖會有白角
+- **症狀**：把 AI（Gemini/DALL-E 等）生成的圓角方形 logo 直接用 Pillow 縮成 favicon/app icon，四角出現白色缺角；自行畫圓角遮罩又對不準原圖圓角半徑。
+- **原因**：AI 輸出的是「圓角圖形 + 白色頁面底」的滿幅 PNG，圓角縫隙是白底不是透明。
+- **做法**：取 logo 底色（用**整圖最大宗非白像素**取樣，比邊緣取樣準；邊緣常有暗角）→ 從**四角 floodfill** 把外圍白色換成底色（主體是被底色包住的白色孤島，不會被填到）→ 得到乾淨滿版方形母圖 → 圓角交給顯示端（CSS border-radius / 平台自動遮罩）。順手可用同法抹除角落浮水印。
+- **影響範圍**：所有走 logo 工作流 B 的專案（V1.13.0 起為預設，幾乎每個業務 app 都會經過）。
+- **證據**：本專案 CLAUDE.md 坑 P6、V0.3.0 版本歷程。
+- **檢查 1 結果**：grep Kit「floodfill / 去背 / 白角 / 圓角」→ §10.2 僅有「去背 ⚠ 有限」能力表，無此實作坑。建議直接補進 `logo/CLAUDE.md` §10.2 的處理步驟，或進坑庫。
+
+#### 2. 遊戲/互動 app 的「配色雙真相」：CSS 變數管 UI、JS 常數管 canvas/SVG 填色
+- **症狀**：改了 CSS `:root` 主題色，畫面大部分變了，但 SVG 地圖（或 canvas）的區塊顏色沒跟著變；之後改 theme-color 又漏掉 webmanifest。
+- **原因**：動態產生的 SVG/canvas 填色寫在 JS 常數，與 CSS 變數是兩套來源；theme-color 又散在 index.html 與 site.webmanifest 兩處（坑 #42 只講後者）。
+- **做法**：換主題色時固定改四處：CSS `:root`、JS 色票常數、HTML `theme-color`、webmanifest `theme_color`。在專案 CLAUDE.md「關鍵檔案路徑」明列這四處（本案做法）；或起手時就讓 JS 讀 `getComputedStyle` 取 CSS 變數（單一真相，但 file:// 雙擊與舊瀏覽器要驗證）。
+- **影響範圍**：所有「JS 動態畫圖 + CSS 主題」的網頁專案（圖表、地圖、遊戲都會中）。
+- **證據**：本專案 CLAUDE.md 坑 P5；V0.2.0（北歐改色）與 V0.3.0（對齊 logo 色）各踩半次。
+- **檢查 1 結果**：grep Kit「theme-color / theme_color」→ 坑 #42 涵蓋 HTML/manifest 一致，但**未涵蓋 JS 填色第三來源**。屬補強既有坑 #42 或新開一條，由 Kit Claude 決定。
+
+### 可加但等更多證據確認
+- 「遊戲計分機制宜從簡起步」：本案 V0.4 加整輪碼錶+時間獎勵，V0.6 被 SELA 收斂回「答對加/答錯扣＋每題速度加成」。一個案例還不足以成原則，先記錄。
 
 ---
 
 ## 三、發現的「跨專案設計模式」（建議進規範）
 
-### 1. 大型地理/資料視覺化：建置期前處理、執行期零依賴
-- **本案發生情境：** 縣市+鄉鎮市區界線原始 GeoJSON 達 9MB+20MB。用 Python（shapely）在**建置期**簡化線條、等距投影、外島做 inset、輸出成總計 ~400KB 的 SVG 路徑字串，執行期前端零依賴、直接吃 `window.MAP`。
-- **可推廣的原則：** 凡「重資料 + 輕互動」的靜態網頁，把資料整形/壓縮放建置期（Python），執行期只留輕量結構 + 原生 render；避免前端載原始大檔或拉 GIS library。
-- **代價/取捨：** 資料更新要重跑前處理腳本（非即時）；簡化會犧牲邊界精度（需取捨容差）。
-- **建議寫入：** `tech-stack-lessons.md` 靜態 HTML 章節，或未來 `reference-static-interactive`。
+> V0.1.0 handoff 的兩條（建置期前處理大型地理資料、事件委派+data-act 分派）**不重複提**，仍有效、證據又多了 5 版。
 
-### 2. 互動型純靜態用「事件委派 + data-act 分派」達成 SPA 體驗
-- **本案發生情境：** 無框架下做多畫面（首頁/選縣市/測驗/結算）切換，每次 `render()` 重畫 innerHTML；事件只綁一次在容器、用 `closest('[data-act]')` 分派。
-- **可推廣的原則：** 純靜態互動 app 不必上 framework；「單一委派監聽 + 宣告式 data-act」即可穩定處理重畫後的事件，避免逐元素重綁失效。
-- **代價/取捨：** 全量重畫對超大 DOM 不划算（本案畫面小，無感）。
-- **建議寫入：** `tech-stack-lessons.md` 靜態 HTML 章節。
+### 1. 「層級優先、選單同構」的多層內容 app 導航
+- **本案發生情境**：app 有兩層內容（縣市/鄉鎮市區）。原本首頁平鋪所有模式卡，兩層的入口長相不一致；V0.5.0 依 SELA 回饋改為「首頁只選層級 → 兩層進到**同構的模式選單**（預覽圖＋相同的模式卡）」，UI 立刻一致、之後加新層級（如景點題）也有現成模板。
+- **可推廣的原則**：內容有多個層級/資料集時，導航分兩步——先選資料集、再選玩法，且各資料集的第二層選單用同一個版型。
+- **代價/取捨**：多一次點擊才能開始；單層內容的 app 不需要。
+- **建議寫入**：sela-philosophy 設計品味段或 tech-stack-lessons 前端章。
 
 ---
 
 ## 四、Kit 該瘦身或調整的地方
 
-### 1. 補強 `reference-static-pages`：file:// 對策要給「正解」，不只「警告」
-- **現狀：** CLAUDE.md / README 提到「file:// 載 ES module 失敗」，但沒明講「**雙擊要能跑該怎麼做**」。
-- **建議改成：** 加一句對策——「需本機雙擊執行時，資料用 classic `<script>` 設 `window` 全域、主程式也用 classic script，**不要 fetch、不要 type=module**」。
-- **理由：** 本案要支援雙擊 + Pages 雙環境，這個對策是關鍵且可重用。
-
-### 2. 補強 `reference-static-pages` §7：build step 與 branch-serve 的衝突講清楚
-- **現狀：** §7 建議「考慮 esbuild build step」，但 SELA 部署是 Git Pusher 推 main、Pages branch 直接託管（不跑 build）。
-- **建議改成：** 加註——「若用 Git Pusher / Pages branch-serve 部署，**原始碼即上線檔，不可有 build step**；需要 build 就改走 GitHub Actions 產 dist 再發佈」。
-- **理由：** 避免下個靜態專案誤上 build 而部署出空白頁。
-
-### 3. 對齊 SOP（claude-init §二）補一條：framework 原型 → branch-serve 部署
-- **現狀：** 對齊 SOP 沒涵蓋「專案原型用了 React/Vite，但目標部署是 Pages branch-serve」這條路徑。
-- **建議：** 加決策提醒——「原型若是 framework 但部署走 branch-serve，對齊時應評估**重寫成純靜態**（或改 Actions build）」。本案即是此情境（React/Vite 原型 → V0.1.0 重寫純靜態）。
-
-### Kit 結構性建議
-- 評估新增 `reference-static-interactive`（互動/遊戲/測驗型純靜態），與現有偏內容展示的 `reference-static-pages` 區隔。素材可由本案萃取。
+1. **`logo/CLAUDE.md` §10.2 補「AI 圓角 logo 轉檔」步驟**：現狀只有能力表（去背 ⚠ 有限）；建議補第二節坑 1 的「取大宗色 → 四角 floodfill → 滿版方形 → 圓角交顯示端」四步，幾乎每個工作流 B 專案都用得到。
+2. **坑 #42 擴充**：從「HTML theme-color 與 manifest 要一致」擴成「主題色的 N 處真相清單：CSS 變數、JS 填色常數（如有動態繪圖）、HTML、manifest」。
+3. （重申 V0.1.0 三條補強：file:// 正解、branch-serve 與 build step 衝突、framework 原型對齊路徑——若 Kit 尚未處理，與本次合併處理。）
 
 ---
 
 ## 五、留在這個專案、不要回流 Kit 的東西
 
-- 台灣 22 縣市 / 368 鄉鎮市區的**資料本身**與名稱對映
-- 地圖投影、外島 inset、`hitCircles` 等**具體實作座標**
-- 計分公式具體數值（BASE=100、SPEED_CAP=8、連擊門檻 3/6/10、評級門檻）
-- 配色翡翠綠主題（app 向性，非通用）
-- 三種測驗模式與 quiz 業務流程
+- 台灣縣市/鄉鎮市區資料、投影座標、外島 inset/hitCircles 實作
+- 計分具體數值（+100、−50、速度 8s/+50、連擊 3/6/10 門檻、評級門檻）與其演變史
+- `data/landmarks.json` 的 66 個景點內容（業務素材）
+- 北歐霧藍配色具體色票（app 向性）
+- 三模式與 15 題上限等遊戲規則
 
 ---
 
 ## 六、Kit Claude 的建議行動清單
 
 ### 建議升 Kit 版本
-V1.15.0（b+1，新內容為主：補強 reference + 對齊 SOP 增補 + 評估新 reference）
+V1.15.0（b+1；若已因 V0.1.0 handoff 升過，則在該版基礎 b+1）
 
 ### 必做
-- [ ] `reference-static-pages` 補「file:// 雙擊對策（window 全域 + classic script）」
-- [ ] `reference-static-pages` §7 補「branch-serve 不可有 build step」的衝突說明
-- [ ] `claude-init.md` §二 對齊 SOP 補「framework 原型 → branch-serve → 評估轉純靜態」
+- [ ] `logo/CLAUDE.md` §10.2 補「AI 圓角方形 logo 轉檔四步」（第二節坑 1）
+- [ ] 坑 #42 擴充為「主題色 N 處真相」（第二節坑 2），或新開坑引用 #42
+- [ ] 確認 V0.1.0 handoff 三條補強是否已落地，未落地則一併處理
 
 ### 暫緩
-- [ ] 新增 `reference-static-interactive`：等再有 1 個同型專案佐證，再決定要不要獨立成 reference（目前只有本案一例）
-- [ ] 「建置期前處理大型資料」是否獨立成模式：先進 tech-stack-lessons，累積更多再評估升級
+- [ ] 「遊戲計分從簡起步」原則：等第二個遊戲型專案佐證
+- [ ] 「層級優先、選單同構」導航模式：可先記 tech-stack-lessons，要不要升 philosophy 等更多案例
 
 ### 不做
-- [ ] 把本案計分公式 / 台灣地理資料 / 翡翠配色收進 Kit（業務特定，不通用）
+- [ ] 本案計分數值、台灣資料、景點素材、翡翠/霧藍色票進 Kit（業務特定）
 
 ---
 
 ## 七、給 Kit Claude 的最後備註
 
-- 本案是「先成原型、再首次對齊 Kit」的典型：原型在對話中快速長出 React/Vite 版，對齊時因部署模型（branch-serve）才轉純靜態。這條路徑現實中會反覆出現，值得進 SOP。
-- 第三節兩個設計模式都只有本案一例，建議先記錄、待第二例再升級為正式規範或 reference。
+- 本 handoff 覆蓋 V0.2.0–V0.6.0 五版（V0.1.0 已有獨立 handoff，未重複其內容）。
+- V0.4→V0.6 的計分來回（加整輪限時 → 收斂回每題加成）是真實的需求演化紀錄，保留在專案版本歷程，對 Kit 的價值先以「暫緩」一條觀察。

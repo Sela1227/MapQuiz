@@ -170,6 +170,6 @@ h2 { font-size: 21px; font-weight: 700; margin: 4px 0 12px; color: var(--slate-d
 .hero-title { font-size: 22px; font-weight: 800; letter-spacing: .5px; margin: 2px 0 3px; }
 .hero-sub { font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,.88); }
 
-/* 限時挑戰：計時 chip + 分數列右側群組 */
+/* 分數列右側群組 */
 .srtright { display: flex; align-items: center; gap: 8px; }
-.timerchip { background: var(--primary); color: #fff; font-size: 13px; font-weight: 700; padding: 5px 11px; border-radius: 999px; letter-spacing: .5px; font-variant-numeric: tabular-nums; }
+.float.neg { color: var(--danger); }

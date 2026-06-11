@@ -15,8 +15,7 @@
 
 特色：
 
-- **限時挑戰**：全程碼錶，時間越短分數越高（答錯加 5 秒）
-- 連擊加成（3 連 ×1.5、6 連 ×2、10 連 ×3）＋ 速度獎勵（答得越快加越多）
+- **計分**：答對 +100（連擊 3/6/10 有 ×1.5/×2/×3 倍率）、答錯 −50（總分不低於 0）、每題 8 秒內答得越快額外加成越多（最高 +50）
 - 答對／答錯音效（WebAudio，可靜音）、分數浮動動畫
 - 結算評級 S+／S／A／B／C／D，並用對錯把整張地圖上色
 - **北歐霧藍極簡介面**，沉穩低干擾
@@ -50,6 +49,8 @@ python -m http.server 8000
 MapQuiz/
 ├── index.html              入口（含 favicon 套組、meta）
 ├── css/style.css           樣式（CSS 變數：北歐霧藍主題 + SELA 品牌色）
+├── data/
+│   └── landmarks.json      下版「景點題」素材（尚未接線）
 ├── js/
 │   ├── data.js             地圖資料（window.MAP / window.DISTRICTS）
 │   └── app.js              主程式（測驗流程、計分、音效、存檔）
@@ -75,12 +76,12 @@ app 專屬 logo（白色台灣＋定位 pin、北歐霧藍底）已整合為 fav
 
 ## 版本
 
-V0.4.0
+V0.6.0
 
 ---
 
 <div align="center">
   <img src="assets/sela.svg" width="22" alt="SELA"/>
   <br/>
-  <sub>Made by <strong>SELA</strong> · V0.4.0</sub>
+  <sub>Made by <strong>SELA</strong> · V0.6.0</sub>
 </div>

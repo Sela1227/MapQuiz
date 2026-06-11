@@ -16,19 +16,8 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var TARGET_PER_Q = 6, TIME_BONUS_K = 12, WRONG_PENALTY = 5000;
-  function isMap2() { return S.mode === "map2name" || S.mode === "timed"; }
-  function fmtTime(ms) { var s = Math.max(0, Math.round(ms / 1000)); return s < 60 ? s + " 秒" : Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
-  var timerInt = null;
-  function startTimer() {
-    if (timerInt) clearInterval(timerInt);
-    timerInt = setInterval(function () {
-      if (S.screen === "quiz" && S.mode === "timed") {
-        var el = document.getElementById("rt");
-        if (el) el.textContent = fmtTime((Date.now() - S.roundStart) + S.penaltyMs);
-      } else { clearInterval(timerInt); timerInt = null; }
-    }, 500);
-  }
+  var MAX_Q = 15, WRONG_POINTS = 50;
+  function isMap2() { return S.mode === "map2name"; }
 
   // sound
   var ACTX = null;
@@ -150,18 +139,27 @@
     return '' +
       '<div class="hero">' +
         '<div class="hero-chip"><img src="assets/app-logo.png" alt="MapQuiz"/></div>' +
-        '<div class="hero-txt"><div class="hero-kicker">地理挑戰</div><div class="hero-title">台灣縣市地圖</div><div class="hero-sub">連擊加倍、限時加分，邊玩邊記 22 縣市與 368 區。</div></div>' +
+        '<div class="hero-txt"><div class="hero-kicker">地理挑戰</div><div class="hero-title">台灣縣市地圖</div><div class="hero-sub">每輪最多 15 題；答對加分、答錯扣分，答得越快加成越多。</div></div>' +
       '</div>' +
-      '<div class="eyebrow sub">縣市</div><div style="height:8px"></div>' +
-      homeCard("startCounty", "timed", "限時挑戰", "看地圖選名字；時間越短，分數越高。答錯加 5 秒。", S.best["c-timed"]) +
-      homeCard("startCounty", "map2name", "看地圖，選名字", "地圖點亮一個縣市，從四個選項選出它。", S.best["c-map2name"]) +
-      homeCard("startCounty", "name2map", "看名字，點地圖", "給你縣市名稱，在地圖上點出位置。", S.best["c-name2map"]) +
-      homeCard("exploreCounty", "", "自由練習", "點任一縣市看名稱，先把位置摸熟。", 0) +
-      '<div class="eyebrow sub section-gap">鄉鎮市區</div>' +
-      homeCard("toPicker", "", "分區測驗", "選一個縣市，放大考它底下的鄉鎮市區。", 0) +
+      '<div class="eyebrow sub">選一個層級開始</div><div style="height:8px"></div>' +
+      '<button class="card" data-act="toCountyMenu"><div class="row"><span class="title">縣市</span><span class="best">22 個</span></div><div class="desc">全台 22 縣市的位置與名稱。</div></button>' +
+      '<button class="card" data-act="toPicker"><div class="row"><span class="title">鄉鎮市區</span><span class="best">368 個</span></div><div class="desc">選一個縣市，放大考它底下的分區。</div></button>' +
       missBox +
-      '<p class="note">金門、馬祖（連江縣）在地圖左上角小框內。地圖可用 +/− 放大。</p>' +
+      '<p class="note">金門、馬祖（連江縣）在地圖左上角小框內。地圖可用 +/− 放大。計分：答對 +100（連擊有倍率）、答錯 −50，每題 8 秒內越快加成越多（最高 +50）。</p>' +
       '<div class="attrib"><img src="assets/sela.svg" alt="SELA"/><span>Made by SELA</span></div>';
+  }
+
+  function viewCountyMenu() {
+    function card(act, arg, title, desc, bid) {
+      var b = (bid && S.best[bid] > 0) ? '<span class="best">最高 ' + S.best[bid] + ' 分</span>' : "";
+      return '<button class="card" data-act="' + act + '"' + (arg ? ' data-arg="' + arg + '"' : "") + '><div class="row"><span class="title">' + title + '</span>' + b + '</div><div class="desc">' + desc + '</div></button>';
+    }
+    return '<div class="topbar"><button class="linkbtn" data-act="home">‹ 回首頁</button></div>' +
+      '<div class="eyebrow" style="margin-top:8px">22 個縣市</div><h2>全台縣市</h2>' +
+      '<div style="height:230px;margin-bottom:16px">' + buildMap(NATIONAL, fillFlat, null, null, null) + '</div>' +
+      card("startCounty", "map2name", "看地圖，選名字", "地圖點亮一個縣市，從四個選項選出它。", "c-map2name") +
+      card("startCounty", "name2map", "看名字，點地圖", "給你縣市名稱，在地圖上點出位置。", "c-name2map") +
+      card("exploreCounty", "", "自由練習", "點任一縣市看名稱，不計分。", null);
   }
 
   function viewCountyPicker() {
@@ -183,10 +181,9 @@
     return '<div class="topbar"><button class="linkbtn" data-act="toPicker">‹ 換縣市</button></div>' +
       '<div class="eyebrow" style="margin-top:8px">' + n + ' 個鄉鎮市區</div><h2>' + c + '</h2>' +
       '<div style="height:230px;margin-bottom:16px">' + buildMap(districtDataset(c), fillFlat, null, null, null) + '</div>' +
-      card("timed", "限時挑戰", "看地圖選名字；時間越短分數越高。答錯加 5 秒。") +
       card("map2name", "看地圖，選名字", "地圖點亮一個區，從四個選項選出它。") +
       card("name2map", "看名字，點地圖", "給你區名，在地圖上點出位置。") +
-      card("explore", "自由練習", "點任一區看名稱。");
+      card("explore", "自由練習", "點任一區看名稱，不計分。");
   }
 
   function viewQuiz() {
@@ -196,9 +193,8 @@
     var mult = comboMult(S.combo);
     var comboCls = mult >= 2 ? "combo m2" : mult > 1 ? "combo m15" : "combo";
     var comboHtml = S.combo >= 2 ? '<div class="' + comboCls + ' tw-pop">連擊 ' + S.combo + (mult > 1 ? " ・ ×" + mult : "") + '</div>' : "";
-    var floatHtml = (S.locked && S.lastGain > 0) ? '<span class="float tw-float">+' + S.lastGain + '</span>' : "";
+    var floatHtml = (S.locked && S.lastGain !== 0) ? '<span class="float tw-float' + (S.lastGain < 0 ? ' neg' : '') + '">' + (S.lastGain > 0 ? '+' : '') + S.lastGain + '</span>' : "";
     var speedCls = S.locked ? "speedbar locked" : "speedbar run";
-    var timerHtml = (S.mode === "timed") ? '<span class="timerchip" id="rt">' + fmtTime((Date.now() - S.roundStart) + S.penaltyMs) + '</span>' : "";
 
     var promptHtml = '<div class="prompt"><div class="q">' + (isMap2() ? "點亮的是哪一個？" : "在地圖上找出：") + '</div>' +
       (S.mode === "name2map" ? '<div class="name">' + S.target + '</div>' : "") + '</div>';
@@ -231,14 +227,14 @@
     var nextBtn = S.locked ? '<div style="margin-top:12px"><button class="btn btn-primary" data-act="next">' + (S.idx + 1 >= S.queue.length ? "看成績" : "下一題") + '</button></div>' : "";
 
     return '<div class="topbar"><span class="muted" style="font-size:13px">' + ctx + '第 ' + (S.idx + 1) + '/' + S.queue.length + '</span><span class="right">' + muteBtn() + zoomBar() + '</span></div>' +
-      '<div class="scorestrip"><div><span class="lbl">分數</span><div class="pts">' + S.points + '</div></div><div class="srtright">' + timerHtml + comboHtml + '</div>' + floatHtml + '</div>' +
+      '<div class="scorestrip"><div><span class="lbl">分數</span><div class="pts">' + S.points + '</div></div><div class="srtright">' + comboHtml + '</div>' + floatHtml + '</div>' +
       '<div class="speedtrack"><div class="' + speedCls + '"></div></div>' +
       promptHtml + mapHtml + bottom + nextBtn;
   }
 
   function viewExplore() {
     var ds = dataset();
-    var backTo = S.level === "county" ? "home" : "districtMenuBack";
+    var backTo = S.level === "county" ? "countyMenuBack" : "districtMenuBack";
     var ctx = S.level === "county" ? "全台縣市" : S.activeCounty;
     var status = S.revealed ? S.revealed : ("點" + (ctx === "全台縣市" ? "縣市" : "區") + "看名稱");
     var statusCls = S.revealed ? "" : "muted";
@@ -256,26 +252,26 @@
     var wrong = S.answers.filter(function (a) { return !a.correct; }).map(function (a) { return a.name; });
     var avgMs = S.answers.length ? Math.round(S.answers.reduce(function (s, a) { return s + a.ms; }, 0) / S.answers.length) : 0;
     var ctx = S.level === "county" ? "全台縣市" : S.activeCounty;
-    var timedStats = (S.mode === "timed") ? '<span>用時 <b>' + fmtTime(S.elapsedMs) + '</b></span><span>時間獎勵 <b>+' + S.timeBonus + '</b></span>' : '';
     var rc = pct >= 90 ? COL.deep : pct >= 60 ? COL.correct : COL.muted;
     var chips = wrong.length ? '<div style="margin-bottom:16px"><div class="desc" style="margin-bottom:8px">這幾個再看看</div><div class="chips">' + wrong.map(function (n) { return '<span class="chip">' + n + '</span>'; }).join("") + '</div></div>' : "";
     var retry = wrong.length ? '<button class="btn btn-outline" data-act="retry">只考錯的 ' + wrong.length + ' 個</button>' : "";
-    var changeCounty = S.level === "district" ? '<button class="btn btn-outline" data-act="toPicker">換個縣市</button>' : "";
+    var backMenu = S.level === "district" ? '<button class="btn btn-outline" data-act="toPicker">換個縣市</button>' : '<button class="btn btn-outline" data-act="toCountyMenu">回模式選單</button>';
     return '<div class="topbar"><span class="muted" style="font-size:13px">' + ctx + '</span></div>' +
       '<div class="rankrow"><div class="rankbadge tw-pop" style="border-color:' + rc + '"><span class="g" style="color:' + rc + '">' + rk.g + '</span></div>' +
       '<div><div class="muted" style="font-size:13px">' + rk.label + (S.newBest ? " ・ 新紀錄!" : "") + '</div>' +
       '<div class="bigpts" style="color:' + rc + '">' + S.points + ' <small>分</small></div></div></div>' +
-      '<div class="stats"><span>答對 <b>' + score + '/' + total + '</b>（' + pct + '%）</span><span>最佳連擊 <b>' + S.bestCombo + '</b></span><span>平均 <b>' + (avgMs / 1000).toFixed(1) + 's</b></span>' + timedStats + '</div>' +
+      '<div class="stats"><span>答對 <b>' + score + '/' + total + '</b>（' + pct + '%）</span><span>最佳連擊 <b>' + S.bestCombo + '</b></span><span>平均 <b>' + (avgMs / 1000).toFixed(1) + 's</b></span></div>' +
       '<div style="height:42vh;margin-bottom:12px">' + buildMap(ds, fillResult, null, null, null) + '</div>' +
       '<div class="legend"><span><span class="dot" style="background:' + COL.correct + '"></span>答對 ' + score + '</span><span><span class="dot" style="background:' + COL.wrong + '"></span>答錯 ' + wrong.length + '</span></div>' +
       chips +
-      '<div class="btn-col"><button class="btn btn-primary" data-act="again">再玩一次</button>' + retry + changeCounty +
+      '<div class="btn-col"><button class="btn btn-primary" data-act="again">再玩一次</button>' + retry + backMenu +
       '<button class="btn btn-ghost" data-act="home">回首頁</button></div>';
   }
 
   function render() {
     var html;
     if (S.screen === "home") html = viewHome();
+    else if (S.screen === "countyMenu") html = viewCountyMenu();
     else if (S.screen === "countyPicker") html = viewCountyPicker();
     else if (S.screen === "districtMenu") html = viewDistrictMenu();
     else if (S.screen === "explore") html = viewExplore();
@@ -289,15 +285,13 @@
     var ds = level === "county" ? NATIONAL : districtDataset(county);
     var names = (list && list.length) ? list : Object.keys(ds.regions);
     S.level = level; S.activeCounty = county; S.mode = (mode === "explore" ? null : mode);
-    S.queue = shuffle(names); S.idx = 0; S.answers = []; S.picked = null; S.locked = false;
+    S.queue = shuffle(names).slice(0, MAX_Q); S.idx = 0; S.answers = []; S.picked = null; S.locked = false;
     S.zoom = 1; S.revealed = null; S.points = 0; S.combo = 0; S.bestCombo = 0; S.lastGain = 0; S.newBest = false;
     S.startTime = Date.now();
     S.screen = (mode === "explore") ? "explore" : "quiz";
     S.target = S.queue[0];
-    S.roundStart = Date.now(); S.penaltyMs = 0; S.timeBonus = 0; S.elapsedMs = 0;
     if (S.screen === "quiz" && isMap2()) S.options = sampleOptions(Object.keys(ds.regions), S.target);
     render();
-    if (S.mode === "timed") startTimer();
   }
 
   function bumpMiss(name) {
@@ -317,7 +311,7 @@
       S.combo = nc; S.bestCombo = Math.max(S.bestCombo, nc); S.points += gained; S.lastGain = gained;
       if (!S.muted) sfx.correct(nc);
     } else {
-      S.combo = 0; S.lastGain = 0; bumpMiss(S.target); if (S.mode === "timed") S.penaltyMs += WRONG_PENALTY;
+      S.combo = 0; var loss = Math.min(WRONG_POINTS, S.points); S.points -= loss; S.lastGain = -loss; bumpMiss(S.target);
       if (!S.muted) sfx.wrong();
     }
     render();
@@ -335,13 +329,6 @@
 
   function finish() {
     var score = S.answers.filter(function (a) { return a.correct; }).length;
-    if (S.mode === "timed") {
-      S.elapsedMs = (Date.now() - S.roundStart) + S.penaltyMs;
-      var elapsedSec = S.elapsedMs / 1000;
-      S.timeBonus = Math.max(0, Math.round((S.queue.length * TARGET_PER_Q - elapsedSec) * TIME_BONUS_K));
-      S.points += S.timeBonus;
-    }
-    if (timerInt) { clearInterval(timerInt); timerInt = null; }
     var id = bestId(S.level, S.mode, S.activeCounty);
     var prev = S.best[id] || 0;
     S.newBest = S.points > prev;
@@ -363,6 +350,8 @@
     switch (act) {
       case "home": S.screen = "home"; render(); break;
       case "toPicker": S.screen = "countyPicker"; render(); break;
+      case "toCountyMenu": S.screen = "countyMenu"; render(); break;
+      case "countyMenuBack": S.screen = "countyMenu"; render(); break;
       case "pickCounty": S.activeCounty = arg; S.screen = "districtMenu"; render(); break;
       case "districtMenuBack": S.screen = "districtMenu"; render(); break;
       case "startCounty": start(arg, "county"); break;
