@@ -246,3 +246,7 @@ h2 { font-size: 21px; font-weight: 700; margin: 4px 0 12px; color: var(--slate-d
 @media (min-width: 900px) {
   .x-map { height: calc(100vh - 190px); }
 }
+
+/* 復習卡 */
+.review-card { border-color: var(--primary); }
+.review-card .title { color: var(--primary); }

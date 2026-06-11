@@ -1,0 +1,2175 @@
+{
+ "schema_version": 1,
+ "items": {
+  "台北市/大安區": [
+   {
+    "text": "大安森林公園是都會之肺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "師大與台大學區交織",
+    "angle": "unsorted"
+   },
+   {
+    "text": "東區商圈時尚薈萃",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/文山區": [
+   {
+    "text": "貓空纜車通往茶山",
+    "angle": "unsorted"
+   },
+   {
+    "text": "政大坐落於山城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "木柵動物園在轄內",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/信義區": [
+   {
+    "text": "101大樓的所在地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "百貨商圈高度密集",
+    "angle": "unsorted"
+   },
+   {
+    "text": "信義威秀電影街熱鬧",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/萬華區": [
+   {
+    "text": "艋舺是台北發源地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "龍山寺香火鼎盛",
+    "angle": "unsorted"
+   },
+   {
+    "text": "剝皮寮老街懷舊",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/中正區": [
+   {
+    "text": "總統府與府前廣場",
+    "angle": "unsorted"
+   },
+   {
+    "text": "中正紀念堂的腹地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "台北車站交通樞紐",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/南港區": [
+   {
+    "text": "昔日黑鄉轉型軟體園區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "南港展覽館會展重鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國家生技園區進駐",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/松山區": [
+   {
+    "text": "松山文創園區由菸廠改建",
+    "angle": "unsorted"
+   },
+   {
+    "text": "小巨蛋是演唱會場地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "饒河夜市美食雲集",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/大同區": [
+   {
+    "text": "大稻埕迪化街南北貨",
+    "angle": "unsorted"
+   },
+   {
+    "text": "寧夏夜市古早味濃",
+    "angle": "unsorted"
+   },
+   {
+    "text": "孔廟與保安宮並立",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/中山區": [
+   {
+    "text": "林森北條通日式風情",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花博公園綠意盎然",
+    "angle": "unsorted"
+   },
+   {
+    "text": "中山北路婚紗街聚集",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/內湖區": [
+   {
+    "text": "科技園區白領聚集",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大湖公園山水相映",
+    "angle": "unsorted"
+   },
+   {
+    "text": "碧湖步道親近自然",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/士林區": [
+   {
+    "text": "士林夜市是觀光名所",
+    "angle": "unsorted"
+   },
+   {
+    "text": "故宮博物院典藏國寶",
+    "angle": "unsorted"
+   },
+   {
+    "text": "陽明山國家公園入口",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市/北投區": [
+   {
+    "text": "溫泉鄉有地熱谷",
+    "angle": "unsorted"
+   },
+   {
+    "text": "凱達格蘭文化館",
+    "angle": "unsorted"
+   },
+   {
+    "text": "北投圖書館是綠建築",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/蘆竹區": [
+   {
+    "text": "南崁工業與住宅交織",
+    "angle": "unsorted"
+   },
+   {
+    "text": "坑口彩繪村繽紛",
+    "angle": "unsorted"
+   },
+   {
+    "text": "羊稠步道森林浴",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/龜山區": [
+   {
+    "text": "林口長庚醫療重鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "眷村文化園區保存",
+    "angle": "unsorted"
+   },
+   {
+    "text": "壽山巖觀音寺古剎",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/復興區": [
+   {
+    "text": "拉拉山有神木群",
+    "angle": "unsorted"
+   },
+   {
+    "text": "小烏來天空步道凌空",
+    "angle": "unsorted"
+   },
+   {
+    "text": "角板山行館梅園",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/大溪區": [
+   {
+    "text": "老街巴洛克牌樓",
+    "angle": "unsorted"
+   },
+   {
+    "text": "木器神桌工藝聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "慈湖兩蔣文化園區",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/八德區": [
+   {
+    "text": "埤塘景觀星羅棋布",
+    "angle": "unsorted"
+   },
+   {
+    "text": "廣豐綠廊休憩",
+    "angle": "unsorted"
+   },
+   {
+    "text": "興仁夜市熱鬧",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/桃園區": [
+   {
+    "text": "市政與商業中心",
+    "angle": "unsorted"
+   },
+   {
+    "text": "虎頭山公園眺市景",
+    "angle": "unsorted"
+   },
+   {
+    "text": "景福宮奉開漳聖王",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/大園區": [
+   {
+    "text": "國際機場的所在",
+    "angle": "unsorted"
+   },
+   {
+    "text": "竹圍漁港海鮮直送",
+    "angle": "unsorted"
+   },
+   {
+    "text": "許厝港濕地賞候鳥",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/楊梅區": [
+   {
+    "text": "秀才步道飄茶香",
+    "angle": "unsorted"
+   },
+   {
+    "text": "客家庄聚落保存",
+    "angle": "unsorted"
+   },
+   {
+    "text": "埔心牧場親子同遊",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/新屋區": [
+   {
+    "text": "綠色隧道沿海岸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石滬群是古漁法",
+    "angle": "unsorted"
+   },
+   {
+    "text": "永安漁港客家漁村",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/觀音區": [
+   {
+    "text": "蓮花季賞荷盛開",
+    "angle": "unsorted"
+   },
+   {
+    "text": "白沙岬燈塔百年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "草漯沙丘地景奇特",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/中壢區": [
+   {
+    "text": "中央大學的學區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "中原商圈洋溢青春",
+    "angle": "unsorted"
+   },
+   {
+    "text": "新明夜市小吃多",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/平鎮區": [
+   {
+    "text": "褒忠祠義民信仰",
+    "angle": "unsorted"
+   },
+   {
+    "text": "新勢公園綠地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "客家文化濃厚",
+    "angle": "unsorted"
+   }
+  ],
+  "桃園市/龍潭區": [
+   {
+    "text": "龍潭大池與南天宮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "小人國主題樂園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "三坑老街石板路",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/龍井區": [
+   {
+    "text": "東海大學路思義教堂著名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "龍井綠竹筍是特產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "麗水漁港有夕照",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/大雅區": [
+   {
+    "text": "小麥田金黃成片",
+    "angle": "unsorted"
+   },
+   {
+    "text": "趙家窯傳承陶藝",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鄰近中科園區",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/沙鹿區": [
+   {
+    "text": "靜宜弘光在此設校",
+    "angle": "unsorted"
+   },
+   {
+    "text": "美仁里有彩繪巷",
+    "angle": "unsorted"
+   },
+   {
+    "text": "沙鹿夜市熱鬧",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/梧棲區": [
+   {
+    "text": "台中港觀光漁市",
+    "angle": "unsorted"
+   },
+   {
+    "text": "頂魚寮公園適合親子",
+    "angle": "unsorted"
+   },
+   {
+    "text": "三井OUTLET進駐",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/豐原區": [
+   {
+    "text": "廟東夜市美食雲集",
+    "angle": "unsorted"
+   },
+   {
+    "text": "漆藝館傳承工藝",
+    "angle": "unsorted"
+   },
+   {
+    "text": "葫蘆墩公園綠意",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/東勢區": [
+   {
+    "text": "客家山城風情濃",
+    "angle": "unsorted"
+   },
+   {
+    "text": "東豐自行車道串連",
+    "angle": "unsorted"
+   },
+   {
+    "text": "是大雪山林場入口",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/后里區": [
+   {
+    "text": "花博森林園區所在",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬場與薩克斯風聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "中社花海四季綻放",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/神岡區": [
+   {
+    "text": "筱雲山莊是古厝",
+    "angle": "unsorted"
+   },
+   {
+    "text": "氣球博物館可體驗",
+    "angle": "unsorted"
+   },
+   {
+    "text": "社口林宅列古蹟",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/新社區": [
+   {
+    "text": "白冷圳是水利遺產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "古堡莊園歐風建築",
+    "angle": "unsorted"
+   },
+   {
+    "text": "香菇與花海聞名",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/石岡區": [
+   {
+    "text": "石岡水壩留921遺跡",
+    "angle": "unsorted"
+   },
+   {
+    "text": "東豐綠廊由此起",
+    "angle": "unsorted"
+   },
+   {
+    "text": "客家美食道地",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/外埔區": [
+   {
+    "text": "忘憂谷稻浪如畫",
+    "angle": "unsorted"
+   },
+   {
+    "text": "水流東有桐花步道",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鐵砧山風景秀麗",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/大肚區": [
+   {
+    "text": "磺溪書院是古蹟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "追分車站祈福勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大肚山台地遼闊",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/和平區": [
+   {
+    "text": "谷關溫泉鄉聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "武陵農場櫻花盛開",
+    "angle": "unsorted"
+   },
+   {
+    "text": "梨山高山水果香甜",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/大甲區": [
+   {
+    "text": "鎮瀾宮媽祖遶境",
+    "angle": "unsorted"
+   },
+   {
+    "text": "奶油酥餅是名產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鐵砧山是風景區",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/大安區": [
+   {
+    "text": "大安濱海樂園戲水",
+    "angle": "unsorted"
+   },
+   {
+    "text": "龜殼生態公園賞景",
+    "angle": "unsorted"
+   },
+   {
+    "text": "松仔腳有廟會傳統",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/清水區": [
+   {
+    "text": "高美濕地夕陽絕美",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鰲峰山運動公園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "米糕是在地名物",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/霧峰區": [
+   {
+    "text": "921地震教育園區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "霧峰林家花園宏偉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "亞洲大學建築現代",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/大里區": [
+   {
+    "text": "菩薩寺清水模建築",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國光花市假日熱鬧",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大里杙老街懷舊",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/南區": [
+   {
+    "text": "台中文學館日式建築",
+    "angle": "unsorted"
+   },
+   {
+    "text": "忠孝夜市銅板美食",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國資圖書館宏偉",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/烏日區": [
+   {
+    "text": "高鐵台中站樞紐",
+    "angle": "unsorted"
+   },
+   {
+    "text": "成功嶺營區歷史",
+    "angle": "unsorted"
+   },
+   {
+    "text": "知高圳步道親水",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/中區": [
+   {
+    "text": "宮原眼科甜點名店",
+    "angle": "unsorted"
+   },
+   {
+    "text": "第二市場小吃匯集",
+    "angle": "unsorted"
+   },
+   {
+    "text": "綠川水岸廊道",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/西區": [
+   {
+    "text": "美術館綠園道優雅",
+    "angle": "unsorted"
+   },
+   {
+    "text": "勤美誠品商圈",
+    "angle": "unsorted"
+   },
+   {
+    "text": "審計新村文創聚落",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/南屯區": [
+   {
+    "text": "犁頭店是老聚落",
+    "angle": "unsorted"
+   },
+   {
+    "text": "彩虹眷村繽紛",
+    "angle": "unsorted"
+   },
+   {
+    "text": "萬和宮老二媽信仰",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/北區": [
+   {
+    "text": "中國醫藥大學在此",
+    "angle": "unsorted"
+   },
+   {
+    "text": "一中街商圈青春",
+    "angle": "unsorted"
+   },
+   {
+    "text": "台中公園湖心亭",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/西屯區": [
+   {
+    "text": "逢甲夜市全台最旺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "台中歌劇院曲牆",
+    "angle": "unsorted"
+   },
+   {
+    "text": "秋紅谷生態池",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/北屯區": [
+   {
+    "text": "大坑步道群健行",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紙箱王主題園區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "軍功路一帶眷村",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/潭子區": [
+   {
+    "text": "潭雅神綠園道騎乘",
+    "angle": "unsorted"
+   },
+   {
+    "text": "摘星山莊是古厝",
+    "angle": "unsorted"
+   },
+   {
+    "text": "加工出口區設立",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/東區": [
+   {
+    "text": "台中火車站舊站古蹟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "東門城樂成宮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "帝國糖廠遺構",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市/太平區": [
+   {
+    "text": "蝙蝠洞生態豐富",
+    "angle": "unsorted"
+   },
+   {
+    "text": "頭汴坑溪谷清涼",
+    "angle": "unsorted"
+   },
+   {
+    "text": "咬人狗坑步道",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/新營區": [
+   {
+    "text": "糖鐵五分車懷舊",
+    "angle": "unsorted"
+   },
+   {
+    "text": "太子宮太子爺信仰",
+    "angle": "unsorted"
+   },
+   {
+    "text": "新營鐵道地景公園",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/鹽水區": [
+   {
+    "text": "蜂炮元宵震撼",
+    "angle": "unsorted"
+   },
+   {
+    "text": "月津港燈節浪漫",
+    "angle": "unsorted"
+   },
+   {
+    "text": "八角樓木造古蹟",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/白河區": [
+   {
+    "text": "蓮花季夏日盛放",
+    "angle": "unsorted"
+   },
+   {
+    "text": "關子嶺泥漿溫泉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "林初埤木棉道",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/後壁區": [
+   {
+    "text": "無米樂稻香故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "菁寮老街懷舊",
+    "angle": "unsorted"
+   },
+   {
+    "text": "土溝農村美術館",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/麻豆區": [
+   {
+    "text": "代天府十八地獄",
+    "angle": "unsorted"
+   },
+   {
+    "text": "麻豆文旦聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "碗粿是在地味",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/下營區": [
+   {
+    "text": "田媽媽鵝肉料理",
+    "angle": "unsorted"
+   },
+   {
+    "text": "上帝廟玄天上帝",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蠶桑文化園區",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/六甲區": [
+   {
+    "text": "烏山頭水庫珊瑚潭",
+    "angle": "unsorted"
+   },
+   {
+    "text": "林鳳營鮮乳產地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "赤山龍湖巖古剎",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/官田區": [
+   {
+    "text": "水雉復育棲地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "葫蘆埤自然公園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "菱角田風光在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/大內區": [
+   {
+    "text": "南瀛天文館觀星",
+    "angle": "unsorted"
+   },
+   {
+    "text": "走馬瀨農場在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "二溪芒果產區",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/佳里區": [
+   {
+    "text": "蕭壠文化園區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "金唐殿剪黏藝術",
+    "angle": "unsorted"
+   },
+   {
+    "text": "北頭洋平埔文化",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/學甲區": [
+   {
+    "text": "上白礁謁祖祭典",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蜀葵花海春日",
+    "angle": "unsorted"
+   },
+   {
+    "text": "是虱目魚故鄉",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/西港區": [
+   {
+    "text": "刈香慶典三年一科",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾文溪畔農鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "胡麻產區在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/新化區": [
+   {
+    "text": "老街巴洛克立面",
+    "angle": "unsorted"
+   },
+   {
+    "text": "virtue街役場古蹟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大目降文化園區",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/新市區": [
+   {
+    "text": "南科考古遺址",
+    "angle": "unsorted"
+   },
+   {
+    "text": "樹谷生活科學館",
+    "angle": "unsorted"
+   },
+   {
+    "text": "毛豆外銷日本",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/安定區": [
+   {
+    "text": "蘇厝王船祭典",
+    "angle": "unsorted"
+   },
+   {
+    "text": "管寮看牛墟在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "胡麻油飄香在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/玉井區": [
+   {
+    "text": "芒果產業重鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "噍吧哖事件紀念",
+    "angle": "unsorted"
+   },
+   {
+    "text": "虎頭山遠眺在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/楠西區": [
+   {
+    "text": "梅嶺賞梅健行",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾文水庫遊湖",
+    "angle": "unsorted"
+   },
+   {
+    "text": "江家古厝聚落",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/南化區": [
+   {
+    "text": "關山里咖啡飄香",
+    "angle": "unsorted"
+   },
+   {
+    "text": "烏山獼猴保護",
+    "angle": "unsorted"
+   },
+   {
+    "text": "南化水庫翠綠",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/左鎮區": [
+   {
+    "text": "設有菜寮化石館",
+    "angle": "unsorted"
+   },
+   {
+    "text": "草山月世界惡地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "二寮日出雲海",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/仁德區": [
+   {
+    "text": "奇美博物館宮殿",
+    "angle": "unsorted"
+   },
+   {
+    "text": "十鼓文創糖廠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "虎山林場綠蔭",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/歸仁區": [
+   {
+    "text": "高鐵台南站樞紐",
+    "angle": "unsorted"
+   },
+   {
+    "text": "沙崙綠能科學城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "仁壽宮保生大帝",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/關廟區": [
+   {
+    "text": "關廟麵日曬聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鳳梨產業重鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "山西宮關聖帝君",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/龍崎區": [
+   {
+    "text": "惡地虎形山地景",
+    "angle": "unsorted"
+   },
+   {
+    "text": "竹炭文化體驗",
+    "angle": "unsorted"
+   },
+   {
+    "text": "牛埔泥岩教學區",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/永康區": [
+   {
+    "text": "永康商圈繁華",
+    "angle": "unsorted"
+   },
+   {
+    "text": "台南應用科大",
+    "angle": "unsorted"
+   },
+   {
+    "text": "三崁店糖廠遺構",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/北區": [
+   {
+    "text": "公園路成功大學",
+    "angle": "unsorted"
+   },
+   {
+    "text": "開元寺古剎可訪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花園夜市最旺",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/北門區": [
+   {
+    "text": "井仔腳瓦盤鹽田",
+    "angle": "unsorted"
+   },
+   {
+    "text": "水晶教堂浪漫",
+    "angle": "unsorted"
+   },
+   {
+    "text": "烏腳病醫療紀念",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/安南區": [
+   {
+    "text": "四草綠色隧道",
+    "angle": "unsorted"
+   },
+   {
+    "text": "台江國家公園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鹽水溪口濕地",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/南區": [
+   {
+    "text": "黃金海岸觀浪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "灣裡萬年殿在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "喜樹彩繪藝術村",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/東區": [
+   {
+    "text": "成大校園綠蔭",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巴克禮公園落羽松",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大東夜市熱鬧",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/安平區": [
+   {
+    "text": "安平古堡熱蘭遮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "樹屋與洋行在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蝦捲與蚵嗲在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/中西區": [
+   {
+    "text": "赤崁樓古蹟可訪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "神農街文青在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國華街小吃天堂",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/善化區": [
+   {
+    "text": "善化糖廠冰品",
+    "angle": "unsorted"
+   },
+   {
+    "text": "胡厝寮彩繪村",
+    "angle": "unsorted"
+   },
+   {
+    "text": "慶安宮五文昌",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/山上區": [
+   {
+    "text": "山上花園水道博物館",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾文溪伏流在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "設有蘭科植物園",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/柳營區": [
+   {
+    "text": "乳牛的家牧場",
+    "angle": "unsorted"
+   },
+   {
+    "text": "劉家古厝聚落",
+    "angle": "unsorted"
+   },
+   {
+    "text": "八翁酪農區在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/東山區": [
+   {
+    "text": "東山咖啡公路",
+    "angle": "unsorted"
+   },
+   {
+    "text": "碧雲寺觀音在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "龍眼乾窯焙在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/七股區": [
+   {
+    "text": "鹽山雪白攀登",
+    "angle": "unsorted"
+   },
+   {
+    "text": "黑面琵鷺保護區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "潟湖蚵棚風光",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市/將軍區": [
+   {
+    "text": "馬沙溝海濱在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "方圓美術館在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "青鯤鯓扇形鹽田",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/田中鎮": [
+   {
+    "text": "蕭家祖廟古蹟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "八堡圳水利設施",
+    "angle": "unsorted"
+   },
+   {
+    "text": "襪子產業聚落",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/社頭鄉": [
+   {
+    "text": "織襪之鄉在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "清水岩寺在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "芭樂產區在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/員林市": [
+   {
+    "text": "百果山風景區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "員林公園在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蜜餞名產在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/彰化市": [
+   {
+    "text": "八卦山大佛地標",
+    "angle": "unsorted"
+   },
+   {
+    "text": "扇形車庫在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "肉圓發源在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/和美鎮": [
+   {
+    "text": "道東書院古蹟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紡織重鎮在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "卦山米粉在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/線西鄉": [
+   {
+    "text": "蛤蜊兵營彩繪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "白馬的家在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "台灣優格餅乾",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/伸港鄉": [
+   {
+    "text": "福安宮媽祖廟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "海岸濕地賞鳥",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蔬菜產區在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/秀水鄉": [
+   {
+    "text": "馬興陳宅益源",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花卉苗木在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "稻米之鄉在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/花壇鄉": [
+   {
+    "text": "是茉莉花產地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "虎山巖古剎可訪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紅磚窯業在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/芬園鄉": [
+   {
+    "text": "是文人賴和的故里",
+    "angle": "unsorted"
+   },
+   {
+    "text": "米粉與荔枝在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "寶藏寺古蹟可訪",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/溪湖鎮": [
+   {
+    "text": "有糖廠五分車",
+    "angle": "unsorted"
+   },
+   {
+    "text": "羊肉爐美食聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "葡萄產區在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/大村鄉": [
+   {
+    "text": "是葡萄的故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大村車站在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "平和社區在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/埔鹽鄉": [
+   {
+    "text": "大有社區彩繪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "是花椰菜產地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "金針花田在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/埔心鄉": [
+   {
+    "text": "蜜紅葡萄在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "有羅厝天主堂",
+    "angle": "unsorted"
+   },
+   {
+    "text": "果園觀光在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/永靖鄉": [
+   {
+    "text": "成美公園庭園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "餘三館古厝在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花卉園藝在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/二水鄉": [
+   {
+    "text": "有集集線鐵道經過",
+    "angle": "unsorted"
+   },
+   {
+    "text": "八堡圳取水設施",
+    "angle": "unsorted"
+   },
+   {
+    "text": "白柚名產在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/二林鎮": [
+   {
+    "text": "蔗農事件紀念",
+    "angle": "unsorted"
+   },
+   {
+    "text": "葡萄酒莊在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "儒林書院在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/埤頭鄉": [
+   {
+    "text": "中興穀堡稻米",
+    "angle": "unsorted"
+   },
+   {
+    "text": "合興宮媽祖廟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "稻田風光在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/芳苑鄉": [
+   {
+    "text": "海牛採蚵文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "王功漁火美景",
+    "angle": "unsorted"
+   },
+   {
+    "text": "是紅蘿蔔產地",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/大城鄉": [
+   {
+    "text": "濁水溪出海口",
+    "angle": "unsorted"
+   },
+   {
+    "text": "西瓜產區在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "風頭水尾在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/竹塘鄉": [
+   {
+    "text": "稻米之鄉在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "醒靈寺在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "平原農村在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/溪州鄉": [
+   {
+    "text": "有費茲洛公園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "成功旅社農用",
+    "angle": "unsorted"
+   },
+   {
+    "text": "莿仔埤圳在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/鹿港鎮": [
+   {
+    "text": "天后宮香火廟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "老街九曲巷著名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "龍山寺藻井著名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/福興鄉": [
+   {
+    "text": "穀倉日式建築",
+    "angle": "unsorted"
+   },
+   {
+    "text": "有乳牛彩繪村",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花椰菜乾在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/北斗鎮": [
+   {
+    "text": "肉圓發源地在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "奠安宮媽祖廟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紅磚市場在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "彰化縣/田尾鄉": [
+   {
+    "text": "公路花園賞花",
+    "angle": "unsorted"
+   },
+   {
+    "text": "菊花故鄉在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "有怡心園庭園",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/小港區": [
+   {
+    "text": "國際機場所在",
+    "angle": "unsorted"
+   },
+   {
+    "text": "臨海工業區在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "淨園農場親子",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/鹽埕區": [
+   {
+    "text": "駁二藝術特區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大溝頂老街在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鴨肉珍美食聞名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/新興區": [
+   {
+    "text": "六合夜市觀光",
+    "angle": "unsorted"
+   },
+   {
+    "text": "美麗島站穹頂",
+    "angle": "unsorted"
+   },
+   {
+    "text": "南華商圈熱鬧",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/前金區": [
+   {
+    "text": "城市光廊浪漫",
+    "angle": "unsorted"
+   },
+   {
+    "text": "設有電影圖書館",
+    "angle": "unsorted"
+   },
+   {
+    "text": "新堀江商圈熱鬧",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/前鎮區": [
+   {
+    "text": "夢時代購物熱鬧",
+    "angle": "unsorted"
+   },
+   {
+    "text": "勞工公園在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "漁港遠洋基地",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/楠梓區": [
+   {
+    "text": "後勁夜市在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "都會公園綠地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "加工出口區在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/鳳山區": [
+   {
+    "text": "鳳儀書院古蹟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曹公圳水利設施",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大東文化藝術中心",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/大寮區": [
+   {
+    "text": "紅豆產區在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "義大世界遊樂",
+    "angle": "unsorted"
+   },
+   {
+    "text": "設有鳳山水庫",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/大樹區": [
+   {
+    "text": "佛光山道場在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "有舊鐵橋濕地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "玉荷包荔枝在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/大社區": [
+   {
+    "text": "觀音山風景怡人",
+    "angle": "unsorted"
+   },
+   {
+    "text": "三奶壇芭樂在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "碧雲宮在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/仁武區": [
+   {
+    "text": "八卦寮埤公園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "澄觀路商圈熱鬧",
+    "angle": "unsorted"
+   },
+   {
+    "text": "工業與住宅在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/鳥松區": [
+   {
+    "text": "澄清湖風景怡人",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鳥松濕地在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "棒球場在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/岡山區": [
+   {
+    "text": "羊肉爐名物在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "籮筐會趕集在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "設有航空教育館",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/橋頭區": [
+   {
+    "text": "糖廠白屋冰品",
+    "angle": "unsorted"
+   },
+   {
+    "text": "台鐵橋頭在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "十鼓糖廠在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/燕巢區": [
+   {
+    "text": "太陽谷惡地在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "泥火山奇觀奇特",
+    "angle": "unsorted"
+   },
+   {
+    "text": "芭樂與棗在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/田寮區": [
+   {
+    "text": "月世界惡地在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "泥火山地景奇特",
+    "angle": "unsorted"
+   },
+   {
+    "text": "一線天峽谷在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/阿蓮區": [
+   {
+    "text": "大崗山風景怡人",
+    "angle": "unsorted"
+   },
+   {
+    "text": "超峰寺古剎可訪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "龍眼蜂蜜在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/路竹區": [
+   {
+    "text": "一甲關帝廟在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蕃茄產區在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "科學園區在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/湖內區": [
+   {
+    "text": "明寧靖王墓在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "圍仔內慈濟宮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "太空梭意象在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/旗山區": [
+   {
+    "text": "老街香蕉歲月",
+    "angle": "unsorted"
+   },
+   {
+    "text": "糖廠文化園區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "天后宮媽祖廟",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/美濃區": [
+   {
+    "text": "客家油紙傘工藝",
+    "angle": "unsorted"
+   },
+   {
+    "text": "菸樓文化在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "粄條美食聞名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/六龜區": [
+   {
+    "text": "不老溫泉鄉在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "十八羅漢山在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "荖濃溪泛舟在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/甲仙區": [
+   {
+    "text": "芋頭冰名產在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "化石館在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "小林村紀念在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/杉林區": [
+   {
+    "text": "大愛永久屋在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "葫蘆雕藝工藝",
+    "angle": "unsorted"
+   },
+   {
+    "text": "月光山步道在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/內門區": [
+   {
+    "text": "有宋江陣表演活動",
+    "angle": "unsorted"
+   },
+   {
+    "text": "是總舖師故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紫竹寺觀音在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/茂林區": [
+   {
+    "text": "紫斑蝶幽谷奇特",
+    "angle": "unsorted"
+   },
+   {
+    "text": "有多納石板屋",
+    "angle": "unsorted"
+   },
+   {
+    "text": "龍頭山曲流在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/桃源區": [
+   {
+    "text": "梅山部落在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "南橫公路在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "布農族文化在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/那瑪夏區": [
+   {
+    "text": "螢火蟲季在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "達卡努瓦部落",
+    "angle": "unsorted"
+   },
+   {
+    "text": "是水蜜桃產區",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/林園區": [
+   {
+    "text": "有紅樹林濕地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鳳鼻頭遺址可訪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石化工業區在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/茄萣區": [
+   {
+    "text": "興達港情人碼頭",
+    "angle": "unsorted"
+   },
+   {
+    "text": "是烏魚子產地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "有白砂崙濕地",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/永安區": [
+   {
+    "text": "設有興達電廠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "是石斑魚產地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "新港彩繪在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/彌陀區": [
+   {
+    "text": "漯底山自然公園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "海岸光廊怡人",
+    "angle": "unsorted"
+   },
+   {
+    "text": "是虱目魚產區",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/梓官區": [
+   {
+    "text": "有蚵仔寮漁港風情",
+    "angle": "unsorted"
+   },
+   {
+    "text": "赤崁夜市在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "漁產直銷在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/苓雅區": [
+   {
+    "text": "衛武營藝文中心",
+    "angle": "unsorted"
+   },
+   {
+    "text": "五塊厝商圈熱鬧",
+    "angle": "unsorted"
+   },
+   {
+    "text": "有龍水里彩繪",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/三民區": [
+   {
+    "text": "科工館展覽在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "愛河之心在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "建工夜市在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/旗津區": [
+   {
+    "text": "渡輪海產街熱鬧",
+    "angle": "unsorted"
+   },
+   {
+    "text": "旗後燈塔在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "彩虹教堂在地知名",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/鼓山區": [
+   {
+    "text": "西子灣夕陽在地知名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "設有壽山動物園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "有哈瑪星鐵道經過",
+    "angle": "unsorted"
+   }
+  ],
+  "高雄市/左營區": [
+   {
+    "text": "蓮池潭龍虎塔",
+    "angle": "unsorted"
+   },
+   {
+    "text": "舊城牆遺跡可訪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "眷村文化在地知名",
+    "angle": "unsorted"
+   }
+  ]
+ }
+}

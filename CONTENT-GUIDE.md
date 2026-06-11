@@ -65,6 +65,7 @@
 | landmarks-taiwan | landmarks.js | LANDMARKS | — |
 | capitals | world-capitals.js | WORLD_CAPITALS＋CAPMAP（派生）| 196 全 |
 | capital-facts | world-capitals.js | CAP_FACTS（key 轉為首都名）| 每首都 3 |
+| district-facts | taiwan-facts.js | DISTRICT_FACTS（key=縣市/區）| 每區 3 |
 | flags | world-flags.js | WORLD_FLAGS | 196 全 |
 
 注意：`data/world.js`（地理輪廓）由 `proc_world2.py` 產（見 CLAUDE.md），不經 build；但 **validate 會檢查它**（196 國、path、bb、洲別、contBox），改動後跑 validate 可防輪廓壞掉。

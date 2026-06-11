@@ -8,8 +8,10 @@
 const fs = require('fs'), path = require('path');
 const { JSDOM } = require('jsdom');
 const P = path.join(__dirname, '..');
-const dom = new JSDOM(fs.readFileSync(path.join(P, 'index.html'), 'utf8'), { pretendToBeVisual: true, url: 'https://x.github.io/MapQuiz/' });
-global.window = dom.window; global.document = dom.window.document;
+const dom = new JSDOM(fs.readFileSync(path.join(P, 'index.html'), 'utf8'), { pretendToBeVisual: true, url: 'https://x.github.io/MapQuiz/', runScripts: 'outside-only' });
+const memStore = {};
+Object.defineProperty(dom.window, 'localStorage', { value: { getItem: k => (k in memStore ? memStore[k] : null), setItem: (k, v) => { memStore[k] = String(v); }, removeItem: k => { delete memStore[k]; } }, configurable: true });
+global.document = dom.window.document;
 for (const f of ['js/data.js', 'data/landmarks.js', 'data/world.js', 'data/world-landmarks.js',
   'data/world-facts.js', 'data/taiwan-facts.js', 'data/world-capitals.js', 'data/world-flags.js', 'js/app.js'])
   dom.window.eval(fs.readFileSync(path.join(P, f), 'utf8'));
@@ -84,7 +86,10 @@ ok(!!d.querySelector('.lvgrid'), '回首頁');
 console.log('— 分區層級 —');
 click('[data-act="toPicker"]'); click('[data-act="pickCounty"][data-arg="台中市"]');
 click('[data-act="startDistrict"][data-arg="map2name"]'); click('.opt');
-ok(!d.querySelector('.fact'), '分區層級不顯示小知識');
+const dfact = d.querySelector('.fact');
+const dname = dfact && dfact.querySelector('.fact-name') ? dfact.querySelector('.fact-name').textContent : null;
+ok(!!dfact, '分區層級答完顯示分區小知識');
+ok(!dname || (W.DISTRICT_FACTS && W.DISTRICT_FACTS['台中市/' + dname]), '分區小知識歸屬正確');
 click('[data-act="quitQuiz"]');
 
 console.log('— 返回手勢（popstate）—');
@@ -97,6 +102,20 @@ click('[data-act="toWorldMenu"]'); click('[data-act="startWorld"][data-arg="map2
 ok(scrName() === 'quiz', '進入世界測驗');
 back(); ok(scrName() === '世界國家', 'quiz 返回手勢→世界選單（不退出）');
 back(); ok(scrName() === 'home', '選單返回手勢→首頁');
+
+console.log('— 常錯復習 —');
+W.eval ? null : null;
+// 製造縣市錯題（map2name 連點第一個選項）
+for (let i = 0; i < 6 && !d.querySelector('.lvgrid'); i++) { const h = d.querySelector('[data-act="home"]'); if (h) h.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true })); else break; }
+click('[data-act="toCountyMenu"]'); click('[data-act="startCounty"][data-arg="map2name"]');
+for (let q = 0; q < 15; q++) { const o = d.querySelector('.opt'); if (!o) break; o.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true })); const n = d.querySelector('[data-act="next"]'); if (n) n.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true })); else break; }
+let missObj = {}; try { missObj = JSON.parse(memStore['tw-miss'] || '{}'); } catch (e) {}
+ok(Object.keys(missObj).length > 0, '答錯記錄寫入 localStorage');
+ok(Object.keys(missObj).every(k => /^[cwd]\|/.test(k)), '錯題鍵帶層級前綴');
+for (let i = 0; i < 6 && !d.querySelector('.lvgrid'); i++) { const h = d.querySelector('[data-act="home"]'); if (h) h.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true })); else break; }
+const reviewCard = d.querySelector('.review-card');
+ok(!!reviewCard, '首頁顯示復習卡');
+if (reviewCard) { click('[data-act="startReview"]'); ok(!!(d.querySelector('.opt') || d.querySelector('path[data-act="answer"]')), '復習卡進入測驗'); }
 
 if (failed) { console.log('\nFAILED: ' + failed); process.exit(1); }
 console.log('\nALL PASS');

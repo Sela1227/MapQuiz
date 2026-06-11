@@ -36,12 +36,13 @@ def main():
     wl, tl = load("landmarks-world"), load("landmarks-taiwan")
     caps, flags = load("capitals"), load("flags")
     capfacts = load("capital-facts")
+    distfacts = load("district-facts")
     names196 = set(open(os.path.join(OUT, "world_names.txt")).read().split())
 
     # ── 覆蓋率下限 ──
     for c in names196:
         if c not in wf: err("facts-world 缺國家：" + c)
-        elif len(wf[c]) < 8: err("facts-world %s 僅 %d 段（下限 8）" % (c, len(wf[c])))
+        elif len(wf[c]) < 12: err("facts-world %s 僅 %d 段（下限 12）" % (c, len(wf[c])))
     for h in HOT:
         if h in wf and len(wf[h]) < 15: err("熱門國 %s 僅 %d 段（下限 15）" % (h, len(wf[h])))
     for c, v in tf.items():
@@ -50,6 +51,9 @@ def main():
         if len(v) < 3: err("景點說明 %s 僅 %d 句（下限 3）" % (nm, len(v)))
     for nation, v in capfacts.items():
         if len(v) < 3: err("capital-facts %s 僅 %d 條（下限 3）" % (nation, len(v)))
+    for dk, v in distfacts.items():
+        if len(v) < 3: err("district-facts %s 僅 %d 段（下限 3）" % (dk, len(v)))
+        if "/" not in dk: err("district-facts key 格式錯（需 縣市/區）：" + dk)
 
     # ── 洩答（坑 P7）──
     def cores(county):
@@ -78,7 +82,7 @@ def main():
         if capvals.count(c) > 1: err("首都重名：" + c)
 
     # ── 句子品質 ──
-    for src, label in [(wf, "facts-world"), (tf, "facts-taiwan"), (wd, "lm-desc-world"), (td, "lm-desc-taiwan"), (capfacts, "capital-facts")]:
+    for src, label in [(wf, "facts-world"), (tf, "facts-taiwan"), (wd, "lm-desc-world"), (td, "lm-desc-taiwan"), (capfacts, "capital-facts"), (distfacts, "district-facts")]:
         for k, v in src.items():
             for e in v:
                 t = e["text"] if isinstance(e, dict) else e
@@ -148,6 +152,24 @@ def main():
                     warn("world.js %s 的 cx/cy 不在 bb 內：(%.1f,%.1f) bb=%s" % (nm, r["cx"], r["cy"], bb))
         for c in CONTS:
             if c not in W.get("contBox", {}): err("world.js contBox 缺洲別：" + c)
+
+    # ── 分區 key 對照 js/data.js 的 DISTRICTS ──
+    try:
+        ds = open(os.path.join(ROOT, "js", "data.js"), encoding="utf-8").read()
+        i = ds.index("window.DISTRICTS"); seg = ds[ds.index("=", i) + 1:]
+        depth = 0; end = None; started = False
+        for j, ch in enumerate(seg):
+            if ch == "{": depth += 1; started = True
+            elif ch == "}":
+                depth -= 1
+                if started and depth == 0: end = j + 1; break
+        DISTRICTS = json.loads(seg[:end])
+        for dk in distfacts:
+            county, _, town = dk.partition("/")
+            if county not in DISTRICTS: err("district-facts 未知縣市：" + dk)
+            elif town not in DISTRICTS[county]["towns"]: err("district-facts 未知分區：" + dk)
+    except Exception as e:
+        warn("district-facts 對照 DISTRICTS 失敗：%s" % e)
 
     # ── 往返一致性（雙檔漂移防線）──
     import importlib.util

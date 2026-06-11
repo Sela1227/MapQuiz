@@ -90,7 +90,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "2.7.2";
+  var VERSION = "2.8.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -205,8 +205,8 @@
   function fillFlat() { return COL.land; }
 
   // ---------- screens ----------
-  function topMiss() {
-    return Object.keys(S.miss).map(function (k) { return [k, S.miss[k]]; }).sort(function (a, b) { return b[1] - a[1]; }).slice(0, 4).map(function (x) { return x[0]; });
+  function topMiss(n) {
+    return Object.keys(S.miss).filter(function (k) { return S.miss[k] > 0 && k.indexOf("|") > 0; }).map(function (k) { return [k, S.miss[k]]; }).sort(function (a, b) { return b[1] - a[1]; }).slice(0, n || 4).map(function (x) { return x[0]; });
   }
 
   function homeCard(act, arg, title, desc, best) {
@@ -215,8 +215,8 @@
   }
 
   function viewHome() {
-    var tm = topMiss();
-    var missBox = tm.length ? '<div class="box"><div class="desc" style="margin-bottom:8px">你最常答錯的縣市</div><div class="chips">' + tm.map(function (n) { return '<span class="chip">' + n + '</span>'; }).join("") + '</div></div>' : "";
+    var tm = topMiss(6);
+    var missBox = tm.length ? '<button class="card review-card" data-act="startReview"><div class="row"><span class="title">復習最常錯</span><span class="best">' + tm.length + ' 個</span></div><div class="desc">針對你最常答錯的地方再練一輪</div><div class="chips" style="margin-top:8px">' + tm.map(function (k) { return '<span class="chip">' + missLabel(k) + '</span>'; }).join("") + '</div></button>' : "";
     return '' +
       '<div class="hero">' +
         '<div class="hero-chip"><img src="assets/app-logo.png" alt="MapQuiz"/></div>' +
@@ -465,10 +465,31 @@
     render();
   }
 
-  function bumpMiss(name) {
-    if (S.level !== "county") return;
-    S.miss[name] = (S.miss[name] || 0) + 1; save("tw-miss", JSON.stringify(S.miss));
+  function startReview() {
+    var tm = topMiss(15);
+    if (!tm.length) return;
+    // 取數量最多的層級作為這輪復習層級（同層級才能共用 dataset 與選項池）
+    var byLevel = { county: [], world: [], district: {} };
+    tm.forEach(function (k) {
+      var lv = missLevel(k), label = missLabel(k);
+      if (lv === "district") { var c = k.split("|")[1]; (byLevel.district[c] = byLevel.district[c] || []).push(label); }
+      else byLevel[lv].push(label);
+    });
+    var best = byLevel.county.length >= byLevel.world.length ? "county" : "world";
+    var bestN = Math.max(byLevel.county.length, byLevel.world.length);
+    var distMax = 0, distCounty = null;
+    Object.keys(byLevel.district).forEach(function (c) { if (byLevel.district[c].length > distMax) { distMax = byLevel.district[c].length; distCounty = c; } });
+    if (distMax > bestN) { S.activeCounty = distCounty; start("map2name", "district", distCounty, byLevel.district[distCounty]); return; }
+    start("map2name", best, null, byLevel[best]);
   }
+
+  function bumpMiss(name) {
+    // 三層級都記；鍵含層級與（分區的）縣市，復習時可重建題目
+    var key = S.level === "county" ? "c|" + name : S.level === "world" ? "w|" + name : "d|" + S.activeCounty + "|" + name;
+    S.miss[key] = (S.miss[key] || 0) + 1; save("tw-miss", JSON.stringify(S.miss));
+  }
+  function missLabel(key) { var p = key.split("|"); return p[0] === "d" ? p[2] : p[1]; }
+  function missLevel(key) { return key[0] === "c" ? "county" : key[0] === "w" ? "world" : "district"; }
 
   function pickAnswer(name) {
     if (S.locked || S.screen !== "quiz") return;
@@ -484,6 +505,10 @@
     else if (S.level === "county") {
       if (S.mode === "landmark" && window.TW_LM_DESC && window.TW_LM_DESC[S.target]) { S.fact = pickFrom(window.TW_LM_DESC[S.target]); S.factName = S.target; }
       else if (window.TW_FACTS && window.TW_FACTS[correctAns()]) { var tf = window.TW_FACTS[correctAns()]; S.fact = tf[Math.floor(Math.random() * tf.length)]; S.factName = correctAns(); }
+    }
+    else if (S.level === "district" && window.DISTRICT_FACTS) {
+      var dkey = S.activeCounty + "/" + correctAns();
+      if (window.DISTRICT_FACTS[dkey]) { S.fact = pickFrom(window.DISTRICT_FACTS[dkey]); S.factName = correctAns(); }
     }
     if (correct) {
       var nc = S.combo + 1, mult = comboMult(nc);
@@ -620,6 +645,7 @@
       case "toWorldMenu": S.screen = "worldMenu"; render(); break;
       case "setCont": S.worldCont = arg || null; render(); break;
       case "worldMenuBack": S.screen = "worldMenu"; render(); break;
+      case "startReview": startReview(); break;
       case "startWorld": start(arg, "world"); break;
       case "exploreWorld": start("explore", "world"); break;
       case "countyMenuBack": S.screen = "countyMenu"; render(); break;
@@ -629,7 +655,7 @@
       case "exploreCounty": start("explore", "county"); break;
       case "startDistrict": start(arg, "district", S.activeCounty); break;
       case "answer": pickAnswer(arg); break;
-      case "reveal": S.revealed = arg; S.fact = (S.level === "world") ? pickFact(arg) : ((S.level === "county" && window.TW_FACTS && window.TW_FACTS[arg]) ? window.TW_FACTS[arg][Math.floor(Math.random() * window.TW_FACTS[arg].length)] : null); S.factName = S.fact ? arg : null; render(); break;
+      case "reveal": S.revealed = arg; S.fact = (S.level === "world") ? pickFact(arg) : ((S.level === "county" && window.TW_FACTS && window.TW_FACTS[arg]) ? window.TW_FACTS[arg][Math.floor(Math.random() * window.TW_FACTS[arg].length)] : (S.level === "district" && window.DISTRICT_FACTS && window.DISTRICT_FACTS[S.activeCounty + "/" + arg]) ? pickFrom(window.DISTRICT_FACTS[S.activeCounty + "/" + arg]) : null); S.factName = S.fact ? arg : null; render(); break;
       case "next": next(); break;
       case "stopQuiz":
         if (S.locked) { S.answers.push({ name: S.target, county: correctAns(), correct: S.picked === correctAns(), picked: S.picked, ms: S.lastMs || 0 }); S.picked = null; S.locked = false; }
