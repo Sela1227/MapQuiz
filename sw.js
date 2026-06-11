@@ -1,8 +1,8 @@
 /* MapQuiz service worker — cache-first 離線（V1.6.0） */
-var CACHE = "mapquiz-v1.6.0";
+var CACHE = "mapquiz-v1.7.0";
 var ASSETS = [
   "./", "./index.html", "./css/style.css", "./js/app.js", "./js/data.js",
-  "./data/landmarks.js", "./data/world.js", "./data/world-landmarks.js", "./data/world-facts.js",
+  "./data/landmarks.js", "./data/world.js", "./data/world-landmarks.js", "./data/world-facts.js", "./data/taiwan-facts.js",
   "./assets/app-logo.png", "./assets/sela.svg",
   "./favicon/favicon-16x16.png", "./favicon/favicon-32x32.png", "./favicon/favicon.ico",
   "./favicon/apple-touch-icon.png", "./favicon/android-chrome-192x192.png",

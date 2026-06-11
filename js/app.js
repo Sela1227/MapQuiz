@@ -22,6 +22,22 @@
   })();
   function lmMap() { return S.level === "world" ? WLMAP : LMAP; }
   function correctAns() { return S.mode === "landmark" ? lmMap()[S.target] : S.target; }
+  // 知名度三級權重：FAME3（家喻戶曉）5、有地標入庫者 2、其餘 1 —— 降低冷門國連發的挫折感
+  var FAME3 = {};
+  ["美國","中國","日本","南韓","北韓","英國","法國","德國","義大利","西班牙","葡萄牙","荷蘭","瑞士","瑞典","挪威","丹麥","芬蘭","俄羅斯","烏克蘭","波蘭","希臘","土耳其","埃及","南非","印度","巴基斯坦","泰國","越南","菲律賓","馬來西亞","新加坡","印尼","澳大利亞","紐西蘭","加拿大","墨西哥","巴西","阿根廷","智利","沙烏地阿拉伯","阿拉伯聯合大公國","以色列","伊朗","伊拉克","台灣","蒙古","緬甸","柬埔寨","古巴","奧地利","比利時","愛爾蘭","冰島","捷克","匈牙利","梵蒂岡","摩納哥","肯亞","衣索比亞","摩洛哥","哥倫比亞","秘魯"].forEach(function (n) { FAME3[n] = 1; });
+  function famWeight(nation) {
+    if (FAME3[nation]) return 5;
+    if (window.WORLD_LANDMARKS && window.WORLD_LANDMARKS[nation]) return 2;
+    return 1;
+  }
+  function weightedSample(names, wOf, k) {
+    var bag = [];
+    names.forEach(function (n) { var w = wOf(n); for (var i = 0; i < w; i++) bag.push(n); });
+    bag = shuffle(bag);
+    var out = [], seen = {};
+    for (var i = 0; i < bag.length && out.length < k; i++) { if (!seen[bag[i]]) { seen[bag[i]] = 1; out.push(bag[i]); } }
+    return out;
+  }
   function pickFact(nation) {
     var FS = window.WORLD_FACTS && window.WORLD_FACTS[nation];
     return (FS && FS.length) ? FS[Math.floor(Math.random() * FS.length)] : null;
@@ -68,7 +84,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "1.6.0";
+  var VERSION = "1.7.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -375,7 +391,13 @@
       names = names.filter(function (n) { var nation = mode === "landmark" ? WLMAP[n] : n; return contOf(nation) === S.worldCont; });
     }
     S.level = level; S.activeCounty = county; S.mode = (mode === "explore" ? null : mode);
-    S.queue = shuffle(names).slice(0, MAX_Q); S.idx = 0; S.answers = []; S.picked = null; S.locked = false;
+    if (level === "world" && !(list && list.length)) {
+      var wOf = (mode === "landmark") ? function (lm) { return famWeight(WLMAP[lm]); } : famWeight;
+      S.queue = weightedSample(names, wOf, MAX_Q);
+    } else {
+      S.queue = shuffle(names).slice(0, MAX_Q);
+    }
+    S.idx = 0; S.answers = []; S.picked = null; S.locked = false;
     S.zoom = 1; S.revealed = null; S.points = 0; S.combo = 0; S.bestCombo = 0; S.lastGain = 0; S.newBest = false;
     S.startTime = Date.now();
     S.screen = (mode === "explore") ? "explore" : "quiz";
@@ -395,7 +417,12 @@
     var correct = name === correctAns();
     var ms = Date.now() - S.startTime;
     S.picked = name; S.locked = true; S.lastMs = ms;
-    S.fact = (S.level === "world") ? pickFact(correctAns()) : null;
+    S.fact = null;
+    if (S.level === "world") S.fact = pickFact(correctAns());
+    else if (S.level === "county") {
+      if (S.mode === "landmark" && window.TW_LM_DESC && window.TW_LM_DESC[S.target]) S.fact = window.TW_LM_DESC[S.target];
+      else if (window.TW_FACTS && window.TW_FACTS[correctAns()]) { var tf = window.TW_FACTS[correctAns()]; S.fact = tf[Math.floor(Math.random() * tf.length)]; }
+    }
     if (correct) {
       var nc = S.combo + 1, mult = comboMult(nc);
       var speed = Math.round(SPEED_MAX * Math.max(0, 1 - Math.min(ms / 1000, SPEED_CAP) / SPEED_CAP));
@@ -465,7 +492,7 @@
       case "exploreCounty": start("explore", "county"); break;
       case "startDistrict": start(arg, "district", S.activeCounty); break;
       case "answer": pickAnswer(arg); break;
-      case "reveal": S.revealed = arg; S.fact = (S.level === "world") ? pickFact(arg) : null; render(); break;
+      case "reveal": S.revealed = arg; S.fact = (S.level === "world") ? pickFact(arg) : ((S.level === "county" && window.TW_FACTS && window.TW_FACTS[arg]) ? window.TW_FACTS[arg][Math.floor(Math.random() * window.TW_FACTS[arg].length)] : null); render(); break;
       case "next": next(); break;
       case "stopQuiz":
         if (S.locked) { S.answers.push({ name: S.target, county: correctAns(), correct: S.picked === correctAns(), picked: S.picked, ms: S.lastMs || 0 }); S.picked = null; S.locked = false; }
