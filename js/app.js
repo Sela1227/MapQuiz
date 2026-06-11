@@ -8,14 +8,54 @@
 
   var NATIONAL = { viewBox: MAP.viewBox, regions: MAP.counties, insets: MAP.insets, hitCircles: MAP.hitCircles };
   function districtDataset(c) { var d = DISTRICTS[c]; return { viewBox: d.viewBox, regions: d.towns, insets: {}, hitCircles: {} }; }
+  function worldDataset() { var w = window.WORLD; return { viewBox: w.viewBox, regions: w.regions, insets: w.insets || {}, hitCircles: w.hitCircles || {} }; }
 
   var COUNTY_ORDER = ["基隆市","台北市","新北市","桃園市","新竹市","新竹縣","苗栗縣","台中市","彰化縣","南投縣","雲林縣","嘉義市","嘉義縣","台南市","高雄市","屏東縣","宜蘭縣","花蓮縣","台東縣","澎湖縣","金門縣","連江縣"];
 
-  var COL = { land:"#D7DFE3", active:"#537387", correct:"#4A9B7F", wrong:"#9A8585", sea:"#EEF2F5", seaLine:"#DCE4E8", muted:"#8A9BA8", deep:"#3E5666", white:"#FFFFFF" };
+  // 景點題索引：景點名 → 所屬縣市（資料來自 data/landmarks.js 的 window.LANDMARKS）
+  var LMAP = {}, WLMAP = {};
+  (function () {
+    var L = window.LANDMARKS || {};
+    Object.keys(L).forEach(function (county) { L[county].forEach(function (lm) { LMAP[lm] = county; }); });
+    var W = window.WORLD_LANDMARKS || {};
+    Object.keys(W).forEach(function (nation) { W[nation].forEach(function (lm) { WLMAP[lm] = nation; }); });
+  })();
+  function lmMap() { return S.level === "world" ? WLMAP : LMAP; }
+  function correctAns() { return S.mode === "landmark" ? lmMap()[S.target] : S.target; }
+  function optPool(ds) {
+    var names = Object.keys(ds.regions);
+    if (S.level !== "world") return names;
+    var c = contOf(correctAns());
+    var pool = names.filter(function (n) { return contOf(n) === c; });
+    return pool.length >= 4 ? pool : names;
+  }
+  function contOf(nation) { var r = window.WORLD && window.WORLD.regions[nation]; return r ? r.cont : null; }
+  function worldFocusBox() {
+    if (S.level !== "world" || !S.target) return null;
+    var Wd = window.WORLD; if (!Wd) return null;
+    var nation = correctAns();
+    var c = contOf(nation);
+    var cb = (c && Wd.contBox && Wd.contBox[c]) || null;
+    if (S.mode === "name2map") return cb;  // 提示到「洲」為止，再緊會洩答
+    var r = Wd.regions[nation]; if (!r || !r.bb) return cb;
+    // 目標國置中的緊聚焦：目標約佔畫面 1/4，保留鄰國當參照
+    var bw = r.bb[2] - r.bb[0], bh = r.bb[3] - r.bb[1];
+    var size = Math.max(bw, bh);
+    var vw = Math.min(Math.max(size * 4, 150), 980);
+    var vh = vw * 0.62;
+    if (vh < Math.max(size * 4, 96) * 0.62) vh = vw * 0.62;
+    var cx = (r.bb[0] + r.bb[2]) / 2, cy = (r.bb[1] + r.bb[3]) / 2;
+    var x = Math.max(0, Math.min(980 - vw, cx - vw / 2));
+    var y = Math.max(0, Math.min(520 - vh, cy - vh / 2));
+    return [Math.round(x), Math.round(y), Math.round(vw), Math.round(vh)];
+  }
+
+  var COL = { land:"#D7DFE3", active:"#3C6078", correct:"#4A9B7F", wrong:"#9A8585", sea:"#EEF2F5", seaLine:"#DCE4E8", muted:"#8A9BA8", deep:"#2C4A5E", white:"#FFFFFF" };
 
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
+  var VERSION = "1.3.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -66,13 +106,13 @@
     S.muted = load("tw-muted") === "1";
   })();
 
-  function dataset() { return S.level === "county" ? NATIONAL : districtDataset(S.activeCounty); }
-  function bestId(lv, m, c) { return lv === "county" ? "c-" + m : "d-" + c + "-" + m; }
+  function dataset() { return S.level === "county" ? NATIONAL : S.level === "world" ? worldDataset() : districtDataset(S.activeCounty); }
+  function bestId(lv, m, c) { return lv === "county" ? "c-" + m : lv === "world" ? "w-" + m : "d-" + c + "-" + m; }
 
   // ---------- map SVG ----------
-  function buildMap(ds, fillOf, clickAct, target, labelName) {
+  function buildMap(ds, fillOf, clickAct, target, labelName, focusBox) {
     var insets = ds.insets || {}, hits = ds.hitCircles || {};
-    var vb = ds.viewBox.split(" ").map(Number);
+    var vb = focusBox ? [focusBox[0], focusBox[1], focusBox[2], focusBox[3]] : ds.viewBox.split(" ").map(Number);
     var order = Object.keys(ds.regions).sort(function (a, b) { return ds.regions[b].area - ds.regions[a].area; });
     var parts = [];
     parts.push('<rect x="' + vb[0] + '" y="' + vb[1] + '" width="' + vb[2] + '" height="' + vb[3] + '" fill="' + COL.sea + '" pointer-events="none"/>');
@@ -98,7 +138,7 @@
     }
     var zc = S.zoom > 1 ? " zoomed" : "";
     var wh = (S.zoom * 100) + "%";
-    return '<div class="map-box' + zc + '"><svg viewBox="' + ds.viewBox + '" width="' + wh + '" height="' + wh + '" preserveAspectRatio="xMidYMid meet">' + parts.join("") + '</svg></div>';
+    return '<div class="map-box' + zc + '"><svg viewBox="' + vb.join(" ") + '" width="' + wh + '" height="' + wh + '" preserveAspectRatio="xMidYMid meet">' + parts.join("") + '</svg></div>';
   }
 
   function zoomBar() {
@@ -110,6 +150,12 @@
 
   // ---------- fills ----------
   function fillQuiz(nm) {
+    if (S.mode === "landmark") {
+      if (!S.locked) return COL.land;
+      if (nm === correctAns()) return COL.correct;
+      if (nm === S.picked && S.picked !== correctAns()) return COL.wrong;
+      return COL.land;
+    }
     if (isMap2()) return nm === S.target ? COL.active : COL.land;
     if (!S.locked) return COL.land;
     if (nm === S.target) return COL.correct;
@@ -118,7 +164,7 @@
   }
   function fillExplore(nm) { return nm === S.revealed ? COL.active : COL.land; }
   function fillResult(nm) {
-    for (var i = 0; i < S.answers.length; i++) if (S.answers[i].name === nm) return S.answers[i].correct ? COL.correct : COL.wrong;
+    for (var i = 0; i < S.answers.length; i++) if ((S.answers[i].county || S.answers[i].name) === nm) return S.answers[i].correct ? COL.correct : COL.wrong;
     return COL.land;
   }
   function fillFlat() { return COL.land; }
@@ -139,14 +185,15 @@
     return '' +
       '<div class="hero">' +
         '<div class="hero-chip"><img src="assets/app-logo.png" alt="MapQuiz"/></div>' +
-        '<div class="hero-txt"><div class="hero-kicker">地理挑戰</div><div class="hero-title">台灣縣市地圖</div><div class="hero-sub">每輪最多 15 題；答對加分、答錯扣分，答得越快加成越多。</div></div>' +
+        '<div class="hero-txt"><div class="hero-kicker">地理挑戰</div><div class="hero-title">台灣及世界地圖測驗</div><div class="hero-sub">台灣縣市、鄉鎮市區到世界 196 國；答對加分、答錯扣分，越快加成越多。</div></div>' +
       '</div>' +
       '<div class="eyebrow sub">選一個層級開始</div><div style="height:8px"></div>' +
       '<button class="card" data-act="toCountyMenu"><div class="row"><span class="title">縣市</span><span class="best">22 個</span></div><div class="desc">全台 22 縣市的位置與名稱。</div></button>' +
       '<button class="card" data-act="toPicker"><div class="row"><span class="title">鄉鎮市區</span><span class="best">368 個</span></div><div class="desc">選一個縣市，放大考它底下的分區。</div></button>' +
+      '<button class="card" data-act="toWorldMenu"><div class="row"><span class="title">世界國家</span><span class="best">196 個</span></div><div class="desc">193 個聯合國會員國＋梵蒂岡、巴勒斯坦、台灣。</div></button>' +
       missBox +
       '<p class="note">金門、馬祖（連江縣）在地圖左上角小框內。地圖可用 +/− 放大。計分：答對 +100（連擊有倍率）、答錯 −50，每題 8 秒內越快加成越多（最高 +50）。</p>' +
-      '<div class="attrib"><img src="assets/sela.svg" alt="SELA"/><span>Made by SELA</span></div>';
+      '<div class="attrib"><img src="assets/sela.svg" alt="SELA"/><span>Made by SELA ・ V' + VERSION + '</span></div>';
   }
 
   function viewCountyMenu() {
@@ -159,7 +206,22 @@
       '<div style="height:230px;margin-bottom:16px">' + buildMap(NATIONAL, fillFlat, null, null, null) + '</div>' +
       card("startCounty", "map2name", "看地圖，選名字", "地圖點亮一個縣市，從四個選項選出它。", "c-map2name") +
       card("startCounty", "name2map", "看名字，點地圖", "給你縣市名稱，在地圖上點出位置。", "c-name2map") +
+      card("startCounty", "landmark", "景點題", "「日月潭位於哪個縣市？」四選一，答完地圖點亮正解。", "c-landmark") +
       card("exploreCounty", "", "自由練習", "點任一縣市看名稱，不計分。", null);
+  }
+
+  function viewWorldMenu() {
+    function card(act, arg, title, desc, bid) {
+      var b = (bid && S.best[bid] > 0) ? '<span class="best">最高 ' + S.best[bid] + ' 分</span>' : "";
+      return '<button class="card" data-act="' + act + '"' + (arg ? ' data-arg="' + arg + '"' : "") + '><div class="row"><span class="title">' + title + '</span>' + b + '</div><div class="desc">' + desc + '</div></button>';
+    }
+    return '<div class="topbar"><button class="linkbtn" data-act="home">‹ 回首頁</button></div>' +
+      '<div class="eyebrow" style="margin-top:8px">196 個國家</div><h2>世界國家</h2>' +
+      '<div style="height:200px;margin-bottom:16px">' + buildMap(worldDataset(), fillFlat, null, null, null) + '</div>' +
+      card("startWorld", "map2name", "看地圖，選名字", "地圖點亮一個國家，從四個選項選出它。", "w-map2name") +
+      card("startWorld", "name2map", "看名字，點地圖", "給你國名，在地圖上點出位置（小國有點擊範圍，可放大）。", "w-name2map") +
+      card("startWorld", "landmark", "地標題", "「艾菲爾鐵塔位於哪個國家？」四選一，答完地圖點亮正解。", "w-landmark") +
+      card("exploreWorld", "", "自由練習", "點任一國家看名稱，不計分。", null);
   }
 
   function viewCountyPicker() {
@@ -188,7 +250,7 @@
 
   function viewQuiz() {
     var ds = dataset();
-    var ctx = S.level === "county" ? "" : S.activeCounty + " ・ ";
+    var ctx = S.level === "county" ? "" : S.level === "world" ? "世界 ・ " : S.activeCounty + " ・ ";
     var score = S.answers.filter(function (a) { return a.correct; }).length;
     var mult = comboMult(S.combo);
     var comboCls = mult >= 2 ? "combo m2" : mult > 1 ? "combo m15" : "combo";
@@ -196,23 +258,23 @@
     var floatHtml = (S.locked && S.lastGain !== 0) ? '<span class="float tw-float' + (S.lastGain < 0 ? ' neg' : '') + '">' + (S.lastGain > 0 ? '+' : '') + S.lastGain + '</span>' : "";
     var speedCls = S.locked ? "speedbar locked" : "speedbar run";
 
-    var promptHtml = '<div class="prompt"><div class="q">' + (isMap2() ? "點亮的是哪一個？" : "在地圖上找出：") + '</div>' +
-      (S.mode === "name2map" ? '<div class="name">' + S.target + '</div>' : "") + '</div>';
+    var promptHtml = '<div class="prompt"><div class="q">' + (S.mode === "landmark" ? (S.level === "world" ? "這個地標位於哪個國家？" : "這個景點位於哪個縣市？") : isMap2() ? "點亮的是哪一個？" : "在地圖上找出：") + '</div>' +
+      ((S.mode === "name2map" || S.mode === "landmark") ? '<div class="name">' + S.target + '</div>' : "") + '</div>';
 
     var clickAct = (S.mode === "name2map" && !S.locked) ? "answer" : null;
-    var ringTarget = isMap2() ? S.target : null;
-    var labelName = (S.mode === "name2map" && S.locked) ? S.target : null;
-    var mapH = isMap2() ? "40vh" : "50vh";
-    var mapHtml = '<div style="height:' + mapH + ';margin-bottom:12px">' + buildMap(ds, fillQuiz, clickAct, ringTarget, labelName) + '</div>';
+    var ringTarget = isMap2() ? S.target : (S.mode === "landmark" && S.locked ? correctAns() : null);
+    var labelName = (S.mode === "name2map" && S.locked) ? S.target : (S.mode === "landmark" && S.locked ? correctAns() : null);
+    var mapH = (isMap2() || S.mode === "landmark") ? "40vh" : "50vh";
+    var mapHtml = '<div style="height:' + mapH + ';margin-bottom:12px">' + buildMap(ds, fillQuiz, clickAct, ringTarget, labelName, worldFocusBox()) + '</div>';
 
     var bottom;
-    if (isMap2()) {
+    if (isMap2() || S.mode === "landmark") {
       bottom = '<div class="opts">' + S.options.map(function (opt) {
         var cls = "opt";
-        if (S.locked) { if (opt === S.target) cls = "opt correct"; else if (opt === S.picked) cls = "opt wrong"; else cls = "opt dim"; }
+        if (S.locked) { if (opt === correctAns()) cls = "opt correct"; else if (opt === S.picked) cls = "opt wrong"; else cls = "opt dim"; }
         var mark = "";
-        if (S.locked && opt === S.target) mark = "  ✓";
-        else if (S.locked && opt === S.picked) mark = "  ✗";
+        if (S.locked && opt === correctAns()) mark = "  ✓";
+        else if (S.locked && opt === S.picked && opt !== correctAns()) mark = "  ✗";
         return '<button class="' + cls + '" data-act="answer" data-arg="' + opt + '"' + (S.locked ? " disabled" : "") + '>' + opt + mark + '</button>';
       }).join("") + '</div>';
     } else {
@@ -225,18 +287,19 @@
       }
     }
     var nextBtn = S.locked ? '<div style="margin-top:12px"><button class="btn btn-primary" data-act="next">' + (S.idx + 1 >= S.queue.length ? "看成績" : "下一題") + '</button></div>' : "";
+    var stopBtn = '<div style="margin-top:10px"><button class="btn btn-ghost" data-act="stopQuiz">停止測驗並結算</button></div>';
 
-    return '<div class="topbar"><span class="muted" style="font-size:13px">' + ctx + '第 ' + (S.idx + 1) + '/' + S.queue.length + '</span><span class="right">' + muteBtn() + zoomBar() + '</span></div>' +
+    return '<div class="topbar"><span style="display:flex;align-items:center;gap:10px"><button class="linkbtn" data-act="quitQuiz">‹ 離開</button><span class="muted" style="font-size:13px">' + ctx + '第 ' + (S.idx + 1) + '/' + S.queue.length + '</span></span><span class="right">' + muteBtn() + zoomBar() + '</span></div>' +
       '<div class="scorestrip"><div><span class="lbl">分數</span><div class="pts">' + S.points + '</div></div><div class="srtright">' + comboHtml + '</div>' + floatHtml + '</div>' +
       '<div class="speedtrack"><div class="' + speedCls + '"></div></div>' +
-      promptHtml + mapHtml + bottom + nextBtn;
+      promptHtml + mapHtml + bottom + nextBtn + stopBtn;
   }
 
   function viewExplore() {
     var ds = dataset();
-    var backTo = S.level === "county" ? "countyMenuBack" : "districtMenuBack";
-    var ctx = S.level === "county" ? "全台縣市" : S.activeCounty;
-    var status = S.revealed ? S.revealed : ("點" + (ctx === "全台縣市" ? "縣市" : "區") + "看名稱");
+    var backTo = S.level === "county" ? "countyMenuBack" : S.level === "world" ? "worldMenuBack" : "districtMenuBack";
+    var ctx = S.level === "county" ? "全台縣市" : S.level === "world" ? "世界國家" : S.activeCounty;
+    var status = S.revealed ? S.revealed : ("點" + (ctx === "全台縣市" ? "縣市" : ctx === "世界國家" ? "國家" : "區") + "看名稱");
     var statusCls = S.revealed ? "" : "muted";
     return '<div class="topbar"><button class="linkbtn" data-act="' + backTo + '">‹ 返回</button><span class="right">' + zoomBar() + '</span></div>' +
       '<div style="text-align:center;font-size:15px;font-weight:700;min-height:24px;margin:6px 0 10px" class="' + statusCls + '">' + status + '</div>' +
@@ -245,22 +308,22 @@
 
   function viewResult() {
     var ds = dataset();
-    var total = S.queue.length;
+    var total = S.answers.length;
     var score = S.answers.filter(function (a) { return a.correct; }).length;
     var pct = Math.round((score / total) * 100);
     var rk = rankOf(pct);
     var wrong = S.answers.filter(function (a) { return !a.correct; }).map(function (a) { return a.name; });
     var avgMs = S.answers.length ? Math.round(S.answers.reduce(function (s, a) { return s + a.ms; }, 0) / S.answers.length) : 0;
-    var ctx = S.level === "county" ? "全台縣市" : S.activeCounty;
+    var ctx = S.level === "county" ? "全台縣市" : S.level === "world" ? "世界國家" : S.activeCounty;
     var rc = pct >= 90 ? COL.deep : pct >= 60 ? COL.correct : COL.muted;
     var chips = wrong.length ? '<div style="margin-bottom:16px"><div class="desc" style="margin-bottom:8px">這幾個再看看</div><div class="chips">' + wrong.map(function (n) { return '<span class="chip">' + n + '</span>'; }).join("") + '</div></div>' : "";
     var retry = wrong.length ? '<button class="btn btn-outline" data-act="retry">只考錯的 ' + wrong.length + ' 個</button>' : "";
-    var backMenu = S.level === "district" ? '<button class="btn btn-outline" data-act="toPicker">換個縣市</button>' : '<button class="btn btn-outline" data-act="toCountyMenu">回模式選單</button>';
+    var backMenu = S.level === "district" ? '<button class="btn btn-outline" data-act="toPicker">換個縣市</button>' : '<button class="btn btn-outline" data-act="' + (S.level === "world" ? "toWorldMenu" : "toCountyMenu") + '">回模式選單</button>';
     return '<div class="topbar"><span class="muted" style="font-size:13px">' + ctx + '</span></div>' +
       '<div class="rankrow"><div class="rankbadge tw-pop" style="border-color:' + rc + '"><span class="g" style="color:' + rc + '">' + rk.g + '</span></div>' +
       '<div><div class="muted" style="font-size:13px">' + rk.label + (S.newBest ? " ・ 新紀錄!" : "") + '</div>' +
       '<div class="bigpts" style="color:' + rc + '">' + S.points + ' <small>分</small></div></div></div>' +
-      '<div class="stats"><span>答對 <b>' + score + '/' + total + '</b>（' + pct + '%）</span><span>最佳連擊 <b>' + S.bestCombo + '</b></span><span>平均 <b>' + (avgMs / 1000).toFixed(1) + 's</b></span></div>' +
+      '<div class="stats"><span>答對 <b>' + score + '/' + total + '</b>（' + pct + '%）</span>' + (total < S.queue.length ? '<span>提前結算（共 ' + S.queue.length + ' 題）</span>' : '') + '<span>最佳連擊 <b>' + S.bestCombo + '</b></span><span>平均 <b>' + (avgMs / 1000).toFixed(1) + 's</b></span></div>' +
       '<div style="height:42vh;margin-bottom:12px">' + buildMap(ds, fillResult, null, null, null) + '</div>' +
       '<div class="legend"><span><span class="dot" style="background:' + COL.correct + '"></span>答對 ' + score + '</span><span><span class="dot" style="background:' + COL.wrong + '"></span>答錯 ' + wrong.length + '</span></div>' +
       chips +
@@ -272,6 +335,7 @@
     var html;
     if (S.screen === "home") html = viewHome();
     else if (S.screen === "countyMenu") html = viewCountyMenu();
+    else if (S.screen === "worldMenu") html = viewWorldMenu();
     else if (S.screen === "countyPicker") html = viewCountyPicker();
     else if (S.screen === "districtMenu") html = viewDistrictMenu();
     else if (S.screen === "explore") html = viewExplore();
@@ -282,15 +346,16 @@
 
   // ---------- logic ----------
   function start(mode, level, county, list) {
-    var ds = level === "county" ? NATIONAL : districtDataset(county);
-    var names = (list && list.length) ? list : Object.keys(ds.regions);
+    var ds = level === "county" ? NATIONAL : level === "world" ? worldDataset() : districtDataset(county);
+    var names = (list && list.length) ? list : (mode === "landmark" ? Object.keys(level === "world" ? WLMAP : LMAP) : Object.keys(ds.regions));
     S.level = level; S.activeCounty = county; S.mode = (mode === "explore" ? null : mode);
     S.queue = shuffle(names).slice(0, MAX_Q); S.idx = 0; S.answers = []; S.picked = null; S.locked = false;
     S.zoom = 1; S.revealed = null; S.points = 0; S.combo = 0; S.bestCombo = 0; S.lastGain = 0; S.newBest = false;
     S.startTime = Date.now();
     S.screen = (mode === "explore") ? "explore" : "quiz";
     S.target = S.queue[0];
-    if (S.screen === "quiz" && isMap2()) S.options = sampleOptions(Object.keys(ds.regions), S.target);
+    if (S.screen === "quiz" && isMap2()) S.options = sampleOptions(optPool(ds), S.target);
+    if (S.screen === "quiz" && S.mode === "landmark") S.options = sampleOptions(optPool(ds), lmMap()[S.target]);
     render();
   }
 
@@ -301,7 +366,7 @@
 
   function pickAnswer(name) {
     if (S.locked || S.screen !== "quiz") return;
-    var correct = name === S.target;
+    var correct = name === correctAns();
     var ms = Date.now() - S.startTime;
     S.picked = name; S.locked = true; S.lastMs = ms;
     if (correct) {
@@ -311,19 +376,20 @@
       S.combo = nc; S.bestCombo = Math.max(S.bestCombo, nc); S.points += gained; S.lastGain = gained;
       if (!S.muted) sfx.correct(nc);
     } else {
-      S.combo = 0; var loss = Math.min(WRONG_POINTS, S.points); S.points -= loss; S.lastGain = -loss; bumpMiss(S.target);
+      S.combo = 0; var loss = Math.min(WRONG_POINTS, S.points); S.points -= loss; S.lastGain = -loss; bumpMiss(correctAns());
       if (!S.muted) sfx.wrong();
     }
     render();
   }
 
   function next() {
-    var correct = S.picked === S.target;
-    S.answers.push({ name: S.target, correct: correct, picked: S.picked, ms: S.lastMs || 0 });
+    var correct = S.picked === correctAns();
+    S.answers.push({ name: S.target, county: correctAns(), correct: correct, picked: S.picked, ms: S.lastMs || 0 });
     S.picked = null; S.locked = false; S.lastGain = 0;
     if (S.idx + 1 >= S.queue.length) { finish(); return; }
     S.idx += 1; S.target = S.queue[S.idx]; S.startTime = Date.now();
-    if (isMap2()) S.options = sampleOptions(Object.keys(dataset().regions), S.target);
+    if (isMap2()) S.options = sampleOptions(optPool(dataset()), S.target);
+    if (S.mode === "landmark") S.options = sampleOptions(optPool(dataset()), lmMap()[S.target]);
     render();
   }
 
@@ -351,6 +417,10 @@
       case "home": S.screen = "home"; render(); break;
       case "toPicker": S.screen = "countyPicker"; render(); break;
       case "toCountyMenu": S.screen = "countyMenu"; render(); break;
+      case "toWorldMenu": S.screen = "worldMenu"; render(); break;
+      case "worldMenuBack": S.screen = "worldMenu"; render(); break;
+      case "startWorld": start(arg, "world"); break;
+      case "exploreWorld": start("explore", "world"); break;
       case "countyMenuBack": S.screen = "countyMenu"; render(); break;
       case "pickCounty": S.activeCounty = arg; S.screen = "districtMenu"; render(); break;
       case "districtMenuBack": S.screen = "districtMenu"; render(); break;
@@ -360,9 +430,14 @@
       case "answer": pickAnswer(arg); break;
       case "reveal": S.revealed = arg; render(); break;
       case "next": next(); break;
+      case "stopQuiz":
+        if (S.locked) { S.answers.push({ name: S.target, county: correctAns(), correct: S.picked === correctAns(), picked: S.picked, ms: S.lastMs || 0 }); S.picked = null; S.locked = false; }
+        if (S.answers.length === 0) { S.screen = (S.level === "county") ? "countyMenu" : (S.level === "world") ? "worldMenu" : "districtMenu"; render(); break; }
+        finish(); break;
+      case "quitQuiz": S.picked = null; S.locked = false; S.lastGain = 0; S.screen = (S.level === "county") ? "countyMenu" : (S.level === "world") ? "worldMenu" : "districtMenu"; render(); break;
       case "again": start(S.mode, S.level, S.activeCounty); break;
       case "retry": start(S.mode, S.level, S.activeCounty, S.answers.filter(function (a) { return !a.correct; }).map(function (a) { return a.name; })); break;
-      case "zoomIn": S.zoom = Math.min(3, +(S.zoom + 0.25).toFixed(2)); render(); break;
+      case "zoomIn": S.zoom = Math.min(4, +(S.zoom + 0.25).toFixed(2)); render(); break;
       case "zoomOut": S.zoom = Math.max(1, +(S.zoom - 0.25).toFixed(2)); render(); break;
       case "mute": toggleMute(); render(); break;
     }

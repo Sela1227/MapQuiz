@@ -11,7 +11,7 @@
 > 1. **以本專案 CLAUDE.md 為主、Kit 為輔。**
 > 2. 刻意決定（明寫理由，下次別「修正」回去）：
 >    - **app 主題＝北歐霧藍極簡，主色 `#537387`**（取樣自 app logo 底色、SELA V0.2.0 指定北歐風）。SELA logo 仍橘+白不變。
->    - **app logo（白色台灣＋定位 pin、霧藍底）已整合**：來源＝其他 AI（Gemini）生圖 + Claude 優化轉檔（滿版方形、多解析度套組）。用於 favicon／app icon／README 主視覺／首頁；SELA logo 降為品牌歸屬印記（首頁底 + README footer）。Logo prompt 紀錄：`SELA-logo-prompt.md`。
+>    - **app logo（V1.0.0 換版：地圖書＋羅盤＋定位 pin、霧藍底 #3C6078）**：來源＝Gemini 生圖 + Claude 方形裁切/轉檔；主色同步對齊 #3C6078（四處）。舊台灣 pin 版退役。用於 favicon／app icon／README 主視覺／首頁；SELA logo 降為品牌歸屬印記（首頁底 + README footer）。Logo prompt 紀錄：`SELA-logo-prompt.md`。
 > 3. **英文程式名 = MapQuiz；中文俗稱 = 台灣縣市地圖**（UI／文件用）。
 > 4. **下次完成版本時記得評估 SELA-handoff.md**（Kit 鐵律 #0）。
 
@@ -19,9 +19,9 @@
 
 ## 〇、當前狀態
 
-- **版本：** V0.6.0
-- **狀態：** 可運作（計分定案：答對加/答錯扣 + 每題速度加成；15 題上限；層級優先流程）
-- **一句話定位：** 全台 22 縣市 + 368 鄉鎮市區的互動地理測驗，連擊／限時計分，給想記住台灣地理位置的人玩。
+- **版本：** V1.3.0
+- **狀態：** 上線里程碑（台灣縣市/分區 + 世界 196 國三層級；新 logo；計分穩定）
+- **一句話定位：** 台灣（22 縣市＋368 鄉鎮市區）為主、世界（196 國）為輔的互動地理測驗。
 - **目標使用者：** 學生、想熟悉台灣行政區位置的一般大眾。
 - **技術棧：** 純 HTML + CSS + 原生 JS（無框架、無 build step）
 - **入口點：** `index.html`（載入 `js/data.js` → `js/app.js`，立即 `render()`）
@@ -53,9 +53,11 @@
 | 「一塊區域」 | `regions[name] = {d, cx, cy, area}` | 資料在 `data.js` |
 | 「配色」 | CSS `:root` 變數 **＋** `app.js` 的 `COL`（SVG 填色）| 兩處都改才一致（坑 P5）|
 | 「外島呈現」 | `insets`、`hitCircles` | 僅縣市層級；資料在 `data.js` |
+| 「世界題聚焦」 | `worldFocusBox()` → `WORLD.contBox[洲]` 餵給 `buildMap(...,focusBox)`；干擾項 `optPool()` 同洲 | `app.js`；洲框資料在 `world.js`（建置期 proc_world2.py 產）|
 | 「一輪題數」 | `MAX_Q`（=15），`start()` 內 `shuffle(names).slice(0, MAX_Q)` | `app.js` |
 | 「計分」 | 答對 `BASE`(100)×`comboMult` + 速度加成 `SPEED_MAX`(50, `SPEED_CAP` 8s 內遞減)；答錯扣 `WRONG_POINTS`(50)、總分下限 0 | `app.js` 常數區 / `pickAnswer()` |
-| 「景點題素材（未接線）」 | `data/landmarks.json`（22 縣市 ×3 景點 + _spec 接線說明）| index.html **刻意未載入**；接線方式見該檔 _spec |
+| 「景點/地標題」（縣市與世界層級）| 題目=地名、正解=`lmMap()[題目]`（county→LMAP、world→WLMAP）；`correctAns()` 統一正解；鎖定後地圖點亮正解 | `app.js`（LMAP/WLMAP/lmMap/correctAns）|
+| 「景點題資料」 | 台灣：`landmarks.json→landmarks.js`；世界：`world-landmarks.json→world-landmarks.js`（規則同坑 P7，另不收跨國界地標）。台灣編輯 `data/landmarks.json` → 轉出 `data/landmarks.js`（window.LANDMARKS，坑 P1）→ 兩檔同 commit | `data/` 兩檔 + `index.html` 載入順序（data.js → landmarks.js → app.js）|
 
 > 地圖資料（`data.js`）是建置期由 GeoJSON 前處理產生的，不要手改座標。
 
@@ -66,12 +68,13 @@
 | 想改什麼 | 動哪些檔 |
 |---------|---------|
 | 配色 / 版面 | `css/style.css` 的 `:root` **＋** `js/app.js` 的 `COL` |
+| 版本號（升版必改三處）| `js/app.js` 頂部 `VERSION`（顯示於首頁 footer）＋ README「## 版本」與 footer ＋ 本檔「〇、當前狀態」|
 | 主色（對齊 logo）| `:root --primary`、`COL.active`、`index.html` theme-color、`favicon/site.webmanifest` theme_color（四處一致）|
 | 計分 / 評級 | `js/app.js` 的常數 / `rankOf()` |
 | 測驗流程 / 畫面 | `js/app.js` 的 `view*()` 與 `start/pickAnswer/next/finish` |
 | 地圖資料 | `js/data.js`（建置期產生，勿手改）|
 | app logo | `assets/app-logo.png`(母圖) + `favicon/`(套組)；重生 prompt 見 `SELA-logo-prompt.md` |
-| 景點題素材 | `data/landmarks.json`（下版接線；改存 window 全域 js 以符合坑 P1）|
+| 景點題內容 | `data/landmarks.json`（編輯來源）+ `data/landmarks.js`（載入檔，兩檔同步）|
 | SELA 歸屬印記 | `viewHome()` 結尾 `.attrib`、README footer、`assets/sela.svg` |
 
 ---
@@ -84,6 +87,11 @@ P2. SVG r 屬性的 CSS 動畫只部分瀏覽器支援 → keyframes 同時動 o
 P3. 大型資料別塞進 index.html → data.js / style.css / app.js 分檔
 P4. render() 重畫 innerHTML，逐元素綁事件會失效 → 事件委派（#app 上 closest('[data-act]')）
 P5. 配色有「兩處真相」：CSS 變數 + JS COL；主色還要同步 index.html 與 webmanifest 的 theme-color → 改色四處一起改
+P7. 景點題名稱會自我洩答
+   - 症狀：題目名稱含所屬縣市字樣（基隆廟口夜市、臺中國家歌劇院——含臺/台變體、馬祖/蘭陽俗稱）
+   - 原因：建題時直接用全名，沒做洩答檢查
+   - 做法：入庫前跑稽核（縣市核心字 + 臺/台互換 + 俗稱表）；改通行俗稱或換景點。世界版國名同理（國名通常即答案載體，世界版景點題要套同規則）
+
 P6. app logo 轉檔：AI 生的圓角方形圖外圍是白底（含圓角縫隙），直接縮成 favicon 會有白角
    - 做法：從四角 floodfill 把外圍白換成 logo 底色（台灣/文字是被藍包住的白色孤島，不會被填），得乾淨滿版方形；圓角交給顯示端 CSS（.applogo border-radius）。主色用「整圖最大宗非白像素」取樣最準（邊緣取樣會偏暗）。
 ```
@@ -116,18 +124,38 @@ python -m http.server 8000   # 開 http://localhost:8000
 | V0.3.0 | 整合 app logo（Gemini 生圖 + Pillow 轉多解析度套組 + favicon.ico/apple-touch）；主色取樣 logo 底色對齊為 `#537387`（CSS/JS/HTML/manifest 四處）；首頁 + README 換上 app 主視覺；SELA logo 降為歸屬印記 |
 | V0.4.0 | 加限時挑戰模式（獨立）；首頁主色 hero；計時主色 chip |
 | V0.5.0 | 流程重整：層級優先 + 同構選單；限時融入；15 題上限；備妥景點題素材（未接線）|
-| V0.6.0 | **計分定案**：答對 +100×連擊倍率 + 每題速度加成（8s 內最高 +50）、**答錯 −50**（總分下限 0）；移除整輪碼錶/時間獎勵/罰秒（V0.4–0.5 的限時機制收斂為每題加成）|
+| V0.6.0 | 計分定案：答對 +100×連擊 + 每題速度加成、答錯 −50（下限 0）；移除整輪碼錶/時間獎勵/罰秒 |
+| V0.6.1 | 測驗頂列加「‹ 離開」（放棄不計分，回模式選單）|
+| V0.7.0 | 「停止測驗並結算」：部分結算；與「‹ 離開」雙出口 |
+| V0.8.0 | 接線景點題（66 景點、correctAns() 抽象化、json→js 雙檔）|
+| V0.9.0 | 景點題庫擴充 66→121；寫入世界版路線圖 |
+| V0.9.1 | 洩答稽核修 10 名（坑 P7）；世界前置初版（110m、176 國，未掛載）|
+| V0.9.2 | 世界名單定版 196 國（NE 10m、剔非主權、補以巴）；未掛載 |
+| V1.0.0 | 里程碑：世界版上線＋換 logo＋改抬頭；主色 #3C6078；zoom 4× |
+| V1.1.0 | 世界地標題（88 個/53 國、lmMap() 層級感知）|
+| V1.2.0 | 世界題聚焦初版：太平洋置中投影、cont/contBox、洲級聚焦、選項不跨洲 |
+| V1.3.0 | (1) **頁面顯示版本號**：app.js `VERSION` 常數 → 首頁 footer「Made by SELA ・ V<版本>」（升版三處同步，見關鍵檔案路徑表）；(2) **聚焦加強**：world.js 每國加投影 bbox `bb`、洲框邊距 18/22%→8/10%；map2name/地標題改**目標國置中緊聚焦**（`worldFocusBox()`：目標 bbox ×4、最小視窗 150、夾在全圖內），name2map 維持洲框（再緊會洩答）；(3) **世界地標 88→138**（+50：中亞/西非/加勒比/東歐等，洩答稽核——大辛巴威遺址因含國名棄用、巴拿馬運河同理）|
 
 ---
 
 ## 七、下版候選工作（按優先序）
 
-1. **接線景點特色題** — 素材已備（`data/landmarks.json`，22 縣市 ×3）；依其 _spec 改存 `data/landmarks.js`（window 全域、坑 P1），在縣市選單加「景點題」模式卡（『〈景點〉位於哪個縣市？』四選一），沿用現有計分。是 SELA 已點名的下一步。
-2. PWA 離線安裝（webmanifest + app icon 已備，補 service worker）
-3. 分區「只考錯的」跨縣市彙整（目前限單一縣市內）
-4. 英文區名提示／英文作答模式（資料已含 TOWNENG）
-5. 無障礙：鍵盤操作、aria、焦點順序
-6. 地圖資料更新流程文件（內政部界線改版時怎麼重產 data.js）
+1. **微型國 name2map 可玩性追蹤** — V1.2.0 洲聚焦後已大幅改善（歐洲框內微型國可視）；SELA 實玩後若仍難點，再考慮歐洲微型國 inset。
+2. 世界地標題庫擴充（目前 88 個/53 國；可往 150 個、補中亞/西非/加勒比覆蓋）
+2. 景點反向題（「下列哪個景點在〈縣市〉？」，同題庫反著出）
+3. PWA 離線安裝（webmanifest + app icon 已備，補 service worker）
+4. 分區「只考錯的」跨縣市彙整（目前限單一縣市內）
+5. 英文區名提示／英文作答模式（資料已含 TOWNENG）
+6. 無障礙：鍵盤操作、aria、焦點順序
+7. 地圖資料更新流程文件（界線改版時怎麼重產 data.js）
+
+### 世界版路線圖（V0.9.1：資料前置已完成，僅剩接線）
+
+現有架構已為此鋪好路，接法：
+- **資料（✓ 已完成，V0.9.2 定版）**：`data/world.js`——**196 國＝193 聯合國會員＋梵蒂岡＋巴勒斯坦＋台灣**。NE 10m、NAME_ZHT＋慣稱覆寫（台灣/紐西蘭/南北韓/捷克/印尼/厄瓜多/克羅埃西亞/馬爾他/盧安達/馬利/蒙古/中國/聖馬利諾/巴勒斯坦）；排除港澳格陵蘭等非主權實體與北賽/索馬利蘭、科索沃；Israel/Palestine 由 Disputed/Indeterminate 補入。58 個微型國 hitCircles（梵蒂岡/摩納哥等靠點擊圈作答；name2map 模式對微型國的可玩性，接線時要評估加洲別放大或提高 zoom 上限）。名單 `data/world_names.txt` 供校對。
+- **接點**：`dataset()` 已抽象為 `{viewBox, regions, insets, hitCircles}`，世界地圖就是再一個 dataset；首頁層級選單（V0.5.0 同構設計）加第三張卡「世界國家」，進同款模式選單即可，四種題型（含景點題）零改動共用。
+- **景點**：`landmarks.json` 格式直接沿用（國家 → 景點清單），如「艾菲爾鐵塔→法國」。
+- **注意**：國名採台灣慣用譯名；爭議地區的呈現方式屆時與 SELA 對焦再定。
 
 ---
 
@@ -139,4 +167,4 @@ python -m http.server 8000   # 開 http://localhost:8000
 
 ## 九、一句話總結
 
-V0.6.0：計分定案為純加減分——答對 +100（連擊 ×1.5/×2/×3）＋每題 8 秒內速度加成（最高 +50），答錯 −50（總分下限 0）；移除整輪碼錶、結算時間獎勵與罰秒。jsdom 驗證通過。下版第一優先是接線景點特色題（素材在 data/landmarks.json）。
+V1.3.0：版本號上頁面（VERSION 單一真相＋升版三處清單）；聚焦改目標國置中緊聚焦（name2map 留洲級提示）；世界地標擴至 138。jsdom 全綠。下版優先：SELA 實玩回饋（聚焦強度/微型國手感）。

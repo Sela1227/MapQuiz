@@ -8,9 +8,9 @@
   --sela-white: #FFFFFF;
 
   /* app 主題：北歐霧藍 */
-  --primary: #537387;       /* 主色：作答中、主要按鈕 */
+  --primary: #3C6078;       /* 主色：作答中、主要按鈕 */
   --secondary: #9AB0BC;     /* 副色 */
-  --slate-deep: #3E5666;    /* 深板岩：標題強調、最高評級 */
+  --slate-deep: #2C4A5E;    /* 深板岩：標題強調、最高評級 */
   --success: #4A9B7F;       /* 柔和綠：答對 */
   --danger: #9A8585;        /* 低彩度紅：答錯 */
   --muted: #8A9BA8;         /* 輔助文字 */

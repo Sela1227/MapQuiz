@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/app-logo.png" width="112" alt="MapQuiz"/>
-  <h1>MapQuiz（台灣縣市地圖）</h1>
-  <p>互動式地理測驗：全台 22 縣市與 368 鄉鎮市區，連擊加倍、限時加分，邊玩邊記位置。</p>
+  <h1>MapQuiz（台灣及世界地圖測驗）</h1>
+  <p>互動式地理測驗：台灣 22 縣市、368 鄉鎮市區，以及世界 196 國。台灣為主、世界為輔。</p>
   <p><em>北歐極簡風 · 純前端 · 零後端</em></p>
 </div>
 
@@ -15,6 +15,10 @@
 
 特色：
 
+- **世界國家**：196 國＝193 聯合國會員＋梵蒂岡＋巴勒斯坦＋台灣；**太平洋置中投影（台灣居中）**；看地圖選名字／地標題**緊聚焦目標國**（目標約佔畫面 1/4）、看名字點地圖聚焦到洲、選項不跨洲；微型國有點擊範圍、可放大至 4×
+- **世界地標題**：「艾菲爾鐵塔位於哪個國家？」四選一，138 個世界地標（不收跨國界地標避免爭議）
+- **景點題**：「日月潭位於哪個縣市？」四選一，121 個代表景點（每縣市 5–6 個），答完地圖點亮正解
+- **可中途結算**：測驗下方「停止測驗並結算」，按下立刻以已作答題目結算分數；頂列「‹ 離開」則是放棄不計分
 - **計分**：答對 +100（連擊 3/6/10 有 ×1.5/×2/×3 倍率）、答錯 −50（總分不低於 0）、每題 8 秒內答得越快額外加成越多（最高 +50）
 - 答對／答錯音效（WebAudio，可靜音）、分數浮動動畫
 - 結算評級 S+／S／A／B／C／D，並用對錯把整張地圖上色
@@ -50,7 +54,12 @@ MapQuiz/
 ├── index.html              入口（含 favicon 套組、meta）
 ├── css/style.css           樣式（CSS 變數：北歐霧藍主題 + SELA 品牌色）
 ├── data/
-│   └── landmarks.json      下版「景點題」素材（尚未接線）
+│   ├── landmarks.json      景點題編輯來源
+│   ├── landmarks.js        景點題載入檔（window.LANDMARKS）
+│   ├── world.js            世界國界資料：196 國（V1.0.0 已接線）
+│   ├── world-landmarks.json 世界地標題編輯來源
+│   ├── world-landmarks.js  世界地標題載入檔（window.WORLD_LANDMARKS）
+│   └── world_names.txt     196 國繁中名單（供校對）
 ├── js/
 │   ├── data.js             地圖資料（window.MAP / window.DISTRICTS）
 │   └── app.js              主程式（測驗流程、計分、音效、存檔）
@@ -66,7 +75,7 @@ MapQuiz/
 
 ## Logo
 
-app 專屬 logo（白色台灣＋定位 pin、北歐霧藍底）已整合為 favicon／app icon／README 主視覺，由其他 AI 生圖、Claude 優化轉檔（多解析度 + favicon.ico + apple-touch-icon）。`SELA-logo-prompt.md` 保留生成用的 prompt。SELA logo 作為品牌歸屬印記，置於首頁底與 README footer。
+app 專屬 logo（V1.0.0 起換為「地圖書＋羅盤＋定位 pin」版本，呼應世界地圖；霧藍底 #3C6078）已整合為 favicon／app icon／README 主視覺，由其他 AI 生圖、Claude 優化轉檔（多解析度 + favicon.ico + apple-touch-icon）。`SELA-logo-prompt.md` 保留生成用的 prompt。SELA logo 作為品牌歸屬印記，置於首頁底與 README footer。
 
 ## 資料來源
 
@@ -76,12 +85,12 @@ app 專屬 logo（白色台灣＋定位 pin、北歐霧藍底）已整合為 fav
 
 ## 版本
 
-V0.6.0
+V1.3.0
 
 ---
 
 <div align="center">
   <img src="assets/sela.svg" width="22" alt="SELA"/>
   <br/>
-  <sub>Made by <strong>SELA</strong> · V0.6.0</sub>
+  <sub>Made by <strong>SELA</strong> · V1.3.0</sub>
 </div>
