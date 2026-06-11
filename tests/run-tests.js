@@ -8,7 +8,7 @@
 const fs = require('fs'), path = require('path');
 const { JSDOM } = require('jsdom');
 const P = path.join(__dirname, '..');
-const dom = new JSDOM(fs.readFileSync(path.join(P, 'index.html'), 'utf8'), { pretendToBeVisual: true });
+const dom = new JSDOM(fs.readFileSync(path.join(P, 'index.html'), 'utf8'), { pretendToBeVisual: true, url: 'https://x.github.io/MapQuiz/' });
 global.window = dom.window; global.document = dom.window.document;
 for (const f of ['js/data.js', 'data/landmarks.js', 'data/world.js', 'data/world-landmarks.js',
   'data/world-facts.js', 'data/taiwan-facts.js', 'data/world-capitals.js', 'data/world-flags.js', 'js/app.js'])
@@ -86,6 +86,17 @@ click('[data-act="toPicker"]'); click('[data-act="pickCounty"][data-arg="台中�
 click('[data-act="startDistrict"][data-arg="map2name"]'); click('.opt');
 ok(!d.querySelector('.fact'), '分區層級不顯示小知識');
 click('[data-act="quitQuiz"]');
+
+console.log('— 返回手勢（popstate）—');
+function back() { W.history.back(); W.dispatchEvent(new W.PopStateEvent('popstate', { state: W.history.state })); }
+function scrName() { if (d.querySelector('.prompt')) return 'quiz'; if (d.querySelector('.resgrid')) return 'result'; if (d.querySelector('.x-map')) return 'explore'; if (d.querySelector('.lvgrid')) return 'home'; return d.querySelector('h2') ? d.querySelector('h2').textContent : '?'; }
+if (d.querySelector('[data-act="quitQuiz"]')) click('[data-act="quitQuiz"]');
+for (let i = 0; i < 6 && scrName() !== 'home'; i++) back();  // 用返回手勢一路退回根
+ok(scrName() === 'home', '連續返回手勢可退回首頁');
+click('[data-act="toWorldMenu"]'); click('[data-act="startWorld"][data-arg="map2name"]');
+ok(scrName() === 'quiz', '進入世界測驗');
+back(); ok(scrName() === '世界國家', 'quiz 返回手勢→世界選單（不退出）');
+back(); ok(scrName() === 'home', '選單返回手勢→首頁');
 
 if (failed) { console.log('\nFAILED: ' + failed); process.exit(1); }
 console.log('\nALL PASS');

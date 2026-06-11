@@ -67,5 +67,5 @@
 | capital-facts | world-capitals.js | CAP_FACTS（key 轉為首都名）| 每首都 3 |
 | flags | world-flags.js | WORLD_FLAGS | 196 全 |
 
-注意：`data/world.js`（地理輪廓）不在本系統，由 `proc_world2.py` 管（見 CLAUDE.md）。
+注意：`data/world.js`（地理輪廓）由 `proc_world2.py` 產（見 CLAUDE.md），不經 build；但 **validate 會檢查它**（196 國、path、bb、洲別、contBox），改動後跑 validate 可防輪廓壞掉。
 測試需 jsdom（dev 環境 `npm i jsdom`，不進 repo）。

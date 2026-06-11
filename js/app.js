@@ -90,7 +90,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "2.7.1";
+  var VERSION = "2.7.2";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -408,7 +408,38 @@
     document.getElementById("app").innerHTML = html;
     lastScreen = S.screen;
     if (keepScroll) { var nb = document.querySelector(".map-box"); if (nb) { nb.scrollLeft = keepScroll.l; nb.scrollTop = keepScroll.t; } }
+    syncHistory();
   }
+
+  // 攔截瀏覽器返回（含 Android 邊緣滑動手勢）：在 app 內退一層，而非退出 PWA。
+  // 首頁是根；於根再返回時才放行（pop 到瀏覽器自身的上一頁）。
+  var historyReady = false;
+  function backTarget() {
+    switch (S.screen) {
+      case "home": return null; // 根，放行
+      case "countyMenu": case "worldMenu": case "countyPicker": return "home";
+      case "districtMenu": return "countyPicker";
+      case "explore": return S.level === "county" ? "countyMenu" : S.level === "world" ? "worldMenu" : "districtMenu";
+      case "quiz": case "result": return S.level === "county" ? "countyMenu" : S.level === "world" ? "worldMenu" : "districtMenu";
+      default: return "home";
+    }
+  }
+  function syncHistory() {
+    if (!historyReady) {
+      window.history.replaceState({ screen: S.screen }, "");
+      historyReady = true;
+    } else if (!window.history.state || window.history.state.screen !== S.screen) {
+      window.history.pushState({ screen: S.screen }, "");
+    }
+  }
+  window.addEventListener("popstate", function () {
+    var t = backTarget();
+    if (t === null) { window.history.back(); return; } // 已在首頁，真的離開
+    if (S.screen === "quiz") { S.picked = null; S.locked = false; S.lastGain = 0; }
+    S.screen = t;
+    window.history.pushState({ screen: t }, ""); // 補回一格，維持「再返回還能退」
+    render();
+  });
 
   // ---------- logic ----------
   function start(mode, level, county, list) {

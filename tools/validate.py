@@ -110,6 +110,45 @@ def main():
     for c in capfacts:
         if c not in names196: err("capital-facts 非 196 國名稱：" + c)
 
+    # ── 地圖地理資料（world.js）防護網 ──
+    try:
+        ws = open(os.path.join(OUT, "world.js"), encoding="utf-8").read()
+        W = json.loads(ws[ws.index("{"):ws.rindex(";")])
+    except Exception as e:
+        err("world.js 無法解析：%s" % e); W = None
+    if W:
+        regions = W.get("regions", {})
+        CONTS = {"亞洲", "歐洲", "非洲", "北美洲", "南美洲", "大洋洲"}
+        if len(regions) != 196: err("world.js regions 數=%d（應 196）" % len(regions))
+        for nm in regions:
+            if nm not in names196: err("world.js 含非 196 國名稱：" + nm)
+        for nm in names196:
+            if nm not in regions: err("world.js 缺國家輪廓：" + nm)
+        try:
+            vb = [float(x) for x in str(W.get("viewBox", "")).split()]
+            assert len(vb) == 4
+            vw, vh = vb[2], vb[3]
+        except Exception:
+            err("world.js viewBox 格式錯誤"); vw = vh = 0
+        for nm, r in regions.items():
+            for fld in ("d", "cx", "cy", "area", "cont", "bb"):
+                if fld not in r: err("world.js %s 缺欄位 %s" % (nm, fld))
+            d = r.get("d", "")
+            if not (isinstance(d, str) and d[:1].upper() == "M" and len(d) > 8):
+                err("world.js %s 的 path 非法" % nm)
+            if r.get("cont") not in CONTS:
+                err("world.js %s 洲別非法：%s" % (nm, r.get("cont")))
+            bb = r.get("bb", [])
+            if not (isinstance(bb, list) and len(bb) == 4 and bb[0] <= bb[2] and bb[1] <= bb[3]):
+                err("world.js %s 的 bb 非法：%s" % (nm, bb))
+            elif vw and vh and not (-vw <= bb[0] and bb[2] <= vw * 2 and -vh <= bb[1] and bb[3] <= vh * 2):
+                warn("world.js %s 的 bb 超出畫布範圍頗多：%s" % (nm, bb))
+            if "cx" in r and "cy" in r and bb and len(bb) == 4:
+                if not (bb[0] - 1 <= r["cx"] <= bb[2] + 1 and bb[1] - 1 <= r["cy"] <= bb[3] + 1):
+                    warn("world.js %s 的 cx/cy 不在 bb 內：(%.1f,%.1f) bb=%s" % (nm, r["cx"], r["cy"], bb))
+        for c in CONTS:
+            if c not in W.get("contBox", {}): err("world.js contBox 缺洲別：" + c)
+
     # ── 往返一致性（雙檔漂移防線）──
     import importlib.util
     spec = importlib.util.spec_from_file_location("build", os.path.join(ROOT, "tools", "build.py"))
