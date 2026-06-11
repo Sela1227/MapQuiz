@@ -64,6 +64,7 @@
 | landmarks-world | world-landmarks.js | WORLD_LANDMARKS | — |
 | landmarks-taiwan | landmarks.js | LANDMARKS | — |
 | capitals | world-capitals.js | WORLD_CAPITALS＋CAPMAP（派生）| 196 全 |
+| capital-facts | world-capitals.js | CAP_FACTS（key 轉為首都名）| 每首都 3 |
 | flags | world-flags.js | WORLD_FLAGS | 196 全 |
 
 注意：`data/world.js`（地理輪廓）不在本系統，由 `proc_world2.py` 管（見 CLAUDE.md）。

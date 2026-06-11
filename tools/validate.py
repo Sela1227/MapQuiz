@@ -13,6 +13,10 @@ ANGLES = {"地標", "飲食", "工藝", "節慶", "歷史", "自然", "冷知識
 HOT = ["台灣","日本","南韓","北韓","中國","美國","英國","法國","德國","義大利","西班牙","俄羅斯","印度","泰國","越南","新加坡","馬來西亞","印尼","菲律賓","澳大利亞","紐西蘭","加拿大","墨西哥","巴西","阿根廷","埃及","南非","土耳其","沙烏地阿拉伯","阿拉伯聯合大公國","以色列","荷蘭","瑞士"]
 ALIAS = {"連江縣": ["馬祖"], "宜蘭縣": ["蘭陽"]}
 
+# 註：句子品質採「長度＋亂碼＋重複」機械規則，不做「缺動詞＝半截句」啟發式。
+# 中文大量以名詞謂語句／判斷句成句（「珍珠奶茶的發源地」「京都千年古都」皆完整），
+# 以動詞徵兆判斷半截句會產生近全庫誤報（V2.7.1 實測 2847/3066 誤報）。
+# 真正的半截句多半同時過短，已被 6 字下限攔下。語意級重複需人工複核（見 V2.7.1）。
 errors, warns = [], []
 def err(m): errors.append(m)
 def warn(m): warns.append(m)
@@ -31,6 +35,7 @@ def main():
     wd, td = load("lm-desc-world"), load("lm-desc-taiwan")
     wl, tl = load("landmarks-world"), load("landmarks-taiwan")
     caps, flags = load("capitals"), load("flags")
+    capfacts = load("capital-facts")
     names196 = set(open(os.path.join(OUT, "world_names.txt")).read().split())
 
     # ── 覆蓋率下限 ──
@@ -43,6 +48,8 @@ def main():
         if len(v) < 10: err("facts-taiwan %s 僅 %d 段（下限 10）" % (c, len(v)))
     for nm, v in {**wd, **td}.items():
         if len(v) < 3: err("景點說明 %s 僅 %d 句（下限 3）" % (nm, len(v)))
+    for nation, v in capfacts.items():
+        if len(v) < 3: err("capital-facts %s 僅 %d 條（下限 3）" % (nation, len(v)))
 
     # ── 洩答（坑 P7）──
     def cores(county):
@@ -71,7 +78,7 @@ def main():
         if capvals.count(c) > 1: err("首都重名：" + c)
 
     # ── 句子品質 ──
-    for src, label in [(wf, "facts-world"), (tf, "facts-taiwan"), (wd, "lm-desc-world"), (td, "lm-desc-taiwan")]:
+    for src, label in [(wf, "facts-world"), (tf, "facts-taiwan"), (wd, "lm-desc-world"), (td, "lm-desc-taiwan"), (capfacts, "capital-facts")]:
         for k, v in src.items():
             for e in v:
                 t = e["text"] if isinstance(e, dict) else e
@@ -99,6 +106,9 @@ def main():
     for c in names196:
         if c not in caps: err("缺首都：" + c)
         if c not in flags: err("缺旗幟：" + c)
+        if c not in capfacts: err("缺首都冷知識：" + c)
+    for c in capfacts:
+        if c not in names196: err("capital-facts 非 196 國名稱：" + c)
 
     # ── 往返一致性（雙檔漂移防線）──
     import importlib.util

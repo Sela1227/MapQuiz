@@ -14,8 +14,8 @@ DELTAS = os.path.join(ROOT, "deltas")
 SCHEMA = 1
 
 SOURCES = ["facts-world", "facts-taiwan", "lm-desc-world", "lm-desc-taiwan",
-           "landmarks-world", "landmarks-taiwan", "capitals", "flags"]
-TAGGED = {"facts-world", "facts-taiwan", "lm-desc-world", "lm-desc-taiwan"}  # [{text,angle}]
+           "landmarks-world", "landmarks-taiwan", "capitals", "flags", "capital-facts"]
+TAGGED = {"facts-world", "facts-taiwan", "lm-desc-world", "lm-desc-taiwan", "capital-facts"}  # [{text,angle}]
 
 def load(name):
     p = os.path.join(SRC, name + ".json")
@@ -69,6 +69,8 @@ def main():
     wd, td = flat(data["lm-desc-world"]), flat(data["lm-desc-taiwan"])
     wl, tl = data["landmarks-world"], data["landmarks-taiwan"]
     caps, flags = data["capitals"], data["flags"]
+    capfacts_by_nation = flat(data["capital-facts"])
+    capfacts = {caps[nation]: v for nation, v in capfacts_by_nation.items() if nation in caps}
     capmap = {v: k for k, v in caps.items() if k not in v}  # 坑 P7：首都含國名不入題
 
     def hdr(desc):
@@ -79,7 +81,7 @@ def main():
         "taiwan-facts.js": hdr("台灣縣市小知識 %d 段＋景點說明 %d 句" % (sum(len(v) for v in tf.values()), sum(len(v) for v in td.values()))) + js("TW_FACTS", tf) + js("TW_LM_DESC", td),
         "world-landmarks.js": hdr("世界地標 %d 個＋說明 %d 句" % (sum(len(v) for v in wl.values()), sum(len(v) for v in wd.values()))) + js("WORLD_LANDMARKS", wl) + js("WORLD_LM_DESC", wd),
         "landmarks.js": hdr("台灣景點 %d 個" % sum(len(v) for v in tl.values())) + js("LANDMARKS", tl),
-        "world-capitals.js": hdr("首都 %d／出題池 %d（排除含國名者）" % (len(caps), len(capmap))) + js("WORLD_CAPITALS", caps) + js("CAPMAP", capmap),
+        "world-capitals.js": hdr("首都 %d／出題池 %d（排除含國名者）／冷知識 %d 條" % (len(caps), len(capmap), sum(len(v) for v in capfacts.values()))) + js("WORLD_CAPITALS", caps) + js("CAPMAP", capmap) + js("CAP_FACTS", capfacts),
         "world-flags.js": hdr("旗幟 emoji %d 面" % len(flags)) + js("WORLD_FLAGS", flags),
     }
     for fn, content in files.items():

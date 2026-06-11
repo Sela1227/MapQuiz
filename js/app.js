@@ -90,7 +90,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "2.6.0";
+  var VERSION = "2.7.1";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -447,6 +447,7 @@
     S.fact = null; S.factName = null;
     if (S.level === "world") {
       if (S.mode === "landmark" && window.WORLD_LM_DESC && window.WORLD_LM_DESC[S.target]) { S.fact = pickFrom(window.WORLD_LM_DESC[S.target]); S.factName = S.target; }
+      else if (S.mode === "capital" && window.CAP_FACTS && window.CAP_FACTS[S.target]) { S.fact = pickFrom(window.CAP_FACTS[S.target]); S.factName = S.target; }
       else { S.fact = pickFact(correctAns()); S.factName = correctAns(); }
     }
     else if (S.level === "county") {

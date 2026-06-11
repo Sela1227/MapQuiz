@@ -1,5 +1,5 @@
 {
- "built_at": "2026-06-11T16:16:09",
+ "built_at": "2026-06-11T17:02:35",
  "schema_version": 1,
  "counts": {
   "facts-world": 1802,
@@ -9,17 +9,19 @@
   "landmarks-world": 279,
   "landmarks-taiwan": 165,
   "capitals": 196,
-  "flags": 196
+  "flags": 196,
+  "capital-facts": 588
  },
  "source_sha256": {
-  "facts-world": "a70a4dc06e6711f3",
+  "facts-world": "18fa5297bbf4af51",
   "facts-taiwan": "09b6f8dad708a26f",
   "lm-desc-world": "8ed6f469485b47b0",
-  "lm-desc-taiwan": "a0e3eb380285d2d4",
+  "lm-desc-taiwan": "9a152d2012f3c838",
   "landmarks-world": "0310210d180be1c6",
   "landmarks-taiwan": "cf0fcdcdc5279946",
   "capitals": "bce665a9410e2e9d",
-  "flags": "399f418b3f185809"
+  "flags": "399f418b3f185809",
+  "capital-facts": "0efca238faf82122"
  },
  "outputs": [
   "landmarks.js",
