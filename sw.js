@@ -1,12 +1,12 @@
 /* MapQuiz service worker — cache-first 離線（V1.6.0） */
-var CACHE = "mapquiz-v2.0.0";
+var CACHE = "mapquiz-v2.0.1";
 var ASSETS = [
   "./", "./index.html", "./css/style.css", "./js/app.js", "./js/data.js",
   "./data/landmarks.js", "./data/world.js", "./data/world-landmarks.js", "./data/world-facts.js", "./data/taiwan-facts.js", "./data/world-capitals.js", "./data/world-flags.js",
   "./assets/app-logo.png", "./assets/sela.svg",
   "./favicon/favicon-16x16.png", "./favicon/favicon-32x32.png", "./favicon/favicon.ico",
   "./favicon/apple-touch-icon.png", "./favicon/android-chrome-192x192.png",
-  "./favicon/android-chrome-512x512.png", "./favicon/site.webmanifest"
+  "./favicon/android-chrome-512x512.png", "./site.webmanifest"
 ];
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ASSETS); }).then(function () { return self.skipWaiting(); }));
