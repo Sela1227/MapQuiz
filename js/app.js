@@ -21,7 +21,12 @@
     Object.keys(W).forEach(function (nation) { W[nation].forEach(function (lm) { WLMAP[lm] = nation; }); });
   })();
   function lmMap() { return S.level === "world" ? WLMAP : LMAP; }
-  function correctAns() { return S.mode === "landmark" ? lmMap()[S.target] : S.target; }
+  function isAssoc() { return S.mode === "landmark" || S.mode === "capital" || S.mode === "flag"; }
+  function correctAns() {
+    if (S.mode === "landmark") return lmMap()[S.target];
+    if (S.mode === "capital") return window.CAPMAP[S.target];
+    return S.target;  // flag 模式的題目本身就是國家
+  }
   // 知名度三級權重：FAME3（家喻戶曉）5、有地標入庫者 2、其餘 1 —— 降低冷門國連發的挫折感
   var FAME3 = {};
   ["美國","中國","日本","南韓","北韓","英國","法國","德國","義大利","西班牙","葡萄牙","荷蘭","瑞士","瑞典","挪威","丹麥","芬蘭","俄羅斯","烏克蘭","波蘭","希臘","土耳其","埃及","南非","印度","巴基斯坦","泰國","越南","菲律賓","馬來西亞","新加坡","印尼","澳大利亞","紐西蘭","加拿大","墨西哥","巴西","阿根廷","智利","沙烏地阿拉伯","阿拉伯聯合大公國","以色列","伊朗","伊拉克","台灣","蒙古","緬甸","柬埔寨","古巴","奧地利","比利時","愛爾蘭","冰島","捷克","匈牙利","梵蒂岡","摩納哥","肯亞","衣索比亞","摩洛哥","哥倫比亞","秘魯"].forEach(function (n) { FAME3[n] = 1; });
@@ -84,7 +89,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "1.7.0";
+  var VERSION = "1.8.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -179,7 +184,7 @@
 
   // ---------- fills ----------
   function fillQuiz(nm) {
-    if (S.mode === "landmark") {
+    if (isAssoc()) {
       if (!S.locked) return COL.land;
       if (nm === correctAns()) return COL.correct;
       if (nm === S.picked && S.picked !== correctAns()) return COL.wrong;
@@ -251,6 +256,8 @@
       card("startWorld", "map2name", "看地圖，選名字", "地圖點亮一個國家，從四個選項選出它。", "w-map2name") +
       card("startWorld", "name2map", "看名字，點地圖", "給你國名，在地圖上點出位置（小國有點擊範圍，可放大）。", "w-name2map") +
       card("startWorld", "landmark", "地標題", "「艾菲爾鐵塔位於哪個國家？」四選一，答完地圖點亮正解。", "w-landmark") +
+      card("startWorld", "capital", "首都題", "「坎培拉是哪個國家的首都？」四選一。", "w-capital") +
+      card("startWorld", "flag", "國旗題", "看國旗認國家，四選一。", "w-flag") +
       card("exploreWorld", "", "自由練習", "點任一國家看名稱，不計分。", null);
   }
 
@@ -294,17 +301,17 @@
     var floatHtml = (S.locked && S.lastGain !== 0) ? '<span class="float tw-float' + (S.lastGain < 0 ? ' neg' : '') + '">' + (S.lastGain > 0 ? '+' : '') + S.lastGain + '</span>' : "";
     var speedCls = S.locked ? "speedbar locked" : "speedbar run";
 
-    var promptHtml = '<div class="prompt"><div class="q">' + (S.mode === "landmark" ? (S.level === "world" ? "這個地標位於哪個國家？" : "這個景點位於哪個縣市？") : isMap2() ? "點亮的是哪一個？" : "在地圖上找出：") + '</div>' +
-      ((S.mode === "name2map" || S.mode === "landmark") ? '<div class="name">' + S.target + '</div>' : "") + '</div>';
+    var promptHtml = '<div class="prompt"><div class="q">' + (S.mode === "landmark" ? (S.level === "world" ? "這個地標位於哪個國家？" : "這個景點位於哪個縣市？") : S.mode === "capital" ? "這是哪個國家的首都？" : S.mode === "flag" ? "這是哪一國的國旗？" : isMap2() ? "點亮的是哪一個？" : "在地圖上找出：") + '</div>' +
+      ((S.mode === "name2map" || S.mode === "landmark" || S.mode === "capital") ? '<div class="name">' + S.target + '</div>' : S.mode === "flag" ? '<div class="name flagbig">' + (window.WORLD_FLAGS[S.target] || "") + '</div>' : "") + '</div>';
 
     var clickAct = (S.mode === "name2map" && !S.locked) ? "answer" : null;
-    var ringTarget = isMap2() ? S.target : (S.mode === "landmark" && S.locked ? correctAns() : null);
-    var labelName = (S.mode === "name2map" && S.locked) ? S.target : (S.mode === "landmark" && S.locked ? correctAns() : null);
-    var mapH = (isMap2() || S.mode === "landmark") ? "40vh" : "50vh";
+    var ringTarget = isMap2() ? S.target : (isAssoc() && S.locked ? correctAns() : null);
+    var labelName = (S.mode === "name2map" && S.locked) ? S.target : (isAssoc() && S.locked ? correctAns() : null);
+    var mapH = (isMap2() || isAssoc()) ? "40vh" : "50vh";
     var mapHtml = '<div style="height:' + mapH + ';margin-bottom:12px">' + buildMap(ds, fillQuiz, clickAct, ringTarget, labelName, worldFocusBox()) + '</div>';
 
     var bottom;
-    if (isMap2() || S.mode === "landmark") {
+    if (isMap2() || isAssoc()) {
       bottom = '<div class="opts">' + S.options.map(function (opt) {
         var cls = "opt";
         if (S.locked) { if (opt === correctAns()) cls = "opt correct"; else if (opt === S.picked) cls = "opt wrong"; else cls = "opt dim"; }
@@ -322,7 +329,7 @@
         bottom = '<div class="fb hint">點選你認為正確的位置。</div>';
       }
     }
-    var factHtml = (S.locked && S.fact) ? '<div class="fact"><span class="fact-tag">小知識</span><span>' + S.fact + '</span></div>' : '';
+    var factHtml = (S.locked && S.fact) ? '<div class="fact"><span class="fact-tag">小知識</span><span>' + (S.factName ? '<b class="fact-name">' + S.factName + '</b>' : '') + S.fact + '</span></div>' : '';
     var nextBtn = S.locked ? '<div style="margin-top:12px"><button class="btn btn-primary" data-act="next">' + (S.idx + 1 >= S.queue.length ? "看成績" : "下一題") + '</button></div>' : "";
     var stopBtn = '<div style="margin-top:10px"><button class="btn btn-ghost" data-act="stopQuiz">停止測驗並結算</button></div>';
 
@@ -337,7 +344,7 @@
     var backTo = S.level === "county" ? "countyMenuBack" : S.level === "world" ? "worldMenuBack" : "districtMenuBack";
     var ctx = S.level === "county" ? "全台縣市" : S.level === "world" ? "世界國家" : S.activeCounty;
     var status = S.revealed ? S.revealed : ("點" + (ctx === "全台縣市" ? "縣市" : ctx === "世界國家" ? "國家" : "區") + "看名稱");
-    var exFact = (S.revealed && S.fact) ? '<div class="fact"><span class="fact-tag">小知識</span><span>' + S.fact + '</span></div>' : '';
+    var exFact = (S.revealed && S.fact) ? '<div class="fact"><span class="fact-tag">小知識</span><span>' + (S.factName ? '<b class="fact-name">' + S.factName + '</b>' : '') + S.fact + '</span></div>' : '';
     var statusCls = S.revealed ? "" : "muted";
     return '<div class="topbar"><button class="linkbtn" data-act="' + backTo + '">‹ 返回</button><span class="right">' + zoomBar() + '</span></div>' +
       '<div style="text-align:center;font-size:15px;font-weight:700;min-height:24px;margin:6px 0 10px" class="' + statusCls + '">' + status + '</div>' +
@@ -386,13 +393,13 @@
   // ---------- logic ----------
   function start(mode, level, county, list) {
     var ds = level === "county" ? NATIONAL : level === "world" ? worldDataset() : districtDataset(county);
-    var names = (list && list.length) ? list : (mode === "landmark" ? Object.keys(level === "world" ? WLMAP : LMAP) : Object.keys(ds.regions));
+    var names = (list && list.length) ? list : (mode === "landmark" ? Object.keys(level === "world" ? WLMAP : LMAP) : mode === "capital" ? Object.keys(window.CAPMAP) : Object.keys(ds.regions));
     if (level === "world" && S.worldCont && !(list && list.length)) {
-      names = names.filter(function (n) { var nation = mode === "landmark" ? WLMAP[n] : n; return contOf(nation) === S.worldCont; });
+      names = names.filter(function (n) { var nation = mode === "landmark" ? WLMAP[n] : mode === "capital" ? window.CAPMAP[n] : n; return contOf(nation) === S.worldCont; });
     }
     S.level = level; S.activeCounty = county; S.mode = (mode === "explore" ? null : mode);
     if (level === "world" && !(list && list.length)) {
-      var wOf = (mode === "landmark") ? function (lm) { return famWeight(WLMAP[lm]); } : famWeight;
+      var wOf = (mode === "landmark") ? function (lm) { return famWeight(WLMAP[lm]); } : (mode === "capital") ? function (cp) { return famWeight(window.CAPMAP[cp]); } : famWeight;
       S.queue = weightedSample(names, wOf, MAX_Q);
     } else {
       S.queue = shuffle(names).slice(0, MAX_Q);
@@ -403,7 +410,7 @@
     S.screen = (mode === "explore") ? "explore" : "quiz";
     S.target = S.queue[0];
     if (S.screen === "quiz" && isMap2()) S.options = sampleOptions(optPool(ds), S.target);
-    if (S.screen === "quiz" && S.mode === "landmark") S.options = sampleOptions(optPool(ds), lmMap()[S.target]);
+    if (S.screen === "quiz" && isAssoc()) S.options = sampleOptions(optPool(ds), correctAns());
     render();
   }
 
@@ -417,11 +424,11 @@
     var correct = name === correctAns();
     var ms = Date.now() - S.startTime;
     S.picked = name; S.locked = true; S.lastMs = ms;
-    S.fact = null;
-    if (S.level === "world") S.fact = pickFact(correctAns());
+    S.fact = null; S.factName = null;
+    if (S.level === "world") { S.fact = pickFact(correctAns()); S.factName = correctAns(); }
     else if (S.level === "county") {
-      if (S.mode === "landmark" && window.TW_LM_DESC && window.TW_LM_DESC[S.target]) S.fact = window.TW_LM_DESC[S.target];
-      else if (window.TW_FACTS && window.TW_FACTS[correctAns()]) { var tf = window.TW_FACTS[correctAns()]; S.fact = tf[Math.floor(Math.random() * tf.length)]; }
+      if (S.mode === "landmark" && window.TW_LM_DESC && window.TW_LM_DESC[S.target]) { S.fact = window.TW_LM_DESC[S.target]; S.factName = S.target; }
+      else if (window.TW_FACTS && window.TW_FACTS[correctAns()]) { var tf = window.TW_FACTS[correctAns()]; S.fact = tf[Math.floor(Math.random() * tf.length)]; S.factName = correctAns(); }
     }
     if (correct) {
       var nc = S.combo + 1, mult = comboMult(nc);
@@ -444,7 +451,7 @@
     if (S.idx + 1 >= S.queue.length) { finish(); return; }
     S.idx += 1; S.target = S.queue[S.idx]; S.startTime = Date.now();
     if (isMap2()) S.options = sampleOptions(optPool(dataset()), S.target);
-    if (S.mode === "landmark") S.options = sampleOptions(optPool(dataset()), lmMap()[S.target]);
+    if (isAssoc()) S.options = sampleOptions(optPool(dataset()), correctAns());
     render();
   }
 
@@ -492,7 +499,7 @@
       case "exploreCounty": start("explore", "county"); break;
       case "startDistrict": start(arg, "district", S.activeCounty); break;
       case "answer": pickAnswer(arg); break;
-      case "reveal": S.revealed = arg; S.fact = (S.level === "world") ? pickFact(arg) : ((S.level === "county" && window.TW_FACTS && window.TW_FACTS[arg]) ? window.TW_FACTS[arg][Math.floor(Math.random() * window.TW_FACTS[arg].length)] : null); render(); break;
+      case "reveal": S.revealed = arg; S.fact = (S.level === "world") ? pickFact(arg) : ((S.level === "county" && window.TW_FACTS && window.TW_FACTS[arg]) ? window.TW_FACTS[arg][Math.floor(Math.random() * window.TW_FACTS[arg].length)] : null); S.factName = S.fact ? arg : null; render(); break;
       case "next": next(); break;
       case "stopQuiz":
         if (S.locked) { S.answers.push({ name: S.target, county: correctAns(), correct: S.picked === correctAns(), picked: S.picked, ms: S.lastMs || 0 }); S.picked = null; S.locked = false; }
