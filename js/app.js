@@ -89,7 +89,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "1.8.0";
+  var VERSION = "1.9.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -479,6 +479,62 @@
     e.preventDefault();
     zoomBy(e.deltaY < 0 ? 0.5 : -0.5);  // 滾輪一格 ±0.5，比按鈕快
   }, { passive: false });
+
+  // 雙指捏合縮放：移動中用 CSS transform 即時預覽（不重繪），放手才提交 S.zoom 並 render()
+  var pinch = { active: false, startDist: 0, startZoom: 1, tent: 1, svg: null };
+  function touchDist(t) { var dx = t[0].clientX - t[1].clientX, dy = t[0].clientY - t[1].clientY; return Math.sqrt(dx * dx + dy * dy); }
+  document.getElementById("app").addEventListener("touchstart", function (e) {
+    if (e.touches.length !== 2) return;
+    var box = e.target.closest ? e.target.closest(".map-box") : null;
+    if (!box) return;
+    pinch.active = true; pinch.startDist = touchDist(e.touches); pinch.startZoom = S.zoom; pinch.tent = S.zoom;
+    pinch.svg = box.querySelector("svg");
+    if (pinch.svg) { pinch.svg.style.transformOrigin = "center center"; }
+  }, { passive: true });
+  document.getElementById("app").addEventListener("touchmove", function (e) {
+    if (!pinch.active || e.touches.length !== 2) return;
+    e.preventDefault();  // 阻止瀏覽器整頁縮放
+    var ratio = touchDist(e.touches) / pinch.startDist;
+    pinch.tent = Math.min(4, Math.max(zoomFloor(), +(pinch.startZoom * ratio).toFixed(2)));
+    if (pinch.svg) pinch.svg.style.transform = "scale(" + (pinch.tent / pinch.startZoom) + ")";
+  }, { passive: false });
+  function endPinch() {
+    if (!pinch.active) return;
+    pinch.active = false;
+    if (pinch.svg) pinch.svg.style.transform = "";
+    if (pinch.tent !== S.zoom) { S.zoom = pinch.tent; render(); }
+  }
+  document.getElementById("app").addEventListener("touchend", endPinch, { passive: true });
+  document.getElementById("app").addEventListener("touchcancel", endPinch, { passive: true });
+
+  // 雙指捏合縮放：移動中用 transform 預覽（避免重繪大 SVG），放手才 commit 重繪
+  var pinch = { active: false, d0: 0, z0: 1, scale: 1, el: null };
+  function tDist(t) { var dx = t[0].clientX - t[1].clientX, dy = t[0].clientY - t[1].clientY; return Math.sqrt(dx * dx + dy * dy) || 1; }
+  var appEl = document.getElementById("app");
+  appEl.addEventListener("touchstart", function (e) {
+    if (e.touches.length !== 2) return;
+    var box = e.target.closest ? e.target.closest(".map-box") : null;
+    if (!box) return;
+    e.preventDefault();
+    pinch.active = true; pinch.el = box; pinch.d0 = tDist(e.touches); pinch.z0 = S.zoom; pinch.scale = 1;
+  }, { passive: false });
+  appEl.addEventListener("touchmove", function (e) {
+    if (!pinch.active || e.touches.length !== 2) return;
+    e.preventDefault();
+    pinch.scale = tDist(e.touches) / pinch.d0;
+    var svg = pinch.el.querySelector("svg");
+    if (svg) { svg.style.transformOrigin = "center"; svg.style.transform = "scale(" + pinch.scale + ")"; }
+  }, { passive: false });
+  function endPinch() {
+    if (!pinch.active) return;
+    pinch.active = false;
+    var svg = pinch.el && pinch.el.querySelector("svg");
+    if (svg) svg.style.transform = "";
+    S.zoom = Math.min(4, Math.max(zoomFloor(), +(pinch.z0 * pinch.scale).toFixed(2)));
+    render();
+  }
+  appEl.addEventListener("touchend", endPinch);
+  appEl.addEventListener("touchcancel", endPinch);
   document.getElementById("app").addEventListener("click", function (e) {
     var el = e.target.closest ? e.target.closest("[data-act]") : null;
     if (!el) return;

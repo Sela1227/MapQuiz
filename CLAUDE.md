@@ -19,7 +19,7 @@
 
 ## 〇、當前狀態
 
-- **版本：** V1.8.0
+- **版本：** V1.9.0
 - **狀態：** 上線里程碑（台灣縣市/分區 + 世界 196 國三層級；新 logo；計分穩定）
 - **一句話定位：** 台灣（22 縣市＋368 鄉鎮市區）為主、世界（196 國）為輔的互動地理測驗。
 - **目標使用者：** 學生、想熟悉台灣行政區位置的一般大眾。
@@ -139,7 +139,9 @@ python -m http.server 8000   # 開 http://localhost:8000
 | V1.5.0 | 台灣景點 121→165 |
 | V1.6.0 | PWA（sw.js + 守衛註冊）；世界小知識 980 條 |
 | V1.7.0 | 知名度加權；熱門33國15段；台灣縣市/景點說明 |
-| V1.8.0 | (1) **首都題**：`data/world-capitals.js`＝WORLD_CAPITALS（196 全表）＋CAPMAP（首都→國出題池 183，排除 13 個含國名者：墨西哥城/新加坡/梵蒂岡城…；達卡/達喀爾撞名已辨）；(2) **國旗題**：`data/world-flags.js` 由 NE ISO_A2 轉 emoji（**台灣 NE 標 CN-TW 已覆寫 TW**——資料商世界觀第三例）；(3) **assoc 題型家族**：landmark/capital/flag 共用 `isAssoc()`/`correctAns()` 流程（選項同洲、加權、緊聚焦、小知識全自動共用）；(4) **小知識標名**：`S.factName` 前綴粗體（世界=國名、縣市=縣市名、景點=景點名）|
+| V1.8.0 | 首都題（183 池）；國旗題（emoji、TW 覆寫）；assoc 家族；小知識標名 |
+| V1.9.0 | **雙指捏合縮放**：捏合中以 CSS `transform: scale()` 即時預覽（不重繪 SVG、不斷手勢），`touchend` 才提交 S.zoom 並 render（含世界 viewBox 擴張）；`.map-box` 設 `touch-action: pan-x pan-y`（保留單指平移、擋瀏覽器整頁縮放）；touchmove 需 `{passive:false}` 才能 preventDefault（同 wheel 坑）|
+| _V1.8.0 原文_ | (1) **首都題**：`data/world-capitals.js`＝WORLD_CAPITALS（196 全表）＋CAPMAP（首都→國出題池 183，排除 13 個含國名者：墨西哥城/新加坡/梵蒂岡城…；達卡/達喀爾撞名已辨）；(2) **國旗題**：`data/world-flags.js` 由 NE ISO_A2 轉 emoji（**台灣 NE 標 CN-TW 已覆寫 TW**——資料商世界觀第三例）；(3) **assoc 題型家族**：landmark/capital/flag 共用 `isAssoc()`/`correctAns()` 流程（選項同洲、加權、緊聚焦、小知識全自動共用）；(4) **小知識標名**：`S.factName` 前綴粗體（世界=國名、縣市=縣市名、景點=景點名）|
 | _V1.7.0 原文_ | (1) **知名度加權出題**：`FAME3`（62 國）權重 5、有地標國 2、其餘 1，`weightedSample()` 重複裝袋洗牌去重抽 15（僅世界、非重練）；(2) **熱門 33 國小知識擴至 15 段**（總 1,310 條）；(3) **台灣內容**：`data/taiwan-facts.js` ＝ `TW_FACTS`（22 縣市 ×5）＋ `TW_LM_DESC`（165 景點一句說明，斷言鎖覆蓋）；縣市題顯縣市小知識、景點題優先顯景點說明、縣市自由練習也顯；分區層級不顯；sw.js 快取清單與 CACHE 名同步 |
 | _V1.6.0 原文_ | (1) **PWA**：`sw.js` cache-first 全資源預快取（相對路徑支援 Pages 子路徑；CACHE 名含版本號，activate 清舊快取）；註冊守衛 `location.protocol` 為 http(s) 才註冊（file:// 雙擊不受影響）；manifest 補 `start_url/scope: ./`；(2) **國家小知識**：`data/world-facts.js` 196 國 ×5＝980 條（斷言鎖覆蓋）；答題鎖定時 `pickFact()` 隨機抽一條存 `S.fact`（重繪不換條），顯示於回饋區 `.fact`；自由練習點國家同顯；台灣層級不顯 |
 | _V1.5.0 原文_ | **台灣景點 121→165**（每縣市 7–8 個，+44 全數查證：武陵農場屬台中和平、草嶺屬雲林古坑等易誤判者特別確認；金門慈湖因與桃園慈湖重名改收獅山砲陣地）；P7 稽核全過 |
@@ -177,4 +179,4 @@ python -m http.server 8000   # 開 http://localhost:8000
 
 ## 九、一句話總結
 
-V1.8.0：首都題（183 題池、13 個含國名首都依 P7 排除）、國旗題（emoji、台灣 ISO 覆寫 TW）、小知識前綴名稱；地標/首都/國旗統一為 assoc 題型家族共用全部機制。世界選單現有六種模式。jsdom 全綠。下版優先：SELA 實玩回饋。
+V1.9.0：雙指捏合縮放——移動中 transform 預覽、放手提交（避免重繪斷手勢），與滾輪/按鈕共用同一套 zoom 與下限邏輯。jsdom 模擬捏合進出全綠。下版優先：SELA 裝置實測捏合手感。
