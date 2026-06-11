@@ -1,5 +1,5 @@
 /* MapQuiz service worker — cache-first 離線（V1.6.0） */
-var CACHE = "mapquiz-v2.2.0";
+var CACHE = "mapquiz-v2.3.0";
 var ASSETS = [
   "./", "./index.html", "./css/style.css", "./js/app.js", "./js/data.js",
   "./data/landmarks.js", "./data/world.js", "./data/world-landmarks.js", "./data/world-facts.js", "./data/taiwan-facts.js", "./data/world-capitals.js", "./data/world-flags.js",

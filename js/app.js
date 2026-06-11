@@ -89,7 +89,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "2.2.0";
+  var VERSION = "2.3.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -391,7 +391,10 @@
       '<button class="btn btn-ghost" data-act="home">回首頁</button></div></div>';
   }
 
+  var lastScreen = null;
   function render() {
+    var oldBox = document.querySelector(".map-box");
+    var keepScroll = (oldBox && lastScreen === S.screen) ? { l: oldBox.scrollLeft, t: oldBox.scrollTop } : null;
     var html;
     if (S.screen === "home") html = viewHome();
     else if (S.screen === "countyMenu") html = viewCountyMenu();
@@ -402,6 +405,8 @@
     else if (S.screen === "result") html = viewResult();
     else html = viewQuiz();
     document.getElementById("app").innerHTML = html;
+    lastScreen = S.screen;
+    if (keepScroll) { var nb = document.querySelector(".map-box"); if (nb) { nb.scrollLeft = keepScroll.l; nb.scrollTop = keepScroll.t; } }
   }
 
   // ---------- logic ----------
@@ -439,7 +444,10 @@
     var ms = Date.now() - S.startTime;
     S.picked = name; S.locked = true; S.lastMs = ms;
     S.fact = null; S.factName = null;
-    if (S.level === "world") { S.fact = pickFact(correctAns()); S.factName = correctAns(); }
+    if (S.level === "world") {
+      if (S.mode === "landmark" && window.WORLD_LM_DESC && window.WORLD_LM_DESC[S.target]) { S.fact = window.WORLD_LM_DESC[S.target]; S.factName = S.target; }
+      else { S.fact = pickFact(correctAns()); S.factName = correctAns(); }
+    }
     else if (S.level === "county") {
       if (S.mode === "landmark" && window.TW_LM_DESC && window.TW_LM_DESC[S.target]) { S.fact = window.TW_LM_DESC[S.target]; S.factName = S.target; }
       else if (window.TW_FACTS && window.TW_FACTS[correctAns()]) { var tf = window.TW_FACTS[correctAns()]; S.fact = tf[Math.floor(Math.random() * tf.length)]; S.factName = correctAns(); }
