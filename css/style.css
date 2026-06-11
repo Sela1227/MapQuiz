@@ -178,3 +178,7 @@ h2 { font-size: 21px; font-weight: 700; margin: 4px 0 12px; color: var(--slate-d
 .controw { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; }
 .contchip { font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; }
 .contchip.on { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 700; }
+
+/* 國家小知識 */
+.fact { display: flex; align-items: flex-start; gap: 8px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 11px; padding: 10px 12px; margin-top: 10px; font-size: 13.5px; line-height: 1.55; color: var(--text-light); animation: tw-popk .28s ease-out; }
+.fact-tag { flex-shrink: 0; font-size: 11px; font-weight: 700; color: #fff; background: var(--primary); border-radius: 999px; padding: 3px 9px; letter-spacing: 1px; }

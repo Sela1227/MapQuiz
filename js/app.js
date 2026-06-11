@@ -22,6 +22,10 @@
   })();
   function lmMap() { return S.level === "world" ? WLMAP : LMAP; }
   function correctAns() { return S.mode === "landmark" ? lmMap()[S.target] : S.target; }
+  function pickFact(nation) {
+    var FS = window.WORLD_FACTS && window.WORLD_FACTS[nation];
+    return (FS && FS.length) ? FS[Math.floor(Math.random() * FS.length)] : null;
+  }
   function optPool(ds) {
     var names = Object.keys(ds.regions);
     if (S.level !== "world") return names;
@@ -64,7 +68,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "1.4.0";
+  var VERSION = "1.6.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -302,13 +306,14 @@
         bottom = '<div class="fb hint">點選你認為正確的位置。</div>';
       }
     }
+    var factHtml = (S.locked && S.fact) ? '<div class="fact"><span class="fact-tag">小知識</span><span>' + S.fact + '</span></div>' : '';
     var nextBtn = S.locked ? '<div style="margin-top:12px"><button class="btn btn-primary" data-act="next">' + (S.idx + 1 >= S.queue.length ? "看成績" : "下一題") + '</button></div>' : "";
     var stopBtn = '<div style="margin-top:10px"><button class="btn btn-ghost" data-act="stopQuiz">停止測驗並結算</button></div>';
 
     return '<div class="topbar"><span style="display:flex;align-items:center;gap:10px"><button class="linkbtn" data-act="quitQuiz">‹ 離開</button><span class="muted" style="font-size:13px">' + ctx + '第 ' + (S.idx + 1) + '/' + S.queue.length + '</span></span><span class="right">' + muteBtn() + zoomBar() + '</span></div>' +
       '<div class="scorestrip"><div><span class="lbl">分數</span><div class="pts">' + S.points + '</div></div><div class="srtright">' + comboHtml + '</div>' + floatHtml + '</div>' +
       '<div class="speedtrack"><div class="' + speedCls + '"></div></div>' +
-      promptHtml + mapHtml + bottom + nextBtn + stopBtn;
+      promptHtml + mapHtml + bottom + factHtml + nextBtn + stopBtn;
   }
 
   function viewExplore() {
@@ -316,9 +321,11 @@
     var backTo = S.level === "county" ? "countyMenuBack" : S.level === "world" ? "worldMenuBack" : "districtMenuBack";
     var ctx = S.level === "county" ? "全台縣市" : S.level === "world" ? "世界國家" : S.activeCounty;
     var status = S.revealed ? S.revealed : ("點" + (ctx === "全台縣市" ? "縣市" : ctx === "世界國家" ? "國家" : "區") + "看名稱");
+    var exFact = (S.revealed && S.fact) ? '<div class="fact"><span class="fact-tag">小知識</span><span>' + S.fact + '</span></div>' : '';
     var statusCls = S.revealed ? "" : "muted";
     return '<div class="topbar"><button class="linkbtn" data-act="' + backTo + '">‹ 返回</button><span class="right">' + zoomBar() + '</span></div>' +
       '<div style="text-align:center;font-size:15px;font-weight:700;min-height:24px;margin:6px 0 10px" class="' + statusCls + '">' + status + '</div>' +
+      exFact +
       '<div style="flex:1;min-height:56vh">' + buildMap(ds, fillExplore, "reveal", null, S.revealed) + '</div>';
   }
 
@@ -388,6 +395,7 @@
     var correct = name === correctAns();
     var ms = Date.now() - S.startTime;
     S.picked = name; S.locked = true; S.lastMs = ms;
+    S.fact = (S.level === "world") ? pickFact(correctAns()) : null;
     if (correct) {
       var nc = S.combo + 1, mult = comboMult(nc);
       var speed = Math.round(SPEED_MAX * Math.max(0, 1 - Math.min(ms / 1000, SPEED_CAP) / SPEED_CAP));
@@ -402,6 +410,7 @@
   }
 
   function next() {
+    S.fact = null;
     var correct = S.picked === correctAns();
     S.answers.push({ name: S.target, county: correctAns(), correct: correct, picked: S.picked, ms: S.lastMs || 0 });
     S.picked = null; S.locked = false; S.lastGain = 0;
@@ -456,7 +465,7 @@
       case "exploreCounty": start("explore", "county"); break;
       case "startDistrict": start(arg, "district", S.activeCounty); break;
       case "answer": pickAnswer(arg); break;
-      case "reveal": S.revealed = arg; render(); break;
+      case "reveal": S.revealed = arg; S.fact = (S.level === "world") ? pickFact(arg) : null; render(); break;
       case "next": next(); break;
       case "stopQuiz":
         if (S.locked) { S.answers.push({ name: S.target, county: correctAns(), correct: S.picked === correctAns(), picked: S.picked, ms: S.lastMs || 0 }); S.picked = null; S.locked = false; }
