@@ -173,3 +173,8 @@ h2 { font-size: 21px; font-weight: 700; margin: 4px 0 12px; color: var(--slate-d
 /* 分數列右側群組 */
 .srtright { display: flex; align-items: center; gap: 8px; }
 .float.neg { color: var(--danger); }
+
+/* 世界選洲 chips */
+.controw { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; }
+.contchip { font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; }
+.contchip.on { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 700; }

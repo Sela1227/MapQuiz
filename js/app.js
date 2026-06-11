@@ -36,7 +36,7 @@
     var nation = correctAns();
     var c = contOf(nation);
     var cb = (c && Wd.contBox && Wd.contBox[c]) || null;
-    if (S.mode === "name2map") return cb;  // 提示到「洲」為止，再緊會洩答
+    if (S.mode === "name2map") return expandIfZoomedOut(cb);  // 提示到「洲」為止，再緊會洩答
     var r = Wd.regions[nation]; if (!r || !r.bb) return cb;
     // 目標國置中的緊聚焦：目標約佔畫面 1/4，保留鄰國當參照
     var bw = r.bb[2] - r.bb[0], bh = r.bb[3] - r.bb[1];
@@ -47,7 +47,16 @@
     var cx = (r.bb[0] + r.bb[2]) / 2, cy = (r.bb[1] + r.bb[3]) / 2;
     var x = Math.max(0, Math.min(980 - vw, cx - vw / 2));
     var y = Math.max(0, Math.min(520 - vh, cy - vh / 2));
-    return [Math.round(x), Math.round(y), Math.round(vw), Math.round(vh)];
+    return expandIfZoomedOut([Math.round(x), Math.round(y), Math.round(vw), Math.round(vh)]);
+  }
+  function expandIfZoomedOut(box) {
+    if (!box || S.zoom >= 1) return box;
+    var f = 1 / S.zoom;
+    var cx = box[0] + box[2] / 2, cy = box[1] + box[3] / 2;
+    var w = Math.min(980, box[2] * f), h = Math.min(520, box[3] * f);
+    var x = Math.max(0, Math.min(980 - w, cx - w / 2));
+    var y = Math.max(0, Math.min(520 - h, cy - h / 2));
+    return [Math.round(x), Math.round(y), Math.round(w), Math.round(h)];
   }
 
   var COL = { land:"#D7DFE3", active:"#3C6078", correct:"#4A9B7F", wrong:"#9A8585", sea:"#EEF2F5", seaLine:"#DCE4E8", muted:"#8A9BA8", deep:"#2C4A5E", white:"#FFFFFF" };
@@ -55,7 +64,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "1.3.0";
+  var VERSION = "1.4.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -137,7 +146,7 @@
       parts.push('<text x="' + l.cx + '" y="' + (l.cy + 4) + '" text-anchor="middle" font-size="14" font-weight="800" stroke="#fff" stroke-width="3.5" paint-order="stroke" fill="#16302A" pointer-events="none">' + labelName + '</text>');
     }
     var zc = S.zoom > 1 ? " zoomed" : "";
-    var wh = (S.zoom * 100) + "%";
+    var wh = (Math.max(1, S.zoom) * 100) + "%";
     return '<div class="map-box' + zc + '"><svg viewBox="' + vb.join(" ") + '" width="' + wh + '" height="' + wh + '" preserveAspectRatio="xMidYMid meet">' + parts.join("") + '</svg></div>';
   }
 
@@ -217,13 +226,20 @@
     }
     return '<div class="topbar"><button class="linkbtn" data-act="home">‹ 回首頁</button></div>' +
       '<div class="eyebrow" style="margin-top:8px">196 個國家</div><h2>世界國家</h2>' +
-      '<div style="height:200px;margin-bottom:16px">' + buildMap(worldDataset(), fillFlat, null, null, null) + '</div>' +
+      contChips() +
+      '<div style="height:200px;margin-bottom:16px">' + buildMap(worldDataset(), fillFlat, null, null, null, S.worldCont ? window.WORLD.contBox[S.worldCont] : null) + '</div>' +
       card("startWorld", "map2name", "看地圖，選名字", "地圖點亮一個國家，從四個選項選出它。", "w-map2name") +
       card("startWorld", "name2map", "看名字，點地圖", "給你國名，在地圖上點出位置（小國有點擊範圍，可放大）。", "w-name2map") +
       card("startWorld", "landmark", "地標題", "「艾菲爾鐵塔位於哪個國家？」四選一，答完地圖點亮正解。", "w-landmark") +
       card("exploreWorld", "", "自由練習", "點任一國家看名稱，不計分。", null);
   }
 
+  var CONTS = ["亞洲", "歐洲", "非洲", "北美洲", "南美洲", "大洋洲"];
+  function contChips() {
+    var all = '<button class="contchip' + (!S.worldCont ? " on" : "") + '" data-act="setCont" data-arg="">全部</button>';
+    var rest = CONTS.map(function (c) { return '<button class="contchip' + (S.worldCont === c ? " on" : "") + '" data-act="setCont" data-arg="' + c + '">' + c + '</button>'; }).join("");
+    return '<div class="controw">' + all + rest + '</div>';
+  }
   function viewCountyPicker() {
     var grid = COUNTY_ORDER.map(function (c) {
       var n = Object.keys(DISTRICTS[c].towns).length;
@@ -348,6 +364,9 @@
   function start(mode, level, county, list) {
     var ds = level === "county" ? NATIONAL : level === "world" ? worldDataset() : districtDataset(county);
     var names = (list && list.length) ? list : (mode === "landmark" ? Object.keys(level === "world" ? WLMAP : LMAP) : Object.keys(ds.regions));
+    if (level === "world" && S.worldCont && !(list && list.length)) {
+      names = names.filter(function (n) { var nation = mode === "landmark" ? WLMAP[n] : n; return contOf(nation) === S.worldCont; });
+    }
     S.level = level; S.activeCounty = county; S.mode = (mode === "explore" ? null : mode);
     S.queue = shuffle(names).slice(0, MAX_Q); S.idx = 0; S.answers = []; S.picked = null; S.locked = false;
     S.zoom = 1; S.revealed = null; S.points = 0; S.combo = 0; S.bestCombo = 0; S.lastGain = 0; S.newBest = false;
@@ -409,6 +428,14 @@
   }
 
   // ---------- events (delegation) ----------
+  function zoomFloor() { return (S.screen === "quiz" && S.level === "world") ? 0.2 : 1; }
+  function zoomBy(d) { S.zoom = Math.min(4, Math.max(zoomFloor(), +(S.zoom + d).toFixed(2))); render(); }
+  document.getElementById("app").addEventListener("wheel", function (e) {
+    var box = e.target.closest ? e.target.closest(".map-box") : null;
+    if (!box) return;
+    e.preventDefault();
+    zoomBy(e.deltaY < 0 ? 0.5 : -0.5);  // 滾輪一格 ±0.5，比按鈕快
+  }, { passive: false });
   document.getElementById("app").addEventListener("click", function (e) {
     var el = e.target.closest ? e.target.closest("[data-act]") : null;
     if (!el) return;
@@ -418,6 +445,7 @@
       case "toPicker": S.screen = "countyPicker"; render(); break;
       case "toCountyMenu": S.screen = "countyMenu"; render(); break;
       case "toWorldMenu": S.screen = "worldMenu"; render(); break;
+      case "setCont": S.worldCont = arg || null; render(); break;
       case "worldMenuBack": S.screen = "worldMenu"; render(); break;
       case "startWorld": start(arg, "world"); break;
       case "exploreWorld": start("explore", "world"); break;
@@ -437,8 +465,8 @@
       case "quitQuiz": S.picked = null; S.locked = false; S.lastGain = 0; S.screen = (S.level === "county") ? "countyMenu" : (S.level === "world") ? "worldMenu" : "districtMenu"; render(); break;
       case "again": start(S.mode, S.level, S.activeCounty); break;
       case "retry": start(S.mode, S.level, S.activeCounty, S.answers.filter(function (a) { return !a.correct; }).map(function (a) { return a.name; })); break;
-      case "zoomIn": S.zoom = Math.min(4, +(S.zoom + 0.25).toFixed(2)); render(); break;
-      case "zoomOut": S.zoom = Math.max(1, +(S.zoom - 0.25).toFixed(2)); render(); break;
+      case "zoomIn": zoomBy(+0.25); break;
+      case "zoomOut": zoomBy(-0.25); break;
       case "mute": toggleMute(); render(); break;
     }
   });
