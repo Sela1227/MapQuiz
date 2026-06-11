@@ -19,7 +19,7 @@
 
 ## 〇、當前狀態
 
-- **版本：** V2.0.1
+- **版本：** V2.1.0
 - **狀態：** V2 里程碑（三層級六模式、PWA、小知識/首都/國旗、選單圖像化單頁）
 - **一句話定位：** 台灣（22 縣市＋368 鄉鎮市區）為主、世界（196 國）為輔的互動地理測驗。
 - **目標使用者：** 學生、想熟悉台灣行政區位置的一般大眾。
@@ -151,7 +151,9 @@ python -m http.server 8000   # 開 http://localhost:8000
 | V1.8.0 | 首都題（183 池）；國旗題（emoji、TW 覆寫）；assoc 家族；小知識標名 |
 | V1.9.0 | 雙指捏合縮放（transform 預覽、commit 重繪）|
 | V2.0.0 | 選單圖像化單頁（tile 磁磚＋迷你縮圖；坑 P8）|
-| V2.0.1 | **修 PWA 安裝後 404**：manifest 的 `start_url`/`scope` 是**相對 manifest 自身位置**解析，原檔在 `favicon/` 內導致 PWA 啟動指向 `…/favicon/` → 404（網頁直開正常）。修法：`site.webmanifest` 移至專案根目錄、icons 路徑改 `favicon/…`、index/sw 引用同步（坑 P9）。**修復後需移除舊 PWA 重新安裝** |
+| V2.0.1 | 修 PWA 404（manifest 移根目錄，坑 P9）|
+| V2.1.0 | **響應式雙版面**：各 view 包語意容器（`.quizgrid`/`.menugrid`/`.resgrid`/`.lvgrid`＋`.q-map`/`.m-head`/`.m-map`/`.m-tiles`/`.q-bottom`/`.r-map`），行動裝置維持原始來源順序單欄；`@media (min-width:900px)` 桌機雙欄——地圖佔左欄 sticky 滿高（`!important` 蓋掉 inline vh 高度）、其餘 `grid-column:2`（用 `>` 子選擇器整批指派）；首頁層級卡三欄、縣市選擇器 5 欄。CSS-only 切版，手機 DOM 行為零變動 |
+| _V2.0.1 原文_ | **修 PWA 安裝後 404**：manifest 的 `start_url`/`scope` 是**相對 manifest 自身位置**解析，原檔在 `favicon/` 內導致 PWA 啟動指向 `…/favicon/` → 404（網頁直開正常）。修法：`site.webmanifest` 移至專案根目錄、icons 路徑改 `favicon/…`、index/sw 引用同步（坑 P9）。**修復後需移除舊 PWA 重新安裝** |
 | _V2.0.0 原文_ | **選單圖像化單頁**：模式選單改 2 欄 `tile` 磁磚（內嵌線條 SVG `ICON` ×6＋最高分徽章），世界 6 模式一頁內；首頁層級卡 `lvcard` 內嵌**迷你地圖縮圖**（buildMap 直接縮放渲染）；預覽地圖高度 200/230→128/148。坑：重寫選單函式時用「函式名到函式名」切片，把夾在中間的 CONTS/contChips 一併吞掉（P8）|
 | _V1.9.0 原文_ | **雙指捏合縮放**：捏合中以 CSS `transform: scale()` 即時預覽（不重繪 SVG、不斷手勢），`touchend` 才提交 S.zoom 並 render（含世界 viewBox 擴張）；`.map-box` 設 `touch-action: pan-x pan-y`（保留單指平移、擋瀏覽器整頁縮放）；touchmove 需 `{passive:false}` 才能 preventDefault（同 wheel 坑）|
 | _V1.8.0 原文_ | (1) **首都題**：`data/world-capitals.js`＝WORLD_CAPITALS（196 全表）＋CAPMAP（首都→國出題池 183，排除 13 個含國名者：墨西哥城/新加坡/梵蒂岡城…；達卡/達喀爾撞名已辨）；(2) **國旗題**：`data/world-flags.js` 由 NE ISO_A2 轉 emoji（**台灣 NE 標 CN-TW 已覆寫 TW**——資料商世界觀第三例）；(3) **assoc 題型家族**：landmark/capital/flag 共用 `isAssoc()`/`correctAns()` 流程（選項同洲、加權、緊聚焦、小知識全自動共用）；(4) **小知識標名**：`S.factName` 前綴粗體（世界=國名、縣市=縣市名、景點=景點名）|

@@ -206,3 +206,35 @@ h2 { font-size: 21px; font-weight: 700; margin: 4px 0 12px; color: var(--slate-d
 .lvthumb.lvworld { height: 44px; align-self: center; }
 .lvtxt { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
 .lvtxt .row { display: flex; justify-content: space-between; align-items: baseline; }
+
+/* === V2.1.0 響應式雙版面：手機直幅單欄（預設）、桌機橫幅雙欄（>=900px）=== */
+@media (min-width: 900px) {
+  .wrap { max-width: 980px; }
+
+  /* 測驗：地圖左、作答右，整題一屏 */
+  .quizgrid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: 22px; align-items: start; }
+  .quizgrid > * { grid-column: 2; min-width: 0; }
+  .quizgrid > .q-map { grid-column: 1; grid-row: 1 / span 9; height: calc(100vh - 175px) !important; margin-bottom: 0 !important; position: sticky; top: 12px; }
+
+  /* 選單：地圖左（sticky）、標題＋磁磚右 */
+  .menugrid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); column-gap: 22px; align-items: start; }
+  .menugrid > * { grid-column: 2; min-width: 0; }
+  .menugrid > .m-map { grid-column: 1; grid-row: 1 / span 2; height: calc(100vh - 175px) !important; margin-bottom: 0 !important; position: sticky; top: 12px; }
+
+  /* 結算：地圖左、成績與動作右 */
+  .resgrid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: 22px; align-items: start; }
+  .resgrid > * { grid-column: 2; min-width: 0; }
+  .resgrid > .r-map { grid-column: 1; grid-row: 1 / span 9; height: calc(100vh - 175px) !important; margin-bottom: 0 !important; position: sticky; top: 12px; }
+
+  /* 首頁層級卡三欄 */
+  .lvgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .lvgrid .lvcard { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .lvgrid .lvthumb { width: 100%; height: 96px; }
+  .lvgrid .lvthumb.lvworld { height: 72px; }
+
+  /* 縣市選擇器加寬欄數 */
+  .grid3 { grid-template-columns: repeat(5, 1fr); }
+
+  /* 模式磁磚右欄維持兩欄即可，間距略放 */
+  .m-tiles { gap: 11px; }
+}

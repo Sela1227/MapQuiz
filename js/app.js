@@ -89,7 +89,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "2.0.1";
+  var VERSION = "2.1.0";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -222,9 +222,11 @@
         '<div class="hero-txt"><div class="hero-kicker">地理挑戰</div><div class="hero-title">台灣及世界地圖測驗</div><div class="hero-sub">台灣縣市、鄉鎮市區到世界 196 國；答對加分、答錯扣分，越快加成越多。</div></div>' +
       '</div>' +
       '<div class="eyebrow sub">選一個層級開始</div><div style="height:8px"></div>' +
+      '<div class="lvgrid">' +
       '<button class="card lvcard" data-act="toCountyMenu"><span class="lvthumb">' + buildMap(NATIONAL, fillFlat, null, null, null) + '</span><span class="lvtxt"><span class="row"><span class="title">縣市</span><span class="best">22 個</span></span><span class="desc">全台縣市的位置與名稱。</span></span></button>' +
       '<button class="card lvcard" data-act="toPicker"><span class="lvthumb">' + buildMap(NATIONAL, fillFlat, null, null, null) + '</span><span class="lvtxt"><span class="row"><span class="title">鄉鎮市區</span><span class="best">368 個</span></span><span class="desc">選一個縣市，考它的分區。</span></span></button>' +
       '<button class="card lvcard" data-act="toWorldMenu"><span class="lvthumb lvworld">' + buildMap(worldDataset(), fillFlat, null, null, null) + '</span><span class="lvtxt"><span class="row"><span class="title">世界國家</span><span class="best">196 個</span></span><span class="desc">含梵蒂岡、巴勒斯坦與台灣。</span></span></button>' +
+      '</div>' +
       missBox +
       '<p class="note">金門、馬祖（連江縣）在地圖左上角小框內。地圖可用 +/− 放大。計分：答對 +100（連擊有倍率）、答錯 −50，每題 8 秒內越快加成越多（最高 +50）。</p>' +
       '<div class="attrib"><img src="assets/sela.svg" alt="SELA"/><span>Made by SELA ・ V' + VERSION + '</span></div>';
@@ -255,29 +257,28 @@
 
   function viewCountyMenu() {
     return '<div class="topbar"><button class="linkbtn" data-act="home">‹ 回首頁</button></div>' +
-      '<div class="eyebrow" style="margin-top:8px">22 個縣市</div><h2>全台縣市</h2>' +
-      '<div style="height:148px;margin-bottom:12px">' + buildMap(NATIONAL, fillFlat, null, null, null) + '</div>' +
-      '<div class="tilegrid">' +
+      '<div class="menugrid"><div class="m-head"><div class="eyebrow" style="margin-top:8px">22 個縣市</div><h2>全台縣市</h2></div>' +
+      '<div class="m-map" style="height:148px;margin-bottom:12px">' + buildMap(NATIONAL, fillFlat, null, null, null) + '</div>' +
+      '<div class="m-tiles tilegrid">' +
       tile("startCounty", "map2name", ICON.map2name, "看地圖選名字", "點亮縣市四選一", "c-map2name") +
       tile("startCounty", "name2map", ICON.name2map, "看名字點地圖", "依名稱點出位置", "c-name2map") +
       tile("startCounty", "landmark", ICON.landmark, "景點題", "景點在哪個縣市", "c-landmark") +
       tile("exploreCounty", "", ICON.explore, "自由練習", "點縣市看名稱", null) +
-      '</div>';
+      '</div></div>';
   }
 
   function viewWorldMenu() {
     return '<div class="topbar"><button class="linkbtn" data-act="home">‹ 回首頁</button></div>' +
-      '<div class="eyebrow" style="margin-top:8px">196 個國家</div><h2>世界國家</h2>' +
-      contChips() +
-      '<div style="height:128px;margin-bottom:12px">' + buildMap(worldDataset(), fillFlat, null, null, null, S.worldCont ? window.WORLD.contBox[S.worldCont] : null) + '</div>' +
-      '<div class="tilegrid">' +
+      '<div class="menugrid"><div class="m-head"><div class="eyebrow" style="margin-top:8px">196 個國家</div><h2>世界國家</h2>' + contChips() + '</div>' +
+      '<div class="m-map" style="height:128px;margin-bottom:12px">' + buildMap(worldDataset(), fillFlat, null, null, null, S.worldCont ? window.WORLD.contBox[S.worldCont] : null) + '</div>' +
+      '<div class="m-tiles tilegrid">' +
       tile("startWorld", "map2name", ICON.map2name, "看地圖選名字", "點亮國家四選一", "w-map2name") +
       tile("startWorld", "name2map", ICON.name2map, "看名字點地圖", "依國名點出位置", "w-name2map") +
       tile("startWorld", "landmark", ICON.landmark, "地標題", "地標在哪個國家", "w-landmark") +
       tile("startWorld", "capital", ICON.capital, "首都題", "首都屬於哪一國", "w-capital") +
       tile("startWorld", "flag", ICON.flag, "國旗題", "看國旗認國家", "w-flag") +
       tile("exploreWorld", "", ICON.explore, "自由練習", "點國家看名稱", null) +
-      '</div>';
+      '</div></div>';
   }
 
   function viewCountyPicker() {
@@ -293,13 +294,13 @@
   function viewDistrictMenu() {
     var d = DISTRICTS[S.activeCounty];
     return '<div class="topbar"><button class="linkbtn" data-act="toPicker">‹ 換縣市</button></div>' +
-      '<div class="eyebrow" style="margin-top:8px">' + Object.keys(d.towns).length + ' 個鄉鎮市區</div><h2>' + S.activeCounty + '</h2>' +
-      '<div style="height:148px;margin-bottom:12px">' + buildMap(districtDataset(S.activeCounty), fillFlat, null, null, null) + '</div>' +
-      '<div class="tilegrid">' +
+      '<div class="menugrid"><div class="m-head"><div class="eyebrow" style="margin-top:8px">' + Object.keys(d.towns).length + ' 個鄉鎮市區</div><h2>' + S.activeCounty + '</h2></div>' +
+      '<div class="m-map" style="height:148px;margin-bottom:12px">' + buildMap(districtDataset(S.activeCounty), fillFlat, null, null, null) + '</div>' +
+      '<div class="m-tiles tilegrid">' +
       tile("startDistrict", "map2name", ICON.map2name, "看地圖選名字", "點亮分區四選一", bestId("district", "map2name", S.activeCounty)) +
       tile("startDistrict", "name2map", ICON.name2map, "看名字點地圖", "依名稱點出位置", bestId("district", "name2map", S.activeCounty)) +
       tile("explore", "", ICON.explore, "自由練習", "點分區看名稱", null) +
-      '</div>';
+      '</div></div>';
   }
 
   function viewQuiz() {
@@ -319,7 +320,7 @@
     var ringTarget = isMap2() ? S.target : (isAssoc() && S.locked ? correctAns() : null);
     var labelName = (S.mode === "name2map" && S.locked) ? S.target : (isAssoc() && S.locked ? correctAns() : null);
     var mapH = (isMap2() || isAssoc()) ? "40vh" : "50vh";
-    var mapHtml = '<div style="height:' + mapH + ';margin-bottom:12px">' + buildMap(ds, fillQuiz, clickAct, ringTarget, labelName, worldFocusBox()) + '</div>';
+    var mapHtml = '<div class="q-map" style="height:' + mapH + ';margin-bottom:12px">' + buildMap(ds, fillQuiz, clickAct, ringTarget, labelName, worldFocusBox()) + '</div>';
 
     var bottom;
     if (isMap2() || isAssoc()) {
@@ -341,13 +342,14 @@
       }
     }
     var factHtml = (S.locked && S.fact) ? '<div class="fact"><span class="fact-tag">小知識</span><span>' + (S.factName ? '<b class="fact-name">' + S.factName + '</b>' : '') + S.fact + '</span></div>' : '';
-    var nextBtn = S.locked ? '<div style="margin-top:12px"><button class="btn btn-primary" data-act="next">' + (S.idx + 1 >= S.queue.length ? "看成績" : "下一題") + '</button></div>' : "";
-    var stopBtn = '<div style="margin-top:10px"><button class="btn btn-ghost" data-act="stopQuiz">停止測驗並結算</button></div>';
+    var nextBtn = S.locked ? '<div class="q-next" style="margin-top:12px"><button class="btn btn-primary" data-act="next">' + (S.idx + 1 >= S.queue.length ? "看成績" : "下一題") + '</button></div>' : "";
+    var stopBtn = '<div class="q-stop" style="margin-top:10px"><button class="btn btn-ghost" data-act="stopQuiz">停止測驗並結算</button></div>';
 
     return '<div class="topbar"><span style="display:flex;align-items:center;gap:10px"><button class="linkbtn" data-act="quitQuiz">‹ 離開</button><span class="muted" style="font-size:13px">' + ctx + '第 ' + (S.idx + 1) + '/' + S.queue.length + '</span></span><span class="right">' + muteBtn() + zoomBar() + '</span></div>' +
+      '<div class="quizgrid">' +
       '<div class="scorestrip"><div><span class="lbl">分數</span><div class="pts">' + S.points + '</div></div><div class="srtright">' + comboHtml + '</div>' + floatHtml + '</div>' +
       '<div class="speedtrack"><div class="' + speedCls + '"></div></div>' +
-      promptHtml + mapHtml + bottom + factHtml + nextBtn + stopBtn;
+      promptHtml + mapHtml + '<div class="q-bottom">' + bottom + factHtml + nextBtn + stopBtn + '</div></div>';
   }
 
   function viewExplore() {
@@ -377,15 +379,16 @@
     var retry = wrong.length ? '<button class="btn btn-outline" data-act="retry">只考錯的 ' + wrong.length + ' 個</button>' : "";
     var backMenu = S.level === "district" ? '<button class="btn btn-outline" data-act="toPicker">換個縣市</button>' : '<button class="btn btn-outline" data-act="' + (S.level === "world" ? "toWorldMenu" : "toCountyMenu") + '">回模式選單</button>';
     return '<div class="topbar"><span class="muted" style="font-size:13px">' + ctx + '</span></div>' +
+      '<div class="resgrid">' +
       '<div class="rankrow"><div class="rankbadge tw-pop" style="border-color:' + rc + '"><span class="g" style="color:' + rc + '">' + rk.g + '</span></div>' +
       '<div><div class="muted" style="font-size:13px">' + rk.label + (S.newBest ? " ・ 新紀錄!" : "") + '</div>' +
       '<div class="bigpts" style="color:' + rc + '">' + S.points + ' <small>分</small></div></div></div>' +
       '<div class="stats"><span>答對 <b>' + score + '/' + total + '</b>（' + pct + '%）</span>' + (total < S.queue.length ? '<span>提前結算（共 ' + S.queue.length + ' 題）</span>' : '') + '<span>最佳連擊 <b>' + S.bestCombo + '</b></span><span>平均 <b>' + (avgMs / 1000).toFixed(1) + 's</b></span></div>' +
-      '<div style="height:42vh;margin-bottom:12px">' + buildMap(ds, fillResult, null, null, null) + '</div>' +
+      '<div class="r-map" style="height:42vh;margin-bottom:12px">' + buildMap(ds, fillResult, null, null, null) + '</div>' +
       '<div class="legend"><span><span class="dot" style="background:' + COL.correct + '"></span>答對 ' + score + '</span><span><span class="dot" style="background:' + COL.wrong + '"></span>答錯 ' + wrong.length + '</span></div>' +
       chips +
       '<div class="btn-col"><button class="btn btn-primary" data-act="again">再玩一次</button>' + retry + backMenu +
-      '<button class="btn btn-ghost" data-act="home">回首頁</button></div>';
+      '<button class="btn btn-ghost" data-act="home">回首頁</button></div></div>';
   }
 
   function render() {
