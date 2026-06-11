@@ -89,7 +89,7 @@
   // scoring
   var BASE = 100, SPEED_CAP = 8, SPEED_MAX = 50;
   function comboMult(c) { return c >= 10 ? 3 : c >= 6 ? 2 : c >= 3 ? 1.5 : 1; }
-  var VERSION = "2.1.0";
+  var VERSION = "2.1.1";
   var MAX_Q = 15, WRONG_POINTS = 50;
   function isMap2() { return S.mode === "map2name"; }
 
@@ -362,7 +362,7 @@
     return '<div class="topbar"><button class="linkbtn" data-act="' + backTo + '">‹ 返回</button><span class="right">' + zoomBar() + '</span></div>' +
       '<div style="text-align:center;font-size:15px;font-weight:700;min-height:24px;margin:6px 0 10px" class="' + statusCls + '">' + status + '</div>' +
       exFact +
-      '<div style="flex:1;min-height:56vh">' + buildMap(ds, fillExplore, "reveal", null, S.revealed) + '</div>';
+      '<div class="x-map">' + buildMap(ds, fillExplore, "reveal", null, S.revealed) + '</div>';
   }
 
   function viewResult() {
@@ -547,6 +547,25 @@
     S.zoom = Math.min(4, Math.max(zoomFloor(), +(pinch.z0 * pinch.scale).toFixed(2)));
     render();
   }
+  // 滑鼠拖曳平移（桌機）：放大後 overflow 捲動沒有滑鼠拖曳，自行實作；拖曳超過門檻就吞掉後續 click 避免誤作答
+  var drag = { on: false, moved: false, x: 0, y: 0, sl: 0, st: 0, box: null };
+  appEl.addEventListener("mousedown", function (e) {
+    var box = e.target.closest ? e.target.closest(".map-box") : null;
+    if (!box || !box.classList.contains("zoomed")) return;
+    drag.on = true; drag.moved = false; drag.box = box;
+    drag.x = e.clientX; drag.y = e.clientY; drag.sl = box.scrollLeft; drag.st = box.scrollTop;
+  });
+  window.addEventListener("mousemove", function (e) {
+    if (!drag.on) return;
+    var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!drag.moved && Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true;
+    if (drag.moved) { drag.box.scrollLeft = drag.sl - dx; drag.box.scrollTop = drag.st - dy; e.preventDefault(); }
+  });
+  window.addEventListener("mouseup", function () { drag.on = false; });
+  appEl.addEventListener("click", function (e) {
+    if (drag.moved) { e.stopPropagation(); e.preventDefault(); drag.moved = false; }
+  }, true);
+
   appEl.addEventListener("touchend", endPinch);
   appEl.addEventListener("touchcancel", endPinch);
   document.getElementById("app").addEventListener("click", function (e) {

@@ -19,7 +19,7 @@
 
 ## 〇、當前狀態
 
-- **版本：** V2.1.0
+- **版本：** V2.1.1
 - **狀態：** V2 里程碑（三層級六模式、PWA、小知識/首都/國旗、選單圖像化單頁）
 - **一句話定位：** 台灣（22 縣市＋368 鄉鎮市區）為主、世界（196 國）為輔的互動地理測驗。
 - **目標使用者：** 學生、想熟悉台灣行政區位置的一般大眾。
@@ -152,7 +152,9 @@ python -m http.server 8000   # 開 http://localhost:8000
 | V1.9.0 | 雙指捏合縮放（transform 預覽、commit 重繪）|
 | V2.0.0 | 選單圖像化單頁（tile 磁磚＋迷你縮圖；坑 P8）|
 | V2.0.1 | 修 PWA 404（manifest 移根目錄，坑 P9）|
-| V2.1.0 | **響應式雙版面**：各 view 包語意容器（`.quizgrid`/`.menugrid`/`.resgrid`/`.lvgrid`＋`.q-map`/`.m-head`/`.m-map`/`.m-tiles`/`.q-bottom`/`.r-map`），行動裝置維持原始來源順序單欄；`@media (min-width:900px)` 桌機雙欄——地圖佔左欄 sticky 滿高（`!important` 蓋掉 inline vh 高度）、其餘 `grid-column:2`（用 `>` 子選擇器整批指派）；首頁層級卡三欄、縣市選擇器 5 欄。CSS-only 切版，手機 DOM 行為零變動 |
+| V2.1.0 | 響應式雙版面（quizgrid/menugrid/resgrid/lvgrid 雙欄）|
+| V2.1.1 | 修兩個桌機切版後遺症：(1) **探索地圖爆框**——原 `flex:1;min-height:56vh` 在寬版下父層高度不可解析、百分比 SVG 撐爆 → 改 `.x-map` 明確高度（手機 56vh／桌機 calc(100vh-190px)）；(2) **放大後無法拖動**——overflow 捲動在桌機沒有滑鼠拖曳 → 實作 mousedown/move/up 拖曳平移（門檻 4px 區分拖曳與點擊，拖後以 capture 階段吞 click 防誤作答；手機維持原生觸控捲動；游標 grab/grabbing）|
+| _V2.1.0 原文_ | **響應式雙版面**：各 view 包語意容器（`.quizgrid`/`.menugrid`/`.resgrid`/`.lvgrid`＋`.q-map`/`.m-head`/`.m-map`/`.m-tiles`/`.q-bottom`/`.r-map`），行動裝置維持原始來源順序單欄；`@media (min-width:900px)` 桌機雙欄——地圖佔左欄 sticky 滿高（`!important` 蓋掉 inline vh 高度）、其餘 `grid-column:2`（用 `>` 子選擇器整批指派）；首頁層級卡三欄、縣市選擇器 5 欄。CSS-only 切版，手機 DOM 行為零變動 |
 | _V2.0.1 原文_ | **修 PWA 安裝後 404**：manifest 的 `start_url`/`scope` 是**相對 manifest 自身位置**解析，原檔在 `favicon/` 內導致 PWA 啟動指向 `…/favicon/` → 404（網頁直開正常）。修法：`site.webmanifest` 移至專案根目錄、icons 路徑改 `favicon/…`、index/sw 引用同步（坑 P9）。**修復後需移除舊 PWA 重新安裝** |
 | _V2.0.0 原文_ | **選單圖像化單頁**：模式選單改 2 欄 `tile` 磁磚（內嵌線條 SVG `ICON` ×6＋最高分徽章），世界 6 模式一頁內；首頁層級卡 `lvcard` 內嵌**迷你地圖縮圖**（buildMap 直接縮放渲染）；預覽地圖高度 200/230→128/148。坑：重寫選單函式時用「函式名到函式名」切片，把夾在中間的 CONTS/contChips 一併吞掉（P8）|
 | _V1.9.0 原文_ | **雙指捏合縮放**：捏合中以 CSS `transform: scale()` 即時預覽（不重繪 SVG、不斷手勢），`touchend` 才提交 S.zoom 並 render（含世界 viewBox 擴張）；`.map-box` 設 `touch-action: pan-x pan-y`（保留單指平移、擋瀏覽器整頁縮放）；touchmove 需 `{passive:false}` 才能 preventDefault（同 wheel 坑）|

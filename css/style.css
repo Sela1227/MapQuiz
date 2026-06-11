@@ -238,3 +238,11 @@ h2 { font-size: 21px; font-weight: 700; margin: 4px 0 12px; color: var(--slate-d
   /* 模式磁磚右欄維持兩欄即可，間距略放 */
   .m-tiles { gap: 11px; }
 }
+
+/* V2.1.1 修正：自由練習地圖明確高度（手機/桌機）＋放大時抓取游標 */
+.x-map { height: 56vh; margin-bottom: 4px; }
+.map-box.zoomed { cursor: grab; }
+.map-box.zoomed:active { cursor: grabbing; }
+@media (min-width: 900px) {
+  .x-map { height: calc(100vh - 190px); }
+}
