@@ -1,0 +1,7605 @@
+{
+ "schema_version": 1,
+ "items": {
+  "台灣": [
+   {
+    "text": "首都台北，最高峰玉山近 4,000 公尺",
+    "angle": "自然"
+   },
+   {
+    "text": "半導體晶圓代工產量世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "珍珠奶茶的發源地",
+    "angle": "飲食"
+   },
+   {
+    "text": "便利商店密度全球名列前茅",
+    "angle": "最高級"
+   },
+   {
+    "text": "有超過 200 座 3,000 公尺以上高山",
+    "angle": "自然"
+   },
+   {
+    "text": "夜市文化是觀光招牌",
+    "angle": "unsorted"
+   },
+   {
+    "text": "健保制度便利著稱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "媽祖遶境是宗教盛事",
+    "angle": "節慶"
+   },
+   {
+    "text": "故宮典藏中華文物精華",
+    "angle": "unsorted"
+   },
+   {
+    "text": "高鐵一日生活圈",
+    "angle": "unsorted"
+   },
+   {
+    "text": "太魯閣峽谷大理石地形",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蝴蝶種類密度高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "廟宇數量超過萬座",
+    "angle": "歷史"
+   },
+   {
+    "text": "茶藝：高山烏龍馳名",
+    "angle": "飲食"
+   },
+   {
+    "text": "原住民族有16族",
+    "angle": "unsorted"
+   }
+  ],
+  "日本": [
+   {
+    "text": "首都東京是全球最大都會區之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "壽司、動漫與新幹線的故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "由四大本島與數千小島組成",
+    "angle": "自然"
+   },
+   {
+    "text": "富士山是最高峰也是聖山",
+    "angle": "自然"
+   },
+   {
+    "text": "全球最長壽的國家之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "櫻花季全民賞花",
+    "angle": "unsorted"
+   },
+   {
+    "text": "溫泉旅館文化",
+    "angle": "自然"
+   },
+   {
+    "text": "新幹線準點聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "神社鳥居紅色印象",
+    "angle": "unsorted"
+   },
+   {
+    "text": "和食列入非遺",
+    "angle": "飲食"
+   },
+   {
+    "text": "便利商店服務極致",
+    "angle": "unsorted"
+   },
+   {
+    "text": "動漫聖地巡禮風潮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "京都千年古都",
+    "angle": "歷史"
+   },
+   {
+    "text": "札幌雪祭巨型雪雕每年二月登場",
+    "angle": "節慶"
+   },
+   {
+    "text": "澀谷十字路口人潮壯觀",
+    "angle": "unsorted"
+   }
+  ],
+  "南韓": [
+   {
+    "text": "首都首爾，漢江貫穿市區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "K-pop 與韓劇的輸出大國",
+    "angle": "音樂"
+   },
+   {
+    "text": "泡菜是代表性國民食物",
+    "angle": "飲食"
+   },
+   {
+    "text": "三星、現代等財閥企業聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "與北韓以北緯38度線停戰線相隔",
+    "angle": "歷史"
+   },
+   {
+    "text": "濟州島是火山度假島",
+    "angle": "自然"
+   },
+   {
+    "text": "景福宮穿韓服參觀",
+    "angle": "unsorted"
+   },
+   {
+    "text": "炸雞配啤酒文化",
+    "angle": "飲食"
+   },
+   {
+    "text": "汗蒸幕桑拿體驗",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首爾塔情人鎖",
+    "angle": "unsorted"
+   },
+   {
+    "text": "電競被視為國民運動，職業聯賽火熱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "整形與美妝產業發達",
+    "angle": "unsorted"
+   },
+   {
+    "text": "板門店可窺北韓",
+    "angle": "unsorted"
+   },
+   {
+    "text": "釜山海雲台海灘",
+    "angle": "自然"
+   },
+   {
+    "text": "世宗大王發明韓文",
+    "angle": "unsorted"
+   }
+  ],
+  "北韓": [
+   {
+    "text": "首都平壤，全球最封閉的國家之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "與南韓間的非軍事區戒備森嚴",
+    "angle": "unsorted"
+   },
+   {
+    "text": "主體思想為官方意識形態",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿里郎表演以萬人團體操聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "白頭山被視為民族聖山",
+    "angle": "自然"
+   },
+   {
+    "text": "凱旋門比巴黎的更高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "地鐵深達百餘公尺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "集體主義表演震撼",
+    "angle": "unsorted"
+   },
+   {
+    "text": "羅津先鋒經濟特區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "金日成廣場閱兵",
+    "angle": "unsorted"
+   },
+   {
+    "text": "妙香山藏國際友誼展覽館",
+    "angle": "自然"
+   },
+   {
+    "text": "開城高麗古都",
+    "angle": "歷史"
+   },
+   {
+    "text": "與中國隔鴨綠江",
+    "angle": "unsorted"
+   },
+   {
+    "text": "糧食短缺長期困境",
+    "angle": "飲食"
+   },
+   {
+    "text": "旅遊全程導遊陪同",
+    "angle": "unsorted"
+   }
+  ],
+  "中國": [
+   {
+    "text": "人口超過14億，世界第二多",
+    "angle": "unsorted"
+   },
+   {
+    "text": "萬里長城綿延兩萬多公里",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都北京有紫禁城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "長江是亞洲最長河流",
+    "angle": "自然"
+   },
+   {
+    "text": "熊貓的原生地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "高鐵里程世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "春運是最大人類遷徙",
+    "angle": "最高級"
+   },
+   {
+    "text": "川菜粵菜八大菜系",
+    "angle": "飲食"
+   },
+   {
+    "text": "張家界石柱啟發阿凡達",
+    "angle": "unsorted"
+   },
+   {
+    "text": "九寨溝鈣華彩池層層疊翠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "西安兵馬俑震驚世界",
+    "angle": "unsorted"
+   },
+   {
+    "text": "上海外灘天際線",
+    "angle": "unsorted"
+   },
+   {
+    "text": "移動支付普及",
+    "angle": "unsorted"
+   },
+   {
+    "text": "桂林山水甲天下",
+    "angle": "自然"
+   },
+   {
+    "text": "春節紅包文化",
+    "angle": "節慶"
+   }
+  ],
+  "蒙古": [
+   {
+    "text": "全球人口密度最低的國家之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "成吉思汗建立過最大陸上帝國",
+    "angle": "歷史"
+   },
+   {
+    "text": "遊牧文化與蒙古包聞名",
+    "angle": "歷史"
+   },
+   {
+    "text": "戈壁沙漠橫亙南部",
+    "angle": "自然"
+   },
+   {
+    "text": "那達慕大會有賽馬摔跤射箭",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬頭琴與呼麥喉音",
+    "angle": "音樂"
+   },
+   {
+    "text": "冬季首都是全球最冷之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "奶茶suutei tsai加鹽",
+    "angle": "飲食"
+   }
+  ],
+  "印度": [
+   {
+    "text": "人口世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "泰姬瑪哈陵是大理石陵墓傑作",
+    "angle": "unsorted"
+   },
+   {
+    "text": "寶萊塢年產電影量全球最多",
+    "angle": "最高級"
+   },
+   {
+    "text": "恆河被印度教徒視為聖河",
+    "angle": "自然"
+   },
+   {
+    "text": "咖哩與香料文化影響全球",
+    "angle": "最高級"
+   },
+   {
+    "text": "瑜伽發源於此，國際瑜伽日由其推動",
+    "angle": "unsorted"
+   },
+   {
+    "text": "火車通勤人潮震撼",
+    "angle": "unsorted"
+   },
+   {
+    "text": "胡里節彩粉狂歡",
+    "angle": "節慶"
+   },
+   {
+    "text": "瓦拉納西恆河晨浴",
+    "angle": "自然"
+   },
+   {
+    "text": "大吉嶺紅茶山城",
+    "angle": "飲食"
+   },
+   {
+    "text": "齋浦爾粉紅城市",
+    "angle": "unsorted"
+   },
+   {
+    "text": "板球是國民狂熱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "排燈節萬家燈火",
+    "angle": "節慶"
+   },
+   {
+    "text": "香料市場氣味濃烈",
+    "angle": "unsorted"
+   },
+   {
+    "text": "IT外包產業大國",
+    "angle": "unsorted"
+   }
+  ],
+  "巴基斯坦": [
+   {
+    "text": "首都伊斯蘭瑪巴德",
+    "angle": "unsorted"
+   },
+   {
+    "text": "印度河文明發源地之一",
+    "angle": "歷史"
+   },
+   {
+    "text": "K2 是世界第二高峰",
+    "angle": "unsorted"
+   },
+   {
+    "text": "與印度分治於 1947 年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "板球是全民運動",
+    "angle": "unsorted"
+   },
+   {
+    "text": "喀喇崑崙公路高山奇路",
+    "angle": "自然"
+   },
+   {
+    "text": "卡車彩繪藝術繽紛",
+    "angle": "工藝"
+   },
+   {
+    "text": "芒果品種繁多外銷",
+    "angle": "飲食"
+   }
+  ],
+  "孟加拉": [
+   {
+    "text": "人口密度極高的三角洲國家",
+    "angle": "unsorted"
+   },
+   {
+    "text": "恆河與布拉馬普特拉河在此入海",
+    "angle": "工藝"
+   },
+   {
+    "text": "成衣出口是經濟支柱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雨季常有大規模洪水",
+    "angle": "unsorted"
+   },
+   {
+    "text": "孟加拉虎棲息於紅樹林",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人力三輪車滿街跑",
+    "angle": "unsorted"
+   },
+   {
+    "text": "諾貝爾和平獎得主尤努斯微貸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "孟加拉語言運動紀念日成國際母語日",
+    "angle": "unsorted"
+   }
+  ],
+  "斯里蘭卡": [
+   {
+    "text": "印度洋上的錫蘭紅茶之島",
+    "angle": "飲食"
+   },
+   {
+    "text": "獅子岩是古代空中宮殿",
+    "angle": "歷史"
+   },
+   {
+    "text": "佛教文化深厚",
+    "angle": "unsorted"
+   },
+   {
+    "text": "形狀像一滴眼淚",
+    "angle": "unsorted"
+   },
+   {
+    "text": "肉桂的原產地之一",
+    "angle": "飲食"
+   },
+   {
+    "text": "高蹺漁夫海上剪影",
+    "angle": "unsorted"
+   },
+   {
+    "text": "亞洲象孤兒院",
+    "angle": "unsorted"
+   },
+   {
+    "text": "錫蘭紅茶依海拔分為七大產區",
+    "angle": "飲食"
+   }
+  ],
+  "尼泊爾": [
+   {
+    "text": "聖母峰位於與中國邊界",
+    "angle": "unsorted"
+   },
+   {
+    "text": "世界唯一非四邊形國旗",
+    "angle": "unsorted"
+   },
+   {
+    "text": "佛陀誕生於藍毗尼",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都加德滿都古蹟密布",
+    "angle": "工藝"
+   },
+   {
+    "text": "雪巴人以高山嚮導聞名",
+    "angle": "自然"
+   },
+   {
+    "text": "活女神庫瑪麗傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "杜巴廣場王宮群",
+    "angle": "unsorted"
+   },
+   {
+    "text": "達八節是最長節慶",
+    "angle": "節慶"
+   }
+  ],
+  "不丹": [
+   {
+    "text": "以國民幸福總值取代 GDP 聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "虎穴寺懸於峭壁之上",
+    "angle": "歷史"
+   },
+   {
+    "text": "全球唯一禁菸販售的國家之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "龍旗是國旗圖案",
+    "angle": "unsorted"
+   },
+   {
+    "text": "碳負排放國家",
+    "angle": "unsorted"
+   },
+   {
+    "text": "弓箭是國技，村村有射箭場",
+    "angle": "unsorted"
+   },
+   {
+    "text": "辣椒起司ema datshi當主菜",
+    "angle": "飲食"
+   },
+   {
+    "text": "男女傳統服飾日常穿著",
+    "angle": "unsorted"
+   }
+  ],
+  "馬爾地夫": [
+   {
+    "text": "上千座珊瑚環礁組成",
+    "angle": "自然"
+   },
+   {
+    "text": "全球地勢最低的國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "水上屋度假勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "平均海拔僅約1.5公尺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "以潛水與珊瑚礁聞名",
+    "angle": "自然"
+   },
+   {
+    "text": "夜光海灘藍眼淚",
+    "angle": "自然"
+   },
+   {
+    "text": "環礁機場跑道貼海",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾召開水下內閣會議",
+    "angle": "unsorted"
+   }
+  ],
+  "阿富汗": [
+   {
+    "text": "興都庫什山脈貫穿全境",
+    "angle": "自然"
+   },
+   {
+    "text": "巴米揚大佛遺址所在",
+    "angle": "歷史"
+   },
+   {
+    "text": "內陸國，無出海口",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都喀布爾位居興都庫什山谷",
+    "angle": "工藝"
+   },
+   {
+    "text": "自古是絲路商旅必經的通道",
+    "angle": "歷史"
+   },
+   {
+    "text": "藍色清真寺馬扎里沙里夫",
+    "angle": "歷史"
+   },
+   {
+    "text": "風箏競技傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "青金石礦千年開採",
+    "angle": "unsorted"
+   }
+  ],
+  "哈薩克": [
+   {
+    "text": "世界最大內陸國",
+    "angle": "最高級"
+   },
+   {
+    "text": "拜科努爾是人類首次上太空的發射場",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都阿斯塔納建築前衛",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘋果的原產地之一",
+    "angle": "飲食"
+   },
+   {
+    "text": "草原遊牧文化深厚",
+    "angle": "自然"
+   },
+   {
+    "text": "冬不拉琴聲草原",
+    "angle": "音樂"
+   },
+   {
+    "text": "金人武士考古象徵",
+    "angle": "歷史"
+   },
+   {
+    "text": "那吾魯孜春節盛宴",
+    "angle": "節慶"
+   }
+  ],
+  "烏茲別克": [
+   {
+    "text": "撒馬爾罕是絲路名城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雙重內陸國（鄰國也都是內陸國）",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雷吉斯坦 廣場磁磚建築華麗",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鹹海縮減是著名生態危機",
+    "angle": "unsorted"
+   },
+   {
+    "text": "棉花生產大國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大餅non烤爐香",
+    "angle": "飲食"
+   },
+   {
+    "text": "蘇札尼刺繡華麗",
+    "angle": "工藝"
+   },
+   {
+    "text": "希瓦古城如露天博物館",
+    "angle": "歷史"
+   }
+  ],
+  "土庫曼": [
+   {
+    "text": "地獄之門天然氣坑燃燒數十年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "卡拉庫姆沙漠覆蓋大部分國土",
+    "angle": "自然"
+   },
+   {
+    "text": "以汗血寶馬聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "天然氣蘊藏量世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "首都阿什哈巴特多白色大理石建築",
+    "angle": "unsorted"
+   },
+   {
+    "text": "地毯圖紋進了國旗",
+    "angle": "工藝"
+   },
+   {
+    "text": "汗血馬有專屬節日",
+    "angle": "節慶"
+   },
+   {
+    "text": "獨立紀念金像曾隨日轉",
+    "angle": "unsorted"
+   }
+  ],
+  "吉爾吉斯": [
+   {
+    "text": "天山山脈貫穿的高山國",
+    "angle": "自然"
+   },
+   {
+    "text": "伊塞克湖是世界第二大高山湖",
+    "angle": "自然"
+   },
+   {
+    "text": "遊牧史詩《瑪納斯》傳唱千年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都比斯凱克",
+    "angle": "unsorted"
+   },
+   {
+    "text": "氈房文化列入非遺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "世界遊牧運動會發源",
+    "angle": "unsorted"
+   },
+   {
+    "text": "獵鷹文化傳承",
+    "angle": "unsorted"
+   },
+   {
+    "text": "頌詩藝人manaschi吟唱",
+    "angle": "unsorted"
+   }
+  ],
+  "塔吉克": [
+   {
+    "text": "帕米爾高原占國土近半",
+    "angle": "unsorted"
+   },
+   {
+    "text": "中亞最多冰川的國家",
+    "angle": "飲食"
+   },
+   {
+    "text": "首都杜尚別意為「星期一」，源自市集日",
+    "angle": "unsorted"
+   },
+   {
+    "text": "與阿富汗以噴赤河為界",
+    "angle": "自然"
+   },
+   {
+    "text": "高山公路帕米爾公路聞名",
+    "angle": "自然"
+   },
+   {
+    "text": "瓦罕走廊歷史通道",
+    "angle": "unsorted"
+   },
+   {
+    "text": "帕米爾婚禮七日",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石榴與杏乾甜美",
+    "angle": "飲食"
+   }
+  ],
+  "緬甸": [
+   {
+    "text": "蒲甘平原有數千座佛塔",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大金塔貼滿金箔",
+    "angle": "unsorted"
+   },
+   {
+    "text": "伊洛瓦底江縱貫全國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "翡翠產量世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "舊稱 Burma",
+    "angle": "unsorted"
+   },
+   {
+    "text": "特納卡樹皮粉敷面",
+    "angle": "unsorted"
+   },
+   {
+    "text": "茵萊湖漁夫以單腳划槳獨步全球",
+    "angle": "自然"
+   },
+   {
+    "text": "龍基筒裙男女皆穿",
+    "angle": "unsorted"
+   }
+  ],
+  "泰國": [
+   {
+    "text": "首都曼谷全名是世界最長地名之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "唯一未被殖民的東南亞國家",
+    "angle": "歷史"
+   },
+   {
+    "text": "潑水節是傳統新年",
+    "angle": "節慶"
+   },
+   {
+    "text": "佛教徒比例極高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "泰式料理以酸辣聞名全球",
+    "angle": "飲食"
+   },
+   {
+    "text": "水上市場小船叫賣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "泰拳是國技，賽前有拜師舞儀式",
+    "angle": "unsorted"
+   },
+   {
+    "text": "宋干節全民潑水迎傳統新年",
+    "angle": "節慶"
+   },
+   {
+    "text": "大城遺址佛頭樹",
+    "angle": "歷史"
+   },
+   {
+    "text": "清邁水燈節萬盞天燈齊放",
+    "angle": "節慶"
+   },
+   {
+    "text": "夜市美食天堂",
+    "angle": "飲食"
+   },
+   {
+    "text": "按摩文化普及",
+    "angle": "unsorted"
+   },
+   {
+    "text": "普吉攀牙灣石林",
+    "angle": "unsorted"
+   },
+   {
+    "text": "榴槤山竹水果王國",
+    "angle": "飲食"
+   },
+   {
+    "text": "雙手合十打招呼",
+    "angle": "unsorted"
+   }
+  ],
+  "寮國": [
+   {
+    "text": "東南亞唯一內陸國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "龍坡邦古都列世界遺產",
+    "angle": "歷史"
+   },
+   {
+    "text": "湄公河流貫全境",
+    "angle": "自然"
+   },
+   {
+    "text": "首都永珍是東南亞最悠閒的首都之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "咖啡與糯米飯文化",
+    "angle": "飲食"
+   },
+   {
+    "text": "塔鑾金塔國徽意象",
+    "angle": "unsorted"
+   },
+   {
+    "text": "清晨布施僧侶行列",
+    "angle": "工藝"
+   },
+   {
+    "text": "湄公河四千美島",
+    "angle": "自然"
+   }
+  ],
+  "柬埔寨": [
+   {
+    "text": "吳哥窟是全球最大宗教建築群",
+    "angle": "最高級"
+   },
+   {
+    "text": "洞里薩湖雨季面積暴增數倍",
+    "angle": "自然"
+   },
+   {
+    "text": "國旗上有吳哥窟圖案",
+    "angle": "unsorted"
+   },
+   {
+    "text": "高棉帝國曾稱霸中南半島",
+    "angle": "歷史"
+   },
+   {
+    "text": "首都金邊坐落四臂灣河岸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿帕莎拉仙女舞",
+    "angle": "音樂"
+   },
+   {
+    "text": "水祭龍舟競渡",
+    "angle": "節慶"
+   },
+   {
+    "text": "棕糖椰糖傳統製作",
+    "angle": "unsorted"
+   }
+  ],
+  "越南": [
+   {
+    "text": "下龍灣數千座石灰岩島",
+    "angle": "自然"
+   },
+   {
+    "text": "國土狹長呈 S 形",
+    "angle": "unsorted"
+   },
+   {
+    "text": "咖啡產量世界第二",
+    "angle": "飲食"
+   },
+   {
+    "text": "河粉與法國麵包文化融合",
+    "angle": "飲食"
+   },
+   {
+    "text": "首都河內、最大城胡志明市",
+    "angle": "自然"
+   },
+   {
+    "text": "機車海是城市日常",
+    "angle": "unsorted"
+   },
+   {
+    "text": "越式咖啡滴漏煉乳",
+    "angle": "飲食"
+   },
+   {
+    "text": "奧黛傳統服飾",
+    "angle": "unsorted"
+   },
+   {
+    "text": "會安夜晚燈籠如畫",
+    "angle": "unsorted"
+   },
+   {
+    "text": "湄公河水上人家",
+    "angle": "自然"
+   },
+   {
+    "text": "沙壩梯田少數民族",
+    "angle": "unsorted"
+   },
+   {
+    "text": "戰爭遺跡博物館",
+    "angle": "歷史"
+   },
+   {
+    "text": "峴港黃金橋巨手",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鴨仔蛋是特色小吃",
+    "angle": "飲食"
+   },
+   {
+    "text": "胡志明市法式建築",
+    "angle": "unsorted"
+   }
+  ],
+  "馬來西亞": [
+   {
+    "text": "雙峰塔曾是世界最高樓",
+    "angle": "最高級"
+   },
+   {
+    "text": "由馬來半島與婆羅洲兩部分組成",
+    "angle": "自然"
+   },
+   {
+    "text": "多元族群：馬來、華人、印度裔",
+    "angle": "unsorted"
+   },
+   {
+    "text": "檳城美食聞名東南亞",
+    "angle": "飲食"
+   },
+   {
+    "text": "首都吉隆坡由錫礦聚落發展而成",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雙峰塔夜間點燈如水晶宮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "檳城喬治市壁畫散落街角等你尋寶",
+    "angle": "unsorted"
+   },
+   {
+    "text": "肉骨茶與椰漿飯",
+    "angle": "飲食"
+   },
+   {
+    "text": "沙巴神山東南亞高峰",
+    "angle": "自然"
+   },
+   {
+    "text": "西巴丹潛水世界級",
+    "angle": "unsorted"
+   },
+   {
+    "text": "荷蘭紅屋馬六甲",
+    "angle": "unsorted"
+   },
+   {
+    "text": "茨廠街唐人街",
+    "angle": "unsorted"
+   },
+   {
+    "text": "熱帶雨林古老",
+    "angle": "歷史"
+   },
+   {
+    "text": "拉茶表演拉得老高",
+    "angle": "飲食"
+   },
+   {
+    "text": "多元節慶整年不斷",
+    "angle": "節慶"
+   }
+  ],
+  "新加坡": [
+   {
+    "text": "城市國家，面積比台北市略大",
+    "angle": "unsorted"
+   },
+   {
+    "text": "全球最重要的轉口港之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "魚尾獅是城市象徵",
+    "angle": "unsorted"
+   },
+   {
+    "text": "四種官方語言",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花園城市綠化聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "濱海灣金沙無邊際泳池",
+    "angle": "unsorted"
+   },
+   {
+    "text": "小販中心列非遺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "嚴罰口香糖聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "樟宜機場瀑布",
+    "angle": "工藝"
+   },
+   {
+    "text": "聖淘沙度假島",
+    "angle": "自然"
+   },
+   {
+    "text": "組屋政策居者有其屋",
+    "angle": "unsorted"
+   },
+   {
+    "text": "夜間動物園首創",
+    "angle": "unsorted"
+   },
+   {
+    "text": "辣椒螃蟹國菜",
+    "angle": "飲食"
+   },
+   {
+    "text": "四大族群和諧",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花園中的城市規劃",
+    "angle": "unsorted"
+   }
+  ],
+  "印尼": [
+   {
+    "text": "全球最大群島國，逾萬七千座島",
+    "angle": "自然"
+   },
+   {
+    "text": "人口世界第四",
+    "angle": "unsorted"
+   },
+   {
+    "text": "婆羅浮屠是最大佛塔遺跡",
+    "angle": "歷史"
+   },
+   {
+    "text": "火山數量全球最多之一",
+    "angle": "自然"
+   },
+   {
+    "text": "峇里島是國際度假勝地",
+    "angle": "自然"
+   },
+   {
+    "text": "峇里島梯田與神廟",
+    "angle": "歷史"
+   },
+   {
+    "text": "科莫多巨蜥原棲地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "婆羅摩火山日出",
+    "angle": "自然"
+   },
+   {
+    "text": "蘇門答臘紅毛猩猩",
+    "angle": "unsorted"
+   },
+   {
+    "text": "爪哇皮影戲wayang列入非遺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巴東菜整桌小碟任選算盤計價",
+    "angle": "飲食"
+   },
+   {
+    "text": "萬隆火山口湖",
+    "angle": "自然"
+   },
+   {
+    "text": "托拉查傳統葬禮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "衝浪天堂民丹龍目",
+    "angle": "unsorted"
+   },
+   {
+    "text": "萬島之國渡輪繁忙",
+    "angle": "自然"
+   }
+  ],
+  "菲律賓": [
+   {
+    "text": "七千多座島嶼組成",
+    "angle": "自然"
+   },
+   {
+    "text": "巧克力山是奇特地形景觀",
+    "angle": "自然"
+   },
+   {
+    "text": "亞洲唯二天主教為主的國家之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "吉普尼是特色交通工具",
+    "angle": "unsorted"
+   },
+   {
+    "text": "颱風頻繁登陸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "長灘島白沙灘細如麵粉",
+    "angle": "自然"
+   },
+   {
+    "text": "薄荷島眼鏡猴",
+    "angle": "自然"
+   },
+   {
+    "text": "百勝灘瀑布泛舟",
+    "angle": "工藝"
+   },
+   {
+    "text": "科迪勒拉梯田",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖週宗教遊行",
+    "angle": "節慶"
+   },
+   {
+    "text": "jeepney改裝吉普",
+    "angle": "unsorted"
+   },
+   {
+    "text": "芒果乾國民伴手",
+    "angle": "飲食"
+   },
+   {
+    "text": "巴拉望地底河",
+    "angle": "自然"
+   },
+   {
+    "text": "鬥雞文化盛行",
+    "angle": "unsorted"
+   },
+   {
+    "text": "英語普及度高",
+    "angle": "unsorted"
+   }
+  ],
+  "汶萊": [
+   {
+    "text": "婆羅洲上的石油富國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇丹是國家元首",
+    "angle": "unsorted"
+   },
+   {
+    "text": "水上村落歷史悠久",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人民免繳所得稅",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國土被馬來西亞分隔成兩塊",
+    "angle": "unsorted"
+   },
+   {
+    "text": "夜市烤魚串安巴雅",
+    "angle": "飲食"
+   },
+   {
+    "text": "水村學校醫院俱全",
+    "angle": "unsorted"
+   },
+   {
+    "text": "金頂清真寺水上倒影",
+    "angle": "歷史"
+   }
+  ],
+  "東帝汶": [
+   {
+    "text": "21世紀第一個獨立的國家",
+    "angle": "歷史"
+   },
+   {
+    "text": "與印尼分占帝汶島",
+    "angle": "自然"
+   },
+   {
+    "text": "官方語言含葡萄牙語",
+    "angle": "unsorted"
+   },
+   {
+    "text": "咖啡是主要出口品",
+    "angle": "飲食"
+   },
+   {
+    "text": "首都狄力面向班達海",
+    "angle": "unsorted"
+   },
+   {
+    "text": "塔伊斯織布身分象徵",
+    "angle": "工藝"
+   },
+   {
+    "text": "鱷魚是創世傳說圖騰",
+    "angle": "歷史"
+   },
+   {
+    "text": "美元為流通貨幣",
+    "angle": "unsorted"
+   }
+  ],
+  "巴布亞紐幾內亞": [
+   {
+    "text": "語言超過800種，全球最多",
+    "angle": "最高級"
+   },
+   {
+    "text": "與印尼分占新幾內亞島",
+    "angle": "自然"
+   },
+   {
+    "text": "天堂鳥是國鳥",
+    "angle": "unsorted"
+   },
+   {
+    "text": "部落文化多元",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都莫士比港",
+    "angle": "unsorted"
+   },
+   {
+    "text": "極樂鳥羽飾盛裝",
+    "angle": "音樂"
+   },
+   {
+    "text": "Sing-sing部落歌舞節",
+    "angle": "節慶"
+   },
+   {
+    "text": "可可咖啡山地小農",
+    "angle": "飲食"
+   }
+  ],
+  "斐濟": [
+   {
+    "text": "南太平洋的度假群島國",
+    "angle": "自然"
+   },
+   {
+    "text": "橄欖球七人制強權",
+    "angle": "unsorted"
+   },
+   {
+    "text": "卡瓦儀式是傳統文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "330多座島嶼",
+    "angle": "自然"
+   },
+   {
+    "text": "國際換日線附近",
+    "angle": "unsorted"
+   },
+   {
+    "text": "斐濟水外銷全球",
+    "angle": "最高級"
+   },
+   {
+    "text": "walu椰漿魚生開胃",
+    "angle": "unsorted"
+   },
+   {
+    "text": "火上行走儀式",
+    "angle": "unsorted"
+   }
+  ],
+  "索羅門群島": [
+   {
+    "text": "二戰瓜達康納爾戰役發生地",
+    "angle": "歷史"
+   },
+   {
+    "text": "近千座島嶼組成",
+    "angle": "自然"
+   },
+   {
+    "text": "美拉尼西亞文化圈",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都荷尼阿拉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "以貝殼貨幣傳統聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "潛水沉船遺跡密布",
+    "angle": "工藝"
+   },
+   {
+    "text": "貝幣至今禮俗使用",
+    "angle": "unsorted"
+   },
+   {
+    "text": "拉古納環礁人工島",
+    "angle": "歷史"
+   }
+  ],
+  "萬那杜": [
+   {
+    "text": "伊蘇爾火山可近距離觀賞噴發",
+    "angle": "自然"
+   },
+   {
+    "text": "高空彈跳起源於此地陸潛儀式",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾多次被評為最快樂國度",
+    "angle": "音樂"
+   },
+   {
+    "text": "83座島嶼組成",
+    "angle": "自然"
+   },
+   {
+    "text": "獨立前由英法兩國共管數十年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "沙畫敘事列非遺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "豬牙是財富與貨幣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "水下郵局寄明信片",
+    "angle": "unsorted"
+   }
+  ],
+  "薩摩亞": [
+   {
+    "text": "2011年跳過一天改換日線西側",
+    "angle": "unsorted"
+   },
+   {
+    "text": "傳統刺青文化深厚",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇阿天坑是天然泳池",
+    "angle": "unsorted"
+   },
+   {
+    "text": "橄欖球人才輩出",
+    "angle": "unsorted"
+   },
+   {
+    "text": "法雷開放式房屋是特色建築",
+    "angle": "unsorted"
+   },
+   {
+    "text": "卡瓦儀式長老主持",
+    "angle": "unsorted"
+   },
+   {
+    "text": "椰殼纖維繩工藝",
+    "angle": "工藝"
+   },
+   {
+    "text": "橢圓石屋遺址普洛佩索",
+    "angle": "歷史"
+   }
+  ],
+  "東加": [
+   {
+    "text": "太平洋唯一未被殖民的王國",
+    "angle": "歷史"
+   },
+   {
+    "text": "國王體重曾列金氏紀錄",
+    "angle": "unsorted"
+   },
+   {
+    "text": "與換日線相鄰，最早迎接日出之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鯨魚共游勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "橄欖球文化盛行",
+    "angle": "unsorted"
+   },
+   {
+    "text": "樹皮布tapa盛事必備",
+    "angle": "工藝"
+   },
+   {
+    "text": "國王加冕全國歡慶",
+    "angle": "unsorted"
+   },
+   {
+    "text": "南岸噴潮洞海浪打出沖天水柱",
+    "angle": "自然"
+   }
+  ],
+  "吐瓦魯": [
+   {
+    "text": "全球第四小國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "海平面上升的最前線",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國域名 .tv 帶來收入",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人口約一萬餘",
+    "angle": "unsorted"
+   },
+   {
+    "text": "最高點僅約4.6公尺",
+    "angle": "最高級"
+   },
+   {
+    "text": "椰子蟹體型驚人",
+    "angle": "unsorted"
+   },
+   {
+    "text": "傳統舞fatele拍掌",
+    "angle": "音樂"
+   },
+   {
+    "text": "環礁湖即生活中心",
+    "angle": "自然"
+   }
+  ],
+  "吉里巴斯": [
+   {
+    "text": "橫跨赤道與換日線",
+    "angle": "unsorted"
+   },
+   {
+    "text": "全球最早迎接新年的國家之一",
+    "angle": "節慶"
+   },
+   {
+    "text": "33座環礁分布遼闊",
+    "angle": "工藝"
+   },
+   {
+    "text": "鳳凰群島保護區極大",
+    "angle": "自然"
+   },
+   {
+    "text": "面臨海平面上升威脅",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖誕島是最大環礁之一",
+    "angle": "自然"
+   },
+   {
+    "text": "椰子汁日常飲品",
+    "angle": "unsorted"
+   },
+   {
+    "text": "戰時塔拉瓦戰役遺跡",
+    "angle": "歷史"
+   }
+  ],
+  "諾魯": [
+   {
+    "text": "全球第三小國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "曾因磷礦人均收入極高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "沒有官方首都的國家",
+    "angle": "unsorted"
+   },
+   {
+    "text": "面積僅21平方公里",
+    "angle": "unsorted"
+   },
+   {
+    "text": "環島公路一圈約30分鐘",
+    "angle": "自然"
+   },
+   {
+    "text": "磷礦坑疤地貌",
+    "angle": "unsorted"
+   },
+   {
+    "text": "軍艦鳥馴養傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "環島鐵道採礦遺跡",
+    "angle": "歷史"
+   }
+  ],
+  "帛琉": [
+   {
+    "text": "水母湖可與無毒水母共游",
+    "angle": "自然"
+   },
+   {
+    "text": "全球第一個鯊魚保護區",
+    "angle": "最高級"
+   },
+   {
+    "text": "洛克群島如綠色蘑菇",
+    "angle": "自然"
+   },
+   {
+    "text": "曾與台灣有深厚邦誼",
+    "angle": "unsorted"
+   },
+   {
+    "text": "潛水客的天堂",
+    "angle": "unsorted"
+   },
+   {
+    "text": "環保誓詞蓋進護照",
+    "angle": "unsorted"
+   },
+   {
+    "text": "男人會館彩繪山牆",
+    "angle": "工藝"
+   },
+   {
+    "text": "禁用有害防曬乳保礁",
+    "angle": "飲食"
+   }
+  ],
+  "馬紹爾群島": [
+   {
+    "text": "比基尼環礁曾是核試場",
+    "angle": "unsorted"
+   },
+   {
+    "text": "環礁地形教科書範例",
+    "angle": "unsorted"
+   },
+   {
+    "text": "航海杖圖是傳統導航工具",
+    "angle": "unsorted"
+   },
+   {
+    "text": "美國關聯邦協定國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都馬久羅本身就是一座環礁",
+    "angle": "unsorted"
+   },
+   {
+    "text": "木枝海圖導航智慧",
+    "angle": "unsorted"
+   },
+   {
+    "text": "獨木舟橫渡技藝",
+    "angle": "unsorted"
+   },
+   {
+    "text": "環礁間距離以日計",
+    "angle": "unsorted"
+   }
+  ],
+  "密克羅尼西亞聯邦": [
+   {
+    "text": "南馬都爾是海上石城遺跡",
+    "angle": "歷史"
+   },
+   {
+    "text": "由四個州六百多島組成",
+    "angle": "自然"
+   },
+   {
+    "text": "雅浦島以巨大石幣聞名",
+    "angle": "自然"
+   },
+   {
+    "text": "橫跨遼闊西太平洋",
+    "angle": "unsorted"
+   },
+   {
+    "text": "與美國簽自由聯繫條約",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石幣大如車輪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "楠馬都爾水道石城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "傳統椰子酒以椰花蜜發酵釀成",
+    "angle": "飲食"
+   }
+  ],
+  "澳大利亞": [
+   {
+    "text": "全球唯一獨占整塊大陸的國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "大堡礁是最大珊瑚礁系統",
+    "angle": "自然"
+   },
+   {
+    "text": "袋鼠與無尾熊的故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "烏魯魯巨岩是原民聖地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雪梨歌劇院造型如風帆",
+    "angle": "音樂"
+   },
+   {
+    "text": "袋熊袋獾特有種多",
+    "angle": "unsorted"
+   },
+   {
+    "text": "內陸紅土荒漠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "墨爾本咖啡文化",
+    "angle": "飲食"
+   },
+   {
+    "text": "黃金海岸衝浪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "塔斯馬尼亞純淨",
+    "angle": "unsorted"
+   },
+   {
+    "text": "原住民點畫藝術",
+    "angle": "unsorted"
+   },
+   {
+    "text": "野火與生態共存",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖誕節在夏天",
+    "angle": "節慶"
+   },
+   {
+    "text": "袋鼠肉可食用",
+    "angle": "飲食"
+   },
+   {
+    "text": "十二門徒岩海岸",
+    "angle": "unsorted"
+   }
+  ],
+  "紐西蘭": [
+   {
+    "text": "全球第一個給婦女投票權的國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "魔戒電影取景地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "奇異鳥不會飛是國鳥",
+    "angle": "unsorted"
+   },
+   {
+    "text": "毛利文化的哈卡舞聞名",
+    "angle": "音樂"
+   },
+   {
+    "text": "綿羊數量遠多於人口",
+    "angle": "unsorted"
+   },
+   {
+    "text": "皇后鎮極限運動之都",
+    "angle": "unsorted"
+   },
+   {
+    "text": "螢火蟲洞藍光",
+    "angle": "自然"
+   },
+   {
+    "text": "羅托魯瓦地熱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "米佛峽灣遊船",
+    "angle": "自然"
+   },
+   {
+    "text": "蹦極發源地之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "奇異果是代表性出口水果",
+    "angle": "飲食"
+   },
+   {
+    "text": "剃羊毛秀傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "南島冰川健行",
+    "angle": "飲食"
+   },
+   {
+    "text": "星空保護區黑暗純淨",
+    "angle": "unsorted"
+   },
+   {
+    "text": "橄欖球全黑隊哈卡",
+    "angle": "unsorted"
+   }
+  ],
+  "伊朗": [
+   {
+    "text": "古波斯帝國的核心",
+    "angle": "歷史"
+   },
+   {
+    "text": "波斯波利斯是宮殿遺址",
+    "angle": "歷史"
+   },
+   {
+    "text": "波斯地毯工藝精湛",
+    "angle": "工藝"
+   },
+   {
+    "text": "裏海與波斯灣之間",
+    "angle": "unsorted"
+   },
+   {
+    "text": "番紅花產量世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "波斯新年諾魯茲跨13天",
+    "angle": "節慶"
+   },
+   {
+    "text": "細密畫工藝精緻",
+    "angle": "工藝"
+   },
+   {
+    "text": "開心果產量世界前列",
+    "angle": "飲食"
+   }
+  ],
+  "伊拉克": [
+   {
+    "text": "兩河流域文明發源地",
+    "angle": "歷史"
+   },
+   {
+    "text": "巴比倫古城遺址所在",
+    "angle": "歷史"
+   },
+   {
+    "text": "底格里斯與幼發拉底河貫穿",
+    "angle": "自然"
+   },
+   {
+    "text": "石油蘊藏世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "首都巴格達曾是阿拔斯王朝中心",
+    "angle": "歷史"
+   },
+   {
+    "text": "亞述獅身人面浮雕",
+    "angle": "工藝"
+   },
+   {
+    "text": "椰棗品種數百",
+    "angle": "unsorted"
+   },
+   {
+    "text": "沼澤阿拉伯人蘆葦屋",
+    "angle": "unsorted"
+   }
+  ],
+  "敘利亞": [
+   {
+    "text": "大馬士革號稱最古老持續有人居住城市之一",
+    "angle": "歷史"
+   },
+   {
+    "text": "帕米拉古城遺跡聞名",
+    "angle": "歷史"
+   },
+   {
+    "text": "地中海東岸古文明走廊",
+    "angle": "歷史"
+   },
+   {
+    "text": "阿勒坡古城列世界遺產",
+    "angle": "歷史"
+   },
+   {
+    "text": "橄欖與開心果產地",
+    "angle": "飲食"
+   },
+   {
+    "text": "大馬士革鋼刀傳奇",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿勒坡古皂橄欖月桂",
+    "angle": "工藝"
+   },
+   {
+    "text": "十字軍城堡騎士堡",
+    "angle": "歷史"
+   }
+  ],
+  "黎巴嫩": [
+   {
+    "text": "國旗中央是雪松",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巴勒貝克有巨型羅馬神殿",
+    "angle": "歷史"
+   },
+   {
+    "text": "貝魯特曾稱中東巴黎",
+    "angle": "unsorted"
+   },
+   {
+    "text": "腓尼基人的故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "可上午滑雪下午看海",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雪松林比布魯斯古港",
+    "angle": "工藝"
+   },
+   {
+    "text": "梅澤前菜一上就是數十小碟",
+    "angle": "飲食"
+   },
+   {
+    "text": "字母腓尼基起源",
+    "angle": "unsorted"
+   }
+  ],
+  "以色列": [
+   {
+    "text": "死海是地表最低點可漂浮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "耶路撒冷為三大宗教聖地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "哭牆是猶太教聖址",
+    "angle": "unsorted"
+   },
+   {
+    "text": "科技新創密度極高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "希伯來語復活為日常語言",
+    "angle": "unsorted"
+   },
+   {
+    "text": "特拉維夫新創之城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "死海泥保養品",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬薩達日出健行",
+    "angle": "unsorted"
+   },
+   {
+    "text": "加利利湖聖經場景",
+    "angle": "自然"
+   },
+   {
+    "text": "基布茲集體農場",
+    "angle": "工藝"
+   },
+   {
+    "text": "沙漠農業滴灌技術",
+    "angle": "自然"
+   },
+   {
+    "text": "耶路撒冷舊城四區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "安息日全城靜止",
+    "angle": "unsorted"
+   },
+   {
+    "text": "胡姆斯鷹嘴豆泥",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國防新創全球聞名",
+    "angle": "最高級"
+   }
+  ],
+  "巴勒斯坦": [
+   {
+    "text": "伯利恆是耶穌誕生地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "橄欖樹是重要象徵",
+    "angle": "unsorted"
+   },
+   {
+    "text": "分為約旦河西岸與加薩",
+    "angle": "自然"
+   },
+   {
+    "text": "古城希伯崙歷史悠久",
+    "angle": "歷史"
+   },
+   {
+    "text": "刺繡工藝列入非遺",
+    "angle": "工藝"
+   },
+   {
+    "text": "橄欖採收季全家動員",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大袍刺繡區分村落",
+    "angle": "工藝"
+   },
+   {
+    "text": "油炸鷹嘴豆餅常民味",
+    "angle": "飲食"
+   }
+  ],
+  "約旦": [
+   {
+    "text": "佩特拉玫瑰色岩石古城",
+    "angle": "歷史"
+   },
+   {
+    "text": "瓦地倫是火星電影取景地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "死海東岸漂浮勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都安曼依七座山丘而建",
+    "angle": "unsorted"
+   },
+   {
+    "text": "與以色列共享死海",
+    "angle": "unsorted"
+   },
+   {
+    "text": "死海泥敷膚體驗",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曼薩夫羊肉飯國菜",
+    "angle": "飲食"
+   },
+   {
+    "text": "羅馬劇場安曼市中心",
+    "angle": "音樂"
+   }
+  ],
+  "沙烏地阿拉伯": [
+   {
+    "text": "麥加是伊斯蘭最高聖地",
+    "angle": "最高級"
+   },
+   {
+    "text": "石油儲量世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "幾乎全境沙漠無常年河流",
+    "angle": "自然"
+   },
+   {
+    "text": "NEOM未來城計畫",
+    "angle": "unsorted"
+   },
+   {
+    "text": "朝覲季湧入數百萬信徒",
+    "angle": "unsorted"
+   },
+   {
+    "text": "麥地那第二聖城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "朝覲季有專門的朝覲航班與簽證",
+    "angle": "unsorted"
+   },
+   {
+    "text": "駱駝選美比賽",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紅海新城願景計畫",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鷹獵傳統運動",
+    "angle": "unsorted"
+   },
+   {
+    "text": "椰棗是待客果",
+    "angle": "飲食"
+   },
+   {
+    "text": "內志地區傳統建築以泥磚築成",
+    "angle": "unsorted"
+   },
+   {
+    "text": "2034世界盃主辦",
+    "angle": "unsorted"
+   },
+   {
+    "text": "女性近年可開車",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石油城宰赫蘭",
+    "angle": "unsorted"
+   }
+  ],
+  "葉門": [
+   {
+    "text": "希巴姆有「沙漠曼哈頓」泥造高樓",
+    "angle": "自然"
+   },
+   {
+    "text": "摩卡港是咖啡名稱由來",
+    "angle": "飲食"
+   },
+   {
+    "text": "索科特拉島有龍血樹",
+    "angle": "自然"
+   },
+   {
+    "text": "阿拉伯半島最南端",
+    "angle": "自然"
+   },
+   {
+    "text": "古示巴王國傳說地",
+    "angle": "歷史"
+   },
+   {
+    "text": "索科特拉龍血樹奇景",
+    "angle": "unsorted"
+   },
+   {
+    "text": "摩卡咖啡古港記憶",
+    "angle": "飲食"
+   },
+   {
+    "text": "舊薩那泥樓花窗",
+    "angle": "unsorted"
+   }
+  ],
+  "阿曼": [
+   {
+    "text": "乳香貿易古國",
+    "angle": "飲食"
+   },
+   {
+    "text": "峽灣地形被稱阿拉伯挪威",
+    "angle": "自然"
+   },
+   {
+    "text": "首都馬斯喀特",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇丹卡布斯大清真寺壯麗",
+    "angle": "工藝"
+   },
+   {
+    "text": "與波斯灣口的荷莫茲海峽相望",
+    "angle": "unsorted"
+   },
+   {
+    "text": "乳香樹汁採集古法",
+    "angle": "飲食"
+   },
+   {
+    "text": "全國保存著上千座古堡與瞭望塔",
+    "angle": "歷史"
+   },
+   {
+    "text": "帆船賽傳統興盛",
+    "angle": "unsorted"
+   }
+  ],
+  "阿拉伯聯合大公國": [
+   {
+    "text": "哈里發塔是世界最高樓",
+    "angle": "最高級"
+   },
+   {
+    "text": "七個酋長國組成",
+    "angle": "unsorted"
+   },
+   {
+    "text": "杜拜帆船飯店奢華地標",
+    "angle": "飲食"
+   },
+   {
+    "text": "棕櫚人工島填海造陸",
+    "angle": "自然"
+   },
+   {
+    "text": "石油與觀光雙引擎",
+    "angle": "unsorted"
+   },
+   {
+    "text": "杜拜購物節全城折扣加抽獎",
+    "angle": "節慶"
+   },
+   {
+    "text": "室內滑雪場在沙漠",
+    "angle": "自然"
+   },
+   {
+    "text": "黃金市集成條街",
+    "angle": "unsorted"
+   },
+   {
+    "text": "法拉利主題樂園",
+    "angle": "音樂"
+   },
+   {
+    "text": "謝赫扎耶德大清真寺",
+    "angle": "歷史"
+   },
+   {
+    "text": "杜拜噴泉水舞",
+    "angle": "音樂"
+   },
+   {
+    "text": "沙漠衝沙活動",
+    "angle": "自然"
+   },
+   {
+    "text": "阿布達比羅浮宮分館",
+    "angle": "工藝"
+   },
+   {
+    "text": "七星級服務概念",
+    "angle": "unsorted"
+   },
+   {
+    "text": "世界最快雲霄飛車",
+    "angle": "unsorted"
+   }
+  ],
+  "卡達": [
+   {
+    "text": "2022世界盃足球賽主辦國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人均GDP全球前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "半島電視台總部所在",
+    "angle": "自然"
+   },
+   {
+    "text": "液化天然氣出口大國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都杜哈天際線新穎",
+    "angle": "unsorted"
+   },
+   {
+    "text": "珍珠採集史前石刻",
+    "angle": "unsorted"
+   },
+   {
+    "text": "駱駝賽配機器騎師",
+    "angle": "unsorted"
+   },
+   {
+    "text": "填海造出人工島「珍珠島」住宅區",
+    "angle": "自然"
+   }
+  ],
+  "巴林": [
+   {
+    "text": "波斯灣島國以跨海大橋連沙烏地",
+    "angle": "自然"
+   },
+   {
+    "text": "古代迪爾穆文明所在",
+    "angle": "歷史"
+   },
+   {
+    "text": "F1夜間賽道聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "珍珠採集歷史悠久",
+    "angle": "unsorted"
+   },
+   {
+    "text": "金融中心地位重要",
+    "angle": "unsorted"
+   },
+   {
+    "text": "生命之樹沙漠孤木",
+    "angle": "自然"
+   },
+   {
+    "text": "一級方程式夜賽",
+    "angle": "unsorted"
+   },
+   {
+    "text": "古墓塚群數以萬計",
+    "angle": "歷史"
+   }
+  ],
+  "科威特": [
+   {
+    "text": "科威特塔是地標水塔",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石油儲量豐厚的小國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "波斯灣頂端的海灣國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "1990年曾被伊拉克入侵",
+    "angle": "unsorted"
+   },
+   {
+    "text": "夏季氣溫常破50度",
+    "angle": "unsorted"
+   },
+   {
+    "text": "水塔球體地標",
+    "angle": "unsorted"
+   },
+   {
+    "text": "海灣戰爭油井大火記憶",
+    "angle": "歷史"
+   },
+   {
+    "text": "獨桅帆船dhow傳統",
+    "angle": "unsorted"
+   }
+  ],
+  "土耳其": [
+   {
+    "text": "伊斯坦堡橫跨歐亞兩洲",
+    "angle": "unsorted"
+   },
+   {
+    "text": "卡帕多奇亞熱氣球與奇岩",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖索菲亞大教堂千年地標",
+    "angle": "歷史"
+   },
+   {
+    "text": "土耳其咖啡列非遺",
+    "angle": "飲食"
+   },
+   {
+    "text": "安納托利亞文明層疊",
+    "angle": "歷史"
+   },
+   {
+    "text": "熱氣球日出卡帕多奇亞",
+    "angle": "unsorted"
+   },
+   {
+    "text": "棉堡石灰華梯田",
+    "angle": "unsorted"
+   },
+   {
+    "text": "土耳其浴傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巴札市集殺價文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "旋轉舞蘇菲儀式",
+    "angle": "音樂"
+   },
+   {
+    "text": "以弗所古城壯觀",
+    "angle": "歷史"
+   },
+   {
+    "text": "番紅花城鄂圖曼屋",
+    "angle": "unsorted"
+   },
+   {
+    "text": "土耳其軟糖甜點",
+    "angle": "飲食"
+   },
+   {
+    "text": "橫跨歐亞的博斯普魯斯",
+    "angle": "unsorted"
+   },
+   {
+    "text": "傳統茶杯做成鬱金香的曲線形",
+    "angle": "飲食"
+   }
+  ],
+  "賽普勒斯": [
+   {
+    "text": "愛神維納斯誕生傳說地",
+    "angle": "歷史"
+   },
+   {
+    "text": "地中海第三大島",
+    "angle": "自然"
+   },
+   {
+    "text": "島上有南北分治線",
+    "angle": "自然"
+   },
+   {
+    "text": "哈魯米起司原產地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都尼古西亞是分裂首都",
+    "angle": "歷史"
+   },
+   {
+    "text": "哈魯米起司煎烤不化",
+    "angle": "飲食"
+   },
+   {
+    "text": "萊夫卡拉蕾絲精細",
+    "angle": "工藝"
+   },
+   {
+    "text": "綠線分隔南北首都",
+    "angle": "unsorted"
+   }
+  ],
+  "喬治亞": [
+   {
+    "text": "釀酒歷史八千年，陶甕釀酒列非遺",
+    "angle": "飲食"
+   },
+   {
+    "text": "高加索山脈下的古國",
+    "angle": "歷史"
+   },
+   {
+    "text": "喬治亞文是獨特字母系統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都提比里斯溫泉聞名",
+    "angle": "自然"
+   },
+   {
+    "text": "史達林出生於此",
+    "angle": "unsorted"
+   },
+   {
+    "text": "麵包舟khachapuri起司蛋",
+    "angle": "飲食"
+   },
+   {
+    "text": "多聲部民謠列非遺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "高加索村塔樓防禦",
+    "angle": "unsorted"
+   }
+  ],
+  "亞美尼亞": [
+   {
+    "text": "世界第一個以基督教為國教的國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "亞拉拉特山是民族象徵",
+    "angle": "自然"
+   },
+   {
+    "text": "杏桃的學名源自此地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都葉里溫古老",
+    "angle": "歷史"
+   },
+   {
+    "text": "石十字架雕刻列非遺",
+    "angle": "工藝"
+   },
+   {
+    "text": "杏木雙簧管duduk哀婉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "世界最長纜車之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "石榴象徵繁盛",
+    "angle": "unsorted"
+   }
+  ],
+  "亞塞拜然": [
+   {
+    "text": "巴庫火焰塔象徵火之國度",
+    "angle": "unsorted"
+   },
+   {
+    "text": "泥火山數量世界最多",
+    "angle": "自然"
+   },
+   {
+    "text": "裏海石油重鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "拜火教神廟遺存",
+    "angle": "歷史"
+   },
+   {
+    "text": "高加索與裏海交會",
+    "angle": "unsorted"
+   },
+   {
+    "text": "地毯織藝列非遺",
+    "angle": "工藝"
+   },
+   {
+    "text": "石油浴療養特色",
+    "angle": "unsorted"
+   },
+   {
+    "text": "戈布斯坦岩畫萬年",
+    "angle": "工藝"
+   }
+  ],
+  "英國": [
+   {
+    "text": "由英格蘭、蘇格蘭、威爾斯與北愛組成",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巨石陣已矗立四千多年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "工業革命發源地",
+    "angle": "歷史"
+   },
+   {
+    "text": "大笨鐘是國會鐘樓暱稱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "左駕靠左行駛",
+    "angle": "unsorted"
+   },
+   {
+    "text": "皇室文化全球矚目",
+    "angle": "最高級"
+   },
+   {
+    "text": "下午茶傳統由貝德福公爵夫人帶起",
+    "angle": "飲食"
+   },
+   {
+    "text": "披頭四來自利物浦",
+    "angle": "unsorted"
+   },
+   {
+    "text": "哈利波特取景地多",
+    "angle": "unsorted"
+   },
+   {
+    "text": "倫敦眼摩天輪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大英博物館免費參觀",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇格蘭風笛與裙",
+    "angle": "unsorted"
+   },
+   {
+    "text": "炸魚薯條國民美食",
+    "angle": "飲食"
+   },
+   {
+    "text": "牛津劍橋學術重鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紅色電話亭與雙層巴士",
+    "angle": "unsorted"
+   }
+  ],
+  "法國": [
+   {
+    "text": "艾菲爾鐵塔建於1889年世博",
+    "angle": "unsorted"
+   },
+   {
+    "text": "羅浮宮是全球參觀人數最多博物館",
+    "angle": "最高級"
+   },
+   {
+    "text": "葡萄酒與起司種類繁多",
+    "angle": "飲食"
+   },
+   {
+    "text": "全球最多觀光客造訪的國家之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "首都巴黎被稱光之城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "米其林指南發源",
+    "angle": "unsorted"
+   },
+   {
+    "text": "香檳只能產自香檳區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "羅亞爾河城堡群",
+    "angle": "歷史"
+   },
+   {
+    "text": "蔚藍海岸度假勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "環法自行車賽百年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "凱旋門車流壯觀",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖米歇爾山潮汐孤島",
+    "angle": "自然"
+   },
+   {
+    "text": "香水之都格拉斯",
+    "angle": "unsorted"
+   },
+   {
+    "text": "可頌與法棍日常",
+    "angle": "unsorted"
+   },
+   {
+    "text": "奧賽美術館印象派",
+    "angle": "unsorted"
+   }
+  ],
+  "德國": [
+   {
+    "text": "新天鵝堡是迪士尼城堡靈感",
+    "angle": "歷史"
+   },
+   {
+    "text": "啤酒純釀法已逾五百年",
+    "angle": "飲食"
+   },
+   {
+    "text": "高速公路部分路段無速限",
+    "angle": "unsorted"
+   },
+   {
+    "text": "柏林圍牆1989年倒下",
+    "angle": "unsorted"
+   },
+   {
+    "text": "汽車工業強國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "十月啤酒節慕尼黑",
+    "angle": "飲食"
+   },
+   {
+    "text": "香腸種類上千",
+    "angle": "unsorted"
+   },
+   {
+    "text": "黑森林蛋糕原鄉",
+    "angle": "自然"
+   },
+   {
+    "text": "科隆大教堂雙塔",
+    "angle": "歷史"
+   },
+   {
+    "text": "足球甲級聯賽熱血",
+    "angle": "unsorted"
+   },
+   {
+    "text": "包浩斯設計影響深遠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "萊茵河遊船城堡",
+    "angle": "歷史"
+   },
+   {
+    "text": "聖誕市集傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "格林童話之路",
+    "angle": "unsorted"
+   },
+   {
+    "text": "柏林博物館島",
+    "angle": "自然"
+   }
+  ],
+  "義大利": [
+   {
+    "text": "世界遺產數量名列前茅",
+    "angle": "最高級"
+   },
+   {
+    "text": "比薩斜塔因地基傾斜聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "披薩與義大利麵的故鄉",
+    "angle": "飲食"
+   },
+   {
+    "text": "國土形狀像長靴",
+    "angle": "unsorted"
+   },
+   {
+    "text": "羅馬曾是帝國中心",
+    "angle": "歷史"
+   },
+   {
+    "text": "威尼斯貢多拉水巷",
+    "angle": "unsorted"
+   },
+   {
+    "text": "佛羅倫斯文藝復興搖籃",
+    "angle": "unsorted"
+   },
+   {
+    "text": "西西里島地中海風情",
+    "angle": "自然"
+   },
+   {
+    "text": "龐貝被火山灰封存",
+    "angle": "自然"
+   },
+   {
+    "text": "米蘭時尚之都",
+    "angle": "unsorted"
+   },
+   {
+    "text": "咖啡espresso日常",
+    "angle": "飲食"
+   },
+   {
+    "text": "托斯卡尼田園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿瑪菲海岸絕壁小鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "歌劇的發源地",
+    "angle": "音樂"
+   },
+   {
+    "text": "五漁村彩色山崖",
+    "angle": "自然"
+   }
+  ],
+  "西班牙": [
+   {
+    "text": "聖家堂蓋了百餘年仍未完工",
+    "angle": "unsorted"
+   },
+   {
+    "text": "佛朗明哥舞發源地",
+    "angle": "音樂"
+   },
+   {
+    "text": "午休文化 siesta 聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "奔牛節在潘普洛納舉行",
+    "angle": "節慶"
+   },
+   {
+    "text": "曾是日不落帝國",
+    "angle": "歷史"
+   },
+   {
+    "text": "高第建築遍布巴塞隆納",
+    "angle": "工藝"
+   },
+   {
+    "text": "鬥牛傳統具爭議",
+    "angle": "unsorted"
+   },
+   {
+    "text": "tapas小酒館文化",
+    "angle": "飲食"
+   },
+   {
+    "text": "朝聖之路千年路線",
+    "angle": "unsorted"
+   },
+   {
+    "text": "伊比利火腿珍饈",
+    "angle": "unsorted"
+   },
+   {
+    "text": "海鮮燉飯瓦倫西亞",
+    "angle": "飲食"
+   },
+   {
+    "text": "番茄節互擲狂歡",
+    "angle": "節慶"
+   },
+   {
+    "text": "阿爾罕布拉宮摩爾瑰寶",
+    "angle": "工藝"
+   },
+   {
+    "text": "皇馬巴薩世紀對決",
+    "angle": "歷史"
+   },
+   {
+    "text": "午後小酌文化悠閒",
+    "angle": "unsorted"
+   }
+  ],
+  "葡萄牙": [
+   {
+    "text": "大航海時代的先驅",
+    "angle": "unsorted"
+   },
+   {
+    "text": "波特酒產自波多",
+    "angle": "飲食"
+   },
+   {
+    "text": "葡式蛋塔源自里斯本修道院配方",
+    "angle": "unsorted"
+   },
+   {
+    "text": "歐洲大陸最西端的羅卡角",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花磚建築隨處可見",
+    "angle": "unsorted"
+   },
+   {
+    "text": "法朵民謠憂愁滄桑",
+    "angle": "unsorted"
+   },
+   {
+    "text": "軟木塞產量世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "里斯本28號電車穿舊城",
+    "angle": "unsorted"
+   }
+  ],
+  "荷蘭": [
+   {
+    "text": "約三分之一國土低於海平面",
+    "angle": "unsorted"
+   },
+   {
+    "text": "風車與鬱金香是象徵",
+    "angle": "unsorted"
+   },
+   {
+    "text": "單車數量比人口多",
+    "angle": "unsorted"
+   },
+   {
+    "text": "運河環繞的阿姆斯特丹",
+    "angle": "自然"
+   },
+   {
+    "text": "梵谷的故鄉，博物館藏其最多真跡",
+    "angle": "unsorted"
+   },
+   {
+    "text": "庫肯霍夫春日花海",
+    "angle": "unsorted"
+   },
+   {
+    "text": "起司市場傳統交易",
+    "angle": "unsorted"
+   },
+   {
+    "text": "梵谷向日葵真跡",
+    "angle": "unsorted"
+   },
+   {
+    "text": "小孩堤防風車群",
+    "angle": "unsorted"
+   },
+   {
+    "text": "運河屋窄而深",
+    "angle": "自然"
+   },
+   {
+    "text": "橙色是國家代表色",
+    "angle": "unsorted"
+   },
+   {
+    "text": "木鞋曾是日常",
+    "angle": "unsorted"
+   },
+   {
+    "text": "自行車高速公路",
+    "angle": "unsorted"
+   },
+   {
+    "text": "海尼根發源地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "填海造陸圩田工程",
+    "angle": "unsorted"
+   }
+  ],
+  "比利時": [
+   {
+    "text": "巧克力與啤酒種類驚人",
+    "angle": "飲食"
+   },
+   {
+    "text": "歐盟總部所在地布魯塞爾",
+    "angle": "工藝"
+   },
+   {
+    "text": "薯條的發源地之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "原子塔是1958世博地標",
+    "angle": "unsorted"
+   },
+   {
+    "text": "三種官方語言",
+    "angle": "unsorted"
+   },
+   {
+    "text": "尿尿小童是布魯塞爾招牌",
+    "angle": "工藝"
+   },
+   {
+    "text": "鬆餅分列日與布魯塞爾兩派",
+    "angle": "飲食"
+   },
+   {
+    "text": "丁丁歷險記的故鄉",
+    "angle": "unsorted"
+   }
+  ],
+  "盧森堡": [
+   {
+    "text": "人均GDP常居世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "全球少數大公國",
+    "angle": "最高級"
+   },
+   {
+    "text": "大眾運輸全面免費",
+    "angle": "unsorted"
+   },
+   {
+    "text": "金融中心地位重要",
+    "angle": "unsorted"
+   },
+   {
+    "text": "面積僅約台灣的1/14",
+    "angle": "unsorted"
+   },
+   {
+    "text": "舊城峽谷要塞列遺產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "跨國通勤者占就業近半",
+    "angle": "unsorted"
+   },
+   {
+    "text": "盧森堡語德法語並行",
+    "angle": "unsorted"
+   }
+  ],
+  "瑞士": [
+   {
+    "text": "兩百年永久中立國，未加入任何軍事同盟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬特洪峰是三角錐名峰",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鐘錶與巧克力精品",
+    "angle": "unsorted"
+   },
+   {
+    "text": "四種官方語言",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿爾卑斯山纜車與齒軌鐵道密布",
+    "angle": "工藝"
+   },
+   {
+    "text": "少女峰鐵道齒軌",
+    "angle": "unsorted"
+   },
+   {
+    "text": "琉森湖畔卡貝爾橋",
+    "angle": "自然"
+   },
+   {
+    "text": "瑞士刀與鐘錶代表精工傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "起司鍋fondue",
+    "angle": "飲食"
+   },
+   {
+    "text": "策馬特無燃油車",
+    "angle": "unsorted"
+   },
+   {
+    "text": "日內瓦萬國宮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "滑雪場冬季天堂",
+    "angle": "unsorted"
+   },
+   {
+    "text": "火車景觀路線冰川快車",
+    "angle": "飲食"
+   },
+   {
+    "text": "銀行保密傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇黎世湖天鵝",
+    "angle": "自然"
+   }
+  ],
+  "奧地利": [
+   {
+    "text": "音樂之都維也納",
+    "angle": "音樂"
+   },
+   {
+    "text": "莫札特出生於薩爾斯堡",
+    "angle": "unsorted"
+   },
+   {
+    "text": "哈爾施塔特湖畔小鎮如畫",
+    "angle": "自然"
+   },
+   {
+    "text": "咖啡館文化列非遺",
+    "angle": "飲食"
+   },
+   {
+    "text": "阿爾卑斯滑雪勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "維也納新年音樂會全球轉播",
+    "angle": "節慶"
+   },
+   {
+    "text": "薩赫蛋糕巧克力經典",
+    "angle": "unsorted"
+   },
+   {
+    "text": "多瑙河藍色圓舞曲意象",
+    "angle": "音樂"
+   }
+  ],
+  "列支敦斯登": [
+   {
+    "text": "世界少數雙重內陸國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "面積僅160平方公里",
+    "angle": "unsorted"
+   },
+   {
+    "text": "郵票曾是重要收入",
+    "angle": "unsorted"
+   },
+   {
+    "text": "與瑞士使用同一貨幣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "親王居住的瓦杜茲城堡可俯瞰全國",
+    "angle": "歷史"
+   },
+   {
+    "text": "全民不到4萬人",
+    "angle": "unsorted"
+   },
+   {
+    "text": "假牙產業出口隱形冠軍",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國慶日王室開放城堡花園請喝酒",
+    "angle": "飲食"
+   }
+  ],
+  "摩納哥": [
+   {
+    "text": "世界第二小國家",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蒙地卡羅賭場與F1街道賽",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人口密度全球最高",
+    "angle": "最高級"
+   },
+   {
+    "text": "蔚藍海岸的富豪聚集地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "王妃葛麗絲凱莉傳奇",
+    "angle": "unsorted"
+   },
+   {
+    "text": "F1大獎賽街道穿城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "海洋博物館懸崖而建",
+    "angle": "unsorted"
+   },
+   {
+    "text": "無個人所得稅吸引富豪",
+    "angle": "unsorted"
+   }
+  ],
+  "安道爾": [
+   {
+    "text": "庇里牛斯山中的微型國",
+    "angle": "自然"
+   },
+   {
+    "text": "由法國總統與西班牙主教共治",
+    "angle": "unsorted"
+   },
+   {
+    "text": "滑雪與免稅購物聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "無機場無鐵路",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人均壽命名列前茅",
+    "angle": "最高級"
+   },
+   {
+    "text": "加泰隆尼亞語是官方語言",
+    "angle": "unsorted"
+   },
+   {
+    "text": "全境無自家軍隊",
+    "angle": "unsorted"
+   },
+   {
+    "text": "羅曼式小教堂散布山谷",
+    "angle": "工藝"
+   }
+  ],
+  "梵蒂岡": [
+   {
+    "text": "世界最小的國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "教宗駐地，天主教會的行政中樞",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖彼得大教堂是天主教中心",
+    "angle": "歷史"
+   },
+   {
+    "text": "西斯汀禮拜堂有米開朗基羅壁畫",
+    "angle": "unsorted"
+   },
+   {
+    "text": "面積僅0.44平方公里",
+    "angle": "unsorted"
+   },
+   {
+    "text": "瑞士近衛隊彩衣執勤",
+    "angle": "unsorted"
+   },
+   {
+    "text": "有自己的郵政與電台",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖彼得廣場柱廊環抱",
+    "angle": "unsorted"
+   }
+  ],
+  "聖馬利諾": [
+   {
+    "text": "號稱世界最古老共和國",
+    "angle": "歷史"
+   },
+   {
+    "text": "建國於西元301年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蒂塔諾山上三座塔樓",
+    "angle": "自然"
+   },
+   {
+    "text": "被義大利完全包圍",
+    "angle": "unsorted"
+   },
+   {
+    "text": "無海岸線的山城小國",
+    "angle": "自然"
+   },
+   {
+    "text": "郵票與錢幣是收藏珍品",
+    "angle": "unsorted"
+   },
+   {
+    "text": "憲法沿用數百年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "兩位執政官每半年改選",
+    "angle": "unsorted"
+   }
+  ],
+  "馬爾他": [
+   {
+    "text": "地中海十字路口的島國",
+    "angle": "自然"
+   },
+   {
+    "text": "騎士團曾統治數百年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "瓦萊塔是最小歐盟首都之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "巨石神廟比金字塔古老",
+    "angle": "歷史"
+   },
+   {
+    "text": "藍色海蝕洞聞名",
+    "angle": "自然"
+   },
+   {
+    "text": "馬爾他騎士團主權實體仍存",
+    "angle": "unsorted"
+   },
+   {
+    "text": "電影常借古城取景",
+    "angle": "歷史"
+   },
+   {
+    "text": "姆迪納寂靜之城夜遊",
+    "angle": "unsorted"
+   }
+  ],
+  "希臘": [
+   {
+    "text": "西方文明與民主的搖籃",
+    "angle": "歷史"
+   },
+   {
+    "text": "帕德嫩神殿俯瞰雅典",
+    "angle": "歷史"
+   },
+   {
+    "text": "數千座島嶼散布愛琴海",
+    "angle": "工藝"
+   },
+   {
+    "text": "奧運發源於奧林匹亞",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖托里尼藍白屋舍",
+    "angle": "unsorted"
+   },
+   {
+    "text": "橄欖油人均消費世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "米克諾斯白屋藍窗",
+    "angle": "unsorted"
+   },
+   {
+    "text": "哲學悲劇發源舞台",
+    "angle": "音樂"
+   }
+  ],
+  "丹麥": [
+   {
+    "text": "樂高誕生於日德蘭的比隆小鎮",
+    "angle": "音樂"
+   },
+   {
+    "text": "小美人魚雕像在哥本哈根港",
+    "angle": "工藝"
+   },
+   {
+    "text": "hygge 生活哲學聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "單車通勤比例極高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾是維京人重鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "腳踏車城哥本哈根",
+    "angle": "unsorted"
+   },
+   {
+    "text": "丹麥酥點心其實叫維也納麵包",
+    "angle": "飲食"
+   },
+   {
+    "text": "格陵蘭法羅是其自治領",
+    "angle": "unsorted"
+   }
+  ],
+  "挪威": [
+   {
+    "text": "峽灣地形舉世聞名",
+    "angle": "自然"
+   },
+   {
+    "text": "午夜太陽與極光可見",
+    "angle": "unsorted"
+   },
+   {
+    "text": "主權基金全球最大",
+    "angle": "最高級"
+   },
+   {
+    "text": "維京船博物館珍藏完整船骸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "諾貝爾和平獎在奧斯陸頒發",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鮭魚出口世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "奧斯陸歌劇院屋頂可漫步",
+    "angle": "音樂"
+   },
+   {
+    "text": "木板教堂中世紀遺存",
+    "angle": "歷史"
+   }
+  ],
+  "瑞典": [
+   {
+    "text": "諾貝爾獎的故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "IKEA與ABBA來自此地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "fika咖啡歇息文化",
+    "angle": "飲食"
+   },
+   {
+    "text": "斯德哥爾摩建於14座島上",
+    "angle": "自然"
+   },
+   {
+    "text": "森林覆蓋率近七成",
+    "angle": "自然"
+   },
+   {
+    "text": "肉丸配越橘醬國民菜",
+    "angle": "飲食"
+   },
+   {
+    "text": "仲夏節花柱歌舞",
+    "angle": "節慶"
+   },
+   {
+    "text": "北極圈冰旅館每年重建",
+    "angle": "飲食"
+   }
+  ],
+  "芬蘭": [
+   {
+    "text": "千湖之國，湖泊近19萬個",
+    "angle": "自然"
+   },
+   {
+    "text": "桑拿是國民生活方式",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖誕老人村在羅瓦涅米",
+    "angle": "unsorted"
+   },
+   {
+    "text": "幸福國家排名常居第一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "極圈內可見極光",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人均桑拿數量世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "嚕嚕米的故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "教育體系全球取經",
+    "angle": "最高級"
+   }
+  ],
+  "冰島": [
+   {
+    "text": "火山與冰川並存之地",
+    "angle": "飲食"
+   },
+   {
+    "text": "藍湖溫泉乳藍色澤",
+    "angle": "飲食"
+   },
+   {
+    "text": "幾乎全用地熱與水力發電",
+    "angle": "unsorted"
+   },
+   {
+    "text": "無蚊子的國家之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "議會阿爾庭歷史逾千年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "全國人口不到40萬",
+    "angle": "unsorted"
+   },
+   {
+    "text": "電話簿按名字排序",
+    "angle": "unsorted"
+   },
+   {
+    "text": "冰川洞穴藍光奇景",
+    "angle": "飲食"
+   }
+  ],
+  "愛爾蘭": [
+   {
+    "text": "翡翠之島，綠意遍布",
+    "angle": "工藝"
+   },
+   {
+    "text": "健力士黑啤酒發源地",
+    "angle": "飲食"
+   },
+   {
+    "text": "莫赫懸崖高聳大西洋岸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖派翠克節綠色狂歡",
+    "angle": "節慶"
+   },
+   {
+    "text": "文學巨匠輩出",
+    "angle": "unsorted"
+   },
+   {
+    "text": "三葉草是國家象徵",
+    "angle": "unsorted"
+   },
+   {
+    "text": "踢踏舞劇大河之舞",
+    "angle": "音樂"
+   },
+   {
+    "text": "都柏林文學城滿是作家足跡",
+    "angle": "unsorted"
+   }
+  ],
+  "波蘭": [
+   {
+    "text": "蕭邦的祖國，心臟葬於華沙教堂",
+    "angle": "unsorted"
+   },
+   {
+    "text": "維利奇卡鹽礦如地下教堂",
+    "angle": "歷史"
+   },
+   {
+    "text": "華沙二戰後依畫重建舊城",
+    "angle": "歷史"
+   },
+   {
+    "text": "琥珀貿易歷史悠久",
+    "angle": "工藝"
+   },
+   {
+    "text": "餃子pierogi是國民美食",
+    "angle": "飲食"
+   },
+   {
+    "text": "居禮夫人的祖國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "格但斯克團結工聯發源",
+    "angle": "unsorted"
+   },
+   {
+    "text": "波蘭餃子鹹甜皆有",
+    "angle": "飲食"
+   }
+  ],
+  "捷克": [
+   {
+    "text": "布拉格百塔之城",
+    "angle": "工藝"
+   },
+   {
+    "text": "啤酒人均消費量世界第一",
+    "angle": "飲食"
+   },
+   {
+    "text": "查理大橋雕像林立",
+    "angle": "工藝"
+   },
+   {
+    "text": "皮爾森啤酒發源地",
+    "angle": "飲食"
+   },
+   {
+    "text": "波希米亞水晶聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "木偶戲傳統列非遺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "卡羅維瓦利溫泉杯啜飲",
+    "angle": "自然"
+   },
+   {
+    "text": "摩拉維亞葡萄酒鄉",
+    "angle": "飲食"
+   }
+  ],
+  "斯洛伐克": [
+   {
+    "text": "塔特拉山是國家象徵",
+    "angle": "自然"
+   },
+   {
+    "text": "布拉提斯拉瓦緊鄰奧匈邊界",
+    "angle": "工藝"
+   },
+   {
+    "text": "城堡密度名列歐洲前茅",
+    "angle": "歷史"
+   },
+   {
+    "text": "1993年與捷克和平分家",
+    "angle": "unsorted"
+   },
+   {
+    "text": "冰酒與羊乳酪傳統",
+    "angle": "飲食"
+   },
+   {
+    "text": "高塔特拉山羚羊象徵",
+    "angle": "自然"
+   },
+   {
+    "text": "木造教堂群列遺產",
+    "angle": "工藝"
+   },
+   {
+    "text": "冰球是國民熱血",
+    "angle": "飲食"
+   }
+  ],
+  "匈牙利": [
+   {
+    "text": "布達佩斯被多瑙河一分為二",
+    "angle": "工藝"
+   },
+   {
+    "text": "溫泉浴場之都",
+    "angle": "自然"
+   },
+   {
+    "text": "魔術方塊發明者的祖國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "匈牙利語與鄰國語言皆不同源",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紅椒粉是料理靈魂",
+    "angle": "飲食"
+   },
+   {
+    "text": "古拉什燉肉湯經典",
+    "angle": "飲食"
+   },
+   {
+    "text": "赫倫瓷器名窯",
+    "angle": "工藝"
+   },
+   {
+    "text": "塞切尼鎖鏈橋夜景",
+    "angle": "unsorted"
+   }
+  ],
+  "羅馬尼亞": [
+   {
+    "text": "德古拉傳說的外西凡尼亞",
+    "angle": "歷史"
+   },
+   {
+    "text": "布蘭城堡披著吸血鬼色彩",
+    "angle": "工藝"
+   },
+   {
+    "text": "議會宮是全球最重行政建築",
+    "angle": "最高級"
+   },
+   {
+    "text": "喀爾巴阡山棕熊眾多",
+    "angle": "自然"
+   },
+   {
+    "text": "多瑙河三角洲生態豐富",
+    "angle": "自然"
+   },
+   {
+    "text": "木造教堂與彩繪修道院",
+    "angle": "工藝"
+   },
+   {
+    "text": "快樂墓園墓碑畫詼諧",
+    "angle": "音樂"
+   },
+   {
+    "text": "多瑙河出海口生態",
+    "angle": "自然"
+   }
+  ],
+  "保加利亞": [
+   {
+    "text": "玫瑰谷供應全球大量玫瑰精油",
+    "angle": "最高級"
+   },
+   {
+    "text": "優格菌種以保加利亞命名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "里拉修道院壁畫絢麗",
+    "angle": "unsorted"
+   },
+   {
+    "text": "西里爾字母發源地之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "黑海度假海岸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "點頭搖頭意義相反",
+    "angle": "unsorted"
+   },
+   {
+    "text": "卡贊勒克玫瑰節採花",
+    "angle": "節慶"
+   },
+   {
+    "text": "保加利亞女聲合唱神秘",
+    "angle": "unsorted"
+   }
+  ],
+  "塞爾維亞": [
+   {
+    "text": "貝爾格勒位於兩河交匯",
+    "angle": "自然"
+   },
+   {
+    "text": "特斯拉的出生民族故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "EXIT音樂節聞名歐洲",
+    "angle": "節慶"
+   },
+   {
+    "text": "拉基亞果釀白蘭地",
+    "angle": "飲食"
+   },
+   {
+    "text": "薩瓦河畔的白色城市",
+    "angle": "自然"
+   },
+   {
+    "text": "諾瓦克喬科維奇的祖國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "斯拉瓦家庭守護聖人日",
+    "angle": "unsorted"
+   },
+   {
+    "text": "多瑙薩瓦雙河匯流",
+    "angle": "自然"
+   }
+  ],
+  "克羅埃西亞": [
+   {
+    "text": "十六湖國家公園瀑布相連",
+    "angle": "工藝"
+   },
+   {
+    "text": "杜布羅夫尼克是權力遊戲取景地",
+    "angle": "工藝"
+   },
+   {
+    "text": "領帶的發源地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "亞得里亞海千島海岸",
+    "angle": "自然"
+   },
+   {
+    "text": "2018世足亞軍",
+    "angle": "unsorted"
+   },
+   {
+    "text": "達爾馬提亞犬名稱源於此",
+    "angle": "unsorted"
+   },
+   {
+    "text": "島嶼超過一千座",
+    "angle": "自然"
+   },
+   {
+    "text": "klapa阿卡貝拉列非遺",
+    "angle": "unsorted"
+   }
+  ],
+  "斯洛維尼亞": [
+   {
+    "text": "布萊德湖心有教堂小島",
+    "angle": "工藝"
+   },
+   {
+    "text": "波斯托伊納鐘乳石洞穴",
+    "angle": "飲食"
+   },
+   {
+    "text": "歐洲森林覆蓋率前段班",
+    "angle": "自然"
+   },
+   {
+    "text": "國名裡藏著love字樣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿爾卑斯到地中海僅咫尺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蜂箱彩繪板民俗藝術",
+    "angle": "工藝"
+   },
+   {
+    "text": "人均養蜂密度高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "皮蘭鹽田古法產鹽",
+    "angle": "歷史"
+   }
+  ],
+  "波士尼亞與赫塞哥維納": [
+   {
+    "text": "莫斯塔爾古橋跳水傳統",
+    "angle": "歷史"
+   },
+   {
+    "text": "塞拉耶佛點燃一戰導火線",
+    "angle": "歷史"
+   },
+   {
+    "text": "東西文化交會的巴爾幹心臟",
+    "angle": "unsorted"
+   },
+   {
+    "text": "土耳其咖啡文化濃厚",
+    "angle": "飲食"
+   },
+   {
+    "text": "1984冬奧主辦地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "塞拉耶佛玫瑰彈痕紀念",
+    "angle": "unsorted"
+   },
+   {
+    "text": "土耳其咖啡銅壺慢煮",
+    "angle": "飲食"
+   },
+   {
+    "text": "內雷特瓦河翡翠色",
+    "angle": "自然"
+   }
+  ],
+  "蒙特內哥羅": [
+   {
+    "text": "科托爾峽灣如南歐峽灣明珠",
+    "angle": "自然"
+   },
+   {
+    "text": "國名意為黑色的山",
+    "angle": "自然"
+   },
+   {
+    "text": "亞得里亞海新興度假地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "使用歐元但非歐盟成員",
+    "angle": "unsorted"
+   },
+   {
+    "text": "面積小但山海皆備",
+    "angle": "自然"
+   },
+   {
+    "text": "塔拉河峽谷歐洲最深之一",
+    "angle": "自然"
+   },
+   {
+    "text": "海拔落差山海並陳",
+    "angle": "自然"
+   },
+   {
+    "text": "奧斯特羅修道院嵌於岩壁",
+    "angle": "unsorted"
+   }
+  ],
+  "北馬其頓": [
+   {
+    "text": "奧赫里德湖是歐洲最古老湖泊之一",
+    "angle": "歷史"
+   },
+   {
+    "text": "亞歷山大大帝爭議遺產",
+    "angle": "自然"
+   },
+   {
+    "text": "2019年為入北約改國名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "拜占庭教堂濕壁畫豐富",
+    "angle": "歷史"
+   },
+   {
+    "text": "德蕾莎修女出生於史高比耶",
+    "angle": "unsorted"
+   },
+   {
+    "text": "特斯卡聖約翰教堂湖景",
+    "angle": "歷史"
+   },
+   {
+    "text": "比托拉古羅馬遺址",
+    "angle": "歷史"
+   },
+   {
+    "text": "ajvar紅椒醬家家自製",
+    "angle": "unsorted"
+   }
+  ],
+  "阿爾巴尼亞": [
+   {
+    "text": "地堡數十萬座遍布全國",
+    "angle": "工藝"
+   },
+   {
+    "text": "培拉特千窗之城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "賓士車在街頭比例驚人",
+    "angle": "unsorted"
+   },
+   {
+    "text": "點頭搖頭意義與多數國家相反",
+    "angle": "unsorted"
+   },
+   {
+    "text": "亞得里亞海未開發海岸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雙頭鷹旗幟鮮明",
+    "angle": "unsorted"
+   },
+   {
+    "text": "吉諾卡斯特石屋山城",
+    "angle": "自然"
+   },
+   {
+    "text": "海岸里維埃拉新興度假",
+    "angle": "unsorted"
+   }
+  ],
+  "愛沙尼亞": [
+   {
+    "text": "數位政府先驅，可線上投票",
+    "angle": "unsorted"
+   },
+   {
+    "text": "塔林中世紀舊城完整",
+    "angle": "歷史"
+   },
+   {
+    "text": "網路通話Skype誕生地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "電子公民計畫聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "波羅的海三國之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "森林覆蓋過半野味豐",
+    "angle": "自然"
+   },
+   {
+    "text": "波羅的海之路人鏈歷史",
+    "angle": "unsorted"
+   },
+   {
+    "text": "島嶼薩雷馬風車磨坊",
+    "angle": "自然"
+   }
+  ],
+  "拉脫維亞": [
+   {
+    "text": "里加新藝術建築密度歐洲之冠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "波羅的海琥珀之路",
+    "angle": "工藝"
+   },
+   {
+    "text": "歌唱節傳統列非遺",
+    "angle": "節慶"
+   },
+   {
+    "text": "約半數國土為森林",
+    "angle": "自然"
+   },
+   {
+    "text": "里加黑頭宮華麗重建",
+    "angle": "unsorted"
+   },
+   {
+    "text": "仲夏節花冠與篝火",
+    "angle": "節慶"
+   },
+   {
+    "text": "黑麥麵包是餐桌主角",
+    "angle": "飲食"
+   },
+   {
+    "text": "尤爾馬拉木造度假別墅",
+    "angle": "工藝"
+   }
+  ],
+  "立陶宛": [
+   {
+    "text": "十字架山插滿數十萬十字架",
+    "angle": "自然"
+   },
+   {
+    "text": "波羅的海三國最南",
+    "angle": "unsorted"
+   },
+   {
+    "text": "籃球是國民信仰",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾與波蘭組成聯邦",
+    "angle": "unsorted"
+   },
+   {
+    "text": "1990年率先脫離蘇聯獨立",
+    "angle": "unsorted"
+   },
+   {
+    "text": "最後的歐洲多神教國度之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "冷甜菜湯粉紅清爽",
+    "angle": "飲食"
+   },
+   {
+    "text": "庫爾斯沙嘴沙丘綿延",
+    "angle": "unsorted"
+   }
+  ],
+  "白俄羅斯": [
+   {
+    "text": "米爾城堡與涅斯維日城堡列遺產",
+    "angle": "歷史"
+   },
+   {
+    "text": "歐洲最後的原始森林之一",
+    "angle": "自然"
+   },
+   {
+    "text": "被稱為歐洲最後獨裁國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "拖拉機是出口名產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "明斯克二戰後全面重建",
+    "angle": "歷史"
+   },
+   {
+    "text": "別洛韋日森林歐洲野牛",
+    "angle": "自然"
+   },
+   {
+    "text": "馬鈴薯料理百變draniki",
+    "angle": "飲食"
+   },
+   {
+    "text": "明斯克地鐵宏偉",
+    "angle": "unsorted"
+   }
+  ],
+  "烏克蘭": [
+   {
+    "text": "歐洲面積最大的全境歐洲國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "黑土帶是世界糧倉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "切爾諾貝利核災遺址",
+    "angle": "歷史"
+   },
+   {
+    "text": "基輔羅斯文明發源",
+    "angle": "歷史"
+   },
+   {
+    "text": "繡花襯衫vyshyvanka傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "羅宋湯borsch列非遺",
+    "angle": "飲食"
+   },
+   {
+    "text": "復活節彩蛋pysanka工藝",
+    "angle": "節慶"
+   },
+   {
+    "text": "向日葵田是國家意象",
+    "angle": "unsorted"
+   }
+  ],
+  "摩爾多瓦": [
+   {
+    "text": "世界最大酒窖綿延數十公里",
+    "angle": "飲食"
+   },
+   {
+    "text": "歐洲最少觀光客造訪國之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "葡萄酒是國家名片",
+    "angle": "飲食"
+   },
+   {
+    "text": "語言文化近羅馬尼亞",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國土夾在兩鄰國之間",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人均葡萄園面積名列前茅",
+    "angle": "最高級"
+   },
+   {
+    "text": "克里科瓦酒窖如地下城",
+    "angle": "飲食"
+   },
+   {
+    "text": "mamaliga玉米糕主食",
+    "angle": "飲食"
+   }
+  ],
+  "俄羅斯": [
+   {
+    "text": "世界面積最大國家，橫跨11時區",
+    "angle": "最高級"
+   },
+   {
+    "text": "西伯利亞鐵路是最長鐵路",
+    "angle": "最高級"
+   },
+   {
+    "text": "聖瓦西里大教堂洋蔥圓頂",
+    "angle": "歷史"
+   },
+   {
+    "text": "貝加爾湖是最深湖泊",
+    "angle": "自然"
+   },
+   {
+    "text": "芭蕾與文學巨匠輩出",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紅場與克里姆林宮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "跨西伯利亞鐵路七日",
+    "angle": "unsorted"
+   },
+   {
+    "text": "伏特加是餐桌與外交的傳統角色",
+    "angle": "unsorted"
+   },
+   {
+    "text": "冬宮博物館館藏浩瀚",
+    "angle": "unsorted"
+   },
+   {
+    "text": "柴可夫斯基天鵝湖",
+    "angle": "自然"
+   },
+   {
+    "text": "堪察加火山秘境",
+    "angle": "自然"
+   },
+   {
+    "text": "莫斯科外圍的金環古城群保存教堂建築",
+    "angle": "歷史"
+   },
+   {
+    "text": "馬戲與芭蕾傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "套娃是紀念品代表",
+    "angle": "unsorted"
+   },
+   {
+    "text": "莫斯科地鐵如宮殿",
+    "angle": "unsorted"
+   }
+  ],
+  "埃及": [
+   {
+    "text": "吉薩金字塔是僅存古代奇蹟",
+    "angle": "歷史"
+   },
+   {
+    "text": "尼羅河孕育五千年文明",
+    "angle": "歷史"
+   },
+   {
+    "text": "人面獅身像守護金字塔",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇伊士運河連接兩海",
+    "angle": "自然"
+   },
+   {
+    "text": "路克索是露天博物館",
+    "angle": "unsorted"
+   },
+   {
+    "text": "尼羅河遊輪攬古蹟",
+    "angle": "歷史"
+   },
+   {
+    "text": "帝王谷出土圖坦卡門黃金面具",
+    "angle": "工藝"
+   },
+   {
+    "text": "阿布辛貝神殿遷移壯舉",
+    "angle": "工藝"
+   },
+   {
+    "text": "紅海潛水勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "亞歷山卓地中海港",
+    "angle": "自然"
+   },
+   {
+    "text": "開羅汗哈利利市集",
+    "angle": "unsorted"
+   },
+   {
+    "text": "莎草紙畫工藝",
+    "angle": "工藝"
+   },
+   {
+    "text": "齋戒月夜市熱鬧",
+    "angle": "unsorted"
+   },
+   {
+    "text": "駱駝與金字塔合影",
+    "angle": "unsorted"
+   },
+   {
+    "text": "木乃伊製作技術驚人",
+    "angle": "unsorted"
+   }
+  ],
+  "利比亞": [
+   {
+    "text": "大萊普提斯是保存極佳羅馬城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "撒哈拉占國土九成以上",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石油蘊藏非洲前列",
+    "angle": "unsorted"
+   },
+   {
+    "text": "地中海岸線漫長",
+    "angle": "unsorted"
+   },
+   {
+    "text": "的黎波里是首都",
+    "angle": "unsorted"
+   },
+   {
+    "text": "加達梅斯白城巷弄遮陽",
+    "angle": "unsorted"
+   },
+   {
+    "text": "沙漠玻璃隕石之謎",
+    "angle": "自然"
+   },
+   {
+    "text": "橄欖椰棗綠洲農業",
+    "angle": "unsorted"
+   }
+  ],
+  "突尼西亞": [
+   {
+    "text": "迦太基古城曾與羅馬爭霸",
+    "angle": "歷史"
+   },
+   {
+    "text": "星際大戰沙漠場景取景地",
+    "angle": "歷史"
+   },
+   {
+    "text": "茉莉花革命發源地",
+    "angle": "歷史"
+   },
+   {
+    "text": "藍白小鎮西迪布薩伊德",
+    "angle": "工藝"
+   },
+   {
+    "text": "橄欖油出口大國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "藍門白牆地中海風",
+    "angle": "unsorted"
+   },
+   {
+    "text": "哈里薩辣醬餐桌必備",
+    "angle": "unsorted"
+   },
+   {
+    "text": "傑爾巴島陶器村",
+    "angle": "工藝"
+   }
+  ],
+  "阿爾及利亞": [
+   {
+    "text": "非洲面積最大的國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "撒哈拉岩畫記錄遠古生活",
+    "angle": "歷史"
+   },
+   {
+    "text": "卡斯巴老城迷宮般巷弄",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾為法國殖民地百餘年",
+    "angle": "歷史"
+   },
+   {
+    "text": "地中海與沙漠並存",
+    "angle": "自然"
+   },
+   {
+    "text": "庫斯庫斯是國民主食",
+    "angle": "飲食"
+   },
+   {
+    "text": "圖瓦雷格藍人沙漠民",
+    "angle": "自然"
+   },
+   {
+    "text": "奧蘭是萊伊音樂發源",
+    "angle": "音樂"
+   }
+  ],
+  "摩洛哥": [
+   {
+    "text": "舍夫沙萬全城藍色",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬拉喀什不眠廣場列非遺",
+    "angle": "unsorted"
+   },
+   {
+    "text": "撒哈拉駱駝商隊門戶",
+    "angle": "unsorted"
+   },
+   {
+    "text": "薄荷茶是待客之道",
+    "angle": "飲食"
+   },
+   {
+    "text": "電影北非諜影背景地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "塔吉鍋慢燉飄香",
+    "angle": "飲食"
+   },
+   {
+    "text": "阿甘油僅此地產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "非斯皮革染坊百年",
+    "angle": "unsorted"
+   }
+  ],
+  "茅利塔尼亞": [
+   {
+    "text": "撒哈拉中的鐵礦火車世界最長之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "理查特結構如地球之眼",
+    "angle": "unsorted"
+   },
+   {
+    "text": "努瓦克肖特臨大西洋",
+    "angle": "unsorted"
+   },
+   {
+    "text": "古圖書館城欣蓋提",
+    "angle": "歷史"
+   },
+   {
+    "text": "國土多為沙漠",
+    "angle": "自然"
+   },
+   {
+    "text": "駱駝奶茶三道待客",
+    "angle": "飲食"
+   },
+   {
+    "text": "欣蓋提古蘭經手抄本",
+    "angle": "歷史"
+   },
+   {
+    "text": "外海是大西洋著名富饒漁場",
+    "angle": "unsorted"
+   }
+  ],
+  "馬利": [
+   {
+    "text": "傑內大清真寺是最大泥造建築",
+    "angle": "歷史"
+   },
+   {
+    "text": "廷巴克圖曾是學術重鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "尼日河彎曲貫穿",
+    "angle": "自然"
+   },
+   {
+    "text": "多貢人懸崖村落文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾有富甲天下的曼薩穆薩",
+    "angle": "unsorted"
+   },
+   {
+    "text": "科拉琴21弦吟遊",
+    "angle": "音樂"
+   },
+   {
+    "text": "多貢面具舞儀式",
+    "angle": "工藝"
+   },
+   {
+    "text": "尼日河上至今行駛貿易木舟",
+    "angle": "自然"
+   }
+  ],
+  "尼日": [
+   {
+    "text": "國名源於尼日河",
+    "angle": "自然"
+   },
+   {
+    "text": "撒哈拉占國土大半",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿加德茲泥造古城",
+    "angle": "歷史"
+   },
+   {
+    "text": "鈾礦出口重要",
+    "angle": "unsorted"
+   },
+   {
+    "text": "泰內雷沙漠之樹曾是地標",
+    "angle": "自然"
+   },
+   {
+    "text": "圖瓦雷格十字銀飾",
+    "angle": "unsorted"
+   },
+   {
+    "text": "駱駝鹽隊跨沙漠",
+    "angle": "自然"
+   },
+   {
+    "text": "河馬群尼日河棲息",
+    "angle": "自然"
+   }
+  ],
+  "查德": [
+   {
+    "text": "查德湖數十年大幅縮減",
+    "angle": "自然"
+   },
+   {
+    "text": "撒哈拉與莽原過渡帶",
+    "angle": "unsorted"
+   },
+   {
+    "text": "恩內迪高原岩拱壯觀",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都恩賈梅納",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石油管線通往喀麥隆",
+    "angle": "unsorted"
+   },
+   {
+    "text": "烏尼昂加湖群沙漠奇蹟",
+    "angle": "自然"
+   },
+   {
+    "text": "提貝斯提山脈火山",
+    "angle": "自然"
+   },
+   {
+    "text": "阿拉伯與非洲文化交會",
+    "angle": "unsorted"
+   }
+  ],
+  "蘇丹": [
+   {
+    "text": "麥羅埃金字塔數量超過埃及",
+    "angle": "unsorted"
+   },
+   {
+    "text": "青白尼羅河在喀土穆交匯",
+    "angle": "自然"
+   },
+   {
+    "text": "古代庫施王國在此建立文明",
+    "angle": "歷史"
+   },
+   {
+    "text": "2011年南蘇丹分離",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紅海沿岸有港口蘇丹港",
+    "angle": "unsorted"
+   },
+   {
+    "text": "努比亞摔跤傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "尼羅河第六瀑布峽谷",
+    "angle": "工藝"
+   },
+   {
+    "text": "金字塔尖角形制獨特",
+    "angle": "unsorted"
+   }
+  ],
+  "南蘇丹": [
+   {
+    "text": "2011年獨立的最年輕國家之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇德濕地是巨型沼澤",
+    "angle": "自然"
+   },
+   {
+    "text": "白尼羅河自南向北縱貫全境",
+    "angle": "自然"
+   },
+   {
+    "text": "牛隻是財富象徵",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都朱巴位於白尼羅河畔",
+    "angle": "unsorted"
+   },
+   {
+    "text": "丁卡族牛角琴歌",
+    "angle": "音樂"
+   },
+   {
+    "text": "白尼羅河氾濫平原",
+    "angle": "自然"
+   },
+   {
+    "text": "部落疤紋成年禮",
+    "angle": "unsorted"
+   }
+  ],
+  "厄利垂亞": [
+   {
+    "text": "阿斯馬拉義式現代主義建築列遺產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紅海岸線綿長",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾為義大利殖民地",
+    "angle": "歷史"
+   },
+   {
+    "text": "與衣索比亞長年邊界爭端",
+    "angle": "unsorted"
+   },
+   {
+    "text": "達赫拉克群島潛水秘境",
+    "angle": "自然"
+   },
+   {
+    "text": "馬薩瓦紅海珊瑚岩建築",
+    "angle": "自然"
+   },
+   {
+    "text": "單車是國民運動",
+    "angle": "unsorted"
+   },
+   {
+    "text": "駱駝郵差曾遞信",
+    "angle": "unsorted"
+   }
+  ],
+  "吉布地": [
+   {
+    "text": "紅海進出印度洋的咽喉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿薩爾湖低於海平面150公尺",
+    "angle": "自然"
+   },
+   {
+    "text": "多國軍事基地駐地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "地表最熱地區之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鹽湖結晶地貌宛如外星場景",
+    "angle": "自然"
+   },
+   {
+    "text": "阿貝湖石灰塔林",
+    "angle": "自然"
+   },
+   {
+    "text": "鯨鯊季近岸可遇",
+    "angle": "unsorted"
+   },
+   {
+    "text": "卡特葉午後咀嚼社交",
+    "angle": "unsorted"
+   }
+  ],
+  "索馬利亞": [
+   {
+    "text": "非洲大陸海岸線最長國家之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "乳香與沒藥古產地",
+    "angle": "飲食"
+   },
+   {
+    "text": "駱駝數量世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "摩加迪休臨印度洋",
+    "angle": "unsorted"
+   },
+   {
+    "text": "詩歌口傳文化深厚",
+    "angle": "音樂"
+   },
+   {
+    "text": "駱駝肉乳常民飲食",
+    "angle": "飲食"
+   },
+   {
+    "text": "乳香沒藥古貿易",
+    "angle": "飲食"
+   },
+   {
+    "text": "拉斯吉爾岩畫保存佳",
+    "angle": "unsorted"
+   }
+  ],
+  "衣索比亞": [
+   {
+    "text": "咖啡的發源地",
+    "angle": "飲食"
+   },
+   {
+    "text": "拉利貝拉岩鑿教堂群",
+    "angle": "歷史"
+   },
+   {
+    "text": "非洲唯一未被殖民的國家之一",
+    "angle": "歷史"
+   },
+   {
+    "text": "使用獨特衣索比亞曆",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人類祖先露西化石出土地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "咖啡儀式三輪慢飲",
+    "angle": "飲食"
+   },
+   {
+    "text": "英傑拉酸餅手抓餐",
+    "angle": "飲食"
+   },
+   {
+    "text": "埃爾塔阿萊熔岩湖",
+    "angle": "自然"
+   }
+  ],
+  "肯亞": [
+   {
+    "text": "馬賽馬拉動物大遷徙震撼",
+    "angle": "unsorted"
+   },
+   {
+    "text": "長跑選手稱霸世界",
+    "angle": "unsorted"
+   },
+   {
+    "text": "赤道貫穿國土",
+    "angle": "unsorted"
+   },
+   {
+    "text": "奈洛比有市區國家公園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬賽族文化鮮明",
+    "angle": "unsorted"
+   },
+   {
+    "text": "茶葉出口世界前列",
+    "angle": "飲食"
+   },
+   {
+    "text": "馬賽跳躍舞求偶",
+    "angle": "音樂"
+   },
+   {
+    "text": "納庫魯湖紅鶴粉海",
+    "angle": "自然"
+   }
+  ],
+  "坦尚尼亞": [
+   {
+    "text": "吉力馬札羅是非洲最高峰",
+    "angle": "最高級"
+   },
+   {
+    "text": "塞倫蓋提大遷徙起點",
+    "angle": "unsorted"
+   },
+   {
+    "text": "尚吉巴是香料群島",
+    "angle": "自然"
+   },
+   {
+    "text": "恩戈羅恩戈羅火山口生態圈",
+    "angle": "自然"
+   },
+   {
+    "text": "坦干伊喀湖深邃",
+    "angle": "自然"
+   },
+   {
+    "text": "坦桑石僅此地出產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "史瓦希里語發源海岸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "恩戈羅恩戈羅獅群密集",
+    "angle": "unsorted"
+   }
+  ],
+  "烏干達": [
+   {
+    "text": "尼羅河源頭之一在金賈",
+    "angle": "自然"
+   },
+   {
+    "text": "山地大猩猩棲息地",
+    "angle": "自然"
+   },
+   {
+    "text": "維多利亞湖畔國家",
+    "angle": "自然"
+   },
+   {
+    "text": "邱吉爾稱之非洲明珠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "赤道地標可跨南北半球",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬托基蕉泥主食",
+    "angle": "飲食"
+   },
+   {
+    "text": "羅威薩札湖鳥類天堂",
+    "angle": "自然"
+   },
+   {
+    "text": "木舟捕魚維多利亞湖",
+    "angle": "自然"
+   }
+  ],
+  "盧安達": [
+   {
+    "text": "千丘之國地形起伏",
+    "angle": "unsorted"
+   },
+   {
+    "text": "火山國家公園可尋大猩猩",
+    "angle": "自然"
+   },
+   {
+    "text": "禁用塑膠袋的先驅",
+    "angle": "unsorted"
+   },
+   {
+    "text": "基加利市容整潔聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "1994年大屠殺後重生",
+    "angle": "unsorted"
+   },
+   {
+    "text": "每月社區勞動日umuganda",
+    "angle": "unsorted"
+   },
+   {
+    "text": "籃編和平籃工藝",
+    "angle": "工藝"
+   },
+   {
+    "text": "咖啡精品產區崛起",
+    "angle": "飲食"
+   }
+  ],
+  "蒲隆地": [
+   {
+    "text": "坦干伊喀湖畔小國",
+    "angle": "自然"
+   },
+   {
+    "text": "鼓樂表演列非遺",
+    "angle": "音樂"
+   },
+   {
+    "text": "咖啡與茶是經濟命脈",
+    "angle": "飲食"
+   },
+   {
+    "text": "尼羅河最遠源頭之一",
+    "angle": "自然"
+   },
+   {
+    "text": "非洲人口密度最高國之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "皇家鼓舞撼動全場",
+    "angle": "音樂"
+   },
+   {
+    "text": "香蕉酒傳統釀造",
+    "angle": "飲食"
+   },
+   {
+    "text": "坦干伊喀湖沙丁漁火",
+    "angle": "自然"
+   }
+  ],
+  "剛果民主共和國": [
+   {
+    "text": "剛果河流量世界第二",
+    "angle": "飲食"
+   },
+   {
+    "text": "非洲面積第二大國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "礦產資源極豐：鈷鉭銅",
+    "angle": "unsorted"
+   },
+   {
+    "text": "維龍加是非洲最古老國家公園之一",
+    "angle": "歷史"
+   },
+   {
+    "text": "雨林面積僅次亞馬遜",
+    "angle": "unsorted"
+   },
+   {
+    "text": "倭黑猩猩唯一棲地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇庫斯音樂節奏感染",
+    "angle": "節慶"
+   },
+   {
+    "text": "尼拉貢戈熔岩湖沸騰",
+    "angle": "自然"
+   }
+  ],
+  "剛果共和國": [
+   {
+    "text": "首都布拉薩與金夏沙隔河相望",
+    "angle": "工藝"
+   },
+   {
+    "text": "全球最近距離的兩首都",
+    "angle": "最高級"
+   },
+   {
+    "text": "雨林覆蓋率高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石油是主要出口",
+    "angle": "unsorted"
+   },
+   {
+    "text": "奧扎拉雨林保護區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "薩普風衣著紳士文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "木雕面具藝術",
+    "angle": "工藝"
+   },
+   {
+    "text": "雨林巴卡矮人族智慧",
+    "angle": "unsorted"
+   }
+  ],
+  "中非共和國": [
+   {
+    "text": "國名即位置：非洲中心",
+    "angle": "unsorted"
+   },
+   {
+    "text": "姆巴利瀑布壯觀",
+    "angle": "工藝"
+   },
+   {
+    "text": "森林象與低地大猩猩棲地",
+    "angle": "自然"
+   },
+   {
+    "text": "鑽石礦藏豐富",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都班基坐落烏班吉河岸",
+    "angle": "unsorted"
+   },
+   {
+    "text": "森巴基保護區森林象",
+    "angle": "自然"
+   },
+   {
+    "text": "蝴蝶翅膀拼畫工藝",
+    "angle": "工藝"
+   },
+   {
+    "text": "鑽石多由礦工以手工淘洗取得",
+    "angle": "工藝"
+   }
+  ],
+  "喀麥隆": [
+   {
+    "text": "被稱非洲縮影：地形氣候多樣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "喀麥隆火山臨海拔起",
+    "angle": "自然"
+   },
+   {
+    "text": "足球雄獅隊戰績輝煌",
+    "angle": "歷史"
+   },
+   {
+    "text": "英語法語雙官方語",
+    "angle": "unsorted"
+   },
+   {
+    "text": "瓦扎國家公園莽原",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曼德拉山景觀奇特",
+    "angle": "自然"
+   },
+   {
+    "text": "音樂makossa律動",
+    "angle": "音樂"
+   },
+   {
+    "text": "西北草原王國宮殿",
+    "angle": "歷史"
+   }
+  ],
+  "加彭": [
+   {
+    "text": "森林覆蓋率近九成",
+    "angle": "自然"
+   },
+   {
+    "text": "海灘上可見大象與河馬",
+    "angle": "自然"
+   },
+   {
+    "text": "靠石油收入維持中等富裕",
+    "angle": "unsorted"
+   },
+   {
+    "text": "羅安果國家公園衝浪河馬聞名",
+    "angle": "飲食"
+   },
+   {
+    "text": "赤道從國土中部橫貫而過",
+    "angle": "unsorted"
+   },
+   {
+    "text": "面具白臉punu聞名",
+    "angle": "工藝"
+   },
+   {
+    "text": "衝浪河馬海灘奇觀",
+    "angle": "自然"
+   },
+   {
+    "text": "伊邦加儀式成年禮",
+    "angle": "unsorted"
+   }
+  ],
+  "赤道幾內亞": [
+   {
+    "text": "非洲唯一西班牙語國家",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都在島上而非大陸",
+    "angle": "自然"
+   },
+   {
+    "text": "石油暴富的小國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "比奧科島火山地形",
+    "angle": "自然"
+   },
+   {
+    "text": "計畫遷都剛果河岸新城",
+    "angle": "飲食"
+   },
+   {
+    "text": "馬拉博殖民建築",
+    "angle": "歷史"
+   },
+   {
+    "text": "鼓語溝通傳統",
+    "angle": "音樂"
+   },
+   {
+    "text": "雨季長達大半年",
+    "angle": "unsorted"
+   }
+  ],
+  "聖多美普林西比": [
+   {
+    "text": "幾內亞灣可可雙島國",
+    "angle": "自然"
+   },
+   {
+    "text": "曾是世界可可重要產地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "赤道線穿過外海小島",
+    "angle": "自然"
+   },
+   {
+    "text": "葡語非洲島國",
+    "angle": "自然"
+   },
+   {
+    "text": "大狗峰火山岩柱奇景",
+    "angle": "自然"
+   },
+   {
+    "text": "巧克力莊園精品化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巨大的 oba 樹板根盤踞如牆",
+    "angle": "unsorted"
+   },
+   {
+    "text": "葡式克里奧爾語歌謠",
+    "angle": "音樂"
+   }
+  ],
+  "奈及利亞": [
+   {
+    "text": "非洲人口第一大國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "諾萊塢電影產量驚人",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石油出口非洲前列",
+    "angle": "unsorted"
+   },
+   {
+    "text": "拉哥斯是超級大城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "250多個族群語言多元",
+    "angle": "unsorted"
+   },
+   {
+    "text": "afrobeats音樂風靡全球",
+    "angle": "音樂"
+   },
+   {
+    "text": "紗帽gele綁法百變",
+    "angle": "unsorted"
+   },
+   {
+    "text": "貝南青銅器工藝史",
+    "angle": "工藝"
+   }
+  ],
+  "貝南": [
+   {
+    "text": "巫毒教的發源地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿波美王宮列世界遺產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "岡維埃水上村落",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾為達荷美王國",
+    "angle": "歷史"
+   },
+   {
+    "text": "狹長國土臨幾內亞灣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蟒蛇廟活蛇盤踞",
+    "angle": "歷史"
+   },
+   {
+    "text": "阿波美王宮以浮雕記錄王國歷史",
+    "angle": "工藝"
+   },
+   {
+    "text": "zangbeto守夜面具旋舞",
+    "angle": "工藝"
+   }
+  ],
+  "多哥": [
+   {
+    "text": "西非狹長小國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "塔姆貝爾馬土樓列遺產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "洛美是自由港",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巫毒市場聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "可可咖啡棉花出口",
+    "angle": "飲食"
+   },
+   {
+    "text": "塔姆貝爾馬碉堡土樓",
+    "angle": "unsorted"
+   },
+   {
+    "text": "市場巫毒用品琳瑯",
+    "angle": "unsorted"
+   },
+   {
+    "text": "海岸線椰林與潟湖交錯",
+    "angle": "自然"
+   }
+  ],
+  "迦納": [
+   {
+    "text": "黃金海岸的舊稱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "海岸角城堡見證奴隸貿易史",
+    "angle": "歷史"
+   },
+   {
+    "text": "可可產量世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "肯特織布色彩斑斕",
+    "angle": "工藝"
+   },
+   {
+    "text": "非洲首個脫殖獨立的撒南國家",
+    "angle": "unsorted"
+   },
+   {
+    "text": "棺材造型藝術天馬行空",
+    "angle": "unsorted"
+   },
+   {
+    "text": "高蹺舞節慶表演",
+    "angle": "節慶"
+   },
+   {
+    "text": "阿散蒂金凳王權象徵",
+    "angle": "unsorted"
+   }
+  ],
+  "象牙海岸": [
+   {
+    "text": "可可產量世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "和平聖母大教堂是最大教堂之一",
+    "angle": "歷史"
+   },
+   {
+    "text": "經濟首都阿必尚",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國名源自象牙貿易",
+    "angle": "unsorted"
+   },
+   {
+    "text": "足球名將輩出",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿比尚潟湖大都會",
+    "angle": "自然"
+   },
+   {
+    "text": "zaouli面具舞腳步神速",
+    "angle": "工藝"
+   },
+   {
+    "text": "阿提耶串珠盛裝",
+    "angle": "unsorted"
+   }
+  ],
+  "賴比瑞亞": [
+   {
+    "text": "非洲最早共和國，由獲釋奴隸建立",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國旗近似美國星條旗",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾出非洲首位民選女總統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蒙羅維亞以美國總統命名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "船籍註冊大國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "胡椒鳥是暱稱由來",
+    "angle": "unsorted"
+   },
+   {
+    "text": "衝浪小鎮羅伯茨港",
+    "angle": "unsorted"
+   },
+   {
+    "text": "美式建築首都遺風",
+    "angle": "unsorted"
+   }
+  ],
+  "獅子山": [
+   {
+    "text": "首都自由城為獲釋奴隸而建",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鑽石礦藏曾引發血鑽衝突",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國名源自葡語獅子山脈",
+    "angle": "自然"
+   },
+   {
+    "text": "大西洋岸白沙海灘",
+    "angle": "自然"
+   },
+   {
+    "text": "可可與咖啡出口",
+    "angle": "飲食"
+   },
+   {
+    "text": "邦特島奴貿遺跡",
+    "angle": "歷史"
+   },
+   {
+    "text": "河谷至今有人下水淘洗鑽石",
+    "angle": "自然"
+   },
+   {
+    "text": "秘密會社面具傳統",
+    "angle": "工藝"
+   }
+  ],
+  "幾內亞": [
+   {
+    "text": "鋁土礦儲量世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "尼日河塞內加爾河發源地",
+    "angle": "自然"
+   },
+   {
+    "text": "被稱西非水塔",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都柯那克里臨海",
+    "angle": "unsorted"
+   },
+   {
+    "text": "寧巴山自然保護區",
+    "angle": "自然"
+   },
+   {
+    "text": "djembe鼓發源地之一",
+    "angle": "音樂"
+   },
+   {
+    "text": "富塔賈隆高原水源",
+    "angle": "unsorted"
+   },
+   {
+    "text": "芒果季滿城果香",
+    "angle": "飲食"
+   }
+  ],
+  "幾內亞比索": [
+   {
+    "text": "比熱戈斯群島生態獨特",
+    "angle": "自然"
+   },
+   {
+    "text": "腰果是經濟支柱",
+    "angle": "飲食"
+   },
+   {
+    "text": "葡語西非小國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "河口紅樹林密布",
+    "angle": "工藝"
+   },
+   {
+    "text": "曾為奴隸貿易據點",
+    "angle": "unsorted"
+   },
+   {
+    "text": "嘉年華面具狂歡",
+    "angle": "節慶"
+   },
+   {
+    "text": "腰果殼也能釀酒",
+    "angle": "飲食"
+   },
+   {
+    "text": "河口水域有海牛棲息",
+    "angle": "自然"
+   }
+  ],
+  "甘比亞": [
+   {
+    "text": "非洲大陸最小國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "國土沿甘比亞河兩岸延伸",
+    "angle": "自然"
+   },
+   {
+    "text": "被塞內加爾三面包圍",
+    "angle": "unsorted"
+   },
+   {
+    "text": "根書尋根之旅勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鳥種數百，被稱為賞鳥者的天堂",
+    "angle": "unsorted"
+   },
+   {
+    "text": "格里奧吟遊史官",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蒼鷺鸛鳥河畔群聚",
+    "angle": "自然"
+   },
+   {
+    "text": "花生是傳統出口",
+    "angle": "unsorted"
+   }
+  ],
+  "塞內加爾": [
+   {
+    "text": "玫瑰湖湖水粉紅",
+    "angle": "自然"
+   },
+   {
+    "text": "戈雷島奴隸貿易紀念地",
+    "angle": "自然"
+   },
+   {
+    "text": "達卡曾是拉力賽終點",
+    "angle": "unsorted"
+   },
+   {
+    "text": "特拉嘉摔跤是國技",
+    "angle": "unsorted"
+   },
+   {
+    "text": "非洲文藝復興雕像高聳",
+    "angle": "工藝"
+   },
+   {
+    "text": "塞內加爾摔跤萬人空巷",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖路易爵士音樂節",
+    "angle": "節慶"
+   },
+   {
+    "text": "車塞布魚飯國菜",
+    "angle": "飲食"
+   }
+  ],
+  "維德角": [
+   {
+    "text": "大西洋火山群島國",
+    "angle": "自然"
+   },
+   {
+    "text": "morna音樂女王西薩莉亞聞名",
+    "angle": "音樂"
+   },
+   {
+    "text": "葡語克里奧文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "福古火山仍活躍",
+    "angle": "歷史"
+   },
+   {
+    "text": "水資源稀缺靠海水淡化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "豆燉cachupa慢火",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巴特庫鼓陣女性主場",
+    "angle": "音樂"
+   },
+   {
+    "text": "聖維森特嘉年華",
+    "angle": "節慶"
+   }
+  ],
+  "布吉納法索": [
+   {
+    "text": "國名意為正人君子之國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "FESPACO非洲電影節主辦地",
+    "angle": "節慶"
+   },
+   {
+    "text": "泥造清真寺風格獨特",
+    "angle": "歷史"
+   },
+   {
+    "text": "沙漠邊緣的薩赫爾國",
+    "angle": "自然"
+   },
+   {
+    "text": "首都瓦加杜古",
+    "angle": "歷史"
+   },
+   {
+    "text": "波波面具節盛大",
+    "angle": "節慶"
+   },
+   {
+    "text": "泥染布bogolan圖紋",
+    "angle": "工藝"
+   },
+   {
+    "text": "鱷魚聖潭人鱷共處",
+    "angle": "unsorted"
+   }
+  ],
+  "尚比亞": [
+   {
+    "text": "維多利亞瀑布的北岸國",
+    "angle": "工藝"
+   },
+   {
+    "text": "銅礦帶經濟命脈",
+    "angle": "unsorted"
+   },
+   {
+    "text": "尚比西河發源於西北部",
+    "angle": "自然"
+   },
+   {
+    "text": "全境位於內陸高原之上",
+    "angle": "unsorted"
+   },
+   {
+    "text": "與五國共享水域邊界",
+    "angle": "unsorted"
+   },
+   {
+    "text": "尚比西河白水泛舟",
+    "angle": "自然"
+   },
+   {
+    "text": "銅器工藝呼應銅礦大國身分",
+    "angle": "工藝"
+   },
+   {
+    "text": "卡富埃國家公園遼闊",
+    "angle": "unsorted"
+   }
+  ],
+  "辛巴威": [
+   {
+    "text": "大辛巴威石城遺址是國名由來",
+    "angle": "歷史"
+   },
+   {
+    "text": "曾發行百兆面額鈔票",
+    "angle": "unsorted"
+   },
+   {
+    "text": "維多利亞瀑布南岸",
+    "angle": "工藝"
+   },
+   {
+    "text": "巴蘭石雕藝術聞名",
+    "angle": "工藝"
+   },
+   {
+    "text": "哈拉雷是首都",
+    "angle": "unsorted"
+   },
+   {
+    "text": "石雕修納藝術國際展",
+    "angle": "工藝"
+   },
+   {
+    "text": "姆比拉拇指琴列非遺",
+    "angle": "音樂"
+   },
+   {
+    "text": "凱爾橋高空彈跳",
+    "angle": "unsorted"
+   }
+  ],
+  "馬拉威": [
+   {
+    "text": "馬拉威湖占國土近兩成",
+    "angle": "自然"
+   },
+   {
+    "text": "湖中慈鯛魚種類冠全球",
+    "angle": "自然"
+   },
+   {
+    "text": "非洲溫暖之心的暱稱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "茶園與煙草經濟",
+    "angle": "飲食"
+   },
+   {
+    "text": "姆蘭傑山拔地而起",
+    "angle": "自然"
+   },
+   {
+    "text": "湖魚chambo炭烤",
+    "angle": "飲食"
+   },
+   {
+    "text": "大象遷徙保育成功案例",
+    "angle": "unsorted"
+   },
+   {
+    "text": "木雕酋長椅工藝",
+    "angle": "工藝"
+   }
+  ],
+  "莫三比克": [
+   {
+    "text": "印度洋岸線綿延兩千多公里",
+    "angle": "unsorted"
+   },
+   {
+    "text": "莫三比克島曾是葡屬首府",
+    "angle": "自然"
+   },
+   {
+    "text": "蝦料理peri-peri聞名",
+    "angle": "飲食"
+   },
+   {
+    "text": "巴扎魯托群島海洋公園",
+    "angle": "自然"
+   },
+   {
+    "text": "國旗上有AK步槍圖案",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬拉邦塔舞熱烈",
+    "angle": "音樂"
+   },
+   {
+    "text": "蝦料理葡非融合",
+    "angle": "飲食"
+   },
+   {
+    "text": "莫島石城珊瑚石建",
+    "angle": "自然"
+   }
+  ],
+  "波札那": [
+   {
+    "text": "奧卡萬戈三角洲是內陸三角洲奇觀",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鑽石治理的非洲模範生",
+    "angle": "unsorted"
+   },
+   {
+    "text": "喬貝國家公園大象密度極高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "喀拉哈里沙漠覆蓋大半",
+    "angle": "自然"
+   },
+   {
+    "text": "民主穩定著稱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "桑人岩畫措迪洛山",
+    "angle": "自然"
+   },
+   {
+    "text": "籃編圖紋說故事",
+    "angle": "工藝"
+   },
+   {
+    "text": "普拉貨幣意為雨水",
+    "angle": "unsorted"
+   }
+  ],
+  "納米比亞": [
+   {
+    "text": "納米布是最古老沙漠之一",
+    "angle": "工藝"
+   },
+   {
+    "text": "蘇索斯維利紅沙丘高聳",
+    "angle": "unsorted"
+   },
+   {
+    "text": "骷髏海岸船骸點點",
+    "angle": "unsorted"
+   },
+   {
+    "text": "辛巴族紅泥文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "人口密度極低",
+    "angle": "unsorted"
+   },
+   {
+    "text": "死亡谷枯樹紅丘對比",
+    "angle": "unsorted"
+   },
+   {
+    "text": "特威費爾泉岩刻群列世界遺產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "德式小鎮呂德里茨",
+    "angle": "unsorted"
+   }
+  ],
+  "南非": [
+   {
+    "text": "三個首都分掌行政立法司法",
+    "angle": "unsorted"
+   },
+   {
+    "text": "桌山平頂俯瞰開普敦",
+    "angle": "自然"
+   },
+   {
+    "text": "曼德拉終結種族隔離",
+    "angle": "unsorted"
+   },
+   {
+    "text": "好望角是航海里程碑",
+    "angle": "unsorted"
+   },
+   {
+    "text": "葡萄酒產區斯泰倫博斯",
+    "angle": "飲食"
+   },
+   {
+    "text": "花園大道濱海公路",
+    "angle": "unsorted"
+   },
+   {
+    "text": "克魯格五大獸獵遊",
+    "angle": "unsorted"
+   },
+   {
+    "text": "開普敦企鵝海灘",
+    "angle": "自然"
+   },
+   {
+    "text": "鴕鳥之都奧茨胡恩",
+    "angle": "unsorted"
+   },
+   {
+    "text": "世界盃首登非洲",
+    "angle": "unsorted"
+   },
+   {
+    "text": "彩虹之國多元族群",
+    "angle": "unsorted"
+   },
+   {
+    "text": "布隆方丹司法首都",
+    "angle": "工藝"
+   },
+   {
+    "text": "鯊魚籠潛水刺激",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國寶茶 rooibos 只生長於開普山區",
+    "angle": "飲食"
+   },
+   {
+    "text": "鑽石與黃金礦業史",
+    "angle": "unsorted"
+   },
+   {
+    "text": "braai烤肉全民儀式",
+    "angle": "飲食"
+   },
+   {
+    "text": "企鵝漫步博爾德斯海灘",
+    "angle": "自然"
+   },
+   {
+    "text": "11種官方語言",
+    "angle": "unsorted"
+   }
+  ],
+  "賴索托": [
+   {
+    "text": "全境海拔逾1400公尺的天空王國",
+    "angle": "歷史"
+   },
+   {
+    "text": "被南非完全包圍",
+    "angle": "unsorted"
+   },
+   {
+    "text": "非洲少數會下雪滑雪地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "毛毯是民族服飾",
+    "angle": "unsorted"
+   },
+   {
+    "text": "塞莫農康瀑布高懸",
+    "angle": "工藝"
+   },
+   {
+    "text": "巴索托帽錐形草編",
+    "angle": "工藝"
+   },
+   {
+    "text": "氂牛毛毯保暖傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬背是山區交通",
+    "angle": "自然"
+   }
+  ],
+  "史瓦帝尼": [
+   {
+    "text": "非洲少數絕對君主制王國",
+    "angle": "歷史"
+   },
+   {
+    "text": "蘆葦節舞蹈萬人盛會",
+    "angle": "節慶"
+   },
+   {
+    "text": "2018年由史瓦濟蘭改名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "台灣在非洲的邦交國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國土小而野生動物豐富",
+    "angle": "unsorted"
+   },
+   {
+    "text": "印切瓦拉王權祭典",
+    "angle": "節慶"
+   },
+   {
+    "text": "蘆葦舞少女列隊",
+    "angle": "音樂"
+   },
+   {
+    "text": "手工蠟染布是著名工藝品",
+    "angle": "工藝"
+   }
+  ],
+  "馬達加斯加": [
+   {
+    "text": "島上九成物種是特有種",
+    "angle": "自然"
+   },
+   {
+    "text": "狐猴只在此自然分布",
+    "angle": "工藝"
+   },
+   {
+    "text": "猴麵包樹大道夕陽絕景",
+    "angle": "飲食"
+   },
+   {
+    "text": "世界第四大島",
+    "angle": "自然"
+   },
+   {
+    "text": "與非洲大陸分離八千萬年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "翻骨葬famadihana敬祖",
+    "angle": "unsorted"
+   },
+   {
+    "text": "瓦尼拉香草產量世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "變色龍種類過半在此",
+    "angle": "unsorted"
+   }
+  ],
+  "模里西斯": [
+   {
+    "text": "渡渡鳥滅絕的故事發生地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "七色土地質奇觀",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬克吐溫讚譽天堂原型",
+    "angle": "unsorted"
+   },
+   {
+    "text": "印度洋糖業島國",
+    "angle": "自然"
+   },
+   {
+    "text": "多元族群和諧著稱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "sega海島歌舞",
+    "angle": "音樂"
+   },
+   {
+    "text": "甘蔗田覆蓋大半耕地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "多元宗教節慶全年",
+    "angle": "節慶"
+   }
+  ],
+  "塞席爾": [
+   {
+    "text": "海椰子種子是植物界最大",
+    "angle": "最高級"
+   },
+   {
+    "text": "五月谷原始棕櫚林",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花崗岩海灘巨石如雕塑",
+    "angle": "工藝"
+   },
+   {
+    "text": "115座島嶼散布印度洋",
+    "angle": "工藝"
+   },
+   {
+    "text": "生態保育模範",
+    "angle": "unsorted"
+   },
+   {
+    "text": "克里奧爾烤魚椰香",
+    "angle": "飲食"
+   },
+   {
+    "text": "椰子蟹保育有成",
+    "angle": "unsorted"
+   },
+   {
+    "text": "週三半日休閒傳統",
+    "angle": "unsorted"
+   }
+  ],
+  "葛摩": [
+   {
+    "text": "香水群島：依蘭依蘭精油產地",
+    "angle": "自然"
+   },
+   {
+    "text": "活火山卡爾塔拉",
+    "angle": "自然"
+   },
+   {
+    "text": "莫艾利海洋保護區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "印度洋月亮群島之稱",
+    "angle": "自然"
+   },
+   {
+    "text": "腔棘魚活化石海域",
+    "angle": "unsorted"
+   },
+   {
+    "text": "依蘭花清晨手採",
+    "angle": "unsorted"
+   },
+   {
+    "text": "婚禮大典grand mariage",
+    "angle": "unsorted"
+   },
+   {
+    "text": "島上火山湖與鹽湖並存",
+    "angle": "自然"
+   }
+  ],
+  "美國": [
+   {
+    "text": "50州組成，國旗50顆星",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大峽谷深達1.6公里",
+    "angle": "unsorted"
+   },
+   {
+    "text": "自由女神像是法國贈禮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "黃石是世界第一座國家公園",
+    "angle": "最高級"
+   },
+   {
+    "text": "好萊塢主導全球影業",
+    "angle": "最高級"
+   },
+   {
+    "text": "NASA太空探索領頭",
+    "angle": "unsorted"
+   },
+   {
+    "text": "矽谷科技創新中心",
+    "angle": "unsorted"
+   },
+   {
+    "text": "NBA與美式足球風靡",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國家公園系統龐大",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紐約時代廣場跨年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "迪士尼樂園發源地",
+    "angle": "音樂"
+   },
+   {
+    "text": "路易斯安那爵士樂",
+    "angle": "音樂"
+   },
+   {
+    "text": "66號公路公路旅行",
+    "angle": "unsorted"
+   },
+   {
+    "text": "常春藤名校群",
+    "angle": "unsorted"
+   },
+   {
+    "text": "漢堡可樂速食文化",
+    "angle": "飲食"
+   }
+  ],
+  "加拿大": [
+   {
+    "text": "世界第二大國土",
+    "angle": "unsorted"
+   },
+   {
+    "text": "楓糖漿產量世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "湖泊數量全球最多",
+    "angle": "自然"
+   },
+   {
+    "text": "官方雙語英法並行",
+    "angle": "unsorted"
+   },
+   {
+    "text": "露易絲湖翡翠色冰川湖",
+    "angle": "飲食"
+   },
+   {
+    "text": "尼加拉瀑布跨境奇觀",
+    "angle": "工藝"
+   },
+   {
+    "text": "洛磯山脈冰原大道",
+    "angle": "飲食"
+   },
+   {
+    "text": "楓葉大道秋色",
+    "angle": "unsorted"
+   },
+   {
+    "text": "北極光黃刀鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "冰球是國民運動",
+    "angle": "飲食"
+   },
+   {
+    "text": "多元移民馬賽克社會",
+    "angle": "unsorted"
+   },
+   {
+    "text": "魁北克法語文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "班夫是首座國家公園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鮭魚洄游奇景",
+    "angle": "unsorted"
+   },
+   {
+    "text": "禮貌著稱的國民性",
+    "angle": "unsorted"
+   }
+  ],
+  "墨西哥": [
+   {
+    "text": "奇琴伊察金字塔是馬雅傑作",
+    "angle": "音樂"
+   },
+   {
+    "text": "亡靈節色彩繽紛列非遺",
+    "angle": "節慶"
+   },
+   {
+    "text": "辣椒與玉米的原鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "墨西哥城建在湖床上",
+    "angle": "自然"
+   },
+   {
+    "text": "仙人掌與老鷹是國徽",
+    "angle": "unsorted"
+   },
+   {
+    "text": "亡靈節骷髏彩妝",
+    "angle": "節慶"
+   },
+   {
+    "text": "瑪雅與阿茲特克雙文明",
+    "angle": "歷史"
+   },
+   {
+    "text": "龍舌蘭酒原產",
+    "angle": "飲食"
+   },
+   {
+    "text": "街頭塔可餅攤是國民日常",
+    "angle": "飲食"
+   },
+   {
+    "text": "瓜納華托彩色山城",
+    "angle": "自然"
+   },
+   {
+    "text": "坎昆加勒比海灘",
+    "angle": "自然"
+   },
+   {
+    "text": "帝王蝶越冬森林",
+    "angle": "自然"
+   },
+   {
+    "text": "皮納塔慶生傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "芙烈達卡蘿藝術",
+    "angle": "unsorted"
+   },
+   {
+    "text": "摔角面具文化",
+    "angle": "工藝"
+   }
+  ],
+  "瓜地馬拉": [
+   {
+    "text": "蒂卡爾金字塔聳立雨林",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬雅文明核心區",
+    "angle": "歷史"
+   },
+   {
+    "text": "安地瓜古城火山環繞",
+    "angle": "歷史"
+   },
+   {
+    "text": "安地瓜咖啡產區世界聞名",
+    "angle": "飲食"
+   },
+   {
+    "text": "彩色巴士chicken bus穿梭",
+    "angle": "unsorted"
+   },
+   {
+    "text": "聖週鋸末地毯藝術",
+    "angle": "節慶"
+   },
+   {
+    "text": "基切瑪雅曆法傳承",
+    "angle": "unsorted"
+   },
+   {
+    "text": "火山雞蛋帕卡亞熱岩烤",
+    "angle": "飲食"
+   }
+  ],
+  "貝里斯": [
+   {
+    "text": "大藍洞是潛水聖地",
+    "angle": "自然"
+   },
+   {
+    "text": "中美洲唯一英語官方國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "堡礁長度西半球第一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬雅遺址散布叢林",
+    "angle": "工藝"
+   },
+   {
+    "text": "面積小而生態極豐",
+    "angle": "unsorted"
+   },
+   {
+    "text": "加里富納鼓樂列非遺",
+    "angle": "音樂"
+   },
+   {
+    "text": "海螺季漁村盛事",
+    "angle": "unsorted"
+   },
+   {
+    "text": "瑪雅可可儀式飲",
+    "angle": "unsorted"
+   }
+  ],
+  "薩爾瓦多": [
+   {
+    "text": "中美洲最小且最稠密國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "火山之國地熱豐富",
+    "angle": "自然"
+   },
+   {
+    "text": "2021年比特幣列法定貨幣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "衝浪海岸聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "高地火山土孕育優質咖啡",
+    "angle": "飲食"
+   },
+   {
+    "text": "pupusa玉米餅國民食",
+    "angle": "飲食"
+   },
+   {
+    "text": "火山衝板sandboard",
+    "angle": "自然"
+   },
+   {
+    "text": "聖週彩繪街道",
+    "angle": "節慶"
+   }
+  ],
+  "宏都拉斯": [
+   {
+    "text": "科潘馬雅雕刻精美",
+    "angle": "工藝"
+   },
+   {
+    "text": "加勒比海灣群島潛水勝地",
+    "angle": "自然"
+   },
+   {
+    "text": "香蕉共和國一詞與其歷史相關",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都德古西加巴",
+    "angle": "歷史"
+   },
+   {
+    "text": "羅阿坦島珊瑚礁",
+    "angle": "自然"
+   },
+   {
+    "text": "雨魚奇觀約羅年年",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國花是潔白的白瓷蘭花",
+    "angle": "工藝"
+   },
+   {
+    "text": "加勒比潛水羅阿坦",
+    "angle": "unsorted"
+   }
+  ],
+  "尼加拉瓜": [
+   {
+    "text": "中美洲最大湖有淡水鯊傳聞",
+    "angle": "自然"
+   },
+   {
+    "text": "火山滑板是特色活動",
+    "angle": "自然"
+   },
+   {
+    "text": "格拉納達殖民古城",
+    "angle": "歷史"
+   },
+   {
+    "text": "湖泊與火山之國",
+    "angle": "自然"
+   },
+   {
+    "text": "詩人魯本達里歐故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "güegüense諷刺劇列非遺",
+    "angle": "音樂"
+   },
+   {
+    "text": "聖胡安陶藝村以黑陶聞名",
+    "angle": "工藝"
+   },
+   {
+    "text": "湖島奧梅特佩雙火山",
+    "angle": "自然"
+   }
+  ],
+  "哥斯大黎加": [
+   {
+    "text": "廢除軍隊的和平國家",
+    "angle": "unsorted"
+   },
+   {
+    "text": "生物多樣性密度名列世界前茅",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿雷納火山溫泉",
+    "angle": "自然"
+   },
+   {
+    "text": "pura vida是生活口號",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雨林吊橋與樹懶",
+    "angle": "unsorted"
+   },
+   {
+    "text": "牛車彩繪列非遺",
+    "angle": "工藝"
+   },
+   {
+    "text": "咖啡莊園小農精品",
+    "angle": "飲食"
+   },
+   {
+    "text": "軍費轉投教育醫療",
+    "angle": "unsorted"
+   }
+  ],
+  "巴拿馬": [
+   {
+    "text": "巴拿馬運河連接兩大洋",
+    "angle": "自然"
+   },
+   {
+    "text": "美洲大陸最窄處之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巴拿馬帽其實源自厄瓜多",
+    "angle": "unsorted"
+   },
+   {
+    "text": "舊城區列世界遺產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "金融與航運樞紐",
+    "angle": "unsorted"
+   },
+   {
+    "text": "mola布藝庫納族",
+    "angle": "工藝"
+   },
+   {
+    "text": "老城區磚紅屋瓦保存殖民風貌",
+    "angle": "歷史"
+   },
+   {
+    "text": "一天之內可以同時看到兩大洋",
+    "angle": "unsorted"
+   }
+  ],
+  "古巴": [
+   {
+    "text": "老爺車滿街跑的時光膠囊",
+    "angle": "unsorted"
+   },
+   {
+    "text": "哈瓦那舊城殖民風情",
+    "angle": "歷史"
+   },
+   {
+    "text": "雪茄品質世界聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "切格瓦拉革命形象",
+    "angle": "歷史"
+   },
+   {
+    "text": "騷莎音樂的搖籃",
+    "angle": "音樂"
+   },
+   {
+    "text": "千里達鵝卵石糖鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "哈瓦那雪茄至今全程手工捲製",
+    "angle": "工藝"
+   },
+   {
+    "text": "國營冰淇淋店Coppelia排隊",
+    "angle": "飲食"
+   }
+  ],
+  "牙買加": [
+   {
+    "text": "雷鬼樂與巴布馬利的故鄉",
+    "angle": "工藝"
+   },
+   {
+    "text": "波特最快短跑傳奇",
+    "angle": "unsorted"
+   },
+   {
+    "text": "藍山咖啡價格高昂",
+    "angle": "飲食"
+   },
+   {
+    "text": "鄧斯河瀑布可攀爬",
+    "angle": "工藝"
+   },
+   {
+    "text": "拉斯塔法里文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "藍山徒步看日出",
+    "angle": "自然"
+   },
+   {
+    "text": "ackee鹹魚國菜",
+    "angle": "飲食"
+   },
+   {
+    "text": "跳板短跑人才工廠",
+    "angle": "unsorted"
+   }
+  ],
+  "海地": [
+   {
+    "text": "世界第一個黑人共和國",
+    "angle": "最高級"
+   },
+   {
+    "text": "與多明尼加分享伊斯帕尼奧拉島",
+    "angle": "自然"
+   },
+   {
+    "text": "2010大地震重創",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巫毒文化深植",
+    "angle": "unsorted"
+   },
+   {
+    "text": "公民革命推翻奴隸制先驅",
+    "angle": "歷史"
+   },
+   {
+    "text": "鐵藝雕花村Croix-des-Bouquets",
+    "angle": "工藝"
+   },
+   {
+    "text": "海地素人畫派以濃烈色彩聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "rara遊行樂隊長號",
+    "angle": "音樂"
+   }
+  ],
+  "多明尼加": [
+   {
+    "text": "美洲最古老歐洲城市聖多明哥",
+    "angle": "歷史"
+   },
+   {
+    "text": "棒球大聯盟球員搖籃",
+    "angle": "unsorted"
+   },
+   {
+    "text": "琥珀與藍珀產地",
+    "angle": "工藝"
+   },
+   {
+    "text": "加勒比觀光大國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "梅倫格舞發源地",
+    "angle": "音樂"
+   },
+   {
+    "text": "巴恰塔舞發源",
+    "angle": "音樂"
+   },
+   {
+    "text": "琥珀谷藏昆蟲化石",
+    "angle": "工藝"
+   },
+   {
+    "text": "雪茄產量世界前列",
+    "angle": "最高級"
+   }
+  ],
+  "巴哈馬": [
+   {
+    "text": "粉紅沙灘由紅色有孔蟲形成",
+    "angle": "unsorted"
+   },
+   {
+    "text": "豬島小豬會游泳",
+    "angle": "自然"
+   },
+   {
+    "text": "700座島嶼僅少數有人居",
+    "angle": "自然"
+   },
+   {
+    "text": "哥倫布首登美洲之地",
+    "angle": "工藝"
+   },
+   {
+    "text": "離岸金融中心",
+    "angle": "unsorted"
+   },
+   {
+    "text": "junkanoo嘉年華鼓號",
+    "angle": "節慶"
+   },
+   {
+    "text": "海螺沙拉現剝現拌",
+    "angle": "unsorted"
+   },
+   {
+    "text": "藍洞潛水迷宮",
+    "angle": "自然"
+   }
+  ],
+  "聖克里斯多福與尼維斯": [
+   {
+    "text": "美洲最小國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "雙島由火山構成",
+    "angle": "自然"
+   },
+   {
+    "text": "糖業鐵路改觀光列車",
+    "angle": "unsorted"
+   },
+   {
+    "text": "硫磺山要塞列遺產",
+    "angle": "自然"
+   },
+   {
+    "text": "台灣邦交國之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "糖業鐵路環島觀光",
+    "angle": "自然"
+   },
+   {
+    "text": "硫磺山堡壘要塞",
+    "angle": "自然"
+   },
+   {
+    "text": "蜂鳥花園生態",
+    "angle": "unsorted"
+   }
+  ],
+  "安地卡及巴布達": [
+   {
+    "text": "號稱365個海灘一年每天一個",
+    "angle": "自然"
+   },
+   {
+    "text": "帆船週是加勒比盛事",
+    "angle": "unsorted"
+   },
+   {
+    "text": "英語小安地列斯島國",
+    "angle": "自然"
+   },
+   {
+    "text": "納爾遜船塢歷史港",
+    "angle": "unsorted"
+   },
+   {
+    "text": "粉紅與白沙海灘",
+    "angle": "自然"
+   },
+   {
+    "text": "帆船週上百艘競逐",
+    "angle": "unsorted"
+   },
+   {
+    "text": "菠蘿黑鳳梨特有種",
+    "angle": "unsorted"
+   },
+   {
+    "text": "板球傳奇輩出",
+    "angle": "unsorted"
+   }
+  ],
+  "多米尼克": [
+   {
+    "text": "加勒比自然之島",
+    "angle": "自然"
+   },
+   {
+    "text": "沸騰湖是世界第二大溫泉湖",
+    "angle": "自然"
+   },
+   {
+    "text": "365條河流傳說",
+    "angle": "歷史"
+   },
+   {
+    "text": "抹香鯨常年棲息海域",
+    "angle": "unsorted"
+   },
+   {
+    "text": "颶風後重建的綠色國度",
+    "angle": "unsorted"
+   },
+   {
+    "text": "世界溪流密度名列前茅",
+    "angle": "最高級"
+   },
+   {
+    "text": "卡里布原住民領地僅存",
+    "angle": "工藝"
+   },
+   {
+    "text": "鯨魚觀察常年可見",
+    "angle": "unsorted"
+   }
+  ],
+  "聖露西亞": [
+   {
+    "text": "雙峰皮通山是地標",
+    "angle": "自然"
+   },
+   {
+    "text": "誕生兩位諾貝爾獎得主",
+    "angle": "unsorted"
+   },
+   {
+    "text": "火山可開車進入",
+    "angle": "自然"
+   },
+   {
+    "text": "加勒比蜜月勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "台灣邦交國之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "五月爵士音樂節",
+    "angle": "節慶"
+   },
+   {
+    "text": "硫磺泉開車可進火山",
+    "angle": "自然"
+   },
+   {
+    "text": "巧克力莊園體驗",
+    "angle": "unsorted"
+   }
+  ],
+  "聖文森及格瑞那丁": [
+   {
+    "text": "神鬼奇航主要取景地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇弗里耶火山2021噴發",
+    "angle": "自然"
+   },
+   {
+    "text": "格瑞那丁群島遊艇天堂",
+    "angle": "自然"
+   },
+   {
+    "text": "香蕉與葛粉出口",
+    "angle": "unsorted"
+   },
+   {
+    "text": "多座私人島嶼",
+    "angle": "自然"
+   },
+   {
+    "text": "黑沙海灘火山賜予",
+    "angle": "自然"
+   },
+   {
+    "text": "麵包果烤食傳統",
+    "angle": "飲食"
+   },
+   {
+    "text": "貝基亞造船工藝",
+    "angle": "工藝"
+   }
+  ],
+  "巴貝多": [
+   {
+    "text": "蕾哈娜的祖國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "2021年改制共和國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘭姆酒發源地之一",
+    "angle": "飲食"
+   },
+   {
+    "text": "國菜以飛魚搭配玉米糊烹成",
+    "angle": "飲食"
+   },
+   {
+    "text": "板球文化深厚",
+    "angle": "unsorted"
+   },
+   {
+    "text": "crop over豐收嘉年華",
+    "angle": "節慶"
+   },
+   {
+    "text": "飛魚配cou-cou國菜",
+    "angle": "飲食"
+   },
+   {
+    "text": "朗姆酒廠百年蒸餾",
+    "angle": "飲食"
+   }
+  ],
+  "格瑞那達": [
+   {
+    "text": "香料之島：肉豆蔻產量大",
+    "angle": "飲食"
+   },
+   {
+    "text": "水下雕塑公園先驅",
+    "angle": "工藝"
+   },
+   {
+    "text": "首都聖喬治港如明信片",
+    "angle": "unsorted"
+   },
+   {
+    "text": "1983年美軍曾入侵",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巧克力莊園興起",
+    "angle": "unsorted"
+   },
+   {
+    "text": "水下雕塑園先驅",
+    "angle": "工藝"
+   },
+   {
+    "text": "肉豆蔻進了國旗",
+    "angle": "飲食"
+   },
+   {
+    "text": "巧克力節可可慶典",
+    "angle": "節慶"
+   }
+  ],
+  "千里達及托巴哥": [
+   {
+    "text": "鋼鼓樂器的發明地",
+    "angle": "音樂"
+   },
+   {
+    "text": "嘉年華是加勒比最盛大之一",
+    "angle": "節慶"
+   },
+   {
+    "text": "瀝青湖是天然奇觀",
+    "angle": "自然"
+   },
+   {
+    "text": "靠近委內瑞拉外海",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蜂鳥種類繁多",
+    "angle": "unsorted"
+   },
+   {
+    "text": "limbo舞起源地",
+    "angle": "音樂"
+   },
+   {
+    "text": "洞穴裡棲息著夜行性的油鴟鳥",
+    "angle": "自然"
+   },
+   {
+    "text": "羅蒂捲咖哩餡飽足",
+    "angle": "unsorted"
+   }
+  ],
+  "哥倫比亞": [
+   {
+    "text": "咖啡三角區列世界遺產",
+    "angle": "飲食"
+   },
+   {
+    "text": "卡塔赫納城牆古城",
+    "angle": "歷史"
+   },
+   {
+    "text": "祖母綠產量世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "馬奎斯魔幻寫實文學",
+    "angle": "unsorted"
+   },
+   {
+    "text": "彩虹河五彩斑斕",
+    "angle": "自然"
+   },
+   {
+    "text": "瓜希拉沙漠遇加勒比",
+    "angle": "自然"
+   },
+   {
+    "text": "波哥大黃金博物館藏品數以萬計",
+    "angle": "unsorted"
+   },
+   {
+    "text": "咖啡軸心小鎮彩屋",
+    "angle": "飲食"
+   }
+  ],
+  "委內瑞拉": [
+   {
+    "text": "天使瀑布是世界最高瀑布",
+    "angle": "工藝"
+   },
+   {
+    "text": "石油儲量世界第一",
+    "angle": "最高級"
+   },
+   {
+    "text": "平頂山tepui如失落世界",
+    "angle": "自然"
+   },
+   {
+    "text": "環球小姐奪冠次數名列前茅的選美強國",
+    "angle": "最高級"
+   },
+   {
+    "text": "馬拉開波湖閃電奇觀",
+    "angle": "自然"
+   },
+   {
+    "text": "arepa玉米餅百搭",
+    "angle": "飲食"
+   },
+   {
+    "text": "天使瀑布雨季水霧",
+    "angle": "工藝"
+   },
+   {
+    "text": "若羅波舞豎琴伴奏",
+    "angle": "音樂"
+   }
+  ],
+  "圭亞那": [
+   {
+    "text": "凱厄圖爾瀑布單段落差巨大",
+    "angle": "工藝"
+   },
+   {
+    "text": "南美唯一英語官方國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雨林覆蓋率極高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "近年石油開採暴增",
+    "angle": "unsorted"
+   },
+   {
+    "text": "與加勒比文化相近",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都喬治城以白色木造建築著稱",
+    "angle": "工藝"
+   },
+   {
+    "text": "凱厄圖爾金蛙特有",
+    "angle": "unsorted"
+   },
+   {
+    "text": "九成國土雨林覆蓋",
+    "angle": "unsorted"
+   }
+  ],
+  "蘇利南": [
+   {
+    "text": "南美最小國家",
+    "angle": "最高級"
+   },
+   {
+    "text": "荷蘭語是官方語言",
+    "angle": "unsorted"
+   },
+   {
+    "text": "雨林占國土九成以上",
+    "angle": "unsorted"
+   },
+   {
+    "text": "族群多元如小聯合國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "帕拉馬里博木造古城",
+    "angle": "工藝"
+   },
+   {
+    "text": "木造大教堂全西半球最大之一",
+    "angle": "工藝"
+   },
+   {
+    "text": "爪哇印度非洲菜共桌",
+    "angle": "飲食"
+   },
+   {
+    "text": "河豚湯傳統滋補",
+    "angle": "飲食"
+   }
+  ],
+  "厄瓜多": [
+   {
+    "text": "國名即赤道之意",
+    "angle": "unsorted"
+   },
+   {
+    "text": "加拉巴哥群島啟發演化論",
+    "angle": "自然"
+   },
+   {
+    "text": "以美元為法定貨幣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "昆卡與基多古城列遺產",
+    "angle": "歷史"
+   },
+   {
+    "text": "欽博拉索峰頂離地心最遠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "巴拿馬草帽其實產自此",
+    "angle": "unsorted"
+   },
+   {
+    "text": "加拉巴哥陸龜百歲",
+    "angle": "unsorted"
+   },
+   {
+    "text": "玫瑰出口世界前列",
+    "angle": "最高級"
+   }
+  ],
+  "秘魯": [
+   {
+    "text": "馬丘比丘是印加遺城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "納斯卡線神秘地畫",
+    "angle": "unsorted"
+   },
+   {
+    "text": "的的喀喀湖蘆葦浮島",
+    "angle": "自然"
+   },
+   {
+    "text": "美食之都利馬",
+    "angle": "飲食"
+   },
+   {
+    "text": "羊駝與安地斯文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "ceviche檸檬醃生魚",
+    "angle": "unsorted"
+   },
+   {
+    "text": "彩虹山因礦物沉積呈七彩條紋",
+    "angle": "自然"
+   },
+   {
+    "text": "駱馬毛織品保暖",
+    "angle": "工藝"
+   }
+  ],
+  "玻利維亞": [
+   {
+    "text": "烏尤尼鹽湖天空之鏡",
+    "angle": "自然"
+   },
+   {
+    "text": "擁有兩個首都功能城市",
+    "angle": "unsorted"
+   },
+   {
+    "text": "世界最高海拔大城拉巴斯",
+    "angle": "最高級"
+   },
+   {
+    "text": "的的喀喀湖高山湖",
+    "angle": "自然"
+   },
+   {
+    "text": "死亡公路單車挑戰",
+    "angle": "歷史"
+   },
+   {
+    "text": "女紳士bowler帽穿搭",
+    "angle": "unsorted"
+   },
+   {
+    "text": "死亡公路單車朝聖",
+    "angle": "unsorted"
+   },
+   {
+    "text": "摔跤cholitas裙裝上場",
+    "angle": "unsorted"
+   }
+  ],
+  "巴西": [
+   {
+    "text": "亞馬遜雨林過半在境內",
+    "angle": "unsorted"
+   },
+   {
+    "text": "足球王國五奪世界盃",
+    "angle": "歷史"
+   },
+   {
+    "text": "里約嘉年華盛大",
+    "angle": "節慶"
+   },
+   {
+    "text": "救世基督像張臂迎客",
+    "angle": "unsorted"
+   },
+   {
+    "text": "葡語美洲唯一大國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "亞馬遜河流量第一",
+    "angle": "自然"
+   },
+   {
+    "text": "里約海灘文化",
+    "angle": "自然"
+   },
+   {
+    "text": "卡波耶拉戰舞",
+    "angle": "音樂"
+   },
+   {
+    "text": "足球桑巴雙國粹",
+    "angle": "unsorted"
+   },
+   {
+    "text": "伊瓜蘇瀑布共享",
+    "angle": "工藝"
+   },
+   {
+    "text": "巴西烤肉吃到飽",
+    "angle": "飲食"
+   },
+   {
+    "text": "嘉年華花車遊行",
+    "angle": "節慶"
+   },
+   {
+    "text": "耶穌像俯瞰里約",
+    "angle": "unsorted"
+   },
+   {
+    "text": "咖啡產量世界第一",
+    "angle": "飲食"
+   },
+   {
+    "text": "潘塔納爾濕地生態",
+    "angle": "自然"
+   }
+  ],
+  "巴拉圭": [
+   {
+    "text": "瓜拉尼語與西語並列官方",
+    "angle": "unsorted"
+   },
+   {
+    "text": "伊泰普水壩水電巨擘",
+    "angle": "unsorted"
+   },
+   {
+    "text": "南美兩個內陸國之一，靠河運出海",
+    "angle": "unsorted"
+   },
+   {
+    "text": "瑪黛茶文化盛行",
+    "angle": "飲食"
+   },
+   {
+    "text": "台灣在南美唯一邦交國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "tereré冷瑪黛茶輪飲",
+    "angle": "飲食"
+   },
+   {
+    "text": "nanduti蛛網蕾絲",
+    "angle": "工藝"
+   },
+   {
+    "text": "伊泰普供電佔比驚人",
+    "angle": "unsorted"
+   }
+  ],
+  "烏拉圭": [
+   {
+    "text": "首屆世界盃主辦並奪冠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "科洛尼亞鵝卵石古城",
+    "angle": "歷史"
+   },
+   {
+    "text": "牛肉人均消費世界前列",
+    "angle": "飲食"
+   },
+   {
+    "text": "南美最穩定民主之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蒙特維多濱海首都",
+    "angle": "unsorted"
+   },
+   {
+    "text": "全球首個全國免費筆電教育",
+    "angle": "最高級"
+   },
+   {
+    "text": "坎東貝鼓遊行列非遺",
+    "angle": "音樂"
+   },
+   {
+    "text": "烤肉asado不輸鄰國",
+    "angle": "飲食"
+   }
+  ],
+  "智利": [
+   {
+    "text": "國土南北長逾4300公里",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿塔卡馬是最乾燥沙漠",
+    "angle": "自然"
+   },
+   {
+    "text": "復活節島摩艾石像",
+    "angle": "節慶"
+   },
+   {
+    "text": "百內國家公園冰川尖峰",
+    "angle": "飲食"
+   },
+   {
+    "text": "葡萄酒新世界要角",
+    "angle": "飲食"
+   },
+   {
+    "text": "皮斯科酒主權之爭",
+    "angle": "飲食"
+   },
+   {
+    "text": "百內W路線徒步",
+    "angle": "unsorted"
+   },
+   {
+    "text": "阿塔卡馬觀星聖地",
+    "angle": "unsorted"
+   }
+  ],
+  "阿根廷": [
+   {
+    "text": "探戈誕生於布宜諾斯艾利斯",
+    "angle": "工藝"
+   },
+   {
+    "text": "梅西與馬拉度納的足球王國",
+    "angle": "歷史"
+   },
+   {
+    "text": "佩里托莫雷諾冰川崩落壯觀",
+    "angle": "飲食"
+   },
+   {
+    "text": "烤肉asado是國民飲食",
+    "angle": "飲食"
+   },
+   {
+    "text": "巴塔哥尼亞荒野遼闊",
+    "angle": "unsorted"
+   },
+   {
+    "text": "布宜諾斯艾利斯南美巴黎",
+    "angle": "工藝"
+   },
+   {
+    "text": "馬黛茶共飲文化",
+    "angle": "飲食"
+   },
+   {
+    "text": "高喬牛仔草原",
+    "angle": "自然"
+   },
+   {
+    "text": "火地島世界盡頭",
+    "angle": "自然"
+   },
+   {
+    "text": "伊瓜蘇瀑布魔鬼咽喉",
+    "angle": "工藝"
+   },
+   {
+    "text": "足球信仰般狂熱",
+    "angle": "unsorted"
+   },
+   {
+    "text": "安地斯山葡萄酒",
+    "angle": "飲食"
+   },
+   {
+    "text": "冰川國家公園",
+    "angle": "飲食"
+   },
+   {
+    "text": "探戈舞會milonga",
+    "angle": "音樂"
+   },
+   {
+    "text": "牛排份量驚人",
+    "angle": "unsorted"
+   }
+  ],
+  "安哥拉": [
+   {
+    "text": "石油與鑽石資源大國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "首都羅安達物價曾居世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "葡語非洲人口最多國",
+    "angle": "unsorted"
+   },
+   {
+    "text": "卡蘭杜拉瀑布氣勢磅礡",
+    "angle": "工藝"
+   },
+   {
+    "text": "內戰後重建中的巨人",
+    "angle": "歷史"
+   },
+   {
+    "text": "kizomba舞風靡舞壇",
+    "angle": "音樂"
+   },
+   {
+    "text": "木薯粉funje主食",
+    "angle": "飲食"
+   },
+   {
+    "text": "南部黑岩石林地貌奇特",
+    "angle": "unsorted"
+   }
+  ]
+ }
+}

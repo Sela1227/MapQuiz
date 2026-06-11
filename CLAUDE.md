@@ -19,7 +19,7 @@
 
 ## 〇、當前狀態
 
-- **版本：** V2.4.0
+- **版本：** V2.5.0
 - **狀態：** V2 里程碑（三層級六模式、PWA、小知識/首都/國旗、選單圖像化單頁）
 - **一句話定位：** 台灣（22 縣市＋368 鄉鎮市區）為主、世界（196 國）為輔的互動地理測驗。
 - **目標使用者：** 學生、想熟悉台灣行政區位置的一般大眾。
@@ -57,7 +57,7 @@
 | 「一輪題數」 | `MAX_Q`（=15），`start()` 內 `shuffle(names).slice(0, MAX_Q)` | `app.js` |
 | 「計分」 | 答對 `BASE`(100)×`comboMult` + 速度加成 `SPEED_MAX`(50, `SPEED_CAP` 8s 內遞減)；答錯扣 `WRONG_POINTS`(50)、總分下限 0 | `app.js` 常數區 / `pickAnswer()` |
 | 「景點/地標題」（縣市與世界層級）| 題目=地名、正解=`lmMap()[題目]`（county→LMAP、world→WLMAP）；`correctAns()` 統一正解；鎖定後地圖點亮正解 | `app.js`（LMAP/WLMAP/lmMap/correctAns）|
-| 「景點題資料」 | 台灣：`landmarks.json→landmarks.js`；世界：`world-landmarks.json→world-landmarks.js`（規則同坑 P7，另不收跨國界地標）。台灣編輯 `data/landmarks.json` → 轉出 `data/landmarks.js`（window.LANDMARKS，坑 P1）→ 兩檔同 commit | `data/` 兩檔 + `index.html` 載入順序（data.js → landmarks.js → app.js）|
+| 「內容資料」（題庫/小知識/說明/首都/旗幟）| **單一真相 `data-src/*.json`** → `tools/build.py` 產 GENERATED js ＋ manifest → `tools/validate.py`（P7 全套＋覆蓋率＋句子品質＋交叉比對＋往返一致性）必過。增量用 `deltas/`（只增不改、自動歸檔）。詳見 `CONTENT-GUIDE.md` | `data-src/` 8 檔＋`tools/`；`data/*.js` 勿手改 |
 
 > 地圖資料（`data.js`）是建置期由 GeoJSON 前處理產生的，不要手改座標。
 
@@ -74,7 +74,7 @@
 | 測驗流程 / 畫面 | `js/app.js` 的 `view*()` 與 `start/pickAnswer/next/finish` |
 | 地圖資料 | `js/data.js`（建置期產生，勿手改）|
 | app logo | `assets/app-logo.png`(母圖) + `favicon/`(套組)；重生 prompt 見 `SELA-logo-prompt.md` |
-| 景點題內容 | `data/landmarks.json`（編輯來源）+ `data/landmarks.js`（載入檔，兩檔同步）|
+| 內容資料（全部）| `data-src/*.json` 唯一編輯點 → `./make.sh`（CONTENT-GUIDE.md）|
 | SELA 歸屬印記 | `viewHome()` 結尾 `.attrib`、README footer、`assets/sela.svg` |
 
 ---
@@ -157,7 +157,9 @@ python -m http.server 8000   # 開 http://localhost:8000
 | V2.1.2 | PWA 自動更新（主動 update＋controllerchange reload＋導航 network-first）|
 | V2.2.0 | 小知識擴庫（台灣 220、世界 1,802）|
 | V2.3.0 | 重繪保留捲動；世界地標說明 183；盤檢修 51 條 |
-| V2.4.0 | **景點說明擴為每點 3 句**：`TW_LM_DESC`（165×3＝495）與 `WORLD_LM_DESC`（183×3＝549）由字串改**陣列**，`pickFrom()` 答題隨機抽一句（兼容字串防呆）；新句角度＝歷史背景/體驗玩法/冷知識，且遵守盤檢守則（完整句、有謂語）。斷言：兩表全數 ≥3、新句歸屬正確 |
+| V2.4.0 | 景點說明每點 3 句（pickFrom 隨機）|
+| V2.5.0 | **內容基礎建設**：`data-src/` 8 個 JSON 單一真相（schema_version=1、條目帶 angle 標籤）→ `tools/build.py`（合併 deltas 只增不改、剝標籤產 GENERATED js、CAPMAP 派生、manifest 對帳）→ `tools/validate.py` 內容 CI（覆蓋率下限／P7 洩答全套／重名／句子品質 6–40 字禁亂碼／角度白名單／交叉比對／**往返一致性防雙檔漂移**）→ `tools/bump.py` 一鍵升版 → `tests/run-tests.js` 常駐 jsdom（內建導航地圖）→ `make.sh` 一條龍。首跑即抓 39 個真問題（38 條 4–5 字斷句＋1 條說明重複）全修。舊 `data/landmarks.json` 移除；零依賴（純 Python 標準庫）；app 執行期零改動 |
+| _V2.4.0 原文_ | **景點說明擴為每點 3 句**：`TW_LM_DESC`（165×3＝495）與 `WORLD_LM_DESC`（183×3＝549）由字串改**陣列**，`pickFrom()` 答題隨機抽一句（兼容字串防呆）；新句角度＝歷史背景/體驗玩法/冷知識，且遵守盤檢守則（完整句、有謂語）。斷言：兩表全數 ≥3、新句歸屬正確 |
 | _V2.3.0 原文_ | (1) 重繪保留捲動：render() 記住同畫面 `.map-box` 的 scrollLeft/Top 並於重繪後還原（`lastScreen` 守衛：換頁不沿用）——修「放大點選後跳回原位」，探索與測驗皆受惠；(2) **世界地標說明**：`WORLD_LM_DESC` 183 條一句說明（斷言全覆蓋），世界地標題答完優先顯示地標介紹（factName=地標名），其他世界模式維持國家小知識；(3) **小知識盤檢**：啟發式掃描＋人工複核，修 51 條（1 條 U+FFFD 編碼損毀＋50 條缺謂語/語序顛倒的半截句，如「空中朝覲人潮」→「朝覲季有專門的朝覲航班與簽證」）|
 | _V2.2.0 原文_ | 小知識擴庫：台灣 22 縣市 5→**10** 段（+110，共 220；角度：物產/節慶/族群/地理之最）；世界 163 個非熱門國 5→**8** 段（+489，總計 **1,802** 條；角度：飲食/工藝/音樂/民俗，與首批的地標/最高級錯開）；熱門 33 國維持 15。斷言：196 國全 ≥8、熱門 ≥15、縣市全 ≥10、新增無重複字串 |
 | _V2.1.2 原文_ | **PWA 自動更新強化**（原本要「開→關→再開」且 Android PWA 常駐不觸發檢查）：(1) 註冊後立即 `reg.update()` ＋ `visibilitychange` 回前景再 update（PWA 切回不算導航、不會自動檢查）；(2) `controllerchange` **自動 location.reload()** 一次（`hadController` 守衛：首次安裝不 reload 防迴圈）→ 開啟數秒內換新版；(3) sw fetch 對 mode 為 navigate 的請求改 **network-first**（離線 fallback ./index.html），靜態資源維持 cache-first。更新鏈：推版 → 用戶開 app → update() 抓到新 sw → install+skipWaiting → activate 清舊快取+claim → controllerchange → reload → 新版 |

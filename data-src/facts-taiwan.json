@@ -1,0 +1,929 @@
+{
+ "schema_version": 1,
+ "items": {
+  "基隆市": [
+   {
+    "text": "北台灣百年雨港",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曾是台灣最大貨櫃港之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "廟口小吃文化深厚",
+    "angle": "飲食"
+   },
+   {
+    "text": "砲台遺跡環繞港灣",
+    "angle": "歷史"
+   },
+   {
+    "text": "每年中元祭放水燈聞名",
+    "angle": "節慶"
+   },
+   {
+    "text": "全台降雨日數最多的城市之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "西班牙、荷蘭都曾在和平島築城",
+    "angle": "自然"
+   },
+   {
+    "text": "委託行街區見證舶來品年代",
+    "angle": "unsorted"
+   },
+   {
+    "text": "基隆嶼是海上火山地標",
+    "angle": "自然"
+   },
+   {
+    "text": "鎖管（小卷）漁獲大宗",
+    "angle": "unsorted"
+   }
+  ],
+  "台北市": [
+   {
+    "text": "台灣首都與政經中心",
+    "angle": "unsorted"
+   },
+   {
+    "text": "捷運路網最密集的城市",
+    "angle": "unsorted"
+   },
+   {
+    "text": "故宮典藏世界級文物",
+    "angle": "unsorted"
+   },
+   {
+    "text": "盆地地形四面環山",
+    "angle": "自然"
+   },
+   {
+    "text": "夜市與咖啡店密度極高",
+    "angle": "飲食"
+   },
+   {
+    "text": "市內有貓空纜車與北投兩處山系",
+    "angle": "自然"
+   },
+   {
+    "text": "世界少數捷運準點率極高的城市",
+    "angle": "unsorted"
+   },
+   {
+    "text": "二二八和平公園承載歷史記憶",
+    "angle": "unsorted"
+   },
+   {
+    "text": "松山文創園區由菸廠改建",
+    "angle": "自然"
+   },
+   {
+    "text": "木柵動物園是全台最大動物園",
+    "angle": "最高級"
+   }
+  ],
+  "新北市": [
+   {
+    "text": "全台人口最多的城市",
+    "angle": "unsorted"
+   },
+   {
+    "text": "環繞台北的衛星城市群",
+    "angle": "unsorted"
+   },
+   {
+    "text": "山城九份曾因採金繁華",
+    "angle": "自然"
+   },
+   {
+    "text": "海岸線從野柳延伸到福隆",
+    "angle": "unsorted"
+   },
+   {
+    "text": "平溪鐵道支線放天燈",
+    "angle": "unsorted"
+   },
+   {
+    "text": "猴硐被國際媒體選為賞貓勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "金瓜石曾是亞洲金都",
+    "angle": "unsorted"
+   },
+   {
+    "text": "碧潭吊橋與天鵝船是約會經典",
+    "angle": "unsorted"
+   },
+   {
+    "text": "福隆海洋音樂祭夏季盛事",
+    "angle": "節慶"
+   },
+   {
+    "text": "三貂角是台灣本島最東點",
+    "angle": "自然"
+   }
+  ],
+  "桃園市": [
+   {
+    "text": "國際機場所在的國門之都",
+    "angle": "unsorted"
+   },
+   {
+    "text": "工業產值名列前茅",
+    "angle": "最高級"
+   },
+   {
+    "text": "埤塘地景數以千計",
+    "angle": "unsorted"
+   },
+   {
+    "text": "客家人口比例高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大溪木器與豆干聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "航空城是全台最大開發案之一",
+    "angle": "最高級"
+   },
+   {
+    "text": "龍潭是台灣茶業改良場所在",
+    "angle": "飲食"
+   },
+   {
+    "text": "眷村文化保存豐富",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蓮花季在觀音登場",
+    "angle": "unsorted"
+   },
+   {
+    "text": "虎頭山環保公園眺市景",
+    "angle": "自然"
+   }
+  ],
+  "新竹市": [
+   {
+    "text": "科學園區帶動的科技城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "九降風造就米粉與柿餅",
+    "angle": "飲食"
+   },
+   {
+    "text": "清代竹塹城的所在",
+    "angle": "unsorted"
+   },
+   {
+    "text": "貢丸與米粉是名產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "風大被稱風城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "東門市場翻新成青年美食基地",
+    "angle": "飲食"
+   },
+   {
+    "text": "漁港直送烏魚子聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "清華交大兩大學府所在",
+    "angle": "unsorted"
+   },
+   {
+    "text": "玻璃工藝節定期舉辦",
+    "angle": "節慶"
+   },
+   {
+    "text": "十七公里海岸自行車道",
+    "angle": "unsorted"
+   }
+  ],
+  "新竹縣": [
+   {
+    "text": "客家庄與科技業並存",
+    "angle": "unsorted"
+   },
+   {
+    "text": "司馬庫斯被稱上帝的部落",
+    "angle": "unsorted"
+   },
+   {
+    "text": "內灣支線小火車懷舊",
+    "angle": "unsorted"
+   },
+   {
+    "text": "丘陵茶園遍布",
+    "angle": "飲食"
+   },
+   {
+    "text": "泰雅族部落分布山區",
+    "angle": "工藝"
+   },
+   {
+    "text": "竹東是林業集散地轉型山城",
+    "angle": "自然"
+   },
+   {
+    "text": "關西仙草產量全台之冠",
+    "angle": "unsorted"
+   },
+   {
+    "text": "五峰鄉賽夏族矮靈祭神秘",
+    "angle": "節慶"
+   },
+   {
+    "text": "新埔柿餅靠九降風曬成",
+    "angle": "飲食"
+   },
+   {
+    "text": "寶山糖廠黑糖爆漿饅頭",
+    "angle": "自然"
+   }
+  ],
+  "苗栗縣": [
+   {
+    "text": "山城之縣丘陵起伏",
+    "angle": "自然"
+   },
+   {
+    "text": "客家文化大縣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "舊山線鐵道遺產豐富",
+    "angle": "自然"
+   },
+   {
+    "text": "三義是木雕之鄉",
+    "angle": "工藝"
+   },
+   {
+    "text": "桐花季白雪般花海",
+    "angle": "unsorted"
+   },
+   {
+    "text": "大湖草莓產量全台九成",
+    "angle": "自然"
+   },
+   {
+    "text": "白沙屯媽祖徒步進香路線不定",
+    "angle": "節慶"
+   },
+   {
+    "text": "苑裡藺草編織工藝",
+    "angle": "工藝"
+   },
+   {
+    "text": "泰雅織物與部落文化",
+    "angle": "工藝"
+   },
+   {
+    "text": "通霄白沙屯海線風光",
+    "angle": "unsorted"
+   }
+  ],
+  "台中市": [
+   {
+    "text": "台灣第二大城",
+    "angle": "unsorted"
+   },
+   {
+    "text": "氣候宜人被稱宜居城市",
+    "angle": "unsorted"
+   },
+   {
+    "text": "太陽餅與珍珠奶茶發源地之一",
+    "angle": "飲食"
+   },
+   {
+    "text": "歌劇院建築世界知名",
+    "angle": "音樂"
+   },
+   {
+    "text": "從高山武陵到海線梧棲",
+    "angle": "自然"
+   },
+   {
+    "text": "台灣大道公車雙節幹線",
+    "angle": "節慶"
+   },
+   {
+    "text": "審計新村文創市集",
+    "angle": "unsorted"
+   },
+   {
+    "text": "東勢客家山城水果之鄉",
+    "angle": "飲食"
+   },
+   {
+    "text": "大坑步道群市民後花園",
+    "angle": "unsorted"
+   },
+   {
+    "text": "梨山高山茶與水梨",
+    "angle": "飲食"
+   }
+  ],
+  "彰化縣": [
+   {
+    "text": "台灣最早開發地區之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鹿港保存清代街屋",
+    "angle": "unsorted"
+   },
+   {
+    "text": "八卦山大佛地標",
+    "angle": "自然"
+   },
+   {
+    "text": "花卉苗木供應全台",
+    "angle": "unsorted"
+   },
+   {
+    "text": "肉圓是代表小吃",
+    "angle": "飲食"
+   },
+   {
+    "text": "全台人口最多的縣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "肉圓有彰化涼圓與北斗煎兩派",
+    "angle": "飲食"
+   },
+   {
+    "text": "芳苑海牛採蚵文化",
+    "angle": "unsorted"
+   },
+   {
+    "text": "員林蜜餞產業重鎮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "秀水馬興陳益源大厝古蹟",
+    "angle": "歷史"
+   }
+  ],
+  "南投縣": [
+   {
+    "text": "全台唯一不靠海的縣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "日月潭是最大天然湖",
+    "angle": "自然"
+   },
+   {
+    "text": "茶園與高山景觀豐富",
+    "angle": "飲食"
+   },
+   {
+    "text": "921地震重建記憶深刻",
+    "angle": "unsorted"
+   },
+   {
+    "text": "合歡山雪季賞雪勝地",
+    "angle": "自然"
+   },
+   {
+    "text": "凍頂烏龍茶發源於鹿谷",
+    "angle": "飲食"
+   },
+   {
+    "text": "埔里酒廠紹興酒聞名",
+    "angle": "飲食"
+   },
+   {
+    "text": "信義鄉梅子產量全台第一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "奧萬大楓紅勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "玉山登山口塔塔加所在",
+    "angle": "自然"
+   }
+  ],
+  "雲林縣": [
+   {
+    "text": "農業大縣糧倉之一",
+    "angle": "unsorted"
+   },
+   {
+    "text": "北港媽祖信仰中心",
+    "angle": "unsorted"
+   },
+   {
+    "text": "布袋戲的故鄉",
+    "angle": "工藝"
+   },
+   {
+    "text": "西螺醬油古法釀造",
+    "angle": "飲食"
+   },
+   {
+    "text": "沿海養殖漁業興盛",
+    "angle": "unsorted"
+   },
+   {
+    "text": "古坑是台灣咖啡的代名詞",
+    "angle": "飲食"
+   },
+   {
+    "text": "口湖烏魚子產量大宗",
+    "angle": "自然"
+   },
+   {
+    "text": "虎尾是布袋戲三大家族根據地",
+    "angle": "工藝"
+   },
+   {
+    "text": "斗六文旦與茂谷柑",
+    "angle": "unsorted"
+   },
+   {
+    "text": "濁水溪沖積出農業沃土",
+    "angle": "unsorted"
+   }
+  ],
+  "嘉義市": [
+   {
+    "text": "阿里山森林鐵路起點",
+    "angle": "自然"
+   },
+   {
+    "text": "雞肉飯是城市味道",
+    "angle": "飲食"
+   },
+   {
+    "text": "木都之名因檜木集散",
+    "angle": "unsorted"
+   },
+   {
+    "text": "畫家陳澄波的故鄉",
+    "angle": "unsorted"
+   },
+   {
+    "text": "管樂節每年冬天舉行",
+    "angle": "節慶"
+   },
+   {
+    "text": "噴水雞肉飯創始地",
+    "angle": "飲食"
+   },
+   {
+    "text": "舊監獄是全台唯一獄政博物館",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國際管樂節踩街遊行",
+    "angle": "節慶"
+   },
+   {
+    "text": "檜木老屋密度高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "沙鍋魚頭是冬季靈魂",
+    "angle": "飲食"
+   }
+  ],
+  "嘉義縣": [
+   {
+    "text": "阿里山日出雲海馳名",
+    "angle": "自然"
+   },
+   {
+    "text": "高山茶產區廣大",
+    "angle": "飲食"
+   },
+   {
+    "text": "沿海鹽田與蚵田景觀",
+    "angle": "unsorted"
+   },
+   {
+    "text": "鄒族文化部落在山區",
+    "angle": "自然"
+   },
+   {
+    "text": "故宮南院落腳太保",
+    "angle": "unsorted"
+   },
+   {
+    "text": "新港奉天宮開台媽祖",
+    "angle": "unsorted"
+   },
+   {
+    "text": "布袋鹽田曾是台鹽重鎮",
+    "angle": "工藝"
+   },
+   {
+    "text": "梅山36彎茶園公路",
+    "angle": "飲食"
+   },
+   {
+    "text": "鰲鼓濕地候鳥天堂",
+    "angle": "音樂"
+   },
+   {
+    "text": "竹崎親水公園天空走廊",
+    "angle": "unsorted"
+   }
+  ],
+  "台南市": [
+   {
+    "text": "台灣最古老的城市",
+    "angle": "歷史"
+   },
+   {
+    "text": "小吃之都牛肉湯擔仔麵",
+    "angle": "飲食"
+   },
+   {
+    "text": "廟宇密度全台最高",
+    "angle": "歷史"
+   },
+   {
+    "text": "鹽田與虱目魚養殖",
+    "angle": "unsorted"
+   },
+   {
+    "text": "荷蘭與明鄭歷史層疊",
+    "angle": "unsorted"
+   },
+   {
+    "text": "國華街是小吃一級戰區",
+    "angle": "飲食"
+   },
+   {
+    "text": "鹽水蜂炮元宵震撼",
+    "angle": "unsorted"
+   },
+   {
+    "text": "白河蓮花季夏日盛事",
+    "angle": "自然"
+   },
+   {
+    "text": "學甲虱目魚主產地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "南科考古出土數千年遺址",
+    "angle": "歷史"
+   }
+  ],
+  "高雄市": [
+   {
+    "text": "南台灣最大港都",
+    "angle": "最高級"
+   },
+   {
+    "text": "貨櫃港吞吐量曾居世界前列",
+    "angle": "最高級"
+   },
+   {
+    "text": "駁二倉庫變身藝術特區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "捷運美麗島站光之穹頂",
+    "angle": "自然"
+   },
+   {
+    "text": "壽山可俯瞰港灣",
+    "angle": "自然"
+   },
+   {
+    "text": "岡山羊肉爐與螺絲產業",
+    "angle": "飲食"
+   },
+   {
+    "text": "旗山曾因香蕉外銷繁榮",
+    "angle": "自然"
+   },
+   {
+    "text": "茂林紫斑蝶越冬谷",
+    "angle": "unsorted"
+   },
+   {
+    "text": "左營蓮池潭龍虎塔祈福",
+    "angle": "unsorted"
+   },
+   {
+    "text": "六合夜市觀光客必訪",
+    "angle": "unsorted"
+   }
+  ],
+  "屏東縣": [
+   {
+    "text": "台灣最南端的縣",
+    "angle": "unsorted"
+   },
+   {
+    "text": "墾丁是熱帶度假勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "黑鮪魚與櫻花蝦漁獲",
+    "angle": "unsorted"
+   },
+   {
+    "text": "恆春半島落山風強勁",
+    "angle": "自然"
+   },
+   {
+    "text": "排灣魯凱文化深厚",
+    "angle": "unsorted"
+   },
+   {
+    "text": "東港黑鮪魚季每年首拍轟動",
+    "angle": "unsorted"
+   },
+   {
+    "text": "萬巒豬腳一條街",
+    "angle": "unsorted"
+   },
+   {
+    "text": "霧台魯凱石板屋藝術",
+    "angle": "unsorted"
+   },
+   {
+    "text": "恆春古城門保存完整",
+    "angle": "歷史"
+   },
+   {
+    "text": "小琉球禁網捕保育有成",
+    "angle": "unsorted"
+   }
+  ],
+  "宜蘭縣": [
+   {
+    "text": "雪山隧道後的後花園",
+    "angle": "自然"
+   },
+   {
+    "text": "溫泉冷泉皆有",
+    "angle": "自然"
+   },
+   {
+    "text": "三星蔥與鴨賞名產",
+    "angle": "unsorted"
+   },
+   {
+    "text": "童玩節夏日盛事",
+    "angle": "節慶"
+   },
+   {
+    "text": "龜山島是縣民精神地標",
+    "angle": "自然"
+   },
+   {
+    "text": "冬山河親水公園童玩節場地",
+    "angle": "節慶"
+   },
+   {
+    "text": "三星蔥蔥油餅排隊名物",
+    "angle": "飲食"
+   },
+   {
+    "text": "頭城搶孤中元傳統",
+    "angle": "unsorted"
+   },
+   {
+    "text": "蘇澳冷泉全球罕見",
+    "angle": "最高級"
+   },
+   {
+    "text": "傳藝中心保存民俗工藝",
+    "angle": "工藝"
+   }
+  ],
+  "花蓮縣": [
+   {
+    "text": "太魯閣峽谷大理石絕壁",
+    "angle": "unsorted"
+   },
+   {
+    "text": "面積全台最大的縣",
+    "angle": "最高級"
+   },
+   {
+    "text": "縱谷稻田與海岸山脈",
+    "angle": "自然"
+   },
+   {
+    "text": "原住民族比例高",
+    "angle": "unsorted"
+   },
+   {
+    "text": "曼波魚與麻糬聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "玉里麵與玉里臍橙",
+    "angle": "飲食"
+   },
+   {
+    "text": "六十石山金針花海",
+    "angle": "自然"
+   },
+   {
+    "text": "遠雄海洋公園親子勝地",
+    "angle": "unsorted"
+   },
+   {
+    "text": "慶修院日式佛寺古蹟",
+    "angle": "歷史"
+   },
+   {
+    "text": "秀姑巒溪泛舟剌激",
+    "angle": "unsorted"
+   }
+  ],
+  "台東縣": [
+   {
+    "text": "熱氣球嘉年華在鹿野",
+    "angle": "節慶"
+   },
+   {
+    "text": "池上米飯香全台",
+    "angle": "飲食"
+   },
+   {
+    "text": "南島文化發源地之一",
+    "angle": "自然"
+   },
+   {
+    "text": "綠島蘭嶼兩離島",
+    "angle": "自然"
+   },
+   {
+    "text": "慢活步調的後山",
+    "angle": "自然"
+   },
+   {
+    "text": "金樽陸連島衝浪國際賽",
+    "angle": "自然"
+   },
+   {
+    "text": "太麻里金針山日出",
+    "angle": "自然"
+   },
+   {
+    "text": "卑南遺址公園史前文化",
+    "angle": "歷史"
+   },
+   {
+    "text": "成功旗魚漁港鏢旗魚",
+    "angle": "unsorted"
+   },
+   {
+    "text": "紅烏龍是鹿野特色茶",
+    "angle": "飲食"
+   }
+  ],
+  "澎湖縣": [
+   {
+    "text": "玄武岩地質景觀世界級",
+    "angle": "unsorted"
+   },
+   {
+    "text": "花火節每年春夏施放",
+    "angle": "節慶"
+   },
+   {
+    "text": "咾咕石牆與菜宅地景",
+    "angle": "飲食"
+   },
+   {
+    "text": "仙人掌冰是名產",
+    "angle": "飲食"
+   },
+   {
+    "text": "風浪造就石滬漁法",
+    "angle": "unsorted"
+   },
+   {
+    "text": "天人菊是縣花遍地綻放",
+    "angle": "unsorted"
+   },
+   {
+    "text": "小門鯨魚洞玄武岩海蝕",
+    "angle": "自然"
+   },
+   {
+    "text": "望安綠蠵龜產卵保護區",
+    "angle": "unsorted"
+   },
+   {
+    "text": "四眼井是媽宮古井",
+    "angle": "歷史"
+   },
+   {
+    "text": "花枝丸與仙人掌冰名產",
+    "angle": "飲食"
+   }
+  ],
+  "金門縣": [
+   {
+    "text": "戰地史蹟密布的前線島嶼",
+    "angle": "工藝"
+   },
+   {
+    "text": "金門高粱酒以坑道窖藏馳名",
+    "angle": "飲食"
+   },
+   {
+    "text": "閩南聚落保存完整",
+    "angle": "unsorted"
+   },
+   {
+    "text": "風獅爺鎮風辟邪",
+    "angle": "unsorted"
+   },
+   {
+    "text": "坑道見證八二三砲戰",
+    "angle": "歷史"
+   },
+   {
+    "text": "貢糖與一條根伴手禮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "莒光樓郵票圖案聞名",
+    "angle": "unsorted"
+   },
+   {
+    "text": "古寧頭戰役歷史現場",
+    "angle": "歷史"
+   },
+   {
+    "text": "金門大橋連接大小金門",
+    "angle": "unsorted"
+   },
+   {
+    "text": "戰地標語牆面保存",
+    "angle": "歷史"
+   }
+  ],
+  "連江縣": [
+   {
+    "text": "馬祖列島戰地風光",
+    "angle": "歷史"
+   },
+   {
+    "text": "藍眼淚季節限定奇景",
+    "angle": "節慶"
+   },
+   {
+    "text": "閩東石屋聚落芹壁",
+    "angle": "unsorted"
+   },
+   {
+    "text": "老酒與魚麵特產",
+    "angle": "飲食"
+   },
+   {
+    "text": "卡蹓是在地問候語",
+    "angle": "unsorted"
+   },
+   {
+    "text": "北竿短坡山看戰機起降",
+    "angle": "歷史"
+   },
+   {
+    "text": "東莒燈塔與大埔石刻",
+    "angle": "unsorted"
+   },
+   {
+    "text": "馬祖酒廠高粱陳香",
+    "angle": "飲食"
+   },
+   {
+    "text": "藍眼淚季吸引攝影人潮",
+    "angle": "unsorted"
+   },
+   {
+    "text": "南北竿間靠交通船往返",
+    "angle": "unsorted"
+   }
+  ]
+ }
+}

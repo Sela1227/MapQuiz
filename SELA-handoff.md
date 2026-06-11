@@ -1,6 +1,6 @@
 # SELA-handoff.md — MapQuiz
 
-> 依鐵律 #0：V2.0.0 里程碑＋距 V1.5.0 handoff 滿 5 版（V1.6–V2.0），更新本檔。
+> 依鐵律 #0：距 V2.0.0 handoff 滿 5 版（V2.1–V2.5），更新本檔。
 > 分類已先 grep Kit 避免重複；待 SELA 對焦確認。
 
 ---
@@ -12,7 +12,7 @@
 - **技術棧：** HTML + CSS + 原生 JS（無框架、無 build step）；WebAudio；localStorage；Pillow（建置期 logo 轉檔）
 - **規模：** 10 個程式/資料檔；app.js ~480 行、data.js ~358KB（台灣）、world.js ~255KB（世界 196 國）、landmarks 121 題
 - **使用 Kit 版本：** V1.14.1
-- **完成版本：** V2.0.0
+- **完成版本：** V2.5.0
 - **完成日期：** 2026-06-11
 
 ---
@@ -103,11 +103,18 @@
 - 旗幟用 ISO 代碼轉 emoji（零資產、離線可用，Windows 顯示降級）＝小技巧，可記 lessons 一行。
 - NE 將台灣 ISO 標為 CN-TW：併入 V1.0.0「資料商世界觀」條目的第三例證。
 
+## 四.8、V2.1–V2.5 增補觀察
+
+- **PWA 自動更新三件套**（載入即 reg.update()＋visibilitychange 回前景再查＋controllerchange 自動 reload 含首裝守衛）＋導航 network-first：Android PWA「切回前景不算導航」是普遍陷阱，這組合是根治配方。**建議進 tech-stack-lessons 前端章**。
+- **render 後還原 UI 暫態**：innerHTML 重繪會吞掉捲動位置等暫態，「重繪前快照、重繪後還原、跨畫面不沿用」是通用模式，與 V2.0.0 的「預覽即時、commit 延後」同屬一章。
+- **內容工程「單一真相＋生成＋驗證」模式**：內容庫過千條後，JSON 源（帶 metadata）→ build 剝標籤產交付檔 → validator 當內容 CI（含往返一致性防雙檔漂移）→ delta 只增不改。validator 首跑抓出 39 個沉積問題證明其價值。**建議進 Kit 通用章**——任何「Claude 維護大量結構化內容」的專案都適用。
+- 細節：洩答規則要含文字變體（臺/台）與俗稱（馬祖/蘭陽）；中文撞名（達卡/達喀爾）靠唯一性檢查兜底。
+
 ## 五、留在這個專案、不要回流 Kit 的東西
 
 - 台灣縣市/鄉鎮市區資料、世界 196 國名單與覆寫表、投影座標、inset/hitCircles 實作
 - 計分具體數值（+100、−50、速度 8s/+50、連擊 3/6/10 門檻、評級門檻）與其演變史
-- `data/landmarks.json` 的 66 個景點內容（業務素材）
+- `data-src/` 全部內容素材（題庫/小知識/說明，>3,000 條業務內容）
 - 北歐霧藍配色具體色票（app 向性）
 - 三模式與 15 題上限等遊戲規則
 

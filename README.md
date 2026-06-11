@@ -59,10 +59,8 @@ MapQuiz/
 ├── index.html              入口（含 favicon 套組、meta）
 ├── css/style.css           樣式（CSS 變數：北歐霧藍主題 + SELA 品牌色）
 ├── data/
-│   ├── landmarks.json      景點題編輯來源
 │   ├── landmarks.js        景點題載入檔（window.LANDMARKS）
 │   ├── world.js            世界國界資料：196 國（V1.0.0 已接線）
-│   ├── world-landmarks.json 世界地標題編輯來源
 │   ├── world-landmarks.js  世界地標題載入檔（window.WORLD_LANDMARKS）
 │   └── world_names.txt     196 國繁中名單（供校對）
 ├── js/
@@ -88,14 +86,18 @@ app 專屬 logo（V1.0.0 起換為「地圖書＋羅盤＋定位 pin」版本，
 - 鄉鎮市區界線：內政部「鄉鎮市區界線」現行版，經 dkaoster/taiwan-atlas 轉 TopoJSON
 - 界線於建置期以 Python 簡化、投影、外島做 inset，輸出成輕量 SVG 路徑
 
+## 內容維護
+
+所有題庫與小知識的單一真相在 `data-src/`（JSON），改完跑 `./make.sh` 一條龍（build→validate→test→zip）。詳見 `CONTENT-GUIDE.md`。`data/*.js` 為 GENERATED 勿手改。
+
 ## 版本
 
-V2.4.0
+V2.5.0
 
 ---
 
 <div align="center">
   <img src="assets/sela.svg" width="22" alt="SELA"/>
   <br/>
-  <sub>Made by <strong>SELA</strong> · V2.4.0</sub>
+  <sub>Made by <strong>SELA</strong> · V2.5.0</sub>
 </div>
