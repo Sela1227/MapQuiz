@@ -19,7 +19,7 @@
 
 ## 〇、當前狀態
 
-- **版本：** V2.1.2
+- **版本：** V2.2.0
 - **狀態：** V2 里程碑（三層級六模式、PWA、小知識/首都/國旗、選單圖像化單頁）
 - **一句話定位：** 台灣（22 縣市＋368 鄉鎮市區）為主、世界（196 國）為輔的互動地理測驗。
 - **目標使用者：** 學生、想熟悉台灣行政區位置的一般大眾。
@@ -154,7 +154,9 @@ python -m http.server 8000   # 開 http://localhost:8000
 | V2.0.1 | 修 PWA 404（manifest 移根目錄，坑 P9）|
 | V2.1.0 | 響應式雙版面（quizgrid/menugrid/resgrid/lvgrid 雙欄）|
 | V2.1.1 | 修探索爆框＋滑鼠拖曳平移 |
-| V2.1.2 | **PWA 自動更新強化**（原本要「開→關→再開」且 Android PWA 常駐不觸發檢查）：(1) 註冊後立即 `reg.update()` ＋ `visibilitychange` 回前景再 update（PWA 切回不算導航、不會自動檢查）；(2) `controllerchange` **自動 location.reload()** 一次（`hadController` 守衛：首次安裝不 reload 防迴圈）→ 開啟數秒內換新版；(3) sw fetch 對 mode 為 navigate 的請求改 **network-first**（離線 fallback ./index.html），靜態資源維持 cache-first。更新鏈：推版 → 用戶開 app → update() 抓到新 sw → install+skipWaiting → activate 清舊快取+claim → controllerchange → reload → 新版 |
+| V2.1.2 | PWA 自動更新（主動 update＋controllerchange reload＋導航 network-first）|
+| V2.2.0 | **小知識擴庫**：台灣 22 縣市 5→**10** 段（+110，共 220；角度：物產/節慶/族群/地理之最）；世界 163 個非熱門國 5→**8** 段（+489，總計 **1,802** 條；角度：飲食/工藝/音樂/民俗，與首批的地標/最高級錯開）；熱門 33 國維持 15。斷言：196 國全 ≥8、熱門 ≥15、縣市全 ≥10、新增無重複字串 |
+| _V2.1.2 原文_ | **PWA 自動更新強化**（原本要「開→關→再開」且 Android PWA 常駐不觸發檢查）：(1) 註冊後立即 `reg.update()` ＋ `visibilitychange` 回前景再 update（PWA 切回不算導航、不會自動檢查）；(2) `controllerchange` **自動 location.reload()** 一次（`hadController` 守衛：首次安裝不 reload 防迴圈）→ 開啟數秒內換新版；(3) sw fetch 對 mode 為 navigate 的請求改 **network-first**（離線 fallback ./index.html），靜態資源維持 cache-first。更新鏈：推版 → 用戶開 app → update() 抓到新 sw → install+skipWaiting → activate 清舊快取+claim → controllerchange → reload → 新版 |
 | _V2.1.1 原文_ | 修兩個桌機切版後遺症：(1) **探索地圖爆框**——原 `flex:1;min-height:56vh` 在寬版下父層高度不可解析、百分比 SVG 撐爆 → 改 `.x-map` 明確高度（手機 56vh／桌機 calc(100vh-190px)）；(2) **放大後無法拖動**——overflow 捲動在桌機沒有滑鼠拖曳 → 實作 mousedown/move/up 拖曳平移（門檻 4px 區分拖曳與點擊，拖後以 capture 階段吞 click 防誤作答；手機維持原生觸控捲動；游標 grab/grabbing）|
 | _V2.1.0 原文_ | **響應式雙版面**：各 view 包語意容器（`.quizgrid`/`.menugrid`/`.resgrid`/`.lvgrid`＋`.q-map`/`.m-head`/`.m-map`/`.m-tiles`/`.q-bottom`/`.r-map`），行動裝置維持原始來源順序單欄；`@media (min-width:900px)` 桌機雙欄——地圖佔左欄 sticky 滿高（`!important` 蓋掉 inline vh 高度）、其餘 `grid-column:2`（用 `>` 子選擇器整批指派）；首頁層級卡三欄、縣市選擇器 5 欄。CSS-only 切版，手機 DOM 行為零變動 |
 | _V2.0.1 原文_ | **修 PWA 安裝後 404**：manifest 的 `start_url`/`scope` 是**相對 manifest 自身位置**解析，原檔在 `favicon/` 內導致 PWA 啟動指向 `…/favicon/` → 404（網頁直開正常）。修法：`site.webmanifest` 移至專案根目錄、icons 路徑改 `favicon/…`、index/sw 引用同步（坑 P9）。**修復後需移除舊 PWA 重新安裝** |
