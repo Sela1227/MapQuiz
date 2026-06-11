@@ -90,12 +90,12 @@ app 專屬 logo（V1.0.0 起換為「地圖書＋羅盤＋定位 pin」版本，
 
 ## 版本
 
-V1.9.0
+V2.0.0
 
 ---
 
 <div align="center">
   <img src="assets/sela.svg" width="22" alt="SELA"/>
   <br/>
-  <sub>Made by <strong>SELA</strong> · V1.9.0</sub>
+  <sub>Made by <strong>SELA</strong> · V2.0.0</sub>
 </div>

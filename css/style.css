@@ -186,3 +186,23 @@ h2 { font-size: 21px; font-weight: 700; margin: 4px 0 12px; color: var(--slate-d
 /* 國旗題大旗 + 小知識國名 */
 .name.flagbig { font-size: 64px; line-height: 1.1; margin-top: 4px; }
 .fact-name { color: var(--slate-deep); margin-right: 6px; }
+
+/* === V2.0.0 選單圖像化 === */
+/* 模式磁磚：2 欄一頁內 */
+.tilegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.tile { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; background: var(--card); border: 1px solid var(--border); border-radius: 13px; padding: 12px 12px 11px; cursor: pointer; text-align: left; transition: border-color .15s; }
+.tile:hover { border-color: var(--secondary); }
+.tile-ic { width: 26px; height: 26px; color: var(--primary); }
+.tile-ic svg { width: 100%; height: 100%; display: block; }
+.tile-t { font-size: 14px; font-weight: 700; color: var(--text); }
+.tile-d { font-size: 11.5px; color: var(--muted); line-height: 1.35; }
+.tile-best { position: absolute; top: 9px; right: 10px; font-size: 11px; font-weight: 700; color: var(--primary); background: var(--bg-soft); border-radius: 999px; padding: 2px 8px; }
+
+/* 首頁層級卡：迷你地圖縮圖 */
+.lvcard { display: flex; align-items: center; gap: 12px; padding: 12px 14px; }
+.lvthumb { flex-shrink: 0; width: 56px; height: 62px; border-radius: 10px; background: var(--bg-soft); overflow: hidden; display: block; }
+.lvthumb .map-box { border: none; border-radius: 0; background: transparent; }
+.lvthumb svg { width: 100% !important; height: 100% !important; }
+.lvthumb.lvworld { height: 44px; align-self: center; }
+.lvtxt { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
+.lvtxt .row { display: flex; justify-content: space-between; align-items: baseline; }

@@ -19,8 +19,8 @@
 
 ## 〇、當前狀態
 
-- **版本：** V1.9.0
-- **狀態：** 上線里程碑（台灣縣市/分區 + 世界 196 國三層級；新 logo；計分穩定）
+- **版本：** V2.0.0
+- **狀態：** V2 里程碑（三層級六模式、PWA、小知識/首都/國旗、選單圖像化單頁）
 - **一句話定位：** 台灣（22 縣市＋368 鄉鎮市區）為主、世界（196 國）為輔的互動地理測驗。
 - **目標使用者：** 學生、想熟悉台灣行政區位置的一般大眾。
 - **技術棧：** 純 HTML + CSS + 原生 JS（無框架、無 build step）
@@ -87,6 +87,10 @@ P2. SVG r 屬性的 CSS 動畫只部分瀏覽器支援 → keyframes 同時動 o
 P3. 大型資料別塞進 index.html → data.js / style.css / app.js 分檔
 P4. render() 重畫 innerHTML，逐元素綁事件會失效 → 事件委派（#app 上 closest('[data-act]')）
 P5. 配色有「兩處真相」：CSS 變數 + JS COL；主色還要同步 index.html 與 webmanifest 的 theme-color → 改色四處一起改
+P8. 用「函式A開頭~函式B開頭」切片重寫程式碼，會把夾在兩函式之間的其他定義一起刪掉
+   - 症狀：V2.0.0 重寫 viewWorldMenu 時，V1.4.0 插在它與下一個函式之間的 CONTS/contChips 被吞，畫面直接 ReferenceError
+   - 做法：切片重寫前先 grep 區間內容；注入/重寫一律加 assert（存在性與事後檢查）；新定義集中插在固定錨點（如 viewCountyMenu 前）
+
 P7. 景點題名稱會自我洩答
    - 症狀：題目名稱含所屬縣市字樣（基隆廟口夜市、臺中國家歌劇院——含臺/台變體、馬祖/蘭陽俗稱）
    - 原因：建題時直接用全名，沒做洩答檢查
@@ -140,7 +144,9 @@ python -m http.server 8000   # 開 http://localhost:8000
 | V1.6.0 | PWA（sw.js + 守衛註冊）；世界小知識 980 條 |
 | V1.7.0 | 知名度加權；熱門33國15段；台灣縣市/景點說明 |
 | V1.8.0 | 首都題（183 池）；國旗題（emoji、TW 覆寫）；assoc 家族；小知識標名 |
-| V1.9.0 | **雙指捏合縮放**：捏合中以 CSS `transform: scale()` 即時預覽（不重繪 SVG、不斷手勢），`touchend` 才提交 S.zoom 並 render（含世界 viewBox 擴張）；`.map-box` 設 `touch-action: pan-x pan-y`（保留單指平移、擋瀏覽器整頁縮放）；touchmove 需 `{passive:false}` 才能 preventDefault（同 wheel 坑）|
+| V1.9.0 | 雙指捏合縮放（transform 預覽、commit 重繪）|
+| V2.0.0 | **選單圖像化單頁**：模式選單改 2 欄 `tile` 磁磚（內嵌線條 SVG `ICON` ×6＋最高分徽章），世界 6 模式一頁內；首頁層級卡 `lvcard` 內嵌**迷你地圖縮圖**（buildMap 直接縮放渲染）；預覽地圖高度 200/230→128/148。坑：重寫選單函式時用「函式名到函式名」切片，把夾在中間的 CONTS/contChips 一併吞掉（P8）|
+| _V1.9.0 原文_ | **雙指捏合縮放**：捏合中以 CSS `transform: scale()` 即時預覽（不重繪 SVG、不斷手勢），`touchend` 才提交 S.zoom 並 render（含世界 viewBox 擴張）；`.map-box` 設 `touch-action: pan-x pan-y`（保留單指平移、擋瀏覽器整頁縮放）；touchmove 需 `{passive:false}` 才能 preventDefault（同 wheel 坑）|
 | _V1.8.0 原文_ | (1) **首都題**：`data/world-capitals.js`＝WORLD_CAPITALS（196 全表）＋CAPMAP（首都→國出題池 183，排除 13 個含國名者：墨西哥城/新加坡/梵蒂岡城…；達卡/達喀爾撞名已辨）；(2) **國旗題**：`data/world-flags.js` 由 NE ISO_A2 轉 emoji（**台灣 NE 標 CN-TW 已覆寫 TW**——資料商世界觀第三例）；(3) **assoc 題型家族**：landmark/capital/flag 共用 `isAssoc()`/`correctAns()` 流程（選項同洲、加權、緊聚焦、小知識全自動共用）；(4) **小知識標名**：`S.factName` 前綴粗體（世界=國名、縣市=縣市名、景點=景點名）|
 | _V1.7.0 原文_ | (1) **知名度加權出題**：`FAME3`（62 國）權重 5、有地標國 2、其餘 1，`weightedSample()` 重複裝袋洗牌去重抽 15（僅世界、非重練）；(2) **熱門 33 國小知識擴至 15 段**（總 1,310 條）；(3) **台灣內容**：`data/taiwan-facts.js` ＝ `TW_FACTS`（22 縣市 ×5）＋ `TW_LM_DESC`（165 景點一句說明，斷言鎖覆蓋）；縣市題顯縣市小知識、景點題優先顯景點說明、縣市自由練習也顯；分區層級不顯；sw.js 快取清單與 CACHE 名同步 |
 | _V1.6.0 原文_ | (1) **PWA**：`sw.js` cache-first 全資源預快取（相對路徑支援 Pages 子路徑；CACHE 名含版本號，activate 清舊快取）；註冊守衛 `location.protocol` 為 http(s) 才註冊（file:// 雙擊不受影響）；manifest 補 `start_url/scope: ./`；(2) **國家小知識**：`data/world-facts.js` 196 國 ×5＝980 條（斷言鎖覆蓋）；答題鎖定時 `pickFact()` 隨機抽一條存 `S.fact`（重繪不換條），顯示於回饋區 `.fact`；自由練習點國家同顯；台灣層級不顯 |
